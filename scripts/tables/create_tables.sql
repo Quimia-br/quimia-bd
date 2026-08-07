@@ -1,11 +1,7 @@
--- ==========================================
--- DROP TABLES
--- ==========================================
 DROP TABLE IF EXISTS historico_recomendacao CASCADE;
 DROP TABLE IF EXISTS estante_produto CASCADE;
 DROP TABLE IF EXISTS estante CASCADE;
 DROP TABLE IF EXISTS localizacao_usuario CASCADE;
-DROP TABLE IF EXISTS user_produto CASCADE;
 DROP TABLE IF EXISTS produto_superficie CASCADE;
 DROP TABLE IF EXISTS empresa_produto CASCADE;
 DROP TABLE IF EXISTS fds_incompatibilidade CASCADE;
@@ -19,9 +15,6 @@ DROP TABLE IF EXISTS superficie CASCADE;
 DROP TABLE IF EXISTS empresa CASCADE;
 DROP TABLE IF EXISTS marca CASCADE;
 
--- ==========================================
--- TABELAS BASE
--- ==========================================
 
 CREATE TABLE marca (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -58,10 +51,6 @@ CREATE TABLE ponto_parceiro (
     ativo BOOLEAN DEFAULT TRUE
 );
 
--- ==========================================
--- PRODUTO
--- ==========================================
-
 CREATE TABLE produto (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
@@ -70,10 +59,6 @@ CREATE TABLE produto (
     tipo_produto VARCHAR(255),
     cod_barras VARCHAR(255)
 );
-
--- ==========================================
--- FDS
--- ==========================================
 
 CREATE TABLE fds (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -106,10 +91,6 @@ CREATE TABLE fds_descarte (
     tipo_residuo VARCHAR(255)
 );
 
--- ==========================================
--- INTERMÉDIARIAS
--- ==========================================
-
 CREATE TABLE empresa_produto (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_empresa INTEGER,
@@ -125,21 +106,6 @@ CREATE TABLE produto_superficie (
     nivel_compativel DECIMAL(5,2)
 );
 
-CREATE TABLE user_produto (
-    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_user INTEGER,
-    id_produto INTEGER,
-    nome_usuario_produto VARCHAR(255),
-    marca_usuario_produto VARCHAR(255),
-    cod_barras_usuario VARCHAR(255),
-    status VARCHAR(255),
-    data_adicao TIMESTAMP,
-    data_validade TIMESTAMP
-);
-
--- ==========================================
--- LOCALIZAÇÃO
--- ==========================================
 
 CREATE TABLE localizacao_usuario (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -164,10 +130,6 @@ CREATE TABLE estante_produto (
     id_usuario INTEGER,
     id_estante INTEGER
 );
-
--- ==========================================
--- RECOMENDAÇÃO
--- ==========================================
 
 CREATE TABLE historico_recomendacao (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
