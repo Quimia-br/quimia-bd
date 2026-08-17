@@ -4,8 +4,6 @@ ADD CONSTRAINT fk_produto_marca
 FOREIGN KEY (id_marca)
 REFERENCES marca(id)
 ON DELETE SET NULL;
--- SET NULL em vez de CASCADE: apagar uma marca não deve apagar os produtos,
--- só deixar sem marca (já que id_marca é opcional no schema).
 
 ALTER TABLE fds DROP CONSTRAINT IF EXISTS fk_fds_produto;
 ALTER TABLE fds
@@ -125,5 +123,3 @@ ADD CONSTRAINT fk_ponto_parceiro_empresa
 FOREIGN KEY (id_empresa)
 REFERENCES empresa(id)
 ON DELETE CASCADE;
-
--- historico_recomendacao.id_usuario_produto ficou sem FK de propósito.
