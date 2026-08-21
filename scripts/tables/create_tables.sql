@@ -145,7 +145,6 @@ CREATE TABLE estante_produto (
     id_produto  INTEGER NOT NULL,
     id_usuario  INTEGER NOT NULL,
     id_estante  INTEGER NOT NULL,
-    -- Evita duplicar o mesmo produto na mesma estante
     CONSTRAINT estante_produto_unique UNIQUE (id_produto, id_estante)
 );
 
@@ -153,7 +152,7 @@ CREATE TABLE historico_recomendacao (
     id                  INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_produto          INTEGER NOT NULL,
     id_usuario          INTEGER NOT NULL,
-    id_usuario_produto  INTEGER,
+    --id_usuario_produto  INTEGER,
     id_superficie       INTEGER,
     resultado           VARCHAR(255)
         CHECK (resultado IN ('compativel','incompativel','atencao','nao_avaliado')),
