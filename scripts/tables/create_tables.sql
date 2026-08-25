@@ -31,7 +31,7 @@ CREATE TABLE empresa (
 CREATE TABLE superficie (
     id        INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome      VARCHAR(255) NOT NULL,
-    descricao VARCHAR(255)
+    descricao TEXT                              
 );
 
 CREATE TABLE usuario (
@@ -39,40 +39,31 @@ CREATE TABLE usuario (
     nome          VARCHAR(255) NOT NULL,
     email         VARCHAR(255) UNIQUE NOT NULL,
     data_nasc     DATE,
-    nivel_acesso  VARCHAR(255) NOT NULL DEFAULT 'usuario'
-        CHECK (nivel_acesso IN ('usuario', 'empresa', 'admin'))
-);
-
-CREATE TABLE ponto_parceiro (
-    id         INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_empresa INTEGER,
-    nome       VARCHAR(255) NOT NULL,
-    latitude   DECIMAL(10,8),
-    longitude  DECIMAL(11,8),
-    tipo       VARCHAR(255),
-    ativo      BOOLEAN DEFAULT TRUE
+    nivel_acesso  VARCHAR(50) NOT NULL DEFAULT 'usuario'
+        CHECK (nivel_acesso IN ('usuario', 'empresa', 'admin')),
+    ultima_sessao TIMESTAMPTZ                              
 );
 
 CREATE TABLE produto (
     id           INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome         VARCHAR(255) NOT NULL,
     id_marca     INTEGER,
-    descricao    VARCHAR(255),
-    tipo_produto VARCHAR(255)
+    descricao    TEXT,                          
+    tipo_produto VARCHAR(50)                    
         CHECK (tipo_produto IN (
             'limpeza_geral','desinfetante','desincrustante',
             'desengraxante','alvejante','aromatizante','outro'
         )),
-   
     cod_barras   VARCHAR(255) UNIQUE
 );
 
 CREATE TABLE fds (
-    id         INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_produto INTEGER NOT NULL,
-    cas_numero VARCHAR(255),
-    fonte_url  TEXT,
-    raw_json   JSONB
+    id               INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_produto       INTEGER NOT NULL,
+    versao           VARCHAR(20),                
+    data_atualizacao DATE,                       
+    fonte_url        TEXT,
+    raw_json         JSONB
 );
 
 CREATE TABLE fds_incompatibilidade (
@@ -80,7 +71,7 @@ CREATE TABLE fds_incompatibilidade (
     id_fds              INTEGER NOT NULL,
     substancia_reagente VARCHAR(255),
     descricao_risco     TEXT,
-    severidade          VARCHAR(255)
+    severidade          VARCHAR(20)               
         CHECK (severidade IN ('baixa','media','alta','critica'))
 );
 
@@ -88,15 +79,15 @@ CREATE TABLE fds_composto (
     id                INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_fds            INTEGER NOT NULL,
     nome_composto     VARCHAR(255),
-    concentracao_min  DECIMAL(10,4),
-    concentracao_max  DECIMAL(10,4)
+    cas_number        VARCHAR(20),              
+    concentracao_max  NUMERIC(5,2)                
 );
 
 CREATE TABLE fds_descarte (
     id                  INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_fds              INTEGER NOT NULL,
     instrucao_descarte  TEXT,
-    tipo_residuo        VARCHAR(255)
+    tipo_residuo        VARCHAR(50)                -- v5: era VARCHAR(255)
         CHECK (tipo_residuo IN ('quimico','biologico','comum','reciclavel','outro'))
 );
 
@@ -120,10 +111,12 @@ CREATE TABLE produto_superficie (
 CREATE TABLE localizacao_usuario (
     id          INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario  INTEGER NOT NULL,
-    cep         VARCHAR(20),
-    estado      VARCHAR(255),
+    cep         VARCHAR(9),                    
+    estado      VARCHAR(2),                         
     bairro      VARCHAR(255),
     rua         VARCHAR(255),
+    numero      INTEGER,                         
+    complemento VARCHAR(255),                        
     CONSTRAINT localizacao_usuario_unique UNIQUE (id_usuario)
 );
 
@@ -138,19 +131,33 @@ CREATE TABLE estante (
 CREATE TABLE estante_produto (
     id          INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_produto  INTEGER NOT NULL,
-    id_usuario  INTEGER NOT NULL,
     id_estante  INTEGER NOT NULL,
-    CONSTRAINT estante_produto_unique UNIQUE (id_produto, id_estante)
+    CONSTRAINT estante_produto_unique UNIQUE (id_estante, id_produto)
 );
 
 CREATE TABLE historico_recomendacao (
     id                  INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_produto          INTEGER NOT NULL,
     id_usuario          INTEGER NOT NULL,
-    --id_usuario_produto  INTEGER,
     id_superficie       INTEGER,
-    resultado           VARCHAR(255)
+    resultado           VARCHAR(50)                 
         CHECK (resultado IN ('compativel','incompativel','atencao','nao_avaliado')),
     dosagem_sugerida    TEXT,
     data_consulta       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE ponto_parceiro (
+    id          INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_empresa  INTEGER,
+    nome        VARCHAR(255) NOT NULL,
+    cep         VARCHAR(9),                          
+    estado      VARCHAR(2),                           
+    bairro      VARCHAR(255),                          
+    rua         VARCHAR(255),                         
+    numero      INTEGER,                               
+    complemento VARCHAR(50),                           
+    tipo        VARCHAR(50)                             
+        CHECK (tipo IN ('compra', 'descarte')),
+    ativo       BOOLEAN DEFAULT TRUE
+);
+
