@@ -67,9 +67,6 @@ CREATE TABLE produto (
     cod_barras   VARCHAR(255) UNIQUE
 );
 
-CREATE INDEX idx_produto_cod_barras ON produto (cod_barras);
-CREATE INDEX idx_produto_nome       ON produto (nome);
-
 CREATE TABLE fds (
     id         INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_produto INTEGER NOT NULL,
@@ -77,8 +74,6 @@ CREATE TABLE fds (
     fonte_url  TEXT,
     raw_json   JSONB
 );
-
-CREATE INDEX idx_fds_produto ON fds (id_produto);
 
 CREATE TABLE fds_incompatibilidade (
     id                  INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
