@@ -17,6 +17,11 @@ DROP PROCEDURE IF EXISTS cadastrar_produto_completo(
     INTEGER, VARCHAR, DATE, TEXT, JSONB
 );
 
+DROP FUNCTION IF EXISTS fn_atualizar_ultima_sessao();
+DROP TRIGGER IF EXISTS TRIGGER trg_atualizar_ultima_sessao ON usuario_sessao_evento();
+
+
+
 CREATE OR REPLACE FUNCTION buscar_compatibilidade(
     p_id_produto    INTEGER,
     p_id_superficie INTEGER
@@ -292,3 +297,21 @@ CREATE TRIGGER trg_validar_estante_produto
 BEFORE INSERT OR UPDATE ON estante_produto
 FOR EACH ROW
 EXECUTE FUNCTION fn_validar_estante_produto();
+
+CREATE OR REPLACE FUNCTION fn_atualizar_ultima_sessao()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    UPDATE usuario
+        SET ultima_sessao = NEW.ocorreu_em
+        WHERE id = NEW.id_usuario
+            AND (ultima_sessao IS NULL OR ultima_sessao < NEW.ocorreu_em);
+            RETURN NEW;
+        END;
+        $$;
+
+CREATE TRIGGER trg_atualizar_ultima_sessao
+AFTER INSERT ON usuario_sessao_evento
+FOR EACH ROW
+EXECUTE FUNCTION fn_atualizar_ultima_sessao();
