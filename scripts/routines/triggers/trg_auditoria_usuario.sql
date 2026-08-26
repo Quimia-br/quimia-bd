@@ -1,0 +1,2 @@
+DROP TRIGGER IF EXISTS trg_auditoria_usuario ON usuario;
+DROP TRIGGER IF EXISTS auditoria_usuario ON usuario;
