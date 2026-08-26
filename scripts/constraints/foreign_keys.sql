@@ -123,3 +123,8 @@ ADD CONSTRAINT fk_ponto_parceiro_empresa
 FOREIGN KEY (id_empresa)
 REFERENCES empresa(id)
 ON DELETE CASCADE;
+
+ALTER TABLE usuario_sessao_evento
+ADD CONSTRAINT fk_usuario_sessao_evento_usuario
+FOREIGN KEY (id_usuario)
+REFERENCES usuario(id);

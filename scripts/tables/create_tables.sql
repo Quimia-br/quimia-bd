@@ -11,6 +11,7 @@ DROP TABLE IF EXISTS fds CASCADE;
 DROP TABLE IF EXISTS produto CASCADE;
 DROP TABLE IF EXISTS ponto_parceiro CASCADE;
 DROP TABLE IF EXISTS usuario CASCADE;
+DROP TABLE IF EXISTS usuario_sessao_evento CASCADE;
 DROP TABLE IF EXISTS superficie CASCADE;
 DROP TABLE IF EXISTS empresa CASCADE;
 DROP TABLE IF EXISTS marca CASCADE;
@@ -43,6 +44,13 @@ CREATE TABLE usuario (
         CHECK (nivel_acesso IN ('usuario', 'empresa', 'admin')),
     ultima_sessao TIMESTAMPTZ                              
 );
+
+CREATE TABLE IF NOT EXISTS usuario_sessao_evento(
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_usuario INTEGER NOT NULL,
+    evento VARCHAR(30) NOT NULL,
+    ocorreu_em TIMESTAMPTZ NOT NULL DEFAULT now()
+)
 
 CREATE TABLE produto (
     id           INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
