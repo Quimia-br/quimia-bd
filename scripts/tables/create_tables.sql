@@ -36,7 +36,7 @@ CREATE TABLE superficie (
 );
 
 CREATE TABLE usuario (
-    id            INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id            uuid PRIMARY KEY DEFAULT uuidv7(),
     nome          VARCHAR(255) NOT NULL,
     email         VARCHAR(255) UNIQUE NOT NULL,
     data_nasc     DATE,
