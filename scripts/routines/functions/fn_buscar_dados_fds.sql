@@ -14,6 +14,7 @@ BEGIN
       INTO v_json
       FROM fds f
      WHERE f.id_produto = p_id_produto
+     AND f.ativo = TRUE
      ORDER BY f.data_atualizacao DESC NULLS LAST, f.id DESC
      LIMIT 1;
 

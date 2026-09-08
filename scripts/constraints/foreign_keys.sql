@@ -16,6 +16,20 @@ ADD CONSTRAINT fk_incompatibilidade_fds
 FOREIGN KEY (id_fds) REFERENCES fds(id)
 ON DELETE CASCADE;
 
+ALTER TABLE fds_incompatibilidade DROP CONSTRAINT IF EXISTS fk_substancia;
+ALTER TABLE fds_incompatibilidade
+ADD CONSTRAINT fk_substancia;
+FOREIGN KEY (id_substancia) REFERENCES substancia(id)
+ON DELETE CASCADE;
+
+ALTER TABLE fds_incompatibilidade DROP CONSTRAINT IF EXISTS fk_classe_quimica;
+ALTER TABLE fds_incompatibilidade
+ADD CONSTRAINT fk_classe_quimica;
+FOREIGN KEY (id_classe_quimica) REFERENCES classe_quimica(id)
+ON DELETE CASCADE;
+
+
+
 ALTER TABLE fds_composto DROP CONSTRAINT IF EXISTS fk_composto_fds;
 ALTER TABLE fds_composto
 ADD CONSTRAINT fk_composto_fds
@@ -33,8 +47,6 @@ ALTER TABLE fds_descarte
 ADD CONSTRAINT fk_descarte_fds
 FOREIGN KEY (id_fds) REFERENCES fds(id)
 ON DELETE CASCADE;
-
--- dicionário químico
 
 ALTER TABLE substancia_sinonimo DROP CONSTRAINT IF EXISTS fk_sinonimo_substancia;
 ALTER TABLE substancia_sinonimo
