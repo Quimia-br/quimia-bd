@@ -254,6 +254,5 @@
     severidade VARCHAR(20)
         CHECK (severidade IN ('baixa','media','alta','critica')),
     descricao_risco TEXT,
-    data_consulta TIMESTAMPTZ NOT NULL DEFAULT now(),
-
+    data_consulta TIMESTAMPTZ NOT NULL DEFAULT now()
     )

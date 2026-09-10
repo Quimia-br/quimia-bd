@@ -102,7 +102,6 @@ ADD CONSTRAINT fk_sinonimo_pendente_substancia
 FOREIGN KEY (id_substancia_resolvida) REFERENCES substancia(id)
 ON DELETE SET NULL;
 
--- empresa / produto / superfície
 
 ALTER TABLE empresa_produto DROP CONSTRAINT IF EXISTS fk_empresa_produto_empresa;
 ALTER TABLE empresa_produto
@@ -128,7 +127,6 @@ ADD CONSTRAINT fk_produto_superficie_superficie
 FOREIGN KEY (id_superficie) REFERENCES superficie(id)
 ON DELETE CASCADE;
 
--- usuário / localização / estante / histórico
 
 ALTER TABLE localizacao_usuario DROP CONSTRAINT IF EXISTS fk_localizacao_usuario;
 ALTER TABLE localizacao_usuario
@@ -177,6 +175,25 @@ ALTER TABLE historico_recomendacao
 ADD CONSTRAINT fk_hist_recomendacao_superficie
 FOREIGN KEY (id_superficie) REFERENCES superficie(id)
 ON DELETE SET NULL;
+
+ALTER TABLE historico_match DROP CONSTRAINT IF EXISTS fk_hist_match_usuario;
+ALTER TABLE historico_match
+ADD CONSTRAINT fk_usuario
+FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+
+ALTER TABLE historico_match
+DROP CONSTRAINT IF EXISTS fk_hist_match_produto_a;
+ALTER TABLE historico_match
+ADD CONSTRAINT fk_hist_match_produto_a
+FOREIGN KEY (id_produto_a)
+REFERENCES produto(id);
+
+ALTER TABLE historico_match
+DROP CONSTRAINT IF EXISTS fk_hist_match_regra;
+ALTER TABLE historico_match
+ADD CONSTRAINT fk_hist_match_regra
+FOREIGN KEY (id_regra)
+REFERENCES incompatibilidade_regra(id);
 
 ALTER TABLE ponto_parceiro DROP CONSTRAINT IF EXISTS fk_ponto_parceiro_empresa;
 ALTER TABLE ponto_parceiro
