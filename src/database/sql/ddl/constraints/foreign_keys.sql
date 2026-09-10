@@ -18,13 +18,13 @@ ON DELETE CASCADE;
 
 ALTER TABLE fds_incompatibilidade DROP CONSTRAINT IF EXISTS fk_substancia;
 ALTER TABLE fds_incompatibilidade
-ADD CONSTRAINT fk_substancia;
+ADD CONSTRAINT fk_substancia
 FOREIGN KEY (id_substancia) REFERENCES substancia(id)
 ON DELETE CASCADE;
 
 ALTER TABLE fds_incompatibilidade DROP CONSTRAINT IF EXISTS fk_classe_quimica;
 ALTER TABLE fds_incompatibilidade
-ADD CONSTRAINT fk_classe_quimica;
+ADD CONSTRAINT fk_classe_quimica
 FOREIGN KEY (id_classe_quimica) REFERENCES classe_quimica(id)
 ON DELETE CASCADE;
 
@@ -180,20 +180,23 @@ ALTER TABLE historico_match DROP CONSTRAINT IF EXISTS fk_hist_match_usuario;
 ALTER TABLE historico_match
 ADD CONSTRAINT fk_usuario
 FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+ON DELETE CASCADE;
 
 ALTER TABLE historico_match
 DROP CONSTRAINT IF EXISTS fk_hist_match_produto_a;
 ALTER TABLE historico_match
 ADD CONSTRAINT fk_hist_match_produto_a
 FOREIGN KEY (id_produto_a)
-REFERENCES produto(id);
+REFERENCES produto(id)
+ON DELETE CASCADE;
 
 ALTER TABLE historico_match
 DROP CONSTRAINT IF EXISTS fk_hist_match_regra;
 ALTER TABLE historico_match
 ADD CONSTRAINT fk_hist_match_regra
 FOREIGN KEY (id_regra)
-REFERENCES incompatibilidade_regra(id);
+REFERENCES incompatibilidade_regra(id)
+ON DELETE CASCADE;
 
 ALTER TABLE ponto_parceiro DROP CONSTRAINT IF EXISTS fk_ponto_parceiro_empresa;
 ALTER TABLE ponto_parceiro
