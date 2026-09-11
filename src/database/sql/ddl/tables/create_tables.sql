@@ -255,4 +255,5 @@
         CHECK (severidade IN ('baixa','media','alta','critica')),
     descricao_risco TEXT,
     data_consulta TIMESTAMPTZ NOT NULL DEFAULT now()
+    CONSTRAINT chk_historico_match_par CHECK (id_produto_a < id_produto_b)
     )
