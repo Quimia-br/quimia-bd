@@ -1,4 +1,6 @@
 from src.database.execute_sql import executar_scripts
+#from src.database.utils.data-generators.loader import rodar_pipeline
+
 
 executar_scripts([
     "src/database/sql/ddl/tables/create_tables.sql",
