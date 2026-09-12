@@ -58,9 +58,7 @@ TABELAS = {
 
 conn = get_connection()
 
-# ============================================================
 # ETAPA 2 — COPY do CSV bruto pra staging
-# ============================================================
 
 def copy_csv_para_staging(conn, tabela: str, caminho_csv: str, id_batch: uuid.UUID) -> int:
     """
@@ -98,14 +96,13 @@ def copy_csv_para_staging(conn, tabela: str, caminho_csv: str, id_batch: uuid.UU
     return n_linhas
 
 
-# ============================================================
+
 # ETAPA 3 e 4 — rodar um .sql parametrizado por id_batch
 #
 # Os arquivos .sql usam ':batch_id' como placeholder (mais legível
 # pra quem só olha o SQL puro). Aqui a gente troca isso pelo formato
 # %(batch_id)s que o psycopg2 entende, e faz o bind de verdade —
 # evita concatenar string e abrir brecha de SQL injection.
-# ============================================================
 
 def rodar_sql_parametrizado(conn, caminho_sql: Path, id_batch: uuid.UUID):
     sql_bruto = caminho_sql.read_text(encoding="utf-8")
@@ -129,9 +126,7 @@ def contar_status(conn, tabela: str, id_batch: uuid.UUID) -> dict:
     return resultado
 
 
-# ============================================================
 # PIPELINE COMPLETO
-# ============================================================
 
 def rodar_pipeline(tabela: str, caminho_csv: str) -> uuid.UUID:
     if tabela not in TABELAS:
