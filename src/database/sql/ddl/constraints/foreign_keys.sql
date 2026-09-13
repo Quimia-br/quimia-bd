@@ -20,13 +20,13 @@ ALTER TABLE fds_incompatibilidade DROP CONSTRAINT IF EXISTS fk_substancia;
 ALTER TABLE fds_incompatibilidade
 ADD CONSTRAINT fk_substancia
 FOREIGN KEY (id_substancia) REFERENCES substancia(id)
-ON DELETE CASCADE;
+ON DELETE SET NULL;
 
 ALTER TABLE fds_incompatibilidade DROP CONSTRAINT IF EXISTS fk_classe_quimica;
 ALTER TABLE fds_incompatibilidade
 ADD CONSTRAINT fk_classe_quimica
 FOREIGN KEY (id_classe_quimica) REFERENCES classe_quimica(id)
-ON DELETE CASCADE;
+ON DELETE SET NULL;
 
 
 
@@ -70,25 +70,25 @@ ALTER TABLE incompatibilidade_regra DROP CONSTRAINT IF EXISTS fk_regra_substanci
 ALTER TABLE incompatibilidade_regra
 ADD CONSTRAINT fk_regra_substancia_a
 FOREIGN KEY (id_substancia_a) REFERENCES substancia(id)
-ON DELETE CASCADE;
+ON DELETE SET NULL;
 
 ALTER TABLE incompatibilidade_regra DROP CONSTRAINT IF EXISTS fk_regra_classe_a;
 ALTER TABLE incompatibilidade_regra
 ADD CONSTRAINT fk_regra_classe_a
 FOREIGN KEY (id_classe_a) REFERENCES classe_quimica(id)
-ON DELETE CASCADE;
+ON DELETE SET NULL;
 
 ALTER TABLE incompatibilidade_regra DROP CONSTRAINT IF EXISTS fk_regra_substancia_b;
 ALTER TABLE incompatibilidade_regra
 ADD CONSTRAINT fk_regra_substancia_b
 FOREIGN KEY (id_substancia_b) REFERENCES substancia(id)
-ON DELETE CASCADE;
+ON DELETE SET NULL;
 
 ALTER TABLE incompatibilidade_regra DROP CONSTRAINT IF EXISTS fk_regra_classe_b;
 ALTER TABLE incompatibilidade_regra
 ADD CONSTRAINT fk_regra_classe_b
 FOREIGN KEY (id_classe_b) REFERENCES classe_quimica(id)
-ON DELETE CASCADE;
+ON DELETE SET NULL;
 
 ALTER TABLE sinonimo_pendente DROP CONSTRAINT IF EXISTS fk_sinonimo_pendente_fds;
 ALTER TABLE sinonimo_pendente
@@ -178,7 +178,7 @@ ON DELETE SET NULL;
 
 ALTER TABLE historico_match DROP CONSTRAINT IF EXISTS fk_hist_match_usuario;
 ALTER TABLE historico_match
-ADD CONSTRAINT fk_usuario
+ADD CONSTRAINT fk_hist_match_usuario
 FOREIGN KEY (id_usuario) REFERENCES usuario(id)
 ON DELETE CASCADE;
 
@@ -205,7 +205,7 @@ ALTER TABLE historico_match
 ADD CONSTRAINT fk_hist_match_regra
 FOREIGN KEY (id_regra)
 REFERENCES incompatibilidade_regra(id)
-ON DELETE CASCADE;
+ON DELETE SET NULL;
 
 ALTER TABLE ponto_parceiro DROP CONSTRAINT IF EXISTS fk_ponto_parceiro_empresa;
 ALTER TABLE ponto_parceiro

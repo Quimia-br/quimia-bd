@@ -1,13 +1,17 @@
 """
-Quimia — Loader genérico de staging (padrão ELT persistente por lote)
+Quimia — Loader genérico de staging (padrão ELT — staging COMUM, não persistente)
 
-Faz as 3 etapas repetíveis do pipeline:
+Faz as 4 etapas repetíveis do pipeline:
+    1. TRUNCATE          -> limpa a stg_* antes de cada carga (staging comum,
+                             não acumula histórico entre execuções — decisão
+                             do roadmap de execução, ver contexto do projeto)
     2. COPY do CSV bruto -> tabela stg_*
     3. VALIDATE          -> roda o .sql de validação, marcando ok/rejeitado
     4. MIGRATE           -> roda o .sql de migração, só do que ficou 'ok'
 
-A etapa 1 (DDL) não entra aqui de propósito — ela roda uma vez só,
-fora do fluxo de carga (sql/data_load/staging/ddl/*.sql).
+O DDL (CREATE TABLE stg_*) continua rodando uma vez só, fora do fluxo de
+carga (sql/data_load/staging/ddl/*.sql) — o TRUNCATE aqui não recria a
+tabela, só esvazia o conteúdo antes de cada novo lote.
 
 Uso:
     python loader.py --tabela fds --csv fds.csv
@@ -19,17 +23,19 @@ Uso:
 Requer variável de ambiente DATABASE_URL (ou ajuste get_connection()).
 """
 
-from src.database.connection import get_connection
-
 import argparse
 import csv
 import io
 import os
 import uuid
-import psycopg2
 from pathlib import Path
 
+import psycopg2
+from src.database.connection import get_connection
 
+# ============================================================
+# CONFIGURAÇÃO — caminho dos .sql por tabela
+# ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent / "sql" / "data_load" / "staging"
 
@@ -54,11 +60,43 @@ TABELAS = {
         "validate_sql": BASE_DIR / "validate" / "validate_fds.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_fds.sql",
     },
+    "localizacao_usuario": {
+        "stg_table": "stg_localizacao_usuario",
+        "colunas": [
+            "id_usuario_raw", "cep_raw", "estado_raw", "bairro_raw",
+            "rua_raw", "numero_raw", "complemento_raw",
+        ],
+        "validate_sql": BASE_DIR / "validate" / "validate_localizacao_usuario.sql",
+        "migrate_sql": BASE_DIR / "migrate" / "migrate_localizacao_usuario.sql",
+    },
+    "ponto_parceiro": {
+        "stg_table": "stg_ponto_parceiro",
+        "colunas": [
+            "id_empresa_raw", "nome_raw", "cep_raw", "estado_raw", "bairro_raw",
+            "rua_raw", "numero_raw", "complemento_raw", "tipo_raw", "ativo_raw",
+        ],
+        "validate_sql": BASE_DIR / "validate" / "validate_ponto_parceiro.sql",
+        "migrate_sql": BASE_DIR / "migrate" / "migrate_ponto_parceiro.sql",
+    },
 }
 
 conn = get_connection()
 
-# ETAPA 2 — COPY do CSV bruto pra staging
+
+def truncar_staging(conn, tabela: str):
+    """
+    Esvazia a stg_* antes de cada carga. Não recria a tabela (isso é
+    responsabilidade do DDL, rodado uma vez só) — só garante que cada
+    execução do pipeline começa com a staging vazia, sem acumular
+    lotes antigos.
+    """
+    stg_table = TABELAS[tabela]["stg_table"]
+    cur = conn.cursor()
+    cur.execute(f"TRUNCATE {stg_table} RESTART IDENTITY")
+    conn.commit()
+    cur.close()
+
+
 
 def copy_csv_para_staging(conn, tabela: str, caminho_csv: str, id_batch: uuid.UUID) -> int:
     """
@@ -97,13 +135,6 @@ def copy_csv_para_staging(conn, tabela: str, caminho_csv: str, id_batch: uuid.UU
 
 
 
-# ETAPA 3 e 4 — rodar um .sql parametrizado por id_batch
-#
-# Os arquivos .sql usam ':batch_id' como placeholder (mais legível
-# pra quem só olha o SQL puro). Aqui a gente troca isso pelo formato
-# %(batch_id)s que o psycopg2 entende, e faz o bind de verdade —
-# evita concatenar string e abrir brecha de SQL injection.
-
 def rodar_sql_parametrizado(conn, caminho_sql: Path, id_batch: uuid.UUID):
     sql_bruto = caminho_sql.read_text(encoding="utf-8")
     sql_parametrizado = sql_bruto.replace(":batch_id", "%(batch_id)s")
@@ -126,7 +157,6 @@ def contar_status(conn, tabela: str, id_batch: uuid.UUID) -> dict:
     return resultado
 
 
-# PIPELINE COMPLETO
 
 def rodar_pipeline(tabela: str, caminho_csv: str) -> uuid.UUID:
     if tabela not in TABELAS:
@@ -137,6 +167,9 @@ def rodar_pipeline(tabela: str, caminho_csv: str) -> uuid.UUID:
     conn = get_connection()
 
     try:
+        print(f"[{tabela}] limpando staging ({config['stg_table']})...")
+        truncar_staging(conn, tabela)
+
         print(f"[{tabela}] lote {id_batch} — iniciando COPY de {caminho_csv}")
         n_copiadas = copy_csv_para_staging(conn, tabela, caminho_csv, id_batch)
         print(f"[{tabela}] {n_copiadas} linhas copiadas para {config['stg_table']}")
@@ -159,6 +192,8 @@ def rodar_pipeline(tabela: str, caminho_csv: str) -> uuid.UUID:
     finally:
         conn.close()
 
+
+# CLI
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Loader genérico de staging (Quimia)")

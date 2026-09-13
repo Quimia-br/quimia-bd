@@ -1,3 +1,6 @@
+    CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+    
     DROP TABLE IF EXISTS historico_recomendacao CASCADE;
     DROP TABLE IF EXISTS estante_produto CASCADE;
     DROP TABLE IF EXISTS estante CASCADE;
@@ -42,10 +45,10 @@
     );
 
     CREATE TABLE usuario (
-        id            INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        nome          VARCHAR(255) NOT NULL,
-        email         VARCHAR(255) UNIQUE NOT NULL,
-        data_nasc     DATE,
+        id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        nome VARCHAR(255) NOT NULL,
+        email VARCHAR(255) UNIQUE NOT NULL,
+        data_nasc DATE,
         nivel_acesso  VARCHAR(50) NOT NULL DEFAULT 'usuario'
             CHECK (nivel_acesso IN ('usuario', 'empresa', 'admin')),
         ultima_sessao TIMESTAMPTZ
@@ -190,7 +193,7 @@
 
     CREATE TABLE localizacao_usuario (
         id          INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        id_usuario  INTEGER NOT NULL,
+        id_usuario  UUID NOT NULL,
         cep         VARCHAR(9),
         estado      VARCHAR(2),
         bairro      VARCHAR(255),
@@ -202,7 +205,7 @@
 
     CREATE TABLE estante (
         id         INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        id_usuario INTEGER NOT NULL,
+        id_usuario UUID NOT NULL,
         nome       VARCHAR(255),
         ambiente   VARCHAR(255),
         criado_em  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -211,7 +214,7 @@
     CREATE TABLE estante_produto (
         id          INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         id_produto  INTEGER NOT NULL,
-        id_usuario  INTEGER NOT NULL,
+        id_usuario  UUID NOT NULL,
         id_estante  INTEGER NOT NULL,
         CONSTRAINT estante_produto_unique UNIQUE (id_estante, id_produto)
     );
@@ -219,7 +222,7 @@
     CREATE TABLE historico_recomendacao (
         id                  INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         id_produto          INTEGER NOT NULL,
-        id_usuario          INTEGER NOT NULL,
+        id_usuario          UUID NOT NULL,
         id_superficie       INTEGER,
         resultado           VARCHAR(50)
             CHECK (resultado IN ('compativel','incompativel','atencao','nao_avaliado')),
@@ -245,7 +248,7 @@
 
     CREATE TABLE historico_match(
         id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        id_usuario        INTEGER NOT NULL,
+        id_usuario        UUID NOT NULL,
         id_produto_a      INTEGER NOT NULL,
         id_produto_b      INTEGER NOT NULL,
         resultado         VARCHAR(20) NOT NULL
@@ -254,6 +257,6 @@
     severidade VARCHAR(20)
         CHECK (severidade IN ('baixa','media','alta','critica')),
     descricao_risco TEXT,
-    data_consulta TIMESTAMPTZ NOT NULL DEFAULT now()
+    data_consulta TIMESTAMPTZ NOT NULL DEFAULT now(),
     CONSTRAINT chk_historico_match_par CHECK (id_produto_a < id_produto_b)
     )
