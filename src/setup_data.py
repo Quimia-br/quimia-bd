@@ -6,6 +6,8 @@ def main():
     executar_scripts([
         "src/database/sql/ddl/tables/create_tables.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_usuario_empresa.sql",
+        "src/database/sql/data_load/staging/ddl_staging/stg_ponto_parceiro.sql",
+        "src/database/sql/data_load/staging/ddl_staging/stg_localizacao_usuario.sql",
 
         "src/database/sql/routines/functions/fn_atualizar_ultima_sessao.sql",
         "src/database/sql/routines/functions/fn_buscar_compatibilidade.sql",
@@ -27,10 +29,10 @@ def main():
         "src/database/sql/ddl/constraints/foreign_keys.sql"
     ])
     
-    #rodar_pipeline("marca", "src/database/sql/data_load/mock/marca.csv")
-    #rodar_pipeline("superficie", "src/database/sql/data_load/mock/superficie.csv")
     rodar_pipeline("usuario", "src/database/sql/data_load/mocks/usuario.csv")
     rodar_pipeline("empresa", "src/database/sql/data_load/mocks/empresa.csv")
+    rodar_pipeline("ponto_parceiro", "src/database/sql/data_load/mocks/ponto_parceiro.csv")
+    rodar_pipeline("localizacao_usuario", "src/database/sql/data_load/mocks/localizacao_usuario.csv")
     
 if __name__ == "__main__":
     main()
