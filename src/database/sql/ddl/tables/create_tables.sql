@@ -28,7 +28,7 @@
 
     CREATE TABLE marca (
         id   INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        nome VARCHAR(255) NOT NULL
+        nome VARCHAR(255) NOT NULL UNIQUE
     );
 
     CREATE TABLE empresa (
