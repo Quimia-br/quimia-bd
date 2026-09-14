@@ -28,7 +28,7 @@
 
     CREATE TABLE marca (
         id   INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        nome VARCHAR(255) NOT NULL
+        nome VARCHAR(255) NOT NULL UNIQUE
     );
 
     CREATE TABLE empresa (
@@ -87,7 +87,7 @@
     CREATE TABLE produto (
         id           INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         nome         VARCHAR(255) NOT NULL,
-        id_marca     INTEGER,
+        id_marca     INTEGER NOT NULL,
         descricao    TEXT,
         tipo_produto VARCHAR(50)
             CHECK (tipo_produto IN (

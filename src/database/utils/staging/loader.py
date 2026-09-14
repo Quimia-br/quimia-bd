@@ -78,6 +78,22 @@ TABELAS = {
         "validate_sql": BASE_DIR / "validate" / "validate_ponto_parceiro.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_ponto_parceiro.sql",
     },
+    "marca":{
+        "stg_table":"stg_marca",
+        "colunas":[
+            "nome"
+        ],
+        "validate_sql": BASE_DIR / "validate" / "validate_marca.sql",
+        "migrate_sql": BASE_DIR / "migrate" / "migrate_marca.sql"
+    },
+    "superficie":{
+        "stg_table":"stg_superficie",
+        "colunas":[
+            "nome", "descricao"
+        ],
+        "validate_sql": BASE_DIR / "validate" / "validate_superficie.sql",
+        "migrate_sql": BASE_DIR / "migrate" / "migrate_superficie.sql"
+    }
 }
 
 conn = get_connection()
