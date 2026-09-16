@@ -81,7 +81,7 @@ TABELAS = {
     "marca":{
         "stg_table":"stg_marca",
         "colunas":[
-            "nome"
+            "nome_raw"
         ],
         "validate_sql": BASE_DIR / "validate" / "validate_marca.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_marca.sql"
@@ -89,10 +89,27 @@ TABELAS = {
     "superficie":{
         "stg_table":"stg_superficie",
         "colunas":[
-            "nome", "descricao"
+            "nome_raw", "descricao_raw"
         ],
         "validate_sql": BASE_DIR / "validate" / "validate_superficie.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_superficie.sql"
+    },
+    "classe_quimica":{
+        "stg_table":"stg_classe_quimica",
+        "colunas":[
+            "nome_raw", "descricao_raw"
+        ],
+        "validate_sql": BASE_DIR / "validate" / "validate_classe_quimica.sql",
+        "migrate_sql": BASE_DIR / "migrate" / "migrate_classe_quimica.sql"
+    },
+    "substancia":{
+        "stg_table":"stg_substancia",
+        "colunas":[
+            "nome_canonico_raw", "cas_numero_raw",
+            "descricao_raw", 
+        ],
+        "validate_sql": BASE_DIR / "validate" / "validate_substancia.sql",
+        "migrate_sql": BASE_DIR / "migrate" / "migrate_substancia.sql"
     }
 }
 
