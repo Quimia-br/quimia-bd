@@ -10,6 +10,8 @@ def main():
         "src/database/sql/data_load/staging/ddl_staging/stg_localizacao_usuario.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_marca.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_superficie.sql",
+        "src/database/sql/data_load/staging/ddl_staging/stg_classe_quimica.sql",
+        "src/database/sql/data_load/staging/ddl_staging/stg_substancia.sql",
 
         "src/database/sql/routines/functions/fn_atualizar_ultima_sessao.sql",
         "src/database/sql/routines/functions/fn_buscar_compatibilidade.sql",
@@ -35,8 +37,10 @@ def main():
     rodar_pipeline("empresa", "src/database/sql/data_load/mocks/empresa.csv")
     rodar_pipeline("ponto_parceiro", "src/database/sql/data_load/mocks/ponto_parceiro.csv")
     rodar_pipeline("localizacao_usuario", "src/database/sql/data_load/mocks/localizacao_usuario.csv")
-    rodar_pipeline("localizacao_usuario", "src/database/sql/data_load/mocks/marca.csv")
-    rodar_pipeline("localizacao_usuario", "src/database/sql/data_load/mocks/superficie.csv")
+    rodar_pipeline("marca", "src/database/sql/data_load/mocks/marca.csv")
+    rodar_pipeline("superficie", "src/database/sql/data_load/mocks/superficie.csv")
+    rodar_pipeline("classe_quimica", "src/database/sql/data_load/mocks/classe_quimica.csv")
+    rodar_pipeline("substancia", "src/database/sql/data_load/mocks/substancia.csv")
     
 if __name__ == "__main__":
     main()

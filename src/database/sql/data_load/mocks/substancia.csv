@@ -1,0 +1,19 @@
+nome_canonico,cas_numero,descricao
+Hipoclorito de sódio,7681-52-9,Agente clorado ativo em água sanitária.
+Amônia,7664-41-7,Base usada em limpa-vidros e desengraxantes.
+Ácido clorídrico,7647-01-0,"Ácido forte, base do ácido muriático."
+Ácido acético,64-19-7,"Ácido orgânico, componente de vinagre concentrado."
+Hidróxido de sódio,1310-73-2,Base forte (soda cáustica).
+Peróxido de hidrogênio,7722-84-1,"Agente oxidante, alvejante e desinfetante."
+Etanol,64-17-5,Álcool usado como solvente e desinfetante.
+Álcool isopropílico,67-63-0,Solvente e desinfetante de uso doméstico.
+Lauril sulfato de sódio,151-21-3,"Tensoativo aniônico, base de detergentes."
+Cloreto de benzalcônio,63449-41-2,"Quaternário de amônio, germicida."
+Hipoclorito de cálcio,7778-54-3,"Agente clorado sólido, uso em piscinas e desinfecção pesada."
+Ácido fosfórico,7664-38-2,Ácido usado em removedores de crosta/calcário.
+Ácido cítrico,77-92-9,"Ácido orgânico fraco, uso em antical natural."
+Dodecilbenzenossulfonato de sódio,25155-30-0,Tensoativo aniônico comum em detergentes multiuso.
+Fragrância,,Composto proprietário sem CAS declarado — caso real (FDS Minuano).
+,999-99-9,linha de teste — nome ausente
+Substância teste CAS malformado,abc-def,cas inválido de propósito
+Hipoclorito de sódio (duplicata),7681-52-9,duplicata proposital de CAS

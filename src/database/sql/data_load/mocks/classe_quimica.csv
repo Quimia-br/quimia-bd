@@ -1,0 +1,13 @@
+nome,descricao
+hipocloritos,"Compostos à base de hipoclorito, ex: água sanitária. Reage com ácidos liberando cloro gasoso."
+acidos,"Substâncias ácidas de uso doméstico, ex: ácido muriático, vinagre concentrado."
+bases,"Substâncias alcalinas/cáusticas, ex: soda cáustica, amônia."
+amonia_aminas,"Amônia e compostos aminados, usados em limpa-vidros e desengraxantes."
+oxidantes,"Agentes oxidantes fortes, ex: peróxido de hidrogênio."
+tensoativos_anionicos,"Surfactantes aniônicos, base de detergentes e sabões."
+tensoativos_nao_ionicos,"Surfactantes não-iônicos, comuns em desengraxantes multiuso."
+solventes_organicos,"Álcoois e solventes, ex: etanol, isopropanol, usados em desinfetantes."
+quaternarios_amonio,"Compostos de amônio quaternário, base de desinfetantes/germicidas."
+fragrancias_aditivos,"Fragrâncias e aditivos sem função de limpeza direta, frequentemente sem CAS declarado."
+,linha de teste — nome ausente
+hipocloritos,duplicata proposital pra testar validação
