@@ -110,7 +110,12 @@ TABELAS = {
         ],
         "validate_sql": BASE_DIR / "validate" / "validate_substancia.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_substancia.sql"
-    }
+    }, "estante": {
+    "stg_table": "stg_estante",
+    "colunas": ["id_usuario_raw", "nome_raw", "ambiente_raw"],
+    "validate_sql": BASE_DIR / "validate" / "validate_estante.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_estante.sql",
+},
 }
 
 conn = get_connection()
