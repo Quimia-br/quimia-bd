@@ -40,19 +40,41 @@ def buscar_usuarios_existentes(conn):
     return ids
 
 
-def gerar_nome_estante(ambiente):
-    padroes = [
-        f"Estante {ambiente}",
-        f"Armário {ambiente}",
-        f"Prateleira {ambiente.lower()}",
-    ]
-    return random.choice(padroes)
+def gerar_nome_estante():
+    """
+    Nome da estante é texto livre escolhido pelo usuário — não precisa
+    ter relação nenhuma com o ambiente ("Cozinha", "Tung Tung Banheiro",
+    "aquela lá", etc. são todos válidos). O gerador varia o estilo pra
+    simular isso.
+    """
+    estilo = random.choice([
+        "padrao", "apelido", "engracado", "generico", "emoji",
+    ])
+
+    if estilo == "padrao":
+        return f"{random.choice(['Estante', 'Armário', 'Prateleira', 'Gaveta'])} {fake.word()}"
+
+    elif estilo == "apelido":
+        return f"{fake.first_name()}'s stuff"
+
+    elif estilo == "engracado":
+        return random.choice([
+            "tung tung banheiro", "caixa de tralha", "aquele canto",
+            "não sei o nome disso", "bagunça do fundo", "negócio ali",
+            "misturas mortais", "kit sobrevivência",
+        ])
+
+    elif estilo == "generico":
+        return fake.sentence(nb_words=3).rstrip(".")
+
+    else:
+        return random.choice(["limpeza geral", "top secret", "não mexer"])
 
 
 def gerar_estante(n=100, ids_usuario=None):
     if not ids_usuario:
         raise ValueError(
-            "Nenhum usuário encontrado na tabela oficial `usuario`. "
+            "Nenhum usuário encontrado na tabela oficial `usuario`. "   
             "Rode o pipeline de usuario antes de gerar estante."
         )
 
@@ -61,17 +83,16 @@ def gerar_estante(n=100, ids_usuario=None):
         roll = random.random()
         ambiente = random.choice(AMBIENTES)
 
- 
         if roll < 0.85:
             id_usuario = random.choice(ids_usuario)
         elif roll < 0.93:
             id_usuario = str(uuid.uuid4())
         elif roll < 0.97:
-            id_usuario = "uuid-invalido-123"      
+            id_usuario = "uuid-invalido-123"
         else:
-            id_usuario = ""                   
+            id_usuario = ""
 
-        nome = gerar_nome_estante(ambiente) if random.random() < 0.92 else ""
+        nome = gerar_nome_estante() if random.random() < 0.92 else ""
 
         linhas.append({
             "id_usuario": id_usuario,

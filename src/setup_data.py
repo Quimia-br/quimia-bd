@@ -17,7 +17,8 @@ def main():
         "src/database/sql/data_load/staging/ddl_staging/stg_classe_quimica.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_substancia.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_estante.sql",
-
+        "src/database/sql/data_load/staging/ddl_staging/stg_substancia_classe_quimica.sql",
+        "src/database/sql/data_load/staging/ddl_staging/stg_substancia_sinonimo.sql",
 
         # "src/database/sql/routines/functions/fn_atualizar_ultima_sessao.sql",
         # "src/database/sql/routines/functions/fn_buscar_compatibilidade.sql",
@@ -47,6 +48,8 @@ def main():
     rodar_pipeline("superficie", "src/database/sql/data_load/mocks/superficie.csv")
     rodar_pipeline("classe_quimica", "src/database/sql/data_load/mocks/classe_quimica.csv")
     rodar_pipeline("substancia", "src/database/sql/data_load/mocks/substancia.csv")
+    rodar_pipeline("substancia_classe_quimica", "src/database/sql/data_load/mocks/substancia_classe_quimica.csv")
+    rodar_pipeline("substancia_sinonimo", "src/database/sql/data_load/mocks/substancia.csv")
 
     caminho_estante_csv = "src/database/sql/data_load/mocks/estante.csv"
     conn = get_connection()

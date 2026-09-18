@@ -115,13 +115,25 @@ TABELAS = {
     "colunas": ["id_usuario_raw", "nome_raw", "ambiente_raw"],
     "validate_sql": BASE_DIR / "validate" / "validate_estante.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_estante.sql",
-},
-}
+    },
+    "substancia_classe_quimica": {
+    "stg_table": "stg_substancia_classe_quimica",
+    "colunas": ["id_substancia_raw", "id_classe_quimica_raw"],
+    "validate_sql": BASE_DIR / "validate" / "validate_substancia_classe_quimica.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_substancia_classe_quimica.sql",
+    },
+    "substancia_sinonimo": {
+        "stg_table": "stg_substancia_sinonimo",
+    "colunas": ["id_substancia_raw", "sinonimo_raw"],
+    "validate_sql": BASE_DIR / "validate" / "validate_substancia_sinonimo.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_substancia_sinonimo.sql",
+    },  
+}   
 
 conn = get_connection()
 
 
-def truncar_staging(conn, tabela: str):
+def truncar_staging(conn, tabela: str): 
     """
     Esvazia a stg_* antes de cada carga. Não recria a tabela (isso é
     responsabilidade do DDL, rodado uma vez só) — só garante que cada
@@ -153,7 +165,6 @@ def copy_csv_para_staging(conn, tabela: str, caminho_csv: str, id_batch: uuid.UU
         n_linhas = 0
         for linha in reader:
             valores = [str(id_batch)] + [linha.get(col.replace("_raw", ""), "") for col in colunas]
-            # troca vazio por \N pra COPY entender como NULL
             valores = [v if v != "" else r"\N" for v in valores]
             writer.writerow(valores)
             n_linhas += 1
@@ -206,6 +217,7 @@ def rodar_pipeline(tabela: str, caminho_csv: str) -> uuid.UUID:
 
     try:
         print(f"[{tabela}] limpando staging ({config['stg_table']})...")
+        print("DEBUG chaves:", list(config.keys()))
         truncar_staging(conn, tabela)
 
         print(f"[{tabela}] lote {id_batch} — iniciando COPY de {caminho_csv}")
