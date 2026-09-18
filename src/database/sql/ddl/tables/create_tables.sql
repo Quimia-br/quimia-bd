@@ -1,5 +1,5 @@
     CREATE EXTENSION IF NOT EXISTS pgcrypto;
-
+    CREATE EXTENSION IF NOT EXISTS unaccent;
     
     DROP TABLE IF EXISTS historico_recomendacao CASCADE;
     DROP TABLE IF EXISTS estante_produto CASCADE;
