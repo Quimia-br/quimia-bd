@@ -2,12 +2,12 @@
 Quimia — Loader genérico de staging (padrão ELT — staging COMUM, não persistente)
 
 Faz as 4 etapas repetíveis do pipeline:
-    1. TRUNCATE          -> limpa a stg_* antes de cada carga (staging comum,
+    1. TRUNCATE -> limpa a stg_* antes de cada carga (staging comum,
                              não acumula histórico entre execuções — decisão
                              do roadmap de execução, ver contexto do projeto)
     2. COPY do CSV bruto -> tabela stg_*
-    3. VALIDATE          -> roda o .sql de validação, marcando ok/rejeitado
-    4. MIGRATE           -> roda o .sql de migração, só do que ficou 'ok'
+    3. VALIDATE -> roda o .sql de validação, marcando ok/rejeitado
+    4. MIGRATE -> roda o .sql de migração, só do que ficou 'ok'
 
 O DDL (CREATE TABLE stg_*) continua rodando uma vez só, fora do fluxo de
 carga (sql/data_load/staging/ddl/*.sql) — o TRUNCATE aqui não recria a
@@ -33,14 +33,10 @@ from pathlib import Path
 import psycopg2
 from src.database.connection import get_connection
 
-# ============================================================
-# CONFIGURAÇÃO — caminho dos .sql por tabela
-# ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent / "sql" / "data_load" / "staging"
 
-# Mapeia tabela -> (arquivo de validação, arquivo de migração, colunas da stg_*)
-# As colunas precisam bater 1:1 e na mesma ordem do CSV de origem.
+
 TABELAS = {
     "usuario": {
         "stg_table": "stg_usuario",
@@ -127,7 +123,30 @@ TABELAS = {
     "colunas": ["id_substancia_raw", "sinonimo_raw"],
     "validate_sql": BASE_DIR / "validate" / "validate_substancia_sinonimo.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_substancia_sinonimo.sql",
-    },  
+    }, 
+    "produto":{
+        "stg_table": "stg_produto",
+        "colunas":["nome_raw", "id_marca_raw", "descricao_raw",
+                "tipo_produto_raw", "cod_barras_raw"],
+        "validate_sql": BASE_DIR / "validate" / "validate_produto.sql",
+        "migrate_sql": BASE_DIR / "migrate" / "migrate_produto.sql",
+    },
+    "historico_recomendacao": {
+    "stg_table": "stg_historico_recomendacao",
+    "colunas": ["id_produto_raw", "id_usuario_raw", "id_superficie_raw", "resultado_raw", "dosagem_sugerida_raw"],
+    "validate_sql": BASE_DIR / "validate" / "validate_historico_recomendacao.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_historico_recomendacao.sql",
+    },
+    "incompatibilidade_regra": {
+    "stg_table": "stg_incompatibilidade_regra",
+    "colunas": [
+        "id_substancia_a_raw", "id_classe_a_raw",
+        "id_substancia_b_raw", "id_classe_b_raw",
+        "severidade_raw", "descricao_risco_raw", "fonte_raw", "ativo_raw",
+    ],
+    "validate_sql": BASE_DIR / "validate" / "validate_incompatibilidade_regra.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_incompatibilidade_regra.sql",
+    },
 }   
 
 conn = get_connection()

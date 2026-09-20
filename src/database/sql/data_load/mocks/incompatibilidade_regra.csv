@@ -1,0 +1,151 @@
+id_substancia_a,id_classe_a,id_substancia_b,id_classe_b,severidade,descricao_risco,fonte,ativo
+6,,3,,baixa,Liberação de vapores irritantes às vias respiratórias.,,false
+12,,,,alta,Risco de explosão em ambientes confinados.,NBR 14725,true
+,8,2,,baixa,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+1,,,4,media,Risco de explosão em ambientes confinados.,NBR 14725,false
+,9,8,,baixa,Risco de explosão em ambientes confinados.,NBR 14725,false
+5,,5,,,Reação exotérmica com liberação de calor intenso.,NBR 14725,
+8,,13,,critica,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,true
+14,,,6,critica,Liberação de vapores irritantes às vias respiratórias.,,true
+,3,14,,critica,Risco de explosão em ambientes confinados.,,false
+,3,11,,critica,Reação pode causar queimaduras químicas por contato.,,false
+11,4,13,,baixa,Risco de explosão em ambientes confinados.,NBR 14725,false
+12,,,6,baixa,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+3,6,5,,alta,Risco de explosão em ambientes confinados.,NBR 14725,
+,3,,10,alta,Reação pode causar queimaduras químicas por contato.,,false
+,3,9,,critica,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,true
+,9,,9,baixa,Reação exotérmica com liberação de calor intenso.,NBR 14725,true
+6,,8,,leve,Risco de explosão em ambientes confinados.,NBR 14725,true
+,4,4,,baixa,Reação exotérmica com liberação de calor intenso.,NBR 14725,false
+13,,,10,baixa,Reação exotérmica com liberação de calor intenso.,NBR 14725,true
+,4,,4,alta,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,
+3,,,,extrema,Reação exotérmica com liberação de calor intenso.,NBR 14725,true
+,5,13,,baixa,Corrosão acelerada de superfícies metálicas.,,true
+,3,,7,media,Risco de explosão em ambientes confinados.,NBR 14725,true
+5,,,1,critica,Risco de explosão em ambientes confinados.,NBR 14725,false
+14,,14,,critica,,NBR 14725,false
+9,,,2,critica,Corrosão acelerada de superfícies metálicas.,,true
+,6,14,,,Liberação de vapores irritantes às vias respiratórias.,,false
+,7,11,,critica,,NBR 14725,false
+8,,3,,baixa,Liberação de vapores irritantes às vias respiratórias.,,sim
+,3,10,,baixa,Corrosão acelerada de superfícies metálicas.,,true
+9,,6,,baixa,,NBR 14725,true
+7,,1,,alta,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+11,,9,,critica,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+11,,5,,baixa,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,true
+,7,6,,,Reação exotérmica com liberação de calor intenso.,,false
+,2,,2,baixa,Reação exotérmica com liberação de calor intenso.,NBR 14725,
+,5,8,,alta,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,false
+,6,13,,alta,Risco de explosão em ambientes confinados.,NBR 14725,false
+,2,,9,alta,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+,10,2,,critica,Risco de explosão em ambientes confinados.,,false
+11,,,4,alta,Liberação de vapores irritantes às vias respiratórias.,,true
+,3,,4,critica,Reação pode causar queimaduras químicas por contato.,NBR 14725,false
+,1,,,alta,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+14,,,2,critica,Risco de explosão em ambientes confinados.,,true
+4,,13,,critica,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,
+1,,13,,media,Reação exotérmica com liberação de calor intenso.,,true
+,6,,2,,Reação pode causar queimaduras químicas por contato.,,true
+,9,,9,alta,Reação exotérmica com liberação de calor intenso.,NBR 14725,false
+,7,,4,extrema,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+,8,,2,critica,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,
+12,,,,alta,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+,4,7,,alta,Reação pode causar queimaduras químicas por contato.,NBR 14725,
+7,1,,7,leve,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,
+6,,,7,alta,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,false
+,2,,5,alta,Reação pode causar queimaduras químicas por contato.,,false
+,3,,3,media,Risco de explosão em ambientes confinados.,NBR 14725,true
+,3,,7,alta,Reação pode causar queimaduras químicas por contato.,NBR 14725,false
+7,,7,,extrema,Reação exotérmica com liberação de calor intenso.,,true
+8,4,14,,critica,Corrosão acelerada de superfícies metálicas.,NBR 14725,false
+,1,,7,critica,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,true
+,5,,,critica,Liberação de vapores irritantes às vias respiratórias.,,false
+3,,3,,alta,Liberação de vapores irritantes às vias respiratórias.,,false
+14,,12,,media,Reação pode causar queimaduras químicas por contato.,NBR 14725,true
+6,,,8,moderada,Corrosão acelerada de superfícies metálicas.,,false
+15,,,10,media,Risco de explosão em ambientes confinados.,,false
+5,,1,,,Risco de explosão em ambientes confinados.,,
+,10,,5,critica,Risco de explosão em ambientes confinados.,,true
+,8,3,,media,Risco de explosão em ambientes confinados.,NBR 14725,true
+15,8,,,alta,,NBR 14725,true
+,2,4,,extrema,Reação pode causar queimaduras químicas por contato.,NBR 14725,true
+,9,,3,baixa,Liberação de vapores irritantes às vias respiratórias.,,
+,2,10,,moderada,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+,10,,6,,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,true
+11,,13,,baixa,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+,7,14,,critica,Risco de explosão em ambientes confinados.,,sim
+13,,13,,extrema,Reação exotérmica com liberação de calor intenso.,,false
+5,,,7,critica,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+8,,,3,moderada,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,false
+15,,4,,alta,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+8,,,10,alta,Reação exotérmica com liberação de calor intenso.,,false
+7,,7,,leve,Reação pode causar queimaduras químicas por contato.,NBR 14725,false
+,3,2,,alta,Reação exotérmica com liberação de calor intenso.,NBR 14725,false
+8,,7,,,Corrosão acelerada de superfícies metálicas.,NBR 14725,false
+3,,2,,media,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,true
+,9,5,,media,Reação exotérmica com liberação de calor intenso.,NBR 14725,
+8,,14,,media,Corrosão acelerada de superfícies metálicas.,,false
+,7,,8,alta,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,false
+1,,6,,alta,Liberação de vapores irritantes às vias respiratórias.,,false
+3,,4,,critica,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+12,,7,,alta,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,true
+4,,8,,critica,,NBR 14725,true
+6,5,,,media,Corrosão acelerada de superfícies metálicas.,NBR 14725,false
+9,,5,,,Reação exotérmica com liberação de calor intenso.,,true
+14,9,,2,critica,Reação exotérmica com liberação de calor intenso.,,true
+2,,2,,leve,Risco de explosão em ambientes confinados.,,false
+11,,14,,media,Liberação de vapores irritantes às vias respiratórias.,,false
+,2,12,,alta,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+7,,7,,leve,,NBR 14725,true
+13,,1,,baixa,Reação pode causar queimaduras químicas por contato.,NBR 14725,false
+,9,,6,moderada,Corrosão acelerada de superfícies metálicas.,,false
+9,,,10,alta,Reação pode causar queimaduras químicas por contato.,NBR 14725,false
+,7,,3,alta,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+,9,,4,alta,Corrosão acelerada de superfícies metálicas.,NBR 14725,false
+,2,11,,,Corrosão acelerada de superfícies metálicas.,,true
+,10,,9,media,Risco de explosão em ambientes confinados.,,true
+,4,9,,alta,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,true
+3,,8,,critica,Corrosão acelerada de superfícies metálicas.,,
+,8,,8,critica,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+,9,4,,baixa,Corrosão acelerada de superfícies metálicas.,NBR 14725,sim
+2,,5,,media,Risco de explosão em ambientes confinados.,,false
+13,,,1,leve,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,true
+14,,8,,critica,Liberação de vapores irritantes às vias respiratórias.,NBR 14725,true
+,8,,8,alta,Corrosão acelerada de superfícies metálicas.,,true
+6,9,11,,leve,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,false
+9,,10,,baixa,,NBR 14725,true
+,3,,5,media,Corrosão acelerada de superfícies metálicas.,NBR 14725,false
+14,,,6,critica,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+9,3,,,media,Reação exotérmica com liberação de calor intenso.,NBR 14725,sim
+6,,12,,critica,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+,1,,,media,Corrosão acelerada de superfícies metálicas.,NBR 14725,true
+,2,7,,baixa,Corrosão acelerada de superfícies metálicas.,,true
+2,,,9,media,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,false
+,1,,,critica,,,true
+,8,5,,critica,,,false
+,10,2,,baixa,Reação pode causar queimaduras químicas por contato.,NBR 14725,false
+,6,,6,critica,Reação pode causar queimaduras químicas por contato.,,false
+15,,,,baixa,Reação exotérmica com liberação de calor intenso.,,false
+,8,,9,baixa,Reação pode causar queimaduras químicas por contato.,NBR 14725,false
+3,,,1,alta,,NBR 14725,true
+,6,14,,alta,Formação de gás tóxico (ex: cloro) ao entrar em contato.,NBR 14725,false
+12,,,4,critica,Risco de explosão em ambientes confinados.,NBR 14725,true
+,10,,2,baixa,Corrosão acelerada de superfícies metálicas.,,
+14,,,9,critica,Liberação de vapores irritantes às vias respiratórias.,,
+,7,,7,critica,Corrosão acelerada de superfícies metálicas.,,
+7,,,6,media,Corrosão acelerada de superfícies metálicas.,,sim
+,2,,4,alta,Reação pode causar queimaduras químicas por contato.,NBR 14725,true
+,6,,4,media,,,true
+,10,,,baixa,Corrosão acelerada de superfícies metálicas.,NBR 14725,sim
+15,,,,baixa,Reação exotérmica com liberação de calor intenso.,,false
+2,,,9,critica,Corrosão acelerada de superfícies metálicas.,,true
+7,,,10,baixa,Risco de explosão em ambientes confinados.,NBR 14725,true
+13,,,10,alta,Liberação de vapores irritantes às vias respiratórias.,,true
+3,,7,,alta,Corrosão acelerada de superfícies metálicas.,,false
+1,,,3,baixa,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,true
+11,,12,,,Risco de explosão em ambientes confinados.,,false
+3,,15,,baixa,Reação exotérmica com liberação de calor intenso.,,false
+12,,,6,critica,Formação de gás tóxico (ex: cloro) ao entrar em contato.,,true
+2,,8,,alta,Reação exotérmica com liberação de calor intenso.,NBR 14725,true
+12,3,9,,media,Risco de explosão em ambientes confinados.,,true
+,2,4,,media,Risco de explosão em ambientes confinados.,,
