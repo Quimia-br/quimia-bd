@@ -8,7 +8,7 @@ from src.database.utils.data_generators.generate_estante import (
     gerar_estante, buscar_usuarios_existentes,
 )
 from src.database.utils.data_generators.generate_substancia_classe_quimica import (
-    gerar_substancia_classe_quimica, buscar_ids as buscar_ids_scq,
+    gerar_substancia_classe_quimica, buscar_ids as buscar_ids_scq, resolver_pares_curados,
 )
 from src.database.utils.data_generators.generate_substancia_sinonimo import (
     gerar_substancia_sinonimo, buscar_substancias,
@@ -22,6 +22,7 @@ from src.database.utils.data_generators.generate_historico_recomendacao import (
 from src.database.utils.data_generators.generate_incompatibilidade_regra import (
     gerar_incompatibilidade_regra, buscar_ids as buscar_ids_ir,
 )
+
 
 def salvar_csv(caminho: str, linhas: list[dict], fieldnames: list[str]):
     with open(caminho, "w", newline="", encoding="utf-8") as f:
@@ -77,10 +78,10 @@ def main():
     rodar_pipeline("classe_quimica", "src/database/sql/data_load/mocks/classe_quimica.csv")
     rodar_pipeline("substancia", "src/database/sql/data_load/mocks/substancia.csv")
 
+    # ---- estante: depende de usuario ----
     conn = get_connection()
     ids_usuario = buscar_usuarios_existentes(conn)
     conn.close()
-
 
     linhas_estante = gerar_estante(n=200, ids_usuario=ids_usuario)
     csv_estante = salvar_csv(
@@ -90,14 +91,16 @@ def main():
     )
     rodar_pipeline("estante", csv_estante)
 
-
+    # ---- substancia_classe_quimica: depende de substancia + classe_quimica,
+    # usa seed curado pra pares quimicamente corretos ----
     conn = get_connection()
-    ids_substancia = buscar_ids_scq(conn, "substancia")
-    ids_classe = buscar_ids_scq(conn, "classe_quimica")
+    ids_substancia_scq = buscar_ids_scq(conn, "substancia")
+    ids_classe_scq = buscar_ids_scq(conn, "classe_quimica")
+    pares_curados_scq = resolver_pares_curados(conn)
     conn.close()
 
     linhas_scq = gerar_substancia_classe_quimica(
-        n=200, ids_substancia=ids_substancia, ids_classe=ids_classe
+        n=60, ids_substancia=ids_substancia_scq, ids_classe=ids_classe_scq, pares_curados=pares_curados_scq
     )
     csv_scq = salvar_csv(
         "src/database/sql/data_load/mocks/substancia_classe_quimica.csv",
@@ -106,7 +109,7 @@ def main():
     )
     rodar_pipeline("substancia_classe_quimica", csv_scq)
 
-
+    # ---- substancia_sinonimo: depende de substancia ----
     conn = get_connection()
     substancias = buscar_substancias(conn)
     conn.close()
@@ -119,7 +122,7 @@ def main():
     )
     rodar_pipeline("substancia_sinonimo", csv_sinonimo)
 
-
+    # ---- produto: depende de marca ----
     conn = get_connection()
     ids_marca = buscar_marcas(conn)
     conn.close()
@@ -132,7 +135,7 @@ def main():
     )
     rodar_pipeline("produto", csv_produto)
 
-
+    # ---- historico_recomendacao: depende de produto + usuario + superficie ----
     conn = get_connection()
     ids_produto = buscar_ids_hr(conn, "produto")
     ids_usuario_hr = buscar_usuarios(conn)
@@ -152,7 +155,7 @@ def main():
     )
     rodar_pipeline("historico_recomendacao", csv_historico)
 
-
+    # ---- incompatibilidade_regra: depende de substancia + classe_quimica ----
     conn = get_connection()
     ids_substancia_ir = buscar_ids_ir(conn, "substancia")
     ids_classe_ir = buscar_ids_ir(conn, "classe_quimica")
@@ -171,7 +174,6 @@ def main():
         ],
     )
     rodar_pipeline("incompatibilidade_regra", csv_incompatibilidade)
-
 
 
 if __name__ == "__main__":
