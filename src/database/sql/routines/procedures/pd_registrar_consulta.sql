@@ -2,7 +2,7 @@ DROP PROCEDURE IF EXISTS registrar_consulta(INTEGER, INTEGER, INTEGER, TEXT);
 DROP PROCEDURE IF EXISTS pd_registrar_consulta(INTEGER, INTEGER, INTEGER, TEXT);
 
 CREATE OR REPLACE PROCEDURE registrar_consulta(
-    p_id_usuario    INTEGER,
+    p_id_usuario    UUID,
     p_id_produto    INTEGER,
     p_id_superficie INTEGER DEFAULT NULL,
     p_dosagem       TEXT DEFAULT NULL

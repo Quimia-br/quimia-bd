@@ -4,7 +4,7 @@ DROP FUNCTION IF EXISTS validar_estante_produto();
 CREATE OR REPLACE FUNCTION fn_validar_estante_produto()
 RETURNS TRIGGER AS $$
 DECLARE
-    v_id_usuario_estante INTEGER;
+    v_id_usuario_estante UUID;
 BEGIN
     SELECT e.id_usuario
       INTO v_id_usuario_estante
