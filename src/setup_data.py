@@ -55,9 +55,9 @@ def main():
         "src/database/sql/routines/functions/fn_buscar_dados_fds.sql",
         "src/database/sql/routines/functions/fn_buscar_incompatibilidades_existentes.sql",
         "src/database/sql/routines/functions/fn_match.sql",
-        #"src/database/sql/routines/functions/fn_processar_fds_raw_json.sql",
+        "src/database/sql/routines/functions/fn_processar_fds_raw_json.sql",
         "src/database/sql/routines/functions/fn_validar_estante_produto.sql",
-        #"src/database/sql/routines/functions/fn_trg_processar_fds_raw_json.sql",
+        "src/database/sql/routines/functions/fn_trg_processar_fds_raw_json.sql",
         "src/database/sql/routines/functions/fn_match.sql",
 
         "src/database/sql/routines/procedures/pd_cadastrar_produto_completo.sql",
@@ -66,7 +66,7 @@ def main():
         "src/database/sql/routines/triggers/trg_atualizar_ultima_sessao.sql",
         "src/database/sql/routines/triggers/trg_auditoria_fds.sql",
         "src/database/sql/routines/triggers/trg_auditoria_usuario.sql",
-        #"src/database/sql/routines/triggers/trg_processar_fds_raw_json.sql",
+        "src/database/sql/routines/triggers/trg_processar_fds_raw_json.sql",
 
         "src/database/sql/ddl/constraints/foreign_keys.sql"
     ])
@@ -136,7 +136,7 @@ def main():
     )
     rodar_pipeline("produto", csv_produto)
 
-    # ---- historico_recomendacao: depende de produto + usuario + superficie ----
+    # ---- historico_recomendacao: depende de produto + usuario + superficie 
     conn = get_connection()
     ids_produto = buscar_ids_hr(conn, "produto")
     ids_usuario_hr = buscar_usuarios(conn)
