@@ -24,7 +24,7 @@
     DROP TABLE IF EXISTS empresa CASCADE;
     DROP TABLE IF EXISTS marca CASCADE;
     DROP TABLE IF EXISTS historico_match CASCADE;
-
+    DROP TABLE IF EXISTS sessao_acesso CASCADE;
 
     CREATE TABLE marca (
         id   INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -259,4 +259,21 @@
     descricao_risco TEXT,
     data_consulta TIMESTAMPTZ NOT NULL DEFAULT now(),
     CONSTRAINT chk_historico_match_par CHECK (id_produto_a < id_produto_b)
-    )
+    );
+
+    CREATE TABLE IF NOT EXISTS sessao_acesso (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_usuario UUID NOT NULL REFERENCES usuario(id),
+    ocorreu_em   TIMESTAMPTZ NOT NULL DEFAULT now()
+    );
+
+
+    CREATE TABLE IF NOT EXISTS log_auditoria (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    tabela_afetada VARCHAR(100) NOT NULL,
+    operacao VARCHAR(10) NOT NULL CHECK (operacao IN ('INSERT','UPDATE','DELETE')),
+    dado_anterior JSONB,
+    dado_novo JSONB,
+    usuario_db VARCHAR(100) NOT NULL,
+    alterado_em TIMESTAMPTZ NOT NULL DEFAULT now()
+);
