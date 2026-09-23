@@ -3,7 +3,6 @@ CREATE TABLE IF NOT EXISTS stg_historico_recomendacao (
     id_batch UUID NOT NULL,
     id_produto_raw TEXT,
     id_usuario_raw TEXT,
-    id_superficie_raw TEXT,
     resultado_raw TEXT,
     dosagem_sugerida_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
