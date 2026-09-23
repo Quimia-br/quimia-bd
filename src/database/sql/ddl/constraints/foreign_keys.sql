@@ -115,18 +115,6 @@ ADD CONSTRAINT fk_empresa_produto_produto
 FOREIGN KEY (id_produto) REFERENCES produto(id)
 ON DELETE CASCADE;
 
-ALTER TABLE produto_superficie DROP CONSTRAINT IF EXISTS fk_produto_superficie_produto;
-ALTER TABLE produto_superficie
-ADD CONSTRAINT fk_produto_superficie_produto
-FOREIGN KEY (id_produto) REFERENCES produto(id)
-ON DELETE CASCADE;
-
-ALTER TABLE produto_superficie DROP CONSTRAINT IF EXISTS fk_produto_superficie_superficie;
-ALTER TABLE produto_superficie
-ADD CONSTRAINT fk_produto_superficie_superficie
-FOREIGN KEY (id_superficie) REFERENCES superficie(id)
-ON DELETE CASCADE;
-
 
 ALTER TABLE localizacao_usuario DROP CONSTRAINT IF EXISTS fk_localizacao_usuario;
 ALTER TABLE localizacao_usuario
@@ -146,69 +134,4 @@ ADD CONSTRAINT fk_estante_produto_produto
 FOREIGN KEY (id_produto) REFERENCES produto(id)
 ON DELETE CASCADE;
 
-ALTER TABLE estante_produto DROP CONSTRAINT IF EXISTS fk_estante_produto_usuario;
-ALTER TABLE estante_produto
-ADD CONSTRAINT fk_estante_produto_usuario
-FOREIGN KEY (id_usuario) REFERENCES usuario(id)
-ON DELETE CASCADE;
-
-ALTER TABLE estante_produto DROP CONSTRAINT IF EXISTS fk_estante_produto_estante;
-ALTER TABLE estante_produto
-ADD CONSTRAINT fk_estante_produto_estante
-FOREIGN KEY (id_estante) REFERENCES estante(id)
-ON DELETE CASCADE;
-
-ALTER TABLE historico_recomendacao DROP CONSTRAINT IF EXISTS fk_hist_recomendacao_produto;
-ALTER TABLE historico_recomendacao
-ADD CONSTRAINT fk_hist_recomendacao_produto
-FOREIGN KEY (id_produto) REFERENCES produto(id)
-ON DELETE CASCADE;
-
-ALTER TABLE historico_recomendacao DROP CONSTRAINT IF EXISTS fk_hist_recomendacao_usuario;
-ALTER TABLE historico_recomendacao
-ADD CONSTRAINT fk_hist_recomendacao_usuario
-FOREIGN KEY (id_usuario) REFERENCES usuario(id)
-ON DELETE CASCADE;
-
-ALTER TABLE historico_recomendacao DROP CONSTRAINT IF EXISTS fk_hist_recomendacao_superficie;
-ALTER TABLE historico_recomendacao
-ADD CONSTRAINT fk_hist_recomendacao_superficie
-FOREIGN KEY (id_superficie) REFERENCES superficie(id)
-ON DELETE SET NULL;
-
-ALTER TABLE historico_match DROP CONSTRAINT IF EXISTS fk_hist_match_usuario;
-ALTER TABLE historico_match
-ADD CONSTRAINT fk_hist_match_usuario
-FOREIGN KEY (id_usuario) REFERENCES usuario(id)
-ON DELETE CASCADE;
-
-ALTER TABLE historico_match
-DROP CONSTRAINT IF EXISTS fk_hist_match_produto_a;
-ALTER TABLE historico_match
-ADD CONSTRAINT fk_hist_match_produto_a
-FOREIGN KEY (id_produto_a)
-REFERENCES produto(id)
-ON DELETE CASCADE;
-
-ALTER TABLE historico_match
-DROP CONSTRAINT IF EXISTS fk_hist_match_produto_b;
-ALTER TABLE historico_match
-ADD CONSTRAINT fk_hist_match_produto_b
-FOREIGN KEY (id_produto_b)
-REFERENCES produto(id)
-ON DELETE CASCADE;
-
-
-ALTER TABLE historico_match
-DROP CONSTRAINT IF EXISTS fk_hist_match_regra;
-ALTER TABLE historico_match
-ADD CONSTRAINT fk_hist_match_regra
-FOREIGN KEY (id_regra)
-REFERENCES incompatibilidade_regra(id)
-ON DELETE SET NULL;
-
-ALTER TABLE ponto_parceiro DROP CONSTRAINT IF EXISTS fk_ponto_parceiro_empresa;
-ALTER TABLE ponto_parceiro
-ADD CONSTRAINT fk_ponto_parceiro_empresa
-FOREIGN KEY (id_empresa) REFERENCES empresa(id)
-ON DELETE CASCADE;
+ALTER TABLE

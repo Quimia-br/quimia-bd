@@ -39,7 +39,6 @@ def main():
         "src/database/sql/data_load/staging/ddl_staging/stg_ponto_parceiro.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_localizacao_usuario.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_marca.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_superficie.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_classe_quimica.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_substancia.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_estante.sql",
@@ -51,17 +50,14 @@ def main():
 
         "src/database/sql/routines/functions/fn_auditoria.sql",
         "src/database/sql/routines/functions/fn_atualizar_ultima_sessao.sql",
-        "src/database/sql/routines/functions/fn_buscar_compatibilidade.sql",
         "src/database/sql/routines/functions/fn_buscar_dados_fds.sql",
         "src/database/sql/routines/functions/fn_buscar_incompatibilidades_existentes.sql",
         "src/database/sql/routines/functions/fn_match.sql",
         "src/database/sql/routines/functions/fn_processar_fds_raw_json.sql",
         "src/database/sql/routines/functions/fn_validar_estante_produto.sql",
         "src/database/sql/routines/functions/fn_trg_processar_fds_raw_json.sql",
-        "src/database/sql/routines/functions/fn_match.sql",
 
         "src/database/sql/routines/procedures/pd_cadastrar_produto_completo.sql",
-        "src/database/sql/routines/procedures/pd_registrar_consulta.sql",
 
         "src/database/sql/routines/triggers/trg_atualizar_ultima_sessao.sql",
         "src/database/sql/routines/triggers/trg_auditoria_fds.sql",
@@ -76,7 +72,6 @@ def main():
     rodar_pipeline("ponto_parceiro", "src/database/sql/data_load/mocks/ponto_parceiro.csv")
     rodar_pipeline("localizacao_usuario", "src/database/sql/data_load/mocks/localizacao_usuario.csv")
     rodar_pipeline("marca", "src/database/sql/data_load/mocks/marca.csv")
-    rodar_pipeline("superficie", "src/database/sql/data_load/mocks/superficie.csv")
     rodar_pipeline("classe_quimica", "src/database/sql/data_load/mocks/classe_quimica.csv")
     rodar_pipeline("substancia", "src/database/sql/data_load/mocks/substancia.csv")
 
@@ -136,27 +131,25 @@ def main():
     )
     rodar_pipeline("produto", csv_produto)
 
-    # ---- historico_recomendacao: depende de produto + usuario + superficie 
+    # ---- historico_recomendacao: depende de produto + usuario ----
     conn = get_connection()
     ids_produto = buscar_ids_hr(conn, "produto")
     ids_usuario_hr = buscar_usuarios(conn)
-    ids_superficie = buscar_ids_hr(conn, "superficie")
     conn.close()
 
     linhas_historico = gerar_historico_recomendacao(
         n=300,
         ids_produto=ids_produto,
         ids_usuario=ids_usuario_hr,
-        ids_superficie=ids_superficie,
     )
     csv_historico = salvar_csv(
         "src/database/sql/data_load/mocks/historico_recomendacao.csv",
         linhas_historico,
-        ["id_produto", "id_usuario", "id_superficie", "resultado", "dosagem_sugerida"],
+        ["id_produto", "id_usuario", "resultado", "dosagem_sugerida"],
     )
     rodar_pipeline("historico_recomendacao", csv_historico)
 
-    # ---- incompatibilidade_regra: depende de substancia + classe_quimica ----
+    # incompatibilidade_regra: depende de substancia + classe_quimica
     conn = get_connection()
     ids_substancia_ir = buscar_ids_ir(conn, "substancia")
     ids_classe_ir = buscar_ids_ir(conn, "classe_quimica")
