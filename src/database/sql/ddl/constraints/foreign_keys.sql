@@ -133,5 +133,3 @@ ALTER TABLE estante_produto
 ADD CONSTRAINT fk_estante_produto_produto
 FOREIGN KEY (id_produto) REFERENCES produto(id)
 ON DELETE CASCADE;
-
-ALTER TABLE
