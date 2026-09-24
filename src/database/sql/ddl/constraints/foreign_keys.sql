@@ -42,6 +42,12 @@ ADD CONSTRAINT fk_fds_composto_substancia
 FOREIGN KEY (id_substancia) REFERENCES substancia(id)
 ON DELETE SET NULL;
 
+ALTER TABLE fds_primeiro_socorro DROP CONSTRAINT IF EXISTS fk_primeiro_socorro_fds;
+ALTER TABLE fds_primeiro_socorro
+ADD CONSTRAINT fk_primeiro_socorro_fds
+FOREIGN KEY (id_fds) REFERENCES fds(id)
+ON DELETE CASCADE;
+
 ALTER TABLE fds_descarte DROP CONSTRAINT IF EXISTS fk_descarte_fds;
 ALTER TABLE fds_descarte
 ADD CONSTRAINT fk_descarte_fds

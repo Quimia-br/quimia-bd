@@ -13,6 +13,7 @@
     DROP TABLE IF EXISTS fds_composto CASCADE;
     DROP TABLE IF EXISTS fds_incompatibilidade CASCADE;
     DROP TABLE IF EXISTS fds_descarte CASCADE;
+    DROP TABLE IF EXISTS fds_primeiro_socorro CASCADE;
     DROP TABLE IF EXISTS fds CASCADE;
     DROP TABLE IF EXISTS substancia CASCADE;
     DROP TABLE IF EXISTS classe_quimica CASCADE;
@@ -106,6 +107,18 @@
         fonte_url        TEXT,
         raw_json         JSONB
     );
+
+    CREATE TABLE fds_primeiro_socorro (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_fds INTEGER NOT NULL,
+    rota_exposicao VARCHAR(20) NOT NULL
+        CHECK (rota_exposicao IN ('inalacao', 'pele', 'olhos', 'ingestao')),
+    descricao TEXT,
+    sintomas TEXT,
+    tratamento_especial TEXT,
+    atencao_medica_imediata  BOOLEAN NOT NULL DEFAULT FALSE
+    );
+
 
     CREATE TABLE fds_composto (
         id                INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -276,4 +289,4 @@
     dado_novo JSONB,
     usuario_db VARCHAR(100) NOT NULL,
     alterado_em TIMESTAMPTZ NOT NULL DEFAULT now()
-);
+    );
