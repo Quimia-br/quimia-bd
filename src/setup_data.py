@@ -64,7 +64,7 @@ def main():
         "src/database/sql/routines/triggers/trg_auditoria_usuario.sql",
         "src/database/sql/routines/triggers/trg_processar_fds_raw_json.sql",
 
-        "src/database/sql/ddl/constraints/foreign_keys.sql"
+        "src/database/sql/ddl/constraints/foreign_keys.sql",
     ])
 
     rodar_pipeline("usuario", "src/database/sql/data_load/mocks/usuario.csv")
@@ -87,8 +87,7 @@ def main():
     )
     rodar_pipeline("estante", csv_estante)
 
-    # ---- substancia_classe_quimica: depende de substancia + classe_quimica,
-    # usa seed curado pra pares quimicamente corretos ----
+
     conn = get_connection()
     ids_substancia_scq = buscar_ids_scq(conn, "substancia")
     ids_classe_scq = buscar_ids_scq(conn, "classe_quimica")
@@ -105,7 +104,6 @@ def main():
     )
     rodar_pipeline("substancia_classe_quimica", csv_scq)
 
-    # ---- substancia_sinonimo: depende de substancia ----
     conn = get_connection()
     substancias = buscar_substancias(conn)
     conn.close()
@@ -118,7 +116,6 @@ def main():
     )
     rodar_pipeline("substancia_sinonimo", csv_sinonimo)
 
-    # ---- produto: depende de marca ----
     conn = get_connection()
     ids_marca = buscar_marcas(conn)
     conn.close()
@@ -131,7 +128,6 @@ def main():
     )
     rodar_pipeline("produto", csv_produto)
 
-    # ---- historico_recomendacao: depende de produto + usuario ----
     conn = get_connection()
     ids_produto = buscar_ids_hr(conn, "produto")
     ids_usuario_hr = buscar_usuarios(conn)
@@ -146,10 +142,10 @@ def main():
         "src/database/sql/data_load/mocks/historico_recomendacao.csv",
         linhas_historico,
         ["id_produto", "id_usuario", "resultado", "dosagem_sugerida"],
+        ["id_produto", "id_usuario", "resultado", "dosagem_sugerida"],
     )
     rodar_pipeline("historico_recomendacao", csv_historico)
 
-    # incompatibilidade_regra: depende de substancia + classe_quimica
     conn = get_connection()
     ids_substancia_ir = buscar_ids_ir(conn, "substancia")
     ids_classe_ir = buscar_ids_ir(conn, "classe_quimica")
@@ -168,6 +164,19 @@ def main():
         ],
     )
     rodar_pipeline("incompatibilidade_regra", csv_incompatibilidade)
+
+    executar_scripts([
+        "src/database/sql/data_mart/dim/dim_tempo.sql",
+        "src/database/sql/data_mart/dim/dim_produto.sql",
+        "src/database/sql/data_mart/dim/dim_usuario.sql",
+        "src/database/sql/data_mart/dim/dim_substancia.sql",
+        "src/database/sql/data_mart/facts/vw_fato_historico_recomendacao.sql",
+        "src/database/sql/data_mart/facts/vw_fato_historico_match.sql",
+        "src/database/sql/data_mart/facts/vw_fato_auditoria.sql",
+        "src/database/sql/data_mart/facts/vw_fato_dau.sql",
+        "src/database/sql/data_mart/facts/vw_fato_cobertura_incompatibilidade.sql",
+        "src/database/sql/data_mart/facts/vw_fato_fato_sessao_acesso.sql",
+    ])
 
 
 if __name__ == "__main__":

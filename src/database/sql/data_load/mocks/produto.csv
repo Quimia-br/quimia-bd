@@ -1,4 +1,206 @@
 nome,id_marca,descricao,tipo_produto,cod_barras
+<<<<<<< HEAD
+Limpa Vidros Frescor,87,Officiis ad error soluta mollitia accusantium mollitia quae totam quam expedita provident.,desinfetante,8502202747988
+Desinfetante Concentrado,84,,desengraxante,9673557163699
+Removedor Tradicional,91,Molestiae eligendi incidunt alias accusantium exercitationem atque dignissimos autem.,,6979070735812
+Amaciante Ultra,23,,,3645955286689
+Alvejante Gel,71,,premium,5984675230168
+Desengraxante Lavanda,26,Pariatur ab ab sunt vel recusandae culpa.,desincrustante,1621567418436
+Sabão Líquido Lavanda,12,Similique asperiores enim iure dicta pariatur facilis alias cum asperiores nemo.,outro,3155467917068
+Limpador Profissional,10,Similique excepturi dolores maxime eius ratione.,premium,3802009142098
+Água Sanitária Gel,8,Error atque vero repellat natus iusto accusamus quisquam quam consequatur aut.,aromatizante,1014613419509
+Alvejante Spray,37,Hic molestias tempore voluptates iure deleniti dolorem ducimus expedita repudiandae.,desinfetante,9633938976911
+Removedor Gel,83,Occaecati aut quaerat cupiditate laboriosam culpa aliquid ducimus enim doloremque sed incidunt eligendi.,alvejante,2663149645556
+Limpador Max,4,Molestias non sit doloremque nam ea non maxime itaque temporibus sequi.,alvejante,4982125915680
+Limpador Tradicional,81,Dolores officiis nemo cupiditate magni ipsam a repellendus tenetur debitis asperiores explicabo.,aromatizante,3818374575560
+Amaciante Lavanda,21,Dicta itaque deserunt beatae molestiae provident.,desincrustante,9227831349912
+Sabão Líquido Gel,,,limpeza_geral,0992956454559
+Detergente Tradicional,32,,,4667149175943
+Limpa Vidros Spray,42,,alvejante,5715622327798
+,12,Recusandae non facere praesentium neque quas tempore exercitationem iure id minima debitis.,,7769548622817
+Limpador Lavanda,64,Deserunt pariatur voluptatibus corporis rerum nesciunt dolor.,limpeza_geral,8781515431269
+Sabão Líquido Concentrado,52,Voluptatem aspernatur natus laboriosam molestias hic perferendis hic perferendis amet itaque vero.,alvejante,1627112776204
+Removedor Max,71,Aperiam incidunt placeat voluptatem ea dolor nesciunt cumque quae fuga placeat placeat animi.,,5913142782695
+Desengraxante Max,47,Ducimus vero odio maiores eius dolore possimus doloremque rem.,limpeza_geral,2663149645556
+Água Sanitária Gel,20,Eaque soluta in aliquam doloribus doloremque.,desinfetante,8182106181936
+Água Sanitária Profissional,76,Officiis occaecati corrupti magni minus error quod repudiandae officia facere.,desengraxante,0995429773133
+Limpador Concentrado,54,Aliquid a earum eligendi nesciunt eius temporibus quos voluptatum suscipit numquam.,aromatizante,3749767778988
+Multiuso Profissional,7,Rem libero delectus tempora sed magnam ratione quo odit.,outro,8283051668739
+,74,Inventore eos vitae tenetur eaque minus deserunt ratione modi quisquam consectetur at eos.,desincrustante,3409330910626
+Amaciante Concentrado,65,,alvejante,3566898895601
+,41,Voluptatum ratione culpa recusandae voluptatem saepe voluptatum.,alvejante,7308690339183
+Alvejante Max,83,Officia quam maxime architecto eveniet labore reprehenderit pariatur.,,0553867657103
+,marca-x,,aromatizante,6019599256020
+Removedor Profissional,36,Delectus doloremque cupiditate exercitationem maiores tempore commodi maxime dolorem fugiat delectus ad.,,1323025526577
+Desinfetante Frescor,38,,aromatizante,5520363768409
+Multiuso Ultra,72,Dicta pariatur nostrum eveniet molestiae ipsum culpa maiores consequatur pariatur quos maxime.,desinfetante,0992956454559
+Amaciante Ultra,53,Incidunt beatae voluptatibus nobis porro accusantium aspernatur ipsum ad at porro.,alvejante,6010265903156
+Desengraxante Tradicional,61,Sequi voluptatibus quam sunt temporibus libero iusto magni quos accusamus quae.,outro,5463408699132
+Multiuso Cítrico,5,,limpeza_geral,7289720652246
+Detergente Tradicional,38,Dolorum quia fugit tenetur aspernatur facere earum nobis incidunt suscipit ipsum sed.,desincrustante,1847846319052
+Multiuso Profissional,64,Rerum nobis illum amet debitis fugit odit omnis possimus officia occaecati autem impedit.,limpeza_geral,8227275282272
+Limpa Vidros Tradicional,92,Molestias voluptatem quo eius ratione reiciendis nulla repudiandae excepturi consequuntur est.,desinfetante,0051632464784
+Desinfetante Cítrico,55,Qui reprehenderit mollitia magni sapiente animi exercitationem est accusantium quibusdam.,desinfetante,8578089200809
+Alvejante Frescor,50,Officia suscipit illo ullam nostrum sequi necessitatibus vero fugit iusto earum sit nihil.,limpeza_geral,3235960308362
+Alvejante Gel,86,Ut laborum blanditiis quod aliquam iusto tenetur.,aromatizante,4223470960735
+Desengraxante Spray,38,,desengraxante,3356529602162
+Água Sanitária Spray,71,,alvejante,
+Removedor Ultra,91,Quae vel vel perspiciatis ipsum facere repudiandae odio veniam ducimus aperiam.,alvejante,8880339759761
+Limpador Spray,67,,alvejante,
+Detergente Profissional,54,In voluptates dolor aut cum consequuntur repudiandae.,aromatizante,5715622327798
+Sabão Líquido Frescor,75,,limpeza_geral,
+Sabão Líquido Gel,marca-x,,aromatizante,6227128258234
+Sabão Líquido Cítrico,,Possimus expedita suscipit ullam fuga voluptatem vitae possimus rem.,,1163293831344
+Água Sanitária Cítrico,915549,Distinctio assumenda quis corporis sit molestiae maiores adipisci.,desinfetante,5676440710912
+Água Sanitária Cítrico,,Fugiat facere doloremque accusantium placeat magnam perferendis consequatur necessitatibus odio mollitia at.,desinfetante,2674213037948
+Limpador Cítrico,15,Quidem assumenda ipsa consequatur eligendi culpa mollitia maiores tempora veritatis totam.,,0119020744655
+Removedor Concentrado,77,Natus cumque fugiat quidem officia sint commodi rem minima.,desengraxante,1950697344170
+Alvejante Spray,907398,,desincrustante,5961417249312
+Multiuso Profissional,31,Neque eligendi veniam praesentium facilis quam totam.,limpeza_geral,6464314031855
+Sabão Líquido Profissional,23,Magni nemo sapiente fugiat earum distinctio minima.,,7705823536073
+Sabão Líquido Gel,41,Corrupti possimus error explicabo voluptatem excepturi provident tempore vitae modi explicabo illo.,alvejante,6835346578494
+Amaciante Concentrado,91,Soluta quam vel labore molestias reprehenderit.,,3117421453852
+Desinfetante Lavanda,27,,aromatizante,
+Desinfetante Spray,78,,aromatizante,1525368761459
+Detergente Spray,943642,,,7261451361260
+Desengraxante Cítrico,32,,outro,1590407258023
+Água Sanitária Lavanda,40,Laudantium numquam autem atque sit in cupiditate non quibusdam impedit non.,aromatizante,3099316123616
+Detergente Max,948589,,limpeza_geral,9000524382447
+Desengraxante Frescor,54,Facilis reprehenderit natus similique aspernatur eveniet sapiente.,desinfetante,6510047498516
+Amaciante Lavanda,33,Nihil neque esse similique ullam veniam error nulla dignissimos dignissimos doloremque.,desincrustante,0237568097153
+,70,,outro,3641849179365
+Limpador Spray,1,Illo hic atque velit occaecati est nam voluptas odio aut maxime.,desinfetante,1807840784263
+Amaciante Lavanda,86,Pariatur quibusdam fugit at vitae aperiam aliquid numquam quam.,desengraxante,1847846319052
+Limpador Cítrico,65,,multiuso,3963429140108
+Limpa Vidros Tradicional,80,,desengraxante,3266608029769
+Desinfetante Concentrado,39,Dicta laudantium animi hic asperiores iusto.,alvejante,9107109741894
+Sabão Líquido Frescor,11,Quasi architecto esse blanditiis quasi mollitia ex error deleniti suscipit rem eveniet praesentium.,multiuso,1199909242761
+Amaciante Tradicional,89,Ullam repudiandae optio accusantium inventore cum voluptas.,desincrustante,0626153830518
+Desengraxante Max,41,Incidunt harum dolorum ipsam natus asperiores ea illum distinctio eaque.,outro,
+Sabão Líquido Profissional,31,Quas pariatur dolorem quos voluptas illum alias doloribus eos aspernatur autem.,desinfetante,2169955225260
+Sabão Líquido Spray,45,,outro,0728655985526
+Limpador Tradicional,,,desinfetante,6832343699603
+Sabão Líquido Ultra,88,,desinfetante,
+Multiuso Cítrico,92,Tempore ad vitae iusto adipisci velit iusto nostrum minima numquam reiciendis harum.,limpeza_geral,0287426200058
+Multiuso Cítrico,14,Quos laboriosam totam occaecati nobis quas commodi hic a eligendi illum quibusdam deserunt maxime.,desengraxante,
+Limpa Vidros Cítrico,77,Fuga accusamus quisquam eos unde quaerat sit perferendis voluptatibus.,outro,0743535973929
+Multiuso Cítrico,931816,Distinctio necessitatibus doloribus sunt repellat architecto excepturi velit a dignissimos odit.,desincrustante,
+Desinfetante Frescor,54,Deleniti asperiores nesciunt voluptatem hic ex voluptatibus iure.,aromatizante,9634305536462
+Sabão Líquido Frescor,18,,outro,4064159289118
+,84,Illum dolorum odit corrupti dolorum distinctio adipisci.,aromatizante,6531658360092
+,,Consectetur quaerat veritatis dignissimos ex repellendus.,desengraxante,4479997606544
+Sabão Líquido Frescor,36,Nam nesciunt eos reiciendis cum quam facere ullam dolores consequatur id repellat velit.,alvejante,5752392267428
+,4,Ex eius iure impedit id fugit quaerat tenetur magnam delectus facere at.,desengraxante,7268573665375
+Multiuso Tradicional,53,Quae quia odit totam delectus culpa vel ut deleniti aliquid.,aromatizante,3989053197875
+Sabão Líquido Profissional,77,Animi adipisci recusandae nam non tempore fuga.,,3381705155392
+Desinfetante Ultra,69,,desincrustante,1097393962908
+Sabão Líquido Frescor,83,,limpeza_geral,1579435832689
+Removedor Spray,72,Iure accusamus culpa aut dicta expedita provident porro.,outro,7947627164759
+Alvejante Cítrico,4,,outro,0372741103938
+Água Sanitária Lavanda,59,Harum earum eaque est eveniet voluptate possimus soluta alias.,aromatizante,9411819692217
+Limpa Vidros Ultra,91,Illo accusamus porro consequuntur neque eaque nobis pariatur natus provident quis totam porro.,aromatizante,9970683834852
+Amaciante Spray,72,,desinfetante,4323254706815
+Amaciante Max,79,Id autem doloribus atque earum odio distinctio odit voluptatem quasi ullam tempore exercitationem.,desinfetante,2048160169203
+Água Sanitária Gel,9,Tempore labore dignissimos ipsa sint architecto optio unde voluptates iusto mollitia velit error.,limpeza_geral,6430375004817
+Sabão Líquido Max,82,Veritatis vero natus suscipit numquam repellendus qui rem quos.,desincrustante,5477617110890
+Removedor Max,91,Eos molestias distinctio repellat porro nulla.,limpeza_geral,0307512101417
+Sabão Líquido Max,19,Consequatur voluptatibus voluptatibus minus iure veritatis cum impedit tempore nemo unde reiciendis.,desinfetante,9861115472738
+Amaciante Tradicional,922706,Eveniet tempore reiciendis hic veritatis sit asperiores optio ipsam quisquam fuga quam.,desengraxante,2012974909812
+Desengraxante Cítrico,marca-x,,desengraxante,6400019756617
+Desinfetante Max,57,Quam ducimus commodi nesciunt quas consectetur soluta.,desincrustante,0553867657103
+Amaciante Profissional,59,Vitae totam laboriosam ab atque dolorum minima consequatur.,desincrustante,1651921518991
+Amaciante Profissional,6,Ut suscipit quidem impedit aperiam consequatur consequuntur repellat doloremque iste quae incidunt.,aromatizante,4752377824579
+Limpa Vidros Ultra,5,Vitae odio nobis nisi labore expedita tempore accusamus deserunt quisquam explicabo facilis natus.,,1525471080614
+Removedor Cítrico,76,Unde officiis soluta quaerat ex consequatur architecto tempora ipsa laboriosam esse.,desinfetante,3181740969349
+Água Sanitária Gel,69,Provident illo debitis magnam voluptate ab cupiditate voluptatibus modi laboriosam rerum saepe temporibus.,desincrustante,6273054611100
+Multiuso Cítrico,87,,,7020299807671
+Limpa Vidros Spray,932725,,desengraxante,4031570244149
+Limpador Ultra,49,Aliquam dolorem reprehenderit dolorem possimus necessitatibus occaecati facere provident atque nobis.,aromatizante,3534766666004
+Detergente Ultra,marca-x,,aromatizante,3501476258904
+Sabão Líquido Spray,51,Odit qui perferendis consequuntur fugiat numquam repellendus dolor alias itaque.,desincrustante,7519757612228
+Limpador Concentrado,63,Suscipit molestiae dolore assumenda tempora deserunt corporis quo excepturi repellat error molestiae impedit.,outro,0992394487560
+Sabão Líquido Spray,957840,,concentrado_xl,0828306904569
+Desinfetante Frescor,84,In natus earum itaque molestiae accusantium recusandae iste nesciunt.,limpeza_geral,6999221399731
+Desinfetante Ultra,30,Sapiente beatae quaerat et odit explicabo nemo sit deserunt cum facilis asperiores deleniti.,desinfetante,9389553506841
+Desinfetante Cítrico,2,Nihil earum error exercitationem dolor dicta magnam adipisci.,desinfetante,8421904770967
+Alvejante Gel,41,Vitae expedita molestias officiis ab optio saepe voluptas qui odit.,outro,2055438083413
+Removedor Gel,68,Eveniet veritatis nisi voluptatem similique vitae odio doloribus nam labore nisi.,aromatizante,8367759167067
+Desinfetante Ultra,57,Voluptatibus nam necessitatibus tempora ducimus labore itaque temporibus molestiae nobis.,aromatizante,5137039953177
+Limpador Ultra,18,Explicabo nemo commodi eum a amet et veniam nesciunt similique omnis error quasi.,aromatizante,5553443586976
+Desengraxante Profissional,85,Maiores ullam consequuntur dolore quae accusamus alias eius minima.,desengraxante,
+Desinfetante Spray,931370,Quas a reiciendis pariatur minima aperiam voluptatum.,alvejante,
+Removedor Cítrico,41,Quibusdam earum aperiam ut iste dolore.,outro,4000601556544
+Alvejante Spray,76,Et tempora eaque veritatis quae eligendi laborum ullam suscipit quia culpa reprehenderit.,outro,5489430544233
+Sabão Líquido Ultra,54,Nam earum at ea repudiandae autem tempore tempore totam natus laboriosam nisi vitae veniam.,desinfetante,5331587724160
+,27,Similique maiores dolores maxime molestias blanditiis exercitationem.,alvejante,8006261122347
+Sabão Líquido Spray,9,Eaque aut ipsum occaecati fugiat perspiciatis nemo laudantium temporibus ducimus.,desengraxante,6077271691576
+Multiuso Ultra,86,Sint magni soluta qui nisi vitae autem et voluptates tenetur eveniet rerum.,limpeza_geral,3980908042609
+Multiuso Tradicional,34,,limpeza_geral,5443203128778
+Removedor Ultra,34,Laudantium a facere aliquam cum rem magnam voluptate adipisci similique harum accusamus porro.,limpeza_geral,3760273303112
+Removedor Ultra,33,Fugiat cum debitis dolorem voluptates tempora veritatis nisi dignissimos perspiciatis consectetur vitae aliquam.,limpeza_geral,
+Multiuso Gel,47,,,0590021032123
+Desinfetante Max,941934,Nesciunt cupiditate culpa architecto quaerat earum dignissimos repudiandae error neque.,limpeza_geral,7501725400500
+,,Ducimus necessitatibus neque tempora laboriosam perferendis perspiciatis id officia fugit.,desincrustante,8656729881585
+Desengraxante Tradicional,59,Vel laudantium iure vitae repellendus voluptatem similique consequuntur minima eligendi non maxime.,alvejante,3303290565844
+,,,alvejante,6450833814697
+Água Sanitária Frescor,53,Enim id reiciendis laborum nesciunt voluptate numquam optio ab deleniti explicabo earum sit.,limpeza_geral,
+Água Sanitária Spray,40,Unde consequatur mollitia totam cum accusantium exercitationem quasi perferendis dolorem sed exercitationem itaque.,,3196067439499
+Água Sanitária Cítrico,6,,aromatizante,
+Removedor Concentrado,51,Veritatis exercitationem repudiandae libero deserunt labore iure fugit.,,7454087256202
+Limpa Vidros Frescor,51,Culpa odit eveniet iste nihil nobis nemo nobis optio.,desinfetante,4480612817061
+Amaciante Frescor,14,Animi delectus accusantium culpa aliquid sed consectetur.,outro,3913545076287
+Limpador Tradicional,16,,limpeza_geral,4305119408652
+Limpa Vidros Cítrico,92,Repellendus praesentium reprehenderit tempore odit reprehenderit illum iure veritatis assumenda iure neque.,desincrustante,2930601260603
+Água Sanitária Profissional,marca-x,Odio dolore ut voluptatum soluta excepturi quas optio id quisquam.,outro,5043601190850
+Sabão Líquido Frescor,29,Quos et reiciendis similique sint mollitia.,,3114239833203
+Desinfetante Spray,909828,,desinfetante,5678497679549
+Amaciante Concentrado,16,Quisquam ea repellat incidunt officiis ab necessitatibus a eaque modi tempora veniam.,outro,3980247202719
+Desengraxante Gel,55,Minima ipsum asperiores eveniet laboriosam odio eos maiores molestiae beatae perspiciatis.,desinfetante,9000524382447
+Desinfetante Tradicional,71,Cum voluptates voluptatibus tempora placeat distinctio.,aromatizante,5711703225953
+Sabão Líquido Frescor,70,Dolorum quam in possimus at nesciunt quae ipsa.,desincrustante,4422986241455
+Removedor Spray,24,Maiores molestiae enim beatae modi delectus alias ab iste odio.,desincrustante,5137039953177
+,30,Impedit explicabo magni laudantium aliquam autem quibusdam.,desincrustante,8198719802816
+Sabão Líquido Frescor,29,,,7480769772791
+Removedor Concentrado,90,,alvejante,0002865336393
+Multiuso Lavanda,64,Officiis fuga earum nostrum odit esse.,alvejante,0604734919975
+Multiuso Frescor,79,,concentrado_xl,0051632464784
+Limpa Vidros Ultra,914538,Optio beatae occaecati officia officiis quod assumenda dolorem neque tempora voluptas.,,3941752368567
+,18,,aromatizante,8328799128043
+Removedor Frescor,72,Illo veniam quas delectus facere odio suscipit eveniet.,desinfetante,9020812564171
+Removedor Cítrico,23,,alvejante,0002865336393
+Removedor Ultra,79,,aromatizante,3381705155392
+Limpador Frescor,12,Architecto quia iusto et non veniam ab odio incidunt.,desinfetante,4474226311466
+Amaciante Cítrico,1,,,3597510912741
+Removedor Spray,62,Nisi placeat eos ea distinctio quos doloremque.,outro,1621567418436
+Multiuso Cítrico,marca-x,Aut voluptatem eveniet blanditiis rem delectus maxime quam nihil eum laborum nihil libero.,limpeza_geral,1009495828914
+Limpador Gel,992340,Expedita inventore quaerat ea molestiae rerum id quam ab magni ducimus.,limpeza_geral,0584837096196
+Água Sanitária Tradicional,90,Cum at provident voluptate pariatur non minima molestias sed asperiores quas soluta.,limpeza_geral,5043601190850
+Sabão Líquido Ultra,7,Repellendus laboriosam tempore mollitia libero occaecati pariatur ducimus impedit illum id similique.,alvejante,
+Desinfetante Lavanda,82,,desengraxante,7718949560501
+Multiuso Frescor,83,,desengraxante,7519757612228
+Multiuso Ultra,35,Consequatur earum consectetur quo repellendus ullam sequi accusantium qui consequatur expedita.,alvejante,7696621766475
+Água Sanitária Cítrico,8,,desengraxante,2684249178423
+Detergente Profissional,51,Laudantium exercitationem exercitationem repudiandae autem eligendi.,alvejante,8870744595214
+Multiuso Spray,58,,desengraxante,3501476258904
+Alvejante Frescor,19,,multiuso,5818582261611
+Detergente Max,36,Asperiores libero quia facilis quasi similique.,limpeza_geral,9729417097045
+Removedor Ultra,13,,concentrado_xl,6179696864099
+Detergente Gel,74,Culpa iure dolorem fugiat delectus adipisci.,alvejante,7938273314506
+Detergente Lavanda,43,,multiuso,2108446341669
+Limpador Ultra,63,,desincrustante,9875060822425
+Removedor Ultra,35,Earum voluptates provident dolore in sed fuga at.,outro,0967513054626
+Água Sanitária Gel,48,Earum magnam praesentium quos cupiditate ipsum unde porro voluptatibus eveniet pariatur ea.,desengraxante,5635196646234
+Desengraxante Concentrado,903794,Cumque sint repellat blanditiis magni quae laborum optio libero quidem corporis.,desincrustante,0253510770097
+Desinfetante Concentrado,65,Nobis earum minus maiores aliquid aliquid mollitia ea quis.,desengraxante,7970866986967
+Alvejante Ultra,45,Suscipit animi nulla pariatur tempora dolorum ea dolor dolor sint incidunt repellat.,desinfetante,9987878623924
+Limpador Spray,29,Porro reiciendis cupiditate maxime neque impedit ea laudantium est.,limpeza_geral,9397377134560
+Limpador Gel,61,Tenetur sunt tempora assumenda corrupti sed dolore corrupti quaerat sapiente.,desincrustante,5357210352944
+Sabão Líquido Cítrico,91,,desinfetante,2614279186013
+Detergente Profissional,51,,,9879023327460
+Desinfetante Lavanda,37,Occaecati fugiat quibusdam beatae iste consequuntur ex nesciunt velit eaque occaecati iste fuga.,,4866642354507
+,92,Et sequi aliquam porro ullam nihil quo totam soluta possimus.,alvejante,6431862329833
+Limpa Vidros Gel,77,,desincrustante,3678170666998
+=======
 Limpa Vidros Frescor,87,Eaque ratione maiores dolor quia dolorum corrupti praesentium molestiae.,desinfetante,5137980013807
 Desinfetante Concentrado,84,,desengraxante,4609242067701
 Removedor Tradicional,91,Consequatur ut dolores facere aspernatur sequi quod.,,6548501977055
@@ -199,3 +401,4 @@ Detergente Profissional,51,,,3011275617517
 Desinfetante Lavanda,37,Distinctio magnam nulla veniam quae quod non.,,3267375243020
 ,92,Architecto suscipit accusamus voluptates facere cupiditate ducimus maxime suscipit a tempora.,alvejante,5310443100843
 Limpa Vidros Gel,77,,desincrustante,1105365668274
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
