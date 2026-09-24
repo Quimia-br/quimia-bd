@@ -1,404 +1,201 @@
 id_usuario,nome,ambiente
-<<<<<<< HEAD
-35875a0e-5196-4579-a417-bc2b769d7eb3,Mathias's stuff,Cozinha
-b7e46e60-4f83-4647-abdb-4505a5eae837,limpeza geral,Banheiro
-783805ea-5d19-4da1-a080-c3abdbe591e7,Dom's stuff,Cozinha
-f0d923a2-d01b-4d85-9801-2493e1d79d11,top secret,Cozinha
-29305b55-6825-4782-8b8e-faa4075c1e87,Cauã's stuff,Quintal
-7983541e-0d96-4f5c-9867-bc1b3a0414af,caixa de tralha,Garagem
-261aade5-aada-44d6-8a56-35bd4a9d7cf6,top secret,Banheiro
-d8391180-aa31-493d-ace2-dbcff304d473,Itaque dolores vitae,Quarto
-1b34ac9d-9bf1-427b-b06d-1ee14ec96ccb,não sei o nome disso,Quintal
-bfc54a1b-9915-4b5c-bbeb-13192a79ca13,caixa de tralha,Cozinha
-c7dbbafb-2de4-4d6c-a584-a8474f928c55,Quos architecto dicta,Banheiro
-061b377c-e9cb-4f48-a232-ee514340ea7a,Breno's stuff,Garagem
-0a903ee8-b738-4110-bd4f-b9d6ca618397,não mexer,Banheiro
-b96308d2-a32d-4efd-b845-8618398bcd2e,limpeza geral,Quarto
-c7d69ef3-b949-446a-a37d-ddcc9fe3950f,misturas mortais,Cozinha
-57ffba67-3677-49fb-a26b-9d6e1fd2e599,não sei o nome disso,Área de serviço
-9a7b053c-e6ec-47a2-ae09-2ead0e230949,aquele canto,Sala
-89107e3a-982c-4ef0-be93-e1789117b988,top secret,Despensa
-ec674a85-c585-42de-8d34-6f0ee1cbd4d4,Carolina's stuff,Sala
-79c23f2d-da29-4d19-87ab-e8a4a1c1e423,Armário at,Banheiro
-c2468502-4e7a-4886-a26f-25b2dc88965c,Eos ullam nesciunt,Sala
-dc86ec04-eb6a-49dc-9439-58f375091058,limpeza geral,Quarto
-7126530d-6f45-4597-94e5-28e07c314310,negócio ali,Banheiro
-6d6d23d1-4229-433d-a053-8fb0eb5a7169,aquele canto,Sala
-12e3df0c-fdb6-493d-ad09-c530c274ff12,não mexer,Banheiro
-83c4ee5a-85ed-48e8-aded-4e6ed2ac5527,limpeza geral,Garagem
-6a175751-09d5-4f92-89f8-5989dcf2a79e,bagunça do fundo,Quarto
-57ffba67-3677-49fb-a26b-9d6e1fd2e599,,Área de serviço
-af5e446f-7790-480b-8f59-a6974df0cf15,,Quarto
-5aa71dd4-d639-4943-a530-21bcc1761b1f,limpeza geral,Lavanderia
-d001bdb8-0a0f-4f4e-85f8-bf8ad4a68716,,Sala
-67c51021-9194-4459-b379-7c778bc640f0,kit sobrevivência,Área de serviço
-5aa95bc5-70fe-4430-842a-d5d9308c7de8,Olivia's stuff,Quarto
-001befb6-b47a-4e40-b3b5-6edb503c6dc5,limpeza geral,Cozinha
-c7d69ef3-b949-446a-a37d-ddcc9fe3950f,Prateleira nesciunt,Cozinha
-a150e4f7-4abd-4034-998b-8237a44788b9,Henrique's stuff,Área de serviço
-437cc573-3fb6-47fd-abd1-7e4e27bfba1d,Amet ad,Quarto
-0cca4db5-ad24-4a79-84a8-6e5a6e6f0b07,Ex enim atque,Banheiro
-5418954f-69f7-47db-a067-8ef287434dba,Estante fugit,Cozinha
-7581754a-3391-4948-8c0f-3a18bd466dd1,Ana Cecília's stuff,Garagem
-4453e88d-8e16-4941-a63e-339f886f6953,Clarice's stuff,Despensa
-9d54ae62-fe53-480c-bbf6-f283c7eaa0df,limpeza geral,Área de serviço
-9118b882-76bd-480b-93eb-eea15354cb40,,Despensa
-f7aadf11-07b9-4a0e-9593-8925ad7a40b4,Culpa,Área de serviço
-35285e0b-fb61-4dcf-8782-52d627a16859,Gaveta quasi,Sala
-1a20a261-551b-41a9-8bf0-b6616f35004c,não mexer,Quarto
-42598f6f-e19a-4a1e-8ba1-8bc0bedbae83,Estante architecto,Lavanderia
-345d66c0-9686-47fe-bc60-405063a14e4f,não mexer,Cozinha
-1bab3df9-07b4-4750-b20c-54e9dd2d939e,Estante ut,Despensa
-26bda5ad-0a5e-4cce-9b06-5c24a88fdd34,limpeza geral,Área de serviço
-e5e78cd0-28ec-47b1-81a2-f280c51fc0de,não mexer,Cozinha
-ec10c436-ec50-4ebb-9532-79511d4a2754,não sei o nome disso,Quintal
-760bf060-0f42-4c2a-8b1a-e0357d0ad5e9,Ipsam perferendis est,Lavanderia
-6ac2e70a-1126-4e57-8d31-390529139312,limpeza geral,Banheiro
-60a0826f-b272-4e24-b9f4-ed8f4ebe6e1e,caixa de tralha,Área de serviço
-3a896063-450f-4859-aca5-5f12663fd6e8,Incidunt dignissimos vero dolor,Garagem
-9a35de3a-ac22-40ac-a9c2-2a246b22445b,,Quintal
-bd4b0f0a-7725-4e52-a5ac-88663b9cf314,top secret,Despensa
+1e790732-2c4e-483a-b6a2-311c43f7ed38,Bárbara's stuff,Cozinha
+32d4bfc7-c75f-4106-91ce-c491bc8d88f8,limpeza geral,Banheiro
+25813385-732b-40b4-aaf9-4261c582d7c7,Ravy's stuff,Cozinha
+46df1591-9fbb-4e16-950f-6a9829b93eb4,top secret,Cozinha
+a5ddf93b-421d-4f9f-a264-713153ba7b67,Maria Luiza's stuff,Quintal
+835f995b-df10-4bf9-a204-ff9a204bb7c7,caixa de tralha,Garagem
+ea5ea388-b347-4fba-b25f-54d596e1bcf7,top secret,Banheiro
+6675db27-86c9-486d-b137-6269cdea3f45,Vel dolores,Quarto
+a8372f1e-0ee3-4d3a-ad85-4d39badf8a84,não sei o nome disso,Quintal
+61277694-cd0d-44eb-b043-881d68b8585a,caixa de tralha,Cozinha
+5304a466-7708-44c6-9758-39ac46dec392,Distinctio labore,Banheiro
+97d775d5-13e5-4e35-b311-5cfa140f8b87,Thiago's stuff,Garagem
+d18bbfda-b6aa-4106-b604-11fe8cf7ef90,não mexer,Banheiro
+d4fd8eeb-b25d-4adc-ae61-93b9680fe309,limpeza geral,Quarto
+ce2e4c21-e3a8-4420-8fe0-5e3353b529e7,misturas mortais,Cozinha
+3342cfd6-6205-4996-888a-723ac9ddc682,não sei o nome disso,Área de serviço
+450f128f-8469-4f97-a1f0-df3a7caca0a0,aquele canto,Sala
+092e0b5a-22bb-4478-846b-cc41f41db09a,top secret,Despensa
+57d9f4b5-8673-4b16-b746-a07cc3d1bca6,Maria's stuff,Sala
+5b2e225c-7736-46d3-8344-199d537dca82,Armário voluptas,Banheiro
+4469d680-7b20-40fb-9195-183d9f1ba6c6,Quaerat eligendi facere,Sala
+0e291726-0d54-4271-8e58-e166e87ba50e,limpeza geral,Quarto
+54c3de8a-9c96-43df-b278-8539a0b084f0,negócio ali,Banheiro
+8101635c-e4ab-4fa1-bea5-8bcc51288408,aquele canto,Sala
+b160996b-fa9d-405f-b392-6a9c7c613136,não mexer,Banheiro
+ac8f1e3e-a7fb-4aec-8e90-85df1d748543,limpeza geral,Garagem
+966ded72-e2fc-4255-8b0e-11e55161f0b2,bagunça do fundo,Quarto
+3342cfd6-6205-4996-888a-723ac9ddc682,,Área de serviço
+b7b10ee8-52a7-4ab9-aa62-2eea71a7933a,,Quarto
+b79210d9-1d98-4d2a-a6be-a76f32f9504e,limpeza geral,Lavanderia
+80a536ae-9171-465a-9880-81ff6efe9cac,,Sala
+f6161208-6328-4807-8373-e7918217d252,kit sobrevivência,Área de serviço
+b9ab6560-f0fe-40fb-b801-2fe25283d49f,Lívia's stuff,Quarto
+7c189810-0b23-4f3c-8d91-3090a97284e5,limpeza geral,Cozinha
+ce2e4c21-e3a8-4420-8fe0-5e3353b529e7,Prateleira vel,Cozinha
+7e3a2bfe-0367-4fda-9e30-cd1aa858b915,Miguel's stuff,Área de serviço
+ec64e876-13ff-4b01-8ef2-fbd6434ab928,Facilis velit alias,Quarto
+b788e827-d1de-4653-8914-fea0c86ba99a,Placeat vel,Banheiro
+4f8de351-8389-40dd-826c-cbeabf94c37e,Estante molestiae,Cozinha
+48e89f6c-e23b-4e6f-b299-aad0003377a7,Ísis's stuff,Garagem
+76b51576-6073-4d95-adc1-b746123051c4,Lucca's stuff,Despensa
+733a4d54-c2a5-4736-a189-7ee274d7f5c7,limpeza geral,Área de serviço
+7b5f6030-8e60-468d-8292-a7a28d1f1e84,,Despensa
+023a27e3-1fff-4cf6-a725-5e295deb29fa,Possimus similique neque dignissimos,Área de serviço
+ffc29bb5-af6a-4930-96ba-0e7a2c0a96da,Gaveta ratione,Sala
+d228a3b1-17a9-42bf-a785-c572a4d9f5c9,não mexer,Quarto
+16597a71-14df-4125-a9bb-5742dfc77bac,Estante quaerat,Lavanderia
+e806ac36-475d-4a10-b02b-70ca74f4a0fd,não mexer,Cozinha
+30abf7a1-ed5f-41b2-b692-3623dbda585a,Estante voluptatum,Despensa
+2d9ddc39-ae77-436b-aa29-f7cb75714a04,limpeza geral,Área de serviço
+0d6aa3a8-644d-4139-89d8-19c2dcbdc48b,não mexer,Cozinha
+0ed221f9-5542-44d6-8ca2-48203f70f576,não sei o nome disso,Quintal
+3a581372-f24a-4a89-be6c-826c9fe3e378,Tenetur nam accusantium,Lavanderia
+6f009e55-32d0-4893-91bb-cb832f55b91a,limpeza geral,Banheiro
+466fc32d-1ecf-4bfa-b3a9-f639074da51c,caixa de tralha,Área de serviço
+759b3572-5da8-4b3d-9c9b-c2a46683a98c,Praesentium quis laboriosam consectetur,Garagem
+5dd6b7a7-f661-4f30-b0dc-119638a236d6,,Quintal
+af88a453-4092-4747-8607-8ebf1d4ead43,top secret,Despensa
 uuid-invalido-123,,Banheiro
-051e0966-8564-4caa-87da-1cdcf69ce560,Vinicius's stuff,Banheiro
-cbd1306a-81e5-40d4-b141-6a551aade980,kit sobrevivência,Área de serviço
-665bad56-28ae-4e34-a923-efd222967a25,tung tung banheiro,Cozinha
-d788a43f-89cb-495e-bf12-9c0c885c19ad,,Lavanderia
-b0697c2b-e612-41a0-a8db-2a35cd4706fc,limpeza geral,Quarto
-3bb38391-50f9-48f1-b90f-17008bc651e1,aquele canto,Lavanderia
-41c36723-f747-45ad-b679-79fcb5f041b1,Prateleira rem,Cozinha
-eee0b406-972d-4652-a583-e6dcb1dcfb8c,top secret,Área de serviço
+ec96f56f-bab3-4679-a208-77d34b2433e3,Olívia's stuff,Banheiro
+c37e652f-d111-4505-b634-a5482ab4da05,kit sobrevivência,Área de serviço
+1d8e7b58-4387-4b18-a366-4a6970d2b3bd,tung tung banheiro,Cozinha
+62268c04-2efb-4032-808f-7210d30c8b61,,Lavanderia
+a374cb9d-acbf-4c02-abe9-455de6b029fe,limpeza geral,Quarto
+93b36938-4b40-4667-8404-ea2f5eaf3170,aquele canto,Lavanderia
+4a00f0ef-dedf-4a24-a14e-6441a4735cb1,Prateleira eos,Cozinha
+02e39991-1acc-4e0d-bc9e-c0fbdc523dc8,top secret,Área de serviço
 ,,Lavanderia
-7581754a-3391-4948-8c0f-3a18bd466dd1,Libero explicabo,Lavanderia
-b9510ff2-f2c5-4b4a-ad60-f0c7d248ee33,,Garagem
-eacc4c1f-9134-4d57-ac6d-1e211baf46f4,Gaveta quidem,Área de serviço
-2325ba31-ae50-41d0-9d0c-61a84da2164f,Nisi veritatis,Quarto
-dbcea6ff-06d5-4c6f-9a0a-45163868bf9e,Alexandre's stuff,Área de serviço
-ac0038cf-b878-4964-a9b2-634114b70b8d,,Quintal
-70bd29be-b021-4c69-8fad-8dbd58491ec0,top secret,Despensa
+48e89f6c-e23b-4e6f-b299-aad0003377a7,In officia placeat sint,Lavanderia
+4a7ac294-5f83-4676-aaaf-395583b49f51,,Garagem
+174a918f-2c88-4939-9816-2d0306453b3f,Gaveta commodi,Área de serviço
+1eaf96e7-c3ce-4992-a4e6-0551e0ccb590,Cum at,Quarto
+000db453-f3ad-498f-8c92-838469042252,Maria Fernanda's stuff,Área de serviço
+eb047702-8cc0-4d2b-8ddd-53bea362046a,,Quintal
+52da0107-e003-49ac-9d5d-4c647648ebe8,top secret,Despensa
 uuid-invalido-123,aquele canto,Banheiro
-199ccd13-b744-4a3d-8acf-9e6c1339ad49,Molestias,Quintal
-ad94b570-716c-45fc-adb2-18658b9c81e4,limpeza geral,Garagem
-fdc90541-0779-4c71-8b0c-bf5b33943932,In animi,Área de serviço
-23a1446f-fa24-4a8e-be8e-7c5465d0ffd9,Augusto's stuff,Despensa
-78ba838d-8a5a-45b2-b32b-b6a8c7fdd0ba,,Banheiro
-eb3c1937-fc52-45e7-a8ad-af690d7d1b36,top secret,Banheiro
-9739247d-bd58-445c-8bd0-5301a716cf62,limpeza geral,Garagem
-e10301ef-3baa-4f4a-b15f-2c92c34637bb,Luiz Otávio's stuff,Sala
-cb542d56-b0ba-44a4-a83d-c78f72f3281e,Prateleira consequuntur,Quintal
-69876e27-2fc5-45ef-bd4a-378c7f2e4543,kit sobrevivência,Sala
-38802ed9-e249-420d-8dc9-d54c5c12e2ff,Marcelo's stuff,Área de serviço
-6f071b25-27dd-4526-9d7e-a5d7fb539bc3,top secret,Quintal
-965dbd37-9122-4887-9881-f303aa280b66,Luiza's stuff,Área de serviço
-d8374692-986f-444d-becf-976cf0a6ce8a,,Cozinha
-c056119a-718e-4179-9612-58e18d5d8f5a,limpeza geral,Banheiro
-d442971c-934d-4282-b7fd-9eb28298e680,Isabelly's stuff,Sala
-9eff39a3-73c2-46c3-8400-f1a31dcbdac5,Gaveta quia,Cozinha
-b9559c23-3e20-42e6-beda-5b87ce57b1ce,Luana's stuff,Despensa
-56630e5e-648c-481a-b875-2cdabcb2fec1,Praesentium ab quaerat,Banheiro
-bb492cdb-5364-4427-84e8-cb081d10c7bb,Voluptas ipsum,Despensa
-329d0d54-e6ae-44b5-aec9-177f23a8ee41,top secret,Despensa
-fbc594a9-7f51-4b3d-aa74-973fd8f9a877,Amanda's stuff,Quarto
-514799c0-4149-4d99-85fb-2b2600f76deb,Nam dolores nam voluptates,Quintal
-85223bdb-34d5-4fac-8bb8-4a876f17d3b2,não sei o nome disso,Quintal
-6a8d1941-7e90-476c-a19d-df5e74503dc0,Sophie's stuff,Garagem
-b6a592ff-03b1-4025-bb4a-bbbc3ccacea7,Sunt consequatur,Lavanderia
-54ea8e41-5adc-437c-828c-34ec47bb1c6f,Natália's stuff,Despensa
-29bf6c8e-7fcd-4e02-bdc4-c8492640ac8e,Gaveta ab,Sala
-822a8554-a6f9-4cc7-af4d-11da4281ba6c,Aut enim nesciunt,Garagem
-7581754a-3391-4948-8c0f-3a18bd466dd1,Ana Clara's stuff,Despensa
-ad94b570-716c-45fc-adb2-18658b9c81e4,Consectetur veniam,Quintal
-75e18ac9-d153-4bf8-8065-682855b4a3b6,Dolore ex neque,Sala
-bfbfe8f6-255f-4b52-a606-d6784cd0f44a,Minus soluta,Despensa
-5e97ec40-2f54-4911-a758-222e63a4f28a,Anthony's stuff,Cozinha
-3e568693-6271-4e21-8303-69e7308969f4,Tempore est,Lavanderia
-764ad651-0d23-4fde-b6c9-df0647cef8ee,Placeat magni a,Quarto
-9aed3895-d968-4139-9a97-abcbcfb5c87e,Alias,Sala
-2b998397-5959-40a1-9a32-91734ec75f80,,Despensa
-9ff13691-d93f-470a-b7aa-1caae2752d3f,,Banheiro
-db0127d3-847f-4c11-b9a3-6efef0045d6f,Armário voluptatibus,Cozinha
-88fd3e21-ffcd-4e17-8146-a1890c48d178,Juliana's stuff,Quarto
-f6dc3bea-dfbb-420c-be5c-4b5cee1a5cf2,não mexer,Quintal
-uuid-invalido-123,Emanuella's stuff,Banheiro
+3296d3ce-2ed1-4678-8f53-70780c82fa3d,Sint tenetur ipsum,Quintal
+dec23460-e239-40b5-ad0e-333f8836a3f4,limpeza geral,Garagem
+426b55ae-dd13-4b93-b9e2-c28ba5721d6a,Sed deserunt provident,Área de serviço
+c352fc51-a727-4be2-8727-2ade8dbe8bf6,Anthony Gabriel's stuff,Despensa
+e3b1df7c-c8d4-4da9-8d4e-7f427274b4ee,,Banheiro
+d73b783c-dc92-4a1e-923a-626188905cf8,top secret,Banheiro
+c142f60e-3d53-49b2-8a3e-b1c159bde8ef,limpeza geral,Garagem
+076c888a-9ad0-4732-a064-a81b0632a82f,Cauã's stuff,Sala
+9397ef3b-d437-4bdc-9e66-012df58320b8,Prateleira commodi,Quintal
+219d5126-46d6-42b7-90d5-9ff3448e6f1d,kit sobrevivência,Sala
+b4ffa6fc-e038-43ee-8aef-6d8b322346bb,Marcos Vinicius's stuff,Área de serviço
+e15f4c21-fd30-46c4-99fd-9598d6f01563,top secret,Quintal
+0fa252a3-ae17-4763-ae40-162f877773b7,Paulo's stuff,Área de serviço
+4a06928f-89ca-427a-815e-ae5cc2b7a079,,Cozinha
+1153f08b-8d95-4c58-bced-84d865abf674,limpeza geral,Banheiro
+6bea9590-3a3e-4b82-ab8d-78d1e658347e,Isabel's stuff,Sala
+a6991b81-b529-41ee-973c-462e5161ad69,Gaveta iste,Cozinha
+836ae64f-589d-4e4b-95e9-4512386bc70a,Vitor Gabriel's stuff,Despensa
+7047cf32-e98d-4b5d-a09d-c4800b2b3496,Dolor pariatur quia,Banheiro
+731b9d2a-d792-47ee-a91a-66817c3724c9,Nobis nobis quae,Despensa
+43141bdd-da5b-4821-8a70-7f89200393cc,top secret,Despensa
+74916d37-92bf-4e1f-9b65-208bed1d4266,Benjamim's stuff,Quarto
+b6d5c83f-2f8a-489a-8532-8b9bb3b02d34,Asperiores dignissimos,Quintal
+47632cf6-aeb2-4cac-9743-13ef93ecab1c,não sei o nome disso,Quintal
+75db6263-9b82-4bec-8db7-22cb81fd17e9,Ana Júlia's stuff,Garagem
+e9dc0216-e58d-4859-ade1-946214d88cc4,Blanditiis repellat quae,Lavanderia
+a6d66de4-c6bc-411f-9aaa-38bee1a0dc27,Thiago's stuff,Despensa
+20474d23-acaa-4c13-9afe-12cea1850ea9,Gaveta mollitia,Sala
+68459d1c-9fc4-4549-baf3-6823c8cfcebe,Dignissimos,Garagem
+48e89f6c-e23b-4e6f-b299-aad0003377a7,Evelyn's stuff,Despensa
+dec23460-e239-40b5-ad0e-333f8836a3f4,Aliquam enim dicta,Quintal
+0013bae3-ccae-4143-87b5-230c836ced24,Labore temporibus,Sala
+7897f9a7-a050-4c15-8241-fcc84efd8e2d,Explicabo,Despensa
+c34de44c-4998-480c-aa74-12585b5518fa,Bruna's stuff,Cozinha
+ed7b9ea8-9998-454a-99d6-d878c5c7e43b,Praesentium dolores reprehenderit,Lavanderia
+c3d56ca7-d054-4741-81f0-83ee6ef50875,Provident laborum,Quarto
+0d625281-134e-4185-9aeb-8fa8ce0b1549,Exercitationem distinctio,Sala
+9c4311c2-f361-456b-9db2-0a830ef4a725,,Despensa
+0e501906-4b2b-44f9-9ec8-142658fa0a3b,,Banheiro
+74856e3f-6625-4301-818d-8aeaa7a3a13d,Armário repellat,Cozinha
+e9d00e4c-e538-420a-b90a-6d66f41a3cd5,Davi Lucas's stuff,Quarto
+d836352b-cb47-4aeb-a265-b80cce01048c,não mexer,Quintal
+uuid-invalido-123,Sophia's stuff,Banheiro
 uuid-invalido-123,misturas mortais,Banheiro
-9d54ae62-fe53-480c-bbf6-f283c7eaa0df,Josué's stuff,Área de serviço
-c77cfb0a-adc7-4cea-966d-6c66a32a347b,Estante aspernatur,Quintal
-bfc54a1b-9915-4b5c-bbeb-13192a79ca13,não mexer,Sala
-e84d8cf7-9335-451c-9617-8490cb66d613,kit sobrevivência,Sala
-78a8b850-bfa4-4e90-afc7-4a8ab0d69c14,kit sobrevivência,Sala
-14117562-9700-4872-91f3-6233389d4798,Prateleira enim,Quintal
-38b1a0c3-2587-4caf-92ea-b92a27176b2c,não mexer,Área de serviço
-adcc6c31-6e79-4cc0-855d-6f5e89d62183,aquele canto,Garagem
-bfed1fae-7eba-4d25-9fc1-89065bb1ea18,bagunça do fundo,Garagem
-07593ee1-e99d-46fe-bb50-69a783c16078,Corrupti excepturi numquam,Despensa
-35368412-eebc-4e44-ae30-2523f3025585,Facere nulla ea,Área de serviço
-9298bf3b-333b-4d9a-9fc2-9945f2cb473c,Soluta qui cupiditate,Cozinha
-d1d87129-43d2-4ccb-a9c7-0fba7e850a7a,Assumenda explicabo corporis,Quintal
-68bd15c7-61db-4698-b19c-699afe323476,,Garagem
-8d8dae00-8168-47a4-a9f1-818f5acadb7a,bagunça do fundo,Garagem
-258510b2-9b31-438b-b5de-7e8a9dba6a4d,não mexer,Área de serviço
-f5d15441-efae-4684-a985-2756696a0f01,não mexer,Área de serviço
-7a3b498d-432e-4102-8e3a-ece8c54794cb,aquele canto,Banheiro
-93532648-4202-494e-afe8-2d64d6717917,Prateleira consectetur,Despensa
-bdb567da-30cf-4738-b5ea-08d5e84100eb,Non,Lavanderia
-c6304b10-a317-41ce-a915-4cf081e81e9f,Veritatis incidunt exercitationem,Cozinha
-d42a587a-3998-4e45-a045-18042f76b39a,Laborum ad,Lavanderia
-6f8a1bd5-1459-44a1-af18-c3b658e0e2b5,não mexer,Banheiro
-5175b7eb-f5de-41e4-9e14-be5fa609984b,caixa de tralha,Lavanderia
-,Eum quisquam,Banheiro
-b5d4124a-299e-4af3-8654-46756cebadc6,Neque cumque,Área de serviço
-da5556a6-d5ac-47cf-8530-18088c9c517f,Officiis dolorem numquam,Quintal
-7fd42c96-14c9-42d2-a8ac-66a0c62d052f,,Cozinha
-12e3df0c-fdb6-493d-ad09-c530c274ff12,Armário iusto,Área de serviço
-c0ce3e04-1f4d-47d9-a565-f9f13435f7d9,Quaerat repudiandae itaque,Despensa
-284f3c7d-10f1-4d31-b0f1-6b73039f9ec8,bagunça do fundo,Quarto
-c35aa155-5b08-4cc0-b19c-fdf91054974e,não sei o nome disso,Quarto
-d6493c07-6df0-4e34-8724-b5c1807e1061,aquele canto,Despensa
-5f2536d9-e589-446e-810e-1e3382f79d90,top secret,Lavanderia
-2e889f90-48c3-41b1-bdd7-49b95d61bdd2,Officia nisi vel,Quarto
-uuid-invalido-123,Eligendi placeat eligendi,Despensa
-8058e6d3-eb07-4cec-84c8-e027b4124190,top secret,Cozinha
-290a1cae-04c2-47a5-baa4-4e314c255a18,não mexer,Área de serviço
-uuid-invalido-123,Arthur's stuff,Quintal
-7983541e-0d96-4f5c-9867-bc1b3a0414af,top secret,Quarto
-209ee95d-1bc0-4bc3-b4a8-5f3fceedb071,Alias impedit voluptatem,Quarto
-a6cc55a0-814a-4ca6-b9c3-d4468d8d839c,Consequatur impedit et unde,Banheiro
-aad5bea3-0a92-4689-a7f6-cc3af9d39c54,Ipsum,Sala
-fa05633e-b8b9-49f6-9a92-39b43f510bd9,Facere similique,Quintal
-dffc845b-988a-4f4b-8558-33d4ea5e07ea,top secret,Cozinha
-17870c98-b16e-458e-8870-2a444a8f7338,Sunt veritatis accusantium,Área de serviço
-f099db20-2f27-422d-9372-912be9462c34,Lara's stuff,Cozinha
-0144a59e-b6ae-4601-8551-5f63183f7e72,Magni reiciendis,Quarto
-b1d62960-f290-486b-a6e9-6307e6ef6877,limpeza geral,Área de serviço
-d6493c07-6df0-4e34-8724-b5c1807e1061,,Banheiro
-d73dce4f-1914-46d4-a487-d5877765ccb8,,Quarto
-d446f82a-e307-4ec7-84cf-4a3761356463,,Lavanderia
-7d4b4447-68c2-4d53-b8a8-4358128262d0,Maxime aliquid,Quintal
-9ce14591-1843-40eb-8631-f885cc360a57,não mexer,Despensa
-ac0038cf-b878-4964-a9b2-634114b70b8d,Beatae nesciunt,Lavanderia
-eacc4c1f-9134-4d57-ac6d-1e211baf46f4,bagunça do fundo,Despensa
-5175b7eb-f5de-41e4-9e14-be5fa609984b,Magnam debitis aliquid,Quarto
-c01e8b60-979d-4448-a50e-562a361d2fc8,Earum velit,Despensa
+733a4d54-c2a5-4736-a189-7ee274d7f5c7,Arthur Miguel's stuff,Área de serviço
+e2a6c1ad-2eab-461a-9443-d0e31d747f43,Estante veniam,Quintal
+61277694-cd0d-44eb-b043-881d68b8585a,não mexer,Sala
+4ad54fd6-72c7-46cd-a1fe-c143d7d25b95,kit sobrevivência,Sala
+6ce52311-2175-4436-95e3-a0184223b08d,kit sobrevivência,Sala
+3f1e76e5-8610-42ed-ba49-eba5d9566c41,Prateleira possimus,Quintal
+8b424c34-5dc9-4aa3-a9cc-87b9ff0165c3,não mexer,Área de serviço
+b3b53c90-6bd2-4498-bf2d-bf36ef2597a8,aquele canto,Garagem
+c344c00d-67f2-456e-9d3a-361704e9bd89,bagunça do fundo,Garagem
+34643213-999c-46ba-a601-cfb5516a4632,Laborum incidunt,Despensa
+38d3a38a-d0b3-4246-8e95-ea130671ed74,Eligendi possimus eligendi neque,Área de serviço
+7ef10ff8-6555-4b38-9866-27e95d8732ae,Placeat optio doloremque veniam,Cozinha
+c339d208-d06c-4eec-87bd-02b6be0ccf35,Architecto,Quintal
+da6d7541-b2a8-42e0-bd57-b62b38ed3fa0,,Garagem
+f5951df2-362e-49cf-b017-9af418ec093a,bagunça do fundo,Garagem
+59dc3d63-0f8c-4254-b86b-8d4b9fbcb209,não mexer,Área de serviço
+91e3bffc-7d8a-457a-8723-9749437ec7bf,não mexer,Área de serviço
+248ae99d-ff59-475a-afff-71361c918c3d,aquele canto,Banheiro
+48e0b383-322a-4e1c-8271-a26ae745a045,Prateleira odit,Despensa
+6b82fe5c-4ddc-4dc1-9e54-fd48970d2d48,Velit,Lavanderia
+3347c938-2bc7-4215-9786-89b0246f8eb4,Autem incidunt labore,Cozinha
+2063ee2d-0aa1-4b6e-b622-66656406149b,Perspiciatis nulla,Lavanderia
+5f89c8ed-6c45-4fe2-a413-d1b2385f98ba,não mexer,Banheiro
+1f34a5b3-215f-47a5-9ccf-900fcb63ee14,caixa de tralha,Lavanderia
+,Eveniet provident debitis,Banheiro
+8295ef37-045c-4879-88c4-17d76f1fad0f,Asperiores,Área de serviço
+cc97e414-0cf7-4223-b362-b721cf863bf9,Accusantium at maiores,Quintal
+ed0acc9d-59ad-4509-ac65-d24c5992ddfe,,Cozinha
+b160996b-fa9d-405f-b392-6a9c7c613136,Armário error,Área de serviço
+305a8b98-c26e-400a-9bcb-631e600a0c8a,Id,Despensa
+4be68fdf-afe8-4f20-b789-a51bc52dbc53,bagunça do fundo,Quarto
+5934dd3c-1c18-4080-8347-f2d313177e23,não sei o nome disso,Quarto
+2a56af0c-f2ce-4f2c-b5ad-90618e422e8b,aquele canto,Despensa
+5d8cd0de-5e1f-4133-a8d7-0c1a717bba24,top secret,Lavanderia
+562d604d-6450-4701-afc9-0b9f0d38d6f4,Nisi maiores,Quarto
+uuid-invalido-123,Voluptatum animi esse,Despensa
+208a35fd-7747-4c59-a9b5-9c3bb42d654d,top secret,Cozinha
+ce5073af-d739-478e-8edc-3007ccb04b25,não mexer,Área de serviço
+uuid-invalido-123,Ana Júlia's stuff,Quintal
+835f995b-df10-4bf9-a204-ff9a204bb7c7,top secret,Quarto
+fced2c25-5110-42b9-983f-4e62b95db82c,Dolorem,Quarto
+d685fb11-4fe0-47e8-9c18-60b0152e8c51,Cumque velit,Banheiro
+5b343fe3-3789-4c36-a185-16e922f1782f,Nobis inventore,Sala
+1abcff14-8461-4b8a-99d2-a8b3c34da6b4,Suscipit accusamus quos,Quintal
+2feed0c0-f537-487a-8af0-30a926564252,top secret,Cozinha
+113de510-e843-48c4-81dc-3ce491620d2a,Veritatis minima perferendis,Área de serviço
+e13ebb16-7b03-4893-a1cc-3693c597379d,Gael Henrique's stuff,Cozinha
+7bc91a79-11ba-4cf3-81d4-afa0a0550ac4,Illum ratione,Quarto
+6288d926-64d6-45be-adb0-a01783761cf7,limpeza geral,Área de serviço
+2a56af0c-f2ce-4f2c-b5ad-90618e422e8b,,Banheiro
+56a29666-a53d-4a7f-8300-11e49582ca43,,Quarto
+d6bef9c6-e588-49ac-bfa9-dc40e7180ebc,,Lavanderia
+d6cf831f-2014-4b8c-9510-452d7bcdc5b2,Aspernatur nihil magni,Quintal
+f4eae221-aa0c-4033-8cc8-9960791d8566,não mexer,Despensa
+eb047702-8cc0-4d2b-8ddd-53bea362046a,Quos ab,Lavanderia
+174a918f-2c88-4939-9816-2d0306453b3f,bagunça do fundo,Despensa
+1f34a5b3-215f-47a5-9ccf-900fcb63ee14,Pariatur assumenda,Quarto
+94b1a804-99c2-4dc1-b773-e84836318e87,Vitae voluptates,Despensa
 uuid-invalido-123,,Área de serviço
-4e4cdc82-bcac-47de-8fd4-1b5ebf5f03c2,Esse suscipit dignissimos ad,Sala
-f4d5399b-86f8-4563-8004-0ece5e4a01f6,Delectus quae ea,Quarto
-bfaa663f-49d6-49cf-9f36-01848353c9b5,,Lavanderia
-805a1b93-24a5-4d8f-94c0-0552a59582e8,Maiores eius,Garagem
-9118b882-76bd-480b-93eb-eea15354cb40,Tempora modi aliquid,Quarto
-09eef294-8ebd-4382-ba2f-8bf5ee7d1772,negócio ali,Lavanderia
-63257436-ed9c-4cb0-b0cc-e00c2d46dec4,misturas mortais,Sala
-uuid-invalido-123,Estante recusandae,Quarto
-38a58b2e-e8af-4355-939f-9ea6270d7995,Expedita odit,Quintal
+a18c9b8c-c73a-46d4-acac-172fd478f94a,Suscipit officiis,Sala
+98bab745-1f80-4b7a-9919-901c808d861b,Et sunt,Quarto
+1cf6ced0-ec0b-4583-a630-afc90b750a79,,Lavanderia
+3a17c98a-3a07-48fb-a72d-7148afa8ac72,Laudantium rerum dolore,Garagem
+7b5f6030-8e60-468d-8292-a7a28d1f1e84,Sit,Quarto
+914a9fbb-8b0e-458f-8240-3b775e9ca136,negócio ali,Lavanderia
+cad0cda7-4539-449c-8b28-54f02c006184,misturas mortais,Sala
+uuid-invalido-123,Estante ea,Quarto
+83567f04-5935-453d-bbf2-5185b70b15c5,Voluptatibus,Quintal
 ,tung tung banheiro,Banheiro
-36d2dff7-3624-4b81-9b68-601070d6c913,Ab alias commodi,Cozinha
-a5a801dc-5408-4085-9e46-8507756ce7d0,Isaac's stuff,Despensa
-7fd42c96-14c9-42d2-a8ac-66a0c62d052f,não mexer,Banheiro
-d2e5552d-53bf-41a3-a722-934e06075841,kit sobrevivência,Lavanderia
-88cc7e21-ffc3-4c6f-88ff-5ab0535fc9c3,aquele canto,Cozinha
-c959b4ab-40ca-46f0-a5da-259f5f0ad3eb,Deserunt facere quo laboriosam,Garagem
-ac6bce61-c390-4e06-852b-5e1168d83bc0,Error facilis,Quarto
-4c36baec-e002-4279-b651-94cb4b69dba7,top secret,Banheiro
-970fc75d-ee21-4ce3-a4b4-673db94c5cb9,,Quintal
-bd4b0f0a-7725-4e52-a5ac-88663b9cf314,Gaveta sit,Quintal
-b5d4124a-299e-4af3-8654-46756cebadc6,top secret,Quintal
-=======
-0f37a0a1-de86-41ee-926a-66ddef9783f0,Yan's stuff,Cozinha
-8ffcce2a-abfa-4b74-8fa0-1e814464f225,limpeza geral,Banheiro
-fb275fe0-c9f0-4e8c-a99b-82050fef0d99,Pedro's stuff,Cozinha
-9f4acb75-6e55-44f2-ae6c-065ab5cf2429,top secret,Cozinha
-8269eb7c-64d5-4cae-8888-c5ef055de2aa,Maria Luiza's stuff,Quintal
-d26211ee-38d7-4475-90c4-17c1a5379717,caixa de tralha,Garagem
-610986d0-e84c-41f2-95ab-63c60aa04975,top secret,Banheiro
-4b27d014-e7d3-4b89-8c71-beb1c926d36d,Cum itaque ipsa,Quarto
-2eca8150-59a3-4df1-9b2f-766ab9d57f33,não sei o nome disso,Quintal
-f8170cf1-f5d2-445b-87ac-27b7662da6d8,caixa de tralha,Cozinha
-e05d19e2-ff10-4558-b976-757304ec9c3f,Ea fuga,Banheiro
-cdc58319-482f-4afe-997c-497906c24578,Fernando's stuff,Garagem
-0b51abb8-8f18-4a48-94c5-2f8f3b1be4a7,não mexer,Banheiro
-1ad42b86-0478-44a2-9adf-44a9e04a196a,limpeza geral,Quarto
-9978ed7d-dd7f-4fda-b504-6f242c92b11d,misturas mortais,Cozinha
-3d877939-49af-4dc3-8476-d8d2f7399dd4,não sei o nome disso,Área de serviço
-476af832-ab56-4048-8880-469e21b248f9,aquele canto,Sala
-98832d0f-aad7-4f20-9fbf-097e85c09593,top secret,Despensa
-62b9b1f8-daa8-4ab3-86f9-b49d7d78db4c,Vitória's stuff,Sala
-4c817fe8-b628-46f4-a008-72a5907cb489,Armário molestias,Banheiro
-027dba7a-c41b-44aa-a36e-47c362586cf8,Praesentium nesciunt,Sala
-381ae30d-0f7f-47d0-8e5c-197c932c57e7,limpeza geral,Quarto
-d26b2cc5-5145-45aa-b723-89c072616cea,negócio ali,Banheiro
-5e7027b3-0996-47f8-80f7-b499a25ca239,aquele canto,Sala
-fb701e7a-06bf-4a5b-97b5-900345ae2a82,não mexer,Banheiro
-783c8327-efc7-48ba-8a7f-c9e4acad1568,limpeza geral,Garagem
-ee6966ba-a583-4776-8bcf-288c364d8c92,bagunça do fundo,Quarto
-3d877939-49af-4dc3-8476-d8d2f7399dd4,,Área de serviço
-dad717e0-a97b-4468-84d6-f84cf988f8e7,,Quarto
-8ee9e16d-457c-452a-82f3-3a7bb337c659,limpeza geral,Lavanderia
-791bf446-7ad5-419a-b931-d2d311be0618,,Sala
-33424576-3559-4284-98a9-88c2441f2825,kit sobrevivência,Área de serviço
-1982fc20-7bee-4c04-88e8-b2e3455500cc,Ayla's stuff,Quarto
-87e8b06c-de95-43be-bef0-e5eea8e881bb,limpeza geral,Cozinha
-9978ed7d-dd7f-4fda-b504-6f242c92b11d,Prateleira ab,Cozinha
-d160c9ad-386b-46f1-a41a-c50fe398e04e,Isaque's stuff,Área de serviço
-a189272b-9157-4d8e-8e94-0c9af66d3dcb,Doloremque consectetur consectetur,Quarto
-c68092d6-6da9-4a70-9de1-34e2ce53ce21,Sunt,Banheiro
-edb61f55-039a-4d9c-b66b-54e2eb001661,Estante dolore,Cozinha
-b279d69e-df31-426e-b3c3-4637822c5e38,Isaac's stuff,Garagem
-aa9075fd-a5a4-41c7-b512-ed123883e786,Luigi's stuff,Despensa
-3f678405-ba92-4a50-81fc-833cc3b5b2ee,limpeza geral,Área de serviço
-dd0e6e69-ebe7-4562-9da3-108af4acca01,,Despensa
-b1eaa4d1-001e-4f29-9c3a-067c618d8019,Doloremque,Área de serviço
-2dec64d9-7e94-4e13-be8d-cfa2bff997e5,Gaveta vitae,Sala
-646bb8fb-5091-4f86-901b-b4f6b59dfc09,não mexer,Quarto
-2d9fd238-852d-4dfa-8de4-a43f1f088b2c,Estante aut,Lavanderia
-2b6235e6-7890-4724-9e90-6b22becc01e9,não mexer,Cozinha
-cdf88830-e2e3-49b4-917b-cc1f1aefe148,Estante ipsum,Despensa
-91219a5e-e4d0-45b9-9956-91f03b1a6dc9,limpeza geral,Área de serviço
-3041f864-1b78-4625-989c-7d1be680a13f,não mexer,Cozinha
-463a3623-de6b-4c2d-a2da-0feb781bc8f2,não sei o nome disso,Quintal
-65f31109-a287-4057-8b27-780e4c3660c8,Sapiente magni nostrum,Lavanderia
-46f90442-5f91-4b1a-973f-36f166da9f83,limpeza geral,Banheiro
-67445489-f4ac-4386-9aa4-66edf07ab1c5,caixa de tralha,Área de serviço
-99ebd3b2-6743-40bd-92bb-9babae91db4b,Quasi dolor,Garagem
-c810c80c-be0a-4e3f-8b55-37ec9a9c89bf,,Quintal
-19a4893e-99b6-430a-9680-de0f6f1b3611,top secret,Despensa
-uuid-invalido-123,,Banheiro
-5882e242-14ca-4e4c-b588-059a2b29231b,Bárbara's stuff,Banheiro
-04846254-a4b5-48fa-9dc4-06893316e246,kit sobrevivência,Área de serviço
-ef64637d-1959-4e02-b1c3-b3c93d6925d7,tung tung banheiro,Cozinha
-46f6a51b-fdfb-447b-ba70-e60e25ddb662,,Lavanderia
-33269c84-d6ac-4c3b-821f-64319baf4fd9,limpeza geral,Quarto
-9fdc200f-404c-4eb7-ab85-b9cff3d9076a,aquele canto,Lavanderia
-ca1b5857-7775-447e-af15-931da14c1585,Prateleira quaerat,Cozinha
-a601e3b8-1850-4125-b95f-ad83fe295e22,top secret,Área de serviço
-,,Lavanderia
-b279d69e-df31-426e-b3c3-4637822c5e38,Vero debitis,Lavanderia
-3655405e-d800-4153-99d7-5d24801785d7,,Garagem
-85717091-190a-4261-ab43-11442645d608,Gaveta atque,Área de serviço
-e99167b7-e772-44de-9c20-c24313c442fe,Magni tempore pariatur,Quarto
-14183f33-12af-4087-8be8-59cc7ced3775,Lívia's stuff,Área de serviço
-0520873b-0984-4f4b-9531-9cec0a17ca5a,,Quintal
-b1f91ddd-572a-4871-b6c4-9b4fa93fc4f9,top secret,Despensa
-uuid-invalido-123,aquele canto,Banheiro
-15888056-5bd8-43a7-893f-0c0add42e409,Dignissimos mollitia,Quintal
-2207adc9-8877-4893-af09-51c17b465691,limpeza geral,Garagem
-aa8894d7-a379-4a5a-a520-34b37e929073,Esse culpa,Área de serviço
-9d92a009-4649-4e7c-ae95-cfb1c43c6297,Ian's stuff,Despensa
-c308f9f7-2fc4-42b7-8c71-39dc7a0af3fd,,Banheiro
-de4ed220-0bfd-4867-ace1-2d663df9a437,top secret,Banheiro
-d861cd05-805a-4014-b5b8-5a72e2db601c,limpeza geral,Garagem
-df4f89da-b21c-4cbf-860a-66cbb8cfc3f0,Ana Cecília's stuff,Sala
-91732d3e-4b56-4ea3-bdf1-03ad3436d321,Prateleira inventore,Quintal
-cbe17069-92ae-4a69-8228-4dc357a17bbd,kit sobrevivência,Sala
-2fb45407-2d79-4956-8f09-c4ad8569dbfc,Rafael's stuff,Área de serviço
-992d506a-9a81-437b-aa13-42ea0d08d89a,top secret,Quintal
-db427aaf-8fda-4caf-ae5e-4857e4c5b242,Camila's stuff,Área de serviço
-bf3f2189-f9a1-4f93-af06-bb5a5b594569,,Cozinha
-d98236ed-8cd9-4c59-9b99-84beabb55c75,limpeza geral,Banheiro
-bde42d5f-c032-4f10-8cf1-a8cfaaf66b68,Ravi Lucca's stuff,Sala
-a8205501-955c-468c-9f70-d58a92cf3fad,Gaveta quam,Cozinha
-c83c2bc3-293f-427f-9ff1-e74ac674e3d4,Henry's stuff,Despensa
-aec3502d-55be-4342-abf9-63975ca2ded2,Earum nobis,Banheiro
-beb5d51a-7cf6-4b2d-b1b2-5e2aedbcd338,Dolore aliquam laborum,Despensa
-be41d65a-5ee4-43a3-9a55-d94aaf1e9e19,top secret,Despensa
-ff59281c-6d1c-4d7b-a8f6-f0b13a6b9e66,Maria Luísa's stuff,Quarto
-64005a41-6b06-49c1-a628-cc1f4aed37f6,Ratione debitis beatae,Quintal
-cc810774-acdc-4705-9c2f-697cd9fcf7c8,não sei o nome disso,Quintal
-d77e772b-170b-42e1-b055-4c937c3ff52a,Dante's stuff,Garagem
-a71357fe-4578-4a8b-873b-417ddaa83b35,Voluptate voluptate odit,Lavanderia
-a68c243d-d905-4727-b6f9-7ed7d84a8c67,Juan's stuff,Despensa
-be2588e4-c74b-473b-bb54-dc07fa8e5e7b,Gaveta totam,Sala
-974105fc-af1b-4b36-aaa4-64acc680e654,Nostrum quos,Garagem
-b279d69e-df31-426e-b3c3-4637822c5e38,Erick's stuff,Despensa
-2207adc9-8877-4893-af09-51c17b465691,Voluptas ipsa,Quintal
-f43b7bcf-5c65-4ac5-9cfb-b50d362265b6,Perspiciatis qui eveniet,Sala
-7edec1b1-70dc-4182-981f-695c102292eb,Repellendus placeat officia,Despensa
-d067f60f-0d1c-4156-9178-5bb82c88b530,Vinícius's stuff,Cozinha
-42cc7472-4718-4259-8951-864e26947261,Autem eum facilis,Lavanderia
-dd133cd5-3f3c-4d55-b7bd-6a379cc9642c,Inventore quod commodi,Quarto
-2a5536ba-fe64-4e9b-857f-d837b293d247,Soluta corporis blanditiis,Sala
-9d1d2e63-45e4-4271-8795-444583102881,,Despensa
-ee11f5e7-e9e6-498b-ae16-674b939c1d7f,,Banheiro
-745ff734-7264-4c50-aef0-b7042c4754bc,Armário ut,Cozinha
-decb4f61-16c0-4b9f-9395-060c1546dd54,Maria Liz's stuff,Quarto
-8f9181f8-f995-4ff1-b4e4-4c09f4145044,não mexer,Quintal
-uuid-invalido-123,Luigi's stuff,Banheiro
-uuid-invalido-123,misturas mortais,Banheiro
-3f678405-ba92-4a50-81fc-833cc3b5b2ee,Gustavo's stuff,Área de serviço
-af0e8ebd-701c-4929-b6a9-88c073685e50,Estante incidunt,Quintal
-f8170cf1-f5d2-445b-87ac-27b7662da6d8,não mexer,Sala
-99dffe0c-9016-4fae-923f-68341abe590f,kit sobrevivência,Sala
-a9f641d0-6058-4b3a-85ed-89bbce841133,kit sobrevivência,Sala
-82257b46-9b8c-405b-bfab-4451d9be9074,Prateleira doloribus,Quintal
-a6a2ffe3-b9a2-4073-87da-04c8f5b1c568,não mexer,Área de serviço
-7bac7bb8-0f55-4e4c-90f6-0f9111df9a1d,aquele canto,Garagem
-01743337-23e9-46f3-8ce1-3aa7259b8262,bagunça do fundo,Garagem
-1fdcc346-30dd-43ed-a355-446ef38103b1,Perspiciatis eius,Despensa
-5e5ebe01-4ef6-4562-bdcb-94173709a84d,Reiciendis nostrum,Área de serviço
-e819dda6-4743-4b4e-9632-5bc8c55fe0ad,Doloremque laboriosam aperiam facilis,Cozinha
-b6d28ec2-cdb8-488a-b218-6ca0d29716b2,Asperiores ad,Quintal
-7e781b93-362e-47b2-a3f1-c0a33d0e6a6c,,Garagem
-a10084dc-e8c3-4ab2-8939-b35d0c600743,bagunça do fundo,Garagem
-7c01b33e-eca9-457d-a0f8-b694e2ecee31,não mexer,Área de serviço
-5f028061-0bd2-447b-a047-73da2a23ca36,não mexer,Área de serviço
-d98bc090-f496-4471-ad56-bc1b5327145f,aquele canto,Banheiro
-bbc937b2-a53c-4039-ae60-c337d2e86bb1,Prateleira laboriosam,Despensa
-564345f9-f616-4c2b-8ef2-383a4a28f51b,Ex,Lavanderia
-f8436aed-bf8c-4d53-b7a8-1cab2e39b4ce,Fugit ad,Cozinha
-25c7b4e8-93ab-4c07-a706-620df8b21a9d,Maxime aliquid,Lavanderia
-559da3be-f74c-457f-b1ea-c7345b27e4f6,não mexer,Banheiro
-764f5899-fdec-4563-ade7-1d59e739b497,caixa de tralha,Lavanderia
-,Itaque nesciunt saepe,Banheiro
-10ddcbd6-416a-453e-903b-ba540bcafe17,Rerum ducimus,Área de serviço
-e91ef2ca-049a-4eb8-8d5f-a24b006e0144,Alias aperiam cum,Quintal
-8ef66b9a-8de7-4b58-92b5-a4b851b6c90c,,Cozinha
-fb701e7a-06bf-4a5b-97b5-900345ae2a82,Armário quam,Área de serviço
-19c15965-00a5-43c8-a93a-9810c855983c,Corrupti dolor consectetur tenetur,Despensa
-8bca6e59-dd43-47da-aa43-02f943d454b5,bagunça do fundo,Quarto
-3c69761d-dcb5-4921-ad62-3fe9a97f8676,não sei o nome disso,Quarto
-f3bb15ac-7412-4d64-8f6c-218fb2de74cf,aquele canto,Despensa
-6df81dc6-3bfa-416c-b68f-5ff7173ec175,top secret,Lavanderia
-bcf6b4c8-33c5-4249-aa18-170322cbf1fa,Magnam laborum ut,Quarto
-uuid-invalido-123,Sint inventore dolorum,Despensa
-677042de-a25d-4a17-b214-4926ef0a050e,top secret,Cozinha
-a18fd336-b064-40a4-8195-79b8b5959689,não mexer,Área de serviço
-uuid-invalido-123,Rafael's stuff,Quintal
-d26211ee-38d7-4475-90c4-17c1a5379717,top secret,Quarto
-c0b047e8-9fad-416e-9ac8-a60221634707,Placeat quia temporibus,Quarto
-1f38c907-ad63-455f-a1b1-e51913cb106e,Sed odio,Banheiro
-7ad4922f-761d-4df4-b898-24c977048b91,Qui magnam ut,Sala
-ed7ef485-dbee-439e-a584-4fd17f788c3d,In tempora,Quintal
-0a65fbe3-321b-42c0-b277-2e08bcab0f05,top secret,Cozinha
-6c89529c-1725-41e6-858b-ea43b7841976,Harum,Área de serviço
-2acfae47-608b-4beb-b2d2-e93c0fbbbc7e,Lunna's stuff,Cozinha
-81b151e6-e76c-4af6-af2b-5b3e16b928ee,Impedit soluta,Quarto
-2382d9f6-7e4b-470f-a9ca-731c564ebe7c,limpeza geral,Área de serviço
-f3bb15ac-7412-4d64-8f6c-218fb2de74cf,,Banheiro
-ff1ed61d-17d1-4675-b7ec-1adbb4cd421b,,Quarto
-7a3ad98b-14c2-40ca-8f83-6f3790bff246,,Lavanderia
-88c7b8cb-27ca-4192-8d1e-7b3ffeb502dd,Molestias,Quintal
-c0ba77bb-910a-4068-8891-dc8e3c2d7b2f,não mexer,Despensa
-0520873b-0984-4f4b-9531-9cec0a17ca5a,Ipsam doloremque vero,Lavanderia
-85717091-190a-4261-ab43-11442645d608,bagunça do fundo,Despensa
-764f5899-fdec-4563-ade7-1d59e739b497,Maiores expedita voluptatibus,Quarto
-20a5405c-ee0b-4ba6-a456-51e46bda5503,Odio quae eveniet,Despensa
-uuid-invalido-123,,Área de serviço
-faf28acb-ed56-4418-91d9-8fae8555f174,Dolore voluptatum,Sala
-d2ffb481-1ee7-48ed-914c-acff95456cb7,Sed voluptate ipsa,Quarto
-43858d2e-3321-4790-8344-7fdcd73b9a5d,,Lavanderia
-8076d30c-3a8b-4133-b052-0e29f68b9607,Est libero aut,Garagem
-dd0e6e69-ebe7-4562-9da3-108af4acca01,Vel corrupti,Quarto
-0f898c12-649a-4d00-b508-4ca60bdb699a,negócio ali,Lavanderia
-7e9d934e-9926-4287-8829-929c31b8dc60,misturas mortais,Sala
-uuid-invalido-123,Estante tempora,Quarto
-47b0b4a6-9ff1-47a4-b55a-f666e05ae4b4,Officiis harum animi,Quintal
-,tung tung banheiro,Banheiro
-cb8fad63-aea9-4514-92ce-ca04132ed6f0,Quibusdam non reiciendis repellendus,Cozinha
-cb8cba8c-541d-4d04-b7c2-f10c295cd729,Enzo's stuff,Despensa
-8ef66b9a-8de7-4b58-92b5-a4b851b6c90c,não mexer,Banheiro
-ffd8273a-66f1-4c35-b52d-632299153707,kit sobrevivência,Lavanderia
-db5cee13-49a1-402e-ac3b-77395b003b08,aquele canto,Cozinha
-e88ac20c-1d49-4f08-955a-daa0d4f0d911,Ea ad,Garagem
-065afd18-76ae-4787-9cc0-c11fa255f33c,Excepturi magnam fuga,Quarto
-b11e1de6-1715-4c70-bd99-fa2dc7bdb237,top secret,Banheiro
-b5cfb4bf-a927-469b-aa7d-87b8abd10021,,Quintal
-19a4893e-99b6-430a-9680-de0f6f1b3611,Gaveta accusantium,Quintal
-10ddcbd6-416a-453e-903b-ba540bcafe17,top secret,Quintal
->>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
+2554fcb6-ca8e-4542-83fb-bdc8f11573a2,Tempora autem,Cozinha
+68e9b7c8-50d2-41d6-8539-407615232593,Marcos Vinicius's stuff,Despensa
+ed0acc9d-59ad-4509-ac65-d24c5992ddfe,não mexer,Banheiro
+2f2dd36c-2b52-4d2c-9f5c-117b68d096c7,kit sobrevivência,Lavanderia
+14304e25-dd58-48f9-bf8c-858f62b215ba,aquele canto,Cozinha
+5915d5d3-ca16-471f-921c-f57c96b50fc6,Suscipit consequuntur,Garagem
+1eb93b62-c16c-437f-b01c-143b3940ca42,Corporis eveniet quia,Quarto
+d86fc3dd-6cbf-4cfb-b738-fcac673ed0ff,top secret,Banheiro
+086a4d50-1f7b-48d8-840c-6f7cb904600e,,Quintal
+af88a453-4092-4747-8607-8ebf1d4ead43,Gaveta unde,Quintal
+8295ef37-045c-4879-88c4-17d76f1fad0f,top secret,Quintal

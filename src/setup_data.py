@@ -142,7 +142,6 @@ def main():
         "src/database/sql/data_load/mocks/historico_recomendacao.csv",
         linhas_historico,
         ["id_produto", "id_usuario", "resultado", "dosagem_sugerida"],
-        ["id_produto", "id_usuario", "resultado", "dosagem_sugerida"],
     )
     rodar_pipeline("historico_recomendacao", csv_historico)
 
@@ -170,12 +169,13 @@ def main():
         "src/database/sql/data_mart/dim/dim_produto.sql",
         "src/database/sql/data_mart/dim/dim_usuario.sql",
         "src/database/sql/data_mart/dim/dim_substancia.sql",
+        "src/database/sql/data_mart/dim/dim_localizacao.sql",
         "src/database/sql/data_mart/facts/vw_fato_historico_recomendacao.sql",
         "src/database/sql/data_mart/facts/vw_fato_historico_match.sql",
         "src/database/sql/data_mart/facts/vw_fato_auditoria.sql",
-        "src/database/sql/data_mart/facts/vw_fato_dau.sql",
+        "src/database/sql/data_mart/facts/vw_dau.sql",
         "src/database/sql/data_mart/facts/vw_fato_cobertura_incompatibilidade.sql",
-        "src/database/sql/data_mart/facts/vw_fato_fato_sessao_acesso.sql",
+        "src/database/sql/data_mart/facts/vw_fato_sessao_acesso.sql",
     ])
 
 

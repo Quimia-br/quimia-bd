@@ -1,8 +1,10 @@
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+CREATE EXTENSION IF NOT EXISTS unaccent;
+
 DROP TABLE IF EXISTS historico_recomendacao CASCADE;
 DROP TABLE IF EXISTS estante_produto CASCADE;
 DROP TABLE IF EXISTS estante CASCADE;
 DROP TABLE IF EXISTS localizacao_usuario CASCADE;
-DROP TABLE IF EXISTS produto_superficie CASCADE;
 DROP TABLE IF EXISTS sinonimo_pendente CASCADE;
 DROP TABLE IF EXISTS incompatibilidade_regra CASCADE;
 DROP TABLE IF EXISTS substancia_classe_quimica CASCADE;
@@ -10,6 +12,7 @@ DROP TABLE IF EXISTS substancia_sinonimo CASCADE;
 DROP TABLE IF EXISTS fds_composto CASCADE;
 DROP TABLE IF EXISTS fds_incompatibilidade CASCADE;
 DROP TABLE IF EXISTS fds_descarte CASCADE;
+DROP TABLE IF EXISTS fds_primeiro_socorro CASCADE;
 DROP TABLE IF EXISTS fds CASCADE;
 DROP TABLE IF EXISTS substancia CASCADE;
 DROP TABLE IF EXISTS classe_quimica CASCADE;
@@ -96,114 +99,38 @@ CREATE TABLE fds (
     raw_json         JSONB
 );
 
-    CREATE TABLE produto (
-        id           INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        nome         VARCHAR(255) NOT NULL,
-        id_marca     INTEGER NOT NULL,
-        descricao    TEXT,
-        tipo_produto VARCHAR(50)
-            CHECK (tipo_produto IN (
-                'limpeza_geral','desinfetante','desincrustante',
-                'desengraxante','alvejante','aromatizante','outro'
-            )),
-        cod_barras   VARCHAR(255) UNIQUE
-    );
-
-    CREATE TABLE fds (
-        id               INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        id_produto       INTEGER NOT NULL,
-        versao           VARCHAR(20),
-        data_atualizacao DATE,
-        ativo            BOOLEAN NOT NULL DEFAULT TRUE,
-        fonte_url        TEXT,
-        raw_json         JSONB
-    );
-
-    CREATE TABLE fds_primeiro_socorro (
-    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_fds INTEGER NOT NULL,
-    rota_exposicao VARCHAR(20) NOT NULL
+CREATE TABLE fds_primeiro_socorro (
+    id                       INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_fds                   INTEGER NOT NULL,
+    rota_exposicao           VARCHAR(20) NOT NULL
         CHECK (rota_exposicao IN ('inalacao', 'pele', 'olhos', 'ingestao')),
-    descricao TEXT,
-    sintomas TEXT,
-    tratamento_especial TEXT,
+    descricao                TEXT,
+    sintomas                 TEXT,
+    tratamento_especial      TEXT,
     atencao_medica_imediata  BOOLEAN NOT NULL DEFAULT FALSE
-    );
+);
 
-
-    CREATE TABLE fds_composto (
-        id                INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        id_fds            INTEGER NOT NULL,
-        id_substancia     INTEGER,
-        concentracao_min  NUMERIC(5,2),
-        concentracao_max  NUMERIC(5,2),
-        unidade_concentracao VARCHAR(20)
-        CONSTRAINT chk_fds_composto_concentracao CHECK (
-            concentracao_min IS NULL OR concentracao_max IS NULL
-            OR concentracao_min <= concentracao_max
-        )
-    );
-
-    CREATE TABLE fds_incompatibilidade (
-        id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        id_fds INTEGER NOT NULL,
-        id_substancia INTEGER,
-        id_classe_quimica INTEGER,
-        substancia_reagente VARCHAR(255),
-        descricao_risco     TEXT,
-        severidade          VARCHAR(20)
-            CHECK (severidade IN ('baixa','media','alta','critica'))
-    );
-
-    CREATE TABLE fds_descarte (
-        id                  INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        id_fds              INTEGER NOT NULL,
-        instrucao_descarte  TEXT,
-        tipo_residuo        VARCHAR(50)
-            CHECK (tipo_residuo IN ('quimico','biologico','comum','reciclavel','outro'))
-    );
-
-    CREATE TABLE incompatibilidade_regra (
-        id               INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        id_substancia_a  INTEGER,
-        id_classe_a      INTEGER,
-        id_substancia_b  INTEGER,
-        id_classe_b      INTEGER,
-        severidade       VARCHAR(20) NOT NULL
-            CHECK (severidade IN ('baixa','media','alta','critica')),
-        descricao_risco  TEXT NOT NULL,
-        fonte            TEXT,
-        ativo            BOOLEAN NOT NULL DEFAULT TRUE,
-        CONSTRAINT chk_regra_lado_a CHECK (
-            (id_substancia_a IS NOT NULL AND id_classe_a IS NULL) OR
-            (id_substancia_a IS NULL AND id_classe_a IS NOT NULL)
-        ),
-        CONSTRAINT chk_regra_lado_b CHECK (
-            (id_substancia_b IS NOT NULL AND id_classe_b IS NULL) OR
-            (id_substancia_b IS NULL AND id_classe_b IS NOT NULL)
-        )
-    );
-
-    CREATE TABLE sinonimo_pendente (
-        id                       INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        termo_bruto              VARCHAR(255) NOT NULL,
-        cas_bruto                VARCHAR(20),
-        id_fds                   INTEGER NOT NULL,
-        status                   VARCHAR(20) NOT NULL DEFAULT 'pendente'
-            CHECK (status IN ('pendente', 'resolvido', 'descartado')),
-        id_substancia_resolvida  INTEGER,
-        criado_em                TIMESTAMPTZ NOT NULL DEFAULT now(),
-        resolvido_em             TIMESTAMPTZ
-    );
+CREATE TABLE fds_composto (
+    id                    INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_fds                INTEGER NOT NULL,
+    id_substancia         INTEGER,
+    concentracao_min      NUMERIC(5,2),
+    concentracao_max      NUMERIC(5,2),
+    unidade_concentracao  VARCHAR(20),
+    CONSTRAINT chk_fds_composto_concentracao CHECK (
+        concentracao_min IS NULL OR concentracao_max IS NULL
+        OR concentracao_min <= concentracao_max
+    )
+);
 
 CREATE TABLE fds_incompatibilidade (
-    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_fds INTEGER NOT NULL,
-    id_substancia INTEGER,
-    id_classe_quimica INTEGER,
-    substancia_reagente VARCHAR(255),
-    descricao_risco     TEXT,
-    severidade          VARCHAR(20)
+    id                   INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_fds               INTEGER NOT NULL,
+    id_substancia        INTEGER,
+    id_classe_quimica    INTEGER,
+    substancia_reagente  VARCHAR(255),
+    descricao_risco      TEXT,
+    severidade           VARCHAR(20)
         CHECK (severidade IN ('baixa','media','alta','critica'))
 );
 
@@ -286,13 +213,13 @@ CREATE TABLE estante_produto (
 );
 
 CREATE TABLE historico_recomendacao (
-    id                  INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_produto          INTEGER NOT NULL,
-    id_usuario          UUID NOT NULL,
-    resultado           VARCHAR(50)
+    id                INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_produto        INTEGER NOT NULL,
+    id_usuario        UUID NOT NULL,
+    resultado         VARCHAR(50)
         CHECK (resultado IN ('compativel','incompativel','atencao','nao_avaliado')),
-    dosagem_sugerida    TEXT,
-    data_consulta       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    dosagem_sugerida  TEXT,
+    data_consulta     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE ponto_parceiro (
@@ -331,13 +258,12 @@ CREATE TABLE sessao_acesso (
     ocorreu_em  TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-
-    CREATE TABLE IF NOT EXISTS log_auditoria (
-    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    tabela_afetada VARCHAR(100) NOT NULL,
-    operacao VARCHAR(10) NOT NULL CHECK (operacao IN ('INSERT','UPDATE','DELETE')),
-    dado_anterior JSONB,
-    dado_novo JSONB,
-    usuario_db VARCHAR(100) NOT NULL,
-    alterado_em TIMESTAMPTZ NOT NULL DEFAULT now()
-    );
+CREATE TABLE log_auditoria (
+    id              INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    tabela_afetada  VARCHAR(100) NOT NULL,
+    operacao        VARCHAR(10) NOT NULL CHECK (operacao IN ('INSERT','UPDATE','DELETE')),
+    dado_anterior   JSONB,
+    dado_novo       JSONB,
+    usuario_db      VARCHAR(100) NOT NULL,
+    alterado_em     TIMESTAMPTZ NOT NULL DEFAULT now()
+);
