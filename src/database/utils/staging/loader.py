@@ -82,14 +82,6 @@ TABELAS = {
         "validate_sql": BASE_DIR / "validate" / "validate_marca.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_marca.sql"
     },
-    "superficie":{
-        "stg_table":"stg_superficie",
-        "colunas":[
-            "nome_raw", "descricao_raw"
-        ],
-        "validate_sql": BASE_DIR / "validate" / "validate_superficie.sql",
-        "migrate_sql": BASE_DIR / "migrate" / "migrate_superficie.sql"
-    },
     "classe_quimica":{
         "stg_table":"stg_classe_quimica",
         "colunas":[

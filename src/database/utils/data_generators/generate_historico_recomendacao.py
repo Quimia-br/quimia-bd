@@ -1,18 +1,17 @@
 """
 Quimia — Gerador de dados sintéticos: historico_recomendacao
 
-Depende de produto, usuario e superficie já migrados — busca os IDs
-reais do banco antes de gerar. Simula o log de "usuário consultou o
-app pra saber se o produto X é compatível com a superfície Y".
+Depende de produto e usuario já migrados — busca os IDs reais do
+banco antes de gerar. Simula o log de "usuário consultou o app pra
+saber mais sobre o produto X" (sem superfície — o app não avalia mais
+compatibilidade produto x ambiente).
 
 Ruído proposital pro validate:
   - id_produto / id_usuario inexistentes ou com formato inválido
-  - id_superficie inexistente (quando informado)
   - resultado fora do CHECK da tabela oficial
   - campos obrigatórios vazios
 
-Pré-requisito: rodar os pipelines de `produto`, `usuario` e
-`superficie` antes deste.
+Pré-requisito: rodar os pipelines de `produto` e `usuario` antes deste.
 
 Uso:
     python generate_historico_recomendacao.py
@@ -57,7 +56,7 @@ def buscar_usuarios(conn):
     return ids
 
 
-def gerar_historico_recomendacao(n=300, ids_produto=None, ids_usuario=None, ids_superficie=None):
+def gerar_historico_recomendacao(n=300, ids_produto=None, ids_usuario=None):
     if not ids_produto:
         raise ValueError(
             "Nenhum produto encontrado na tabela oficial `produto`. "
@@ -67,11 +66,6 @@ def gerar_historico_recomendacao(n=300, ids_produto=None, ids_usuario=None, ids_
         raise ValueError(
             "Nenhum usuário encontrado na tabela oficial `usuario`. "
             "Rode o pipeline de usuario antes deste."
-        )
-    if not ids_superficie:
-        raise ValueError(
-            "Nenhuma superfície encontrada na tabela oficial `superficie`. "
-            "Rode o pipeline de superficie antes deste."
         )
 
     linhas = []
@@ -97,16 +91,6 @@ def gerar_historico_recomendacao(n=300, ids_produto=None, ids_usuario=None, ids_
         else:
             id_usuario = ""
 
-        roll_s = random.random()
-        if roll_s < 0.75:
-            id_superficie = random.choice(ids_superficie)
-        elif roll_s < 0.85:
-            id_superficie = ""
-        elif roll_s < 0.95:
-            id_superficie = str(random.randint(900000, 999999))
-        else:
-            id_superficie = "superficie-x" 
-
         roll_r = random.random()
         if roll_r < 0.85:
             resultado = random.choice(RESULTADOS_VALIDOS)
@@ -120,7 +104,6 @@ def gerar_historico_recomendacao(n=300, ids_produto=None, ids_usuario=None, ids_
         linhas.append({
             "id_produto": id_produto,
             "id_usuario": id_usuario,
-            "id_superficie": id_superficie,
             "resultado": resultado,
             "dosagem_sugerida": dosagem_sugerida,
         })
@@ -137,24 +120,22 @@ if __name__ == "__main__":
     conn = get_connection()
     ids_produto = buscar_ids(conn, "produto")
     ids_usuario = buscar_usuarios(conn)
-    ids_superficie = buscar_ids(conn, "superficie")
     conn.close()
 
     linhas = gerar_historico_recomendacao(
         n=args.n,
         ids_produto=ids_produto,
         ids_usuario=ids_usuario,
-        ids_superficie=ids_superficie,
     )
 
     with open(args.saida, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
-            f, fieldnames=["id_produto", "id_usuario", "id_superficie", "resultado", "dosagem_sugerida"]
+            f, fieldnames=["id_produto", "id_usuario", "resultado", "dosagem_sugerida"]
         )
         writer.writeheader()
         writer.writerows(linhas)
 
     print(
         f"{args.saida} gerado com {len(linhas)} linhas "
-        f"({len(ids_produto)} produtos, {len(ids_usuario)} usuários, {len(ids_superficie)} superfícies disponíveis)"
+        f"({len(ids_produto)} produtos, {len(ids_usuario)} usuários disponíveis)"
     )

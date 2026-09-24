@@ -1,5 +1,9 @@
 id_substancia,sinonimo
+<<<<<<< HEAD
 2,Molestias Amônia
+=======
+2,Accusantium Amônia
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 4,ÁCIDO ACÉTICO
 6,Peróxido de hidrogênio concentrado
 4,ÁCIDO ACÉTICO
@@ -11,20 +15,32 @@ id_substancia,sinonimo
 1,Hipoclorito de sódio PA
 13,Ácido cítrico grau alimentício
 3,Ácido c.
+<<<<<<< HEAD
 12,Provident Ácido
 12,ÁCIDO FOSFÓRICO
 13,Ácido c.
 2,Quas Amônia
+=======
+12,Optio Ácido
+12,ÁCIDO FOSFÓRICO
+13,Ácido c.
+2,Distinctio Amônia
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 10,CLORETO DE BENZALCÔNIO
 15,fragrância
 1,HIPOCLORITO DE SÓDIO
 14,
 11,HIPOCLORITO DE CÁLCIO
+<<<<<<< HEAD
 15,Reprehenderit Fragrância
+=======
+15,Architecto Fragrância
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 2,amônia
 2,Amônia industrial
 10,Cloreto d.b.
 10,Cloreto d.b.
+<<<<<<< HEAD
 10,Vel Cloreto
 12,ÁCIDO FOSFÓRICO
 10,Vel Cloreto
@@ -34,12 +50,27 @@ id_substancia,sinonimo
 2,amônia
 11,Hipoclorito d.c.
 3,Harum Ácido
+=======
+10,Eius Cloreto
+12,ÁCIDO FOSFÓRICO
+10,Eius Cloreto
+14,Dodecilbenzenossulfonato de sódio técnico
+4,Quia Ácido
+8,Reiciendis Álcool
+2,amônia
+11,Hipoclorito d.c.
+3,Dolorum Ácido
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 14,DODECILBENZENOSSULFONATO DE SÓDIO
 2,amônia
 4,ÁCIDO ACÉTICO
 9,Lauril s.d.s.
 7,etanol
+<<<<<<< HEAD
 4,Odio Ácido
+=======
+4,Quia Ácido
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 4,ÁCIDO ACÉTICO
 10,
 2,Amônia concentrado
@@ -57,28 +88,49 @@ id_substancia,sinonimo
 6,PERÓXIDO DE HIDROGÊNIO
 980981,Ácido clorídrico solução aquosa
 2,amônia
+<<<<<<< HEAD
 7,Atque Etanol
 7,etanol
 9,LAURIL SULFATO DE SÓDIO
 2,amônia
 10,Nihil Cloreto
+=======
+7,Cumque Etanol
+7,etanol
+9,LAURIL SULFATO DE SÓDIO
+2,amônia
+10,Nostrum Cloreto
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 5,HIDRÓXIDO DE SÓDIO
 10,CLORETO DE BENZALCÔNIO
 5,Hidróxido de sódio solução aquosa
 5,Hidróxido d.s.
+<<<<<<< HEAD
 1,Illo Hipoclorito
+=======
+1,Alias Hipoclorito
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 3,Ácido clorídrico técnico
 4,Ácido a.
 14,DODECILBENZENOSSULFONATO DE SÓDIO
 8,ÁLCOOL ISOPROPÍLICO
+<<<<<<< HEAD
 4,Odio Ácido
 12,Corporis Ácido
+=======
+4,Quia Ácido
+12,Voluptatibus Ácido
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 7,ETANOL
 3,
 3,Ácido clorídrico técnico
 6,PERÓXIDO DE HIDROGÊNIO
 14,DODECILBENZENOSSULFONATO DE SÓDIO
+<<<<<<< HEAD
 10,Nihil Cloreto
+=======
+10,Explicabo Cloreto
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 7,etanol
 4,Ácido a.
 2,AMÔNIA
@@ -86,23 +138,36 @@ id_substancia,sinonimo
 14,Dodecilbenzenossulfonato de sódio concentrado
 5,Hidróxido de sódio concentrado
 13,ÁCIDO CÍTRICO
+<<<<<<< HEAD
 13,Delectus Ácido
 10,Officia Cloreto
 15,fragrância
 9,LAURIL SULFATO DE SÓDIO
 2,Enim Amônia
+=======
+13,Mollitia Ácido
+10,Autem Cloreto
+15,fragrância
+9,LAURIL SULFATO DE SÓDIO
+2,Illo Amônia
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 5,Hidróxido d.s.
 6,PERÓXIDO DE HIDROGÊNIO
 8,ÁLCOOL ISOPROPÍLICO
 14,Dodecilbenzenossulfonato d.s.
 14,DODECILBENZENOSSULFONATO DE SÓDIO
+<<<<<<< HEAD
 9,Quod Lauril
+=======
+9,Magni Lauril
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 9,LAURIL SULFATO DE SÓDIO
 13,Ácido cítrico industrial
 9,Lauril sulfato de sódio PA
 13,Ácido c.
 2,
 3,ÁCIDO CLORÍDRICO
+<<<<<<< HEAD
 8,Quidem Álcool
 10,Cloreto de benzalcônio industrial
 5,Aut Hidróxido
@@ -112,11 +177,26 @@ id_substancia,sinonimo
 12,Ácido fosfórico industrial
 11,Hipoclorito de cálcio industrial
 11,Deserunt Hipoclorito
+=======
+8,Nam Álcool
+10,Cloreto de benzalcônio industrial
+5,Saepe Hidróxido
+6,PERÓXIDO DE HIDROGÊNIO
+11,Hipoclorito d.c.
+2,A Amônia
+12,Ácido fosfórico industrial
+11,Hipoclorito de cálcio industrial
+11,Reiciendis Hipoclorito
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 12,ÁCIDO FOSFÓRICO
 7,etanol
 10,Cloreto de benzalcônio industrial
 3,ÁCIDO CLORÍDRICO
+<<<<<<< HEAD
 966648,Commodi Amônia
+=======
+966648,Corporis Amônia
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 6,Peróxido d.h.
 4,Ácido a.
 8,
@@ -127,6 +207,7 @@ id_substancia,sinonimo
 3,Ácido clorídrico solução aquosa
 10,Cloreto de benzalcônio diluído
 7,etanol
+<<<<<<< HEAD
 4,Vero Ácido
 13,Debitis Ácido
 4,Ácido a.
@@ -137,6 +218,18 @@ id_substancia,sinonimo
 7,Etanol solução aquosa
 10,Cloreto de benzalcônio solução aquosa
 11,Cumque Hipoclorito
+=======
+4,Numquam Ácido
+13,Temporibus Ácido
+4,Ácido a.
+13,
+14,Dodecilbenzenossulfonato de sódio industrial
+10,A Cloreto
+5,Nam Hidróxido
+7,Etanol solução aquosa
+10,Cloreto de benzalcônio solução aquosa
+11,Impedit Hipoclorito
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 13,Ácido c.
 9,LAURIL SULFATO DE SÓDIO
 13,Ácido cítrico industrial
@@ -148,18 +241,31 @@ id_substancia,sinonimo
 6,PERÓXIDO DE HIDROGÊNIO
 5,Hidróxido d.s.
 3,ÁCIDO CLORÍDRICO
+<<<<<<< HEAD
 14,Cum Dodecilbenzenossulfonato
 3,Ducimus Ácido
+=======
+14,Labore Dodecilbenzenossulfonato
+3,Accusamus Ácido
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 1,HIPOCLORITO DE SÓDIO
 4,Ácido acético grau alimentício
 10,
 2,amônia
 2,AMÔNIA
+<<<<<<< HEAD
 11,Nihil Hipoclorito
 14,Deserunt Dodecilbenzenossulfonato
 1,Hipoclorito de sódio diluído
 7,ETANOL
 4,Esse Ácido
+=======
+11,Accusantium Hipoclorito
+14,Quibusdam Dodecilbenzenossulfonato
+1,Hipoclorito de sódio diluído
+7,ETANOL
+4,Ducimus Ácido
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 11,HIPOCLORITO DE CÁLCIO
 6,PERÓXIDO DE HIDROGÊNIO
 9,
@@ -175,11 +281,16 @@ id_substancia,sinonimo
 13,Ácido cítrico PA
 8,ÁLCOOL ISOPROPÍLICO
 1,Hipoclorito de sódio PA
+<<<<<<< HEAD
 5,Eum Hidróxido
+=======
+5,Est Hidróxido
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 9,
 1,Hipoclorito de sódio industrial
 13,ÁCIDO CÍTRICO
 4,Ácido a.
+<<<<<<< HEAD
 6,Dolore Peróxido
 950678,Eius Ácido
 3,Exercitationem Ácido
@@ -189,13 +300,32 @@ id_substancia,sinonimo
 2,AMÔNIA
 5,Hidróxido d.s.
 12,Dolorum Ácido
+=======
+6,Incidunt Peróxido
+950678,Occaecati Ácido
+3,Natus Ácido
+6,Peróxido d.h.
+4,Numquam Ácido
+10,Cloreto de benzalcônio grau alimentício
+2,AMÔNIA
+5,Hidróxido d.s.
+12,Corrupti Ácido
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 8,Álcool i.
 12,Ácido f.
 7,etanol
 13,ÁCIDO CÍTRICO
+<<<<<<< HEAD
 11,Cupiditate Hipoclorito
 13,Ácido cítrico PA
 10,Esse Cloreto
 2,Amônia solução aquosa
 6,Magnam Peróxido
+=======
+11,A Hipoclorito
+13,Ácido cítrico PA
+10,Temporibus Cloreto
+2,Amônia solução aquosa
+6,At Peróxido
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
 1,

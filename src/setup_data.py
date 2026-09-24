@@ -142,6 +142,7 @@ def main():
         "src/database/sql/data_load/mocks/historico_recomendacao.csv",
         linhas_historico,
         ["id_produto", "id_usuario", "resultado", "dosagem_sugerida"],
+        ["id_produto", "id_usuario", "resultado", "dosagem_sugerida"],
     )
     rodar_pipeline("historico_recomendacao", csv_historico)
 

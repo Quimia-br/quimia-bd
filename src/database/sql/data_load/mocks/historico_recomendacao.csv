@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 id_produto,id_usuario,id_superficie,resultado,dosagem_sugerida
 10,9fa6a09a-7ca8-44d7-8bf0-fb1c11043573,,incompativel,
 122,79101fb9-6851-4c50-91e4-a85d30ab4d2e,9,incompativel,
@@ -299,3 +300,306 @@ produto-x,ff0c7318-ded8-436f-af64-61ffa1c99aa2,7,incompativel,1 colher de chá p
 1,0291556d-625e-4ca0-bed2-ae3bb98dd555,5,atencao,"Aplicar puro, sem diluição"
 132,8ed1e857-dd6b-4155-a57c-35b41352367f,7,compativel,1 colher de chá para 1L de água
 99,usuario-invalido,,atencao,Diluir 1:10 em água morna
+=======
+id_produto,id_usuario,resultado,dosagem_sugerida
+10,4df573e3-f459-439b-8f42-661bb6a6e063,atencao,
+137,682dfe3b-3595-4ed3-876c-f92ac2b384a2,ok,1 colher de chá para 1L de água
+44,1cab380a-400c-483a-9a15-6b096fd4756b,compativel,"Aplicar puro, sem diluição"
+67,bf984709-d3c6-42df-aabe-456e8f539ceb,incompativel,
+985778,1a560f75-655d-4dd7-abcc-4514976ee4b6,atencao,"Aplicar puro, sem diluição"
+85,dc2f588f-d9a9-4ee0-9208-547684c2164b,compativel,"Aplicar puro, sem diluição"
+19,f4e57cdb-9e53-4766-ae37-bf6bf8c4c47e,nao_avaliado,1 colher de chá para 1L de água
+14,5949ae60-2d5c-43ef-92bd-cf28ed2acc6d,incompativel,Diluir 1:10 em água morna
+146,68fe6532-b504-4b6b-b6e9-26e5b83288ea,,2 colheres de sopa puro
+47,cf177163-8499-4b84-bbaa-470971658fac,incompativel,Diluir 1:10 em água morna
+2,084b8457-d4f4-477f-82bf-389c2bbee22c,incompativel,1 colher de chá para 1L de água
+126,8940fed4-09d2-4cac-9475-ebb9a0bf5c96,nao_avaliado,
+110,usuario-invalido,compativel,1 colher de chá para 1L de água
+96,usuario-invalido,compatível!,1 tampa (30ml) para 5L de água
+64,57c495c4-7a51-43da-8eac-0e03e8b9aa3a,compativel,"Aplicar puro, sem diluição"
+79,052b74c6-ff18-496e-96aa-26327688f857,atencao,"Aplicar puro, sem diluição"
+135,9d92a009-4649-4e7c-ae95-cfb1c43c6297,,Diluir 1:10 em água morna
+,a8205501-955c-468c-9f70-d58a92cf3fad,nao_avaliado,1 tampa (30ml) para 5L de água
+34,b5cfb4bf-a927-469b-aa7d-87b8abd10021,incompativel,1 tampa (30ml) para 5L de água
+10,0cdd7162-cf77-4273-86b6-7ce19d3704d7,compativel,1 colher de chá para 1L de água
+,68476eed-1d05-4501-bcf4-bd1419dd82e6,compativel,
+114,60430361-bcff-4a46-88c1-1ecab3c99a37,incompativel,2 colheres de sopa puro
+3,f8170cf1-f5d2-445b-87ac-27b7662da6d8,atencao,1 colher de chá para 1L de água
+36,0779b4f4-85ec-4278-9c21-d87c768173a8,compativel,Diluir 1:10 em água morna
+28,0b51abb8-8f18-4a48-94c5-2f8f3b1be4a7,atencao,1 colher de chá para 1L de água
+produto-x,91127185-718b-428f-93bc-8ed25fd0de65,compativel,1 colher de chá para 1L de água
+54,bb61452f-2fb7-4ee9-b134-a8de73143ddc,compativel,1 tampa (30ml) para 5L de água
+29,decb4f61-16c0-4b9f-9395-060c1546dd54,compativel,1 colher de chá para 1L de água
+26,1ab50077-edb1-47e0-969b-496bac764d96,nao_avaliado,Diluir 1:10 em água morna
+13,11ec156b-8f3a-411f-be8e-7950f7d4c750,ok,Diluir 1:10 em água morna
+81,df8acdd9-9a09-4d5b-baea-c8f7aa91b8c2,compativel,1 tampa (30ml) para 5L de água
+44,93f3d385-10b5-47f7-8801-5ee8140fdf10,,Diluir 1:10 em água morna
+24,32d2e434-485b-4cf1-9ec4-f71496f0306e,nao_avaliado,"Aplicar puro, sem diluição"
+produto-x,02a54105-bf80-44c7-9ed3-634b3bbd1858,nao_avaliado,"Aplicar puro, sem diluição"
+43,907f3926-072f-4666-a1a8-324127c947d8,incompativel,1 tampa (30ml) para 5L de água
+124,a5bbb766-b515-4efa-a9b3-833b68f6563d,nao_avaliado,Diluir 1:10 em água morna
+34,cf177163-8499-4b84-bbaa-470971658fac,nao_avaliado,"Aplicar puro, sem diluição"
+67,3bd30e54-a979-4233-9662-b93173fa3286,incompativel,
+133,930496fd-36aa-4092-9246-60fc822a8adc,nao_avaliado,
+124,8ffcce2a-abfa-4b74-8fa0-1e814464f225,incompativel,1 colher de chá para 1L de água
+980335,476af832-ab56-4048-8880-469e21b248f9,,1 colher de chá para 1L de água
+127,19c15965-00a5-43c8-a93a-9810c855983c,atencao,2 colheres de sopa puro
+72,14183f33-12af-4087-8be8-59cc7ced3775,nao_avaliado,"Aplicar puro, sem diluição"
+21,039f9cde-eb80-44c4-82ab-85b1b25ccf50,compativel,"Aplicar puro, sem diluição"
+31,,compativel,1 tampa (30ml) para 5L de água
+10,7ac37bf4-027e-4a42-babc-d550d331aea8,atencao,1 colher de chá para 1L de água
+117,usuario-invalido,compativel,2 colheres de sopa puro
+85,3041f864-1b78-4625-989c-7d1be680a13f,atencao,
+25,2dfa77ff-a601-49a4-90c6-2a90612ae376,atencao,
+produto-x,93d82861-6e44-4574-9894-d17500a1cdc0,compativel,1 tampa (30ml) para 5L de água
+964542,04846254-a4b5-48fa-9dc4-06893316e246,nao_avaliado,1 tampa (30ml) para 5L de água
+51,eed3f19e-e445-420f-9d26-e64e6713938c,incompativel,
+107,041027cc-6746-402e-9e78-e688b6132e8f,compativel,"Aplicar puro, sem diluição"
+130,7a3ad98b-14c2-40ca-8f83-6f3790bff246,compativel,1 colher de chá para 1L de água
+976692,0836d044-ef8f-4b01-92c8-bc0cc00d542e,incompativel,
+33,69c072f8-bf6c-4ec4-83a3-e55c31454213,atencao,1 colher de chá para 1L de água
+954875,usuario-invalido,compatível!,Diluir 1:10 em água morna
+88,usuario-invalido,incompativel,2 colheres de sopa puro
+132,a20633ec-7fc9-4f97-9b34-e9c7283d9c68,atencao,
+142,ff5c4bb6-6ed9-445b-bbf7-6ab0a8265ac2,atencao,
+34,,incompativel,1 colher de chá para 1L de água
+83,642ef065-f3e2-4d42-8e1b-12c60a6700d1,nao_avaliado,1 colher de chá para 1L de água
+107,ede080eb-53c2-4822-a944-9623e712d6bd,nao_avaliado,1 tampa (30ml) para 5L de água
+7,ff650de0-969b-4aa9-bd1d-f63b16e61f99,incompativel,Diluir 1:10 em água morna
+42,,incompativel,1 tampa (30ml) para 5L de água
+76,78f5d8b1-1e7d-4eb4-aaa4-5e918cc79aef,nao_avaliado,1 tampa (30ml) para 5L de água
+144,b0fd4184-6eb7-4bf7-ac05-a3650f788a72,nao_avaliado,2 colheres de sopa puro
+74,4bc60cb1-9f98-4735-9c27-f24cb5e74003,,"Aplicar puro, sem diluição"
+produto-x,usuario-invalido,compativel,1 tampa (30ml) para 5L de água
+52,ee11f5e7-e9e6-498b-ae16-674b939c1d7f,,2 colheres de sopa puro
+992357,e3bede51-5eba-4a3d-b7a5-101afaeef226,incompativel,
+produto-x,1430e2be-1dbb-4682-b2a0-ec8e2cd2025a,,1 tampa (30ml) para 5L de água
+45,274a4124-dfef-44a9-85d5-6ef7df5123ce,nao_avaliado,Diluir 1:10 em água morna
+34,c1c78b62-a76f-4a93-a8f2-ff1b64d97112,nao_avaliado,
+905235,82257b46-9b8c-405b-bfab-4451d9be9074,atencao,"Aplicar puro, sem diluição"
+141,7f22ef6d-154c-46df-a9f6-58f7e388b8b8,incompativel,2 colheres de sopa puro
+130,58d7c4ce-1da9-458e-b4b4-5fe3a23e877f,compativel,Diluir 1:10 em água morna
+55,eeb906d4-48c6-4a8e-9167-8a30bbbf1905,incompativel,1 colher de chá para 1L de água
+144,5b2c0dfb-ac75-4a53-ba71-718bb8201625,atencao,"Aplicar puro, sem diluição"
+63,usuario-invalido,atencao,"Aplicar puro, sem diluição"
+914860,d77e772b-170b-42e1-b055-4c937c3ff52a,compativel,1 colher de chá para 1L de água
+96,0836d044-ef8f-4b01-92c8-bc0cc00d542e,compativel,Diluir 1:10 em água morna
+925232,00c969cb-017f-4124-a607-762f52836487,,2 colheres de sopa puro
+produto-x,ede080eb-53c2-4822-a944-9623e712d6bd,compativel,2 colheres de sopa puro
+55,a54cfda0-4b85-48cb-b00f-6c34003ee844,incompativel,1 colher de chá para 1L de água
+112,a70e24a5-0af1-413f-8175-11bd9b0c1366,incompativel,1 tampa (30ml) para 5L de água
+85,1debce7d-2dce-444b-a802-5e946de9da6c,atencao,1 colher de chá para 1L de água
+59,171b3dee-e644-4e74-8e52-2e69d6895f07,nao_avaliado,
+81,edb61f55-039a-4d9c-b66b-54e2eb001661,compativel,
+17,dc2f588f-d9a9-4ee0-9208-547684c2164b,compativel,Diluir 1:10 em água morna
+913911,e361b90a-b98e-4152-bea2-e49665e3c192,compativel,Diluir 1:10 em água morna
+113,6b5e5cff-5b22-4a51-aef1-0e003fa6a28a,incompativel,1 colher de chá para 1L de água
+101,9fdc200f-404c-4eb7-ab85-b9cff3d9076a,incompativel,Diluir 1:10 em água morna
+96,usuario-invalido,incompativel,1 tampa (30ml) para 5L de água
+101,70e6e7a2-60cf-4ce0-8837-e92650996376,atencao,2 colheres de sopa puro
+132,d6c42be8-8f9c-4688-8a29-53f3c2c90d42,atencao,2 colheres de sopa puro
+146,1fe84a42-9c8e-4e6a-acad-03e3efb8c94a,,1 colher de chá para 1L de água
+141,65f31109-a287-4057-8b27-780e4c3660c8,compativel,2 colheres de sopa puro
+125,usuario-invalido,incompativel,1 tampa (30ml) para 5L de água
+18,97a058f3-ae99-4f3e-8591-eddd6d238d6a,nao_avaliado,Diluir 1:10 em água morna
+79,c7efcd8b-cd9c-4e17-a735-ba5c3b840c0d,atencao,Diluir 1:10 em água morna
+produto-x,083c6790-157b-41fc-b719-ddc47fbd9f9a,incompativel,
+112,c653e703-4364-4891-9805-c1333b667a49,atencao,"Aplicar puro, sem diluição"
+92,78d14ddf-775a-4962-bec8-ae0a5af121cc,incompativel,
+72,0cb27bba-fde8-437c-85a5-f8dc37ac3f33,compatível!,Diluir 1:10 em água morna
+20,ee6966ba-a583-4776-8bcf-288c364d8c92,compativel,1 colher de chá para 1L de água
+55,91a253ad-8860-4a71-8c28-0207afdaa7b5,nao_avaliado,
+94,9d1551fe-4b0e-49ec-af17-5abff93b02fe,atencao,2 colheres de sopa puro
+131,1bc8eb1c-a42f-47dd-a1c2-7255b6850ab4,incompativel,1 colher de chá para 1L de água
+132,17a9c7ff-81e7-4c0d-abcf-5301219acb4a,incompativel,
+92,642ef065-f3e2-4d42-8e1b-12c60a6700d1,compativel,Diluir 1:10 em água morna
+11,6c89529c-1725-41e6-858b-ea43b7841976,ok,"Aplicar puro, sem diluição"
+117,2dcbf4f3-f370-427b-b26f-37a6cbb19b55,atencao,1 tampa (30ml) para 5L de água
+134,9d050ad4-c69b-480f-a6e4-471e0fd31423,atencao,1 colher de chá para 1L de água
+45,aede80a9-ddd3-4f0a-870e-0025bd9e2fe4,compativel,1 colher de chá para 1L de água
+58,5ca064d9-d4a6-4bef-be22-0a0297d9d7cc,atencao,"Aplicar puro, sem diluição"
+2,1695f126-efb9-4524-87ba-0bf68b56cd8f,incompativel,1 tampa (30ml) para 5L de água
+72,14f77630-b11e-4459-9d6c-2750f303f04e,compativel,
+85,aec7880e-c56d-49e1-8b02-3e387fda45c1,nao_avaliado,2 colheres de sopa puro
+106,d868e412-e74f-4864-8ffd-481bf77b6326,incompativel,2 colheres de sopa puro
+11,a18b02af-2b50-422d-854a-c4eb0c3dcdb7,incompativel,Diluir 1:10 em água morna
+967717,usuario-invalido,compativel,
+73,4ce822e4-76bb-4e5d-906d-5c8ab47b7a66,nao_avaliado,"Aplicar puro, sem diluição"
+106,6b580793-98e5-4927-ad4f-99274e60e26c,incompativel,1 colher de chá para 1L de água
+68,e361b90a-b98e-4152-bea2-e49665e3c192,nao_avaliado,1 colher de chá para 1L de água
+59,9923ccfb-8677-4b9d-9175-01a4537da78c,incompativel,1 colher de chá para 1L de água
+130,dd0ca6a0-d119-4a00-b263-d6ecfa9d2642,incompativel,"Aplicar puro, sem diluição"
+978618,7f22ef6d-154c-46df-a9f6-58f7e388b8b8,compativel,1 tampa (30ml) para 5L de água
+34,48c1db1d-3d7e-4cab-aec6-96bcbe3ca38d,compativel,
+134,d868e412-e74f-4864-8ffd-481bf77b6326,nao_avaliado,2 colheres de sopa puro
+963192,f02f4f65-801c-49ff-9afa-8bfb1b802e10,compativel,"Aplicar puro, sem diluição"
+123,d067f60f-0d1c-4156-9178-5bb82c88b530,nao_avaliado,Diluir 1:10 em água morna
+2,e25a6e26-33c8-48ca-ae1a-d4236765f17e,nao_avaliado,
+81,5882e242-14ca-4e4c-b588-059a2b29231b,atencao,Diluir 1:10 em água morna
+109,c810c80c-be0a-4e3f-8b55-37ec9a9c89bf,nao_avaliado,2 colheres de sopa puro
+143,c60a12bf-b5ff-48bc-aa7d-7be3505c3bd6,nao_avaliado,Diluir 1:10 em água morna
+,c9f37dcc-2204-4fc4-a266-96a065842308,incompativel,
+59,2012441b-970b-404e-9fca-03486471b811,,1 tampa (30ml) para 5L de água
+103,039f9cde-eb80-44c4-82ab-85b1b25ccf50,compativel,2 colheres de sopa puro
+2,c0ba77bb-910a-4068-8891-dc8e3c2d7b2f,nao_avaliado,1 tampa (30ml) para 5L de água
+57,0b51abb8-8f18-4a48-94c5-2f8f3b1be4a7,nao_avaliado,"Aplicar puro, sem diluição"
+134,7d051572-bf81-4ebe-bf89-eb7e1ac157e3,incompativel,
+3,24ed96ac-f662-4c01-a9f0-6a9da93ae788,,1 colher de chá para 1L de água
+9,d79e6a3f-16e1-4325-a044-494028e44409,incompativel,1 colher de chá para 1L de água
+10,80fec0ec-93ca-48f1-b403-d89d6faec016,incompativel,1 tampa (30ml) para 5L de água
+,5ca064d9-d4a6-4bef-be22-0a0297d9d7cc,nao_avaliado,1 colher de chá para 1L de água
+4,dad717e0-a97b-4468-84d6-f84cf988f8e7,ok,
+90,81d8fca9-d07d-427d-9a48-d07270ea369c,incompativel,"Aplicar puro, sem diluição"
+975354,5a781855-26c8-4fdb-8f3b-e210f0e57acf,compativel,1 colher de chá para 1L de água
+76,14fe0e22-4d8f-4243-80c0-cba81bcddcfe,atencao,1 colher de chá para 1L de água
+65,2ff65302-714a-4ae3-9d44-2fce8e8da6d9,incompativel,Diluir 1:10 em água morna
+produto-x,c0fc53e3-8908-4421-a5d5-f27e255b3e86,talvez,"Aplicar puro, sem diluição"
+18,5812af25-d208-452b-a19a-0ed55907e5a4,,
+81,5ca064d9-d4a6-4bef-be22-0a0297d9d7cc,compativel,
+64,768d36d4-c673-49ab-b7b4-2b2c20ef947c,atencao,1 tampa (30ml) para 5L de água
+46,7b91ab50-fecb-4be5-bb30-5056bd67d84b,atencao,2 colheres de sopa puro
+989536,46355c3a-2ff6-4968-9e8d-df949e8ac6de,incompativel,2 colheres de sopa puro
+68,020514a8-3eed-4716-bfcc-39f08c2d0d48,atencao,2 colheres de sopa puro
+31,6841bbe8-f759-4a8c-94a0-1ff264ef895e,nao_avaliado,1 colher de chá para 1L de água
+139,usuario-invalido,atencao,1 colher de chá para 1L de água
+71,073eb3aa-7d82-44d4-babe-3f414c5f39c5,ok,"Aplicar puro, sem diluição"
+33,a954e2ec-ed58-4278-bcdb-ad60682d105e,compativel,1 colher de chá para 1L de água
+45,0945458a-cef9-430f-869d-63fcf76f957d,nao_avaliado,Diluir 1:10 em água morna
+4,1ad42b86-0478-44a2-9adf-44a9e04a196a,atencao,Diluir 1:10 em água morna
+67,6669ee2a-09cf-43ef-8577-9fef0fec61d5,nao_avaliado,1 colher de chá para 1L de água
+48,2ec98a3f-2894-4f6a-830c-4967a14354d4,atencao,Diluir 1:10 em água morna
+72,4df573e3-f459-439b-8f42-661bb6a6e063,incompativel,1 tampa (30ml) para 5L de água
+61,f02f4f65-801c-49ff-9afa-8bfb1b802e10,incompativel,"Aplicar puro, sem diluição"
+46,759c13cc-6564-4fa0-9f38-3c57811be139,,
+81,4d934d5c-d778-45d7-9d07-748e7d6f2937,compativel,"Aplicar puro, sem diluição"
+42,aa8894d7-a379-4a5a-a520-34b37e929073,compativel,"Aplicar puro, sem diluição"
+67,1b0bf2b2-f627-4fb6-9351-373d65a1e253,atencao,Diluir 1:10 em água morna
+32,2e26b14d-1b51-4b6e-8463-d73254598428,,2 colheres de sopa puro
+138,ee11f5e7-e9e6-498b-ae16-674b939c1d7f,atencao,
+115,f44aa7fe-7e13-4751-990d-a103a672e712,atencao,"Aplicar puro, sem diluição"
+38,0cdd7162-cf77-4273-86b6-7ce19d3704d7,atencao,"Aplicar puro, sem diluição"
+104,a70e24a5-0af1-413f-8175-11bd9b0c1366,atencao,2 colheres de sopa puro
+75,a9a843c5-a658-4ffc-ac68-a2826b702b08,atencao,"Aplicar puro, sem diluição"
+93,eb661688-ac43-453f-9ac8-2b0a6eb5528d,,"Aplicar puro, sem diluição"
+6,d1522377-5b46-4f7f-91c1-ebb8d96f7371,compativel,2 colheres de sopa puro
+27,55862101-3d7d-4890-8aca-7d40f405d517,compativel,"Aplicar puro, sem diluição"
+22,2b7f393b-45a6-4ca0-b079-29246ba07aad,nao_avaliado,Diluir 1:10 em água morna
+73,bbc937b2-a53c-4039-ae60-c337d2e86bb1,incompativel,1 tampa (30ml) para 5L de água
+92,e70c1e31-36e5-4d7e-ae05-c2d042969105,,1 colher de chá para 1L de água
+971898,492e7a02-14d7-4e06-ab77-9ce46b7f3655,nao_avaliado,
+145,0cdd7162-cf77-4273-86b6-7ce19d3704d7,atencao,Diluir 1:10 em água morna
+59,29a34a87-c4a9-4cfa-b7f8-25235dbd497e,nao_avaliado,Diluir 1:10 em água morna
+3,715bacb9-e701-4e44-bee1-210e73503709,atencao,Diluir 1:10 em água morna
+3,edae2b0d-faa7-4f05-98b7-d5af80bc85cb,,"Aplicar puro, sem diluição"
+111,7d051572-bf81-4ebe-bf89-eb7e1ac157e3,compativel,1 colher de chá para 1L de água
+106,d2e3b334-dde8-4cb4-8bac-3416bad22261,incompativel,2 colheres de sopa puro
+100,fc4aa267-9ae0-40aa-85ce-a8294b68923c,nao_avaliado,
+70,b0fd4184-6eb7-4bf7-ac05-a3650f788a72,atencao,"Aplicar puro, sem diluição"
+18,c8771b8f-f996-41de-983f-c22abb3ed22d,nao_avaliado,1 colher de chá para 1L de água
+126,ee6966ba-a583-4776-8bcf-288c364d8c92,compativel,2 colheres de sopa puro
+produto-x,0024685c-19ae-4219-a6fe-c3fd8d1d551c,compativel,2 colheres de sopa puro
+4,32d2e434-485b-4cf1-9ec4-f71496f0306e,nao_avaliado,Diluir 1:10 em água morna
+9,a8205501-955c-468c-9f70-d58a92cf3fad,,1 tampa (30ml) para 5L de água
+101,741fe508-f453-43a5-8d2d-459b104b625d,atencao,"Aplicar puro, sem diluição"
+32,usuario-invalido,nao_avaliado,"Aplicar puro, sem diluição"
+9,3eed453b-a86d-450b-be75-46482934de2a,incompativel,"Aplicar puro, sem diluição"
+80,6c4807ab-73ac-40b2-a623-ea57325524d4,compativel,
+968278,bb61452f-2fb7-4ee9-b134-a8de73143ddc,incompativel,Diluir 1:10 em água morna
+987385,c7ef64f5-ef73-4a99-978c-f217cc6800b7,nao_avaliado,Diluir 1:10 em água morna
+71,06d8dd73-a593-4121-87ab-e322300f716b,compativel,1 tampa (30ml) para 5L de água
+122,055a5c0a-0d60-435e-9eca-c8b70615a7aa,compativel,2 colheres de sopa puro
+24,974e36a9-ab6a-4996-904c-b77efe1e3024,,
+92,a20633ec-7fc9-4f97-9b34-e9c7283d9c68,compativel,2 colheres de sopa puro
+82,,atencao,"Aplicar puro, sem diluição"
+6,275da510-e049-4a46-b588-36d34d794c4d,atencao,1 tampa (30ml) para 5L de água
+113,d61de056-81b9-4625-9087-0f64bc90ec05,incompativel,1 colher de chá para 1L de água
+90,138462ff-fee7-4640-9ae5-ce285ab38a8f,incompativel,1 tampa (30ml) para 5L de água
+116,6669ee2a-09cf-43ef-8577-9fef0fec61d5,nao_avaliado,1 tampa (30ml) para 5L de água
+130,4b3aff43-6988-4088-af76-04f342d13859,ok,1 colher de chá para 1L de água
+17,98832d0f-aad7-4f20-9fbf-097e85c09593,incompativel,1 colher de chá para 1L de água
+142,c5dfe647-9a8b-40a8-9ffe-22326bac054a,atencao,1 tampa (30ml) para 5L de água
+18,303465ef-9018-45ad-917e-341e15a174c1,compativel,2 colheres de sopa puro
+50,61698552-7709-451d-991a-330e95ac6048,nao_avaliado,
+66,57149c12-6a3d-4cce-816b-9ef2f74853ba,compativel,1 tampa (30ml) para 5L de água
+927359,b3faecc6-b09a-4644-94e3-b8f3941c61c3,compativel,Diluir 1:10 em água morna
+107,6b580793-98e5-4927-ad4f-99274e60e26c,atencao,1 colher de chá para 1L de água
+19,851fb074-201c-4031-800e-166196f66b57,,1 colher de chá para 1L de água
+60,2d9fd238-852d-4dfa-8de4-a43f1f088b2c,incompativel,1 colher de chá para 1L de água
+46,1cab380a-400c-483a-9a15-6b096fd4756b,compativel,
+118,72118e6e-e421-4d52-a345-612aa0254658,compatível!,2 colheres de sopa puro
+130,5e7027b3-0996-47f8-80f7-b499a25ca239,nao_avaliado,Diluir 1:10 em água morna
+972100,,atencao,"Aplicar puro, sem diluição"
+111,ed7ef485-dbee-439e-a584-4fd17f788c3d,incompativel,"Aplicar puro, sem diluição"
+66,979858af-a4b4-4ce9-b703-a82c2dbd5e68,nao_avaliado,1 tampa (30ml) para 5L de água
+73,6c89529c-1725-41e6-858b-ea43b7841976,atencao,1 tampa (30ml) para 5L de água
+57,c77ed631-b056-4b37-be8e-d917c996557d,atencao,1 colher de chá para 1L de água
+40,c0fc53e3-8908-4421-a5d5-f27e255b3e86,incompativel,Diluir 1:10 em água morna
+64,4d934d5c-d778-45d7-9d07-748e7d6f2937,nao_avaliado,1 colher de chá para 1L de água
+996241,ca991ad4-4cb6-47bf-a581-eab4ac1c7bc1,incompativel,"Aplicar puro, sem diluição"
+25,4d934d5c-d778-45d7-9d07-748e7d6f2937,nao_avaliado,1 tampa (30ml) para 5L de água
+86,60b54603-ef1d-427d-a533-d0fa0b1f6a03,compativel,2 colheres de sopa puro
+3,86a3a13a-6c02-40d3-88cb-3c07030bd8db,atencao,1 colher de chá para 1L de água
+139,dd133cd5-3f3c-4d55-b7bd-6a379cc9642c,incompativel,2 colheres de sopa puro
+101,usuario-invalido,compativel,2 colheres de sopa puro
+101,6c0584bd-4f3c-4071-90b8-2319d6b23a36,compativel,1 colher de chá para 1L de água
+22,60b54603-ef1d-427d-a533-d0fa0b1f6a03,incompativel,2 colheres de sopa puro
+51,af69e80c-10a0-42fb-8daf-0e7accd65361,incompativel,2 colheres de sopa puro
+111,7e024010-1350-4b45-8b20-76fdce0c369b,nao_avaliado,"Aplicar puro, sem diluição"
+49,5dd95a14-40c2-4a4a-af0d-c08c7e8a0e55,atencao,2 colheres de sopa puro
+,70503639-ee96-4767-aed6-271c838c2c64,incompativel,"Aplicar puro, sem diluição"
+60,d1c8b729-eed7-4347-989c-f39fa8cb7826,compativel,1 tampa (30ml) para 5L de água
+63,035b6035-cb1a-484e-9a7b-4d42b70e63a3,ok,1 tampa (30ml) para 5L de água
+29,5f858fc1-a2f1-45a5-8210-9a6eb61fb5b3,incompativel,
+53,a8205501-955c-468c-9f70-d58a92cf3fad,nao_avaliado,1 colher de chá para 1L de água
+37,bffc2454-d16a-4a45-a679-5438402a9cbd,compativel,Diluir 1:10 em água morna
+73,df2f7783-ad31-430c-a869-2cc55e9615f7,compativel,"Aplicar puro, sem diluição"
+3,6b5e5cff-5b22-4a51-aef1-0e003fa6a28a,atencao,1 tampa (30ml) para 5L de água
+99,9c03d828-e76c-40c6-adb2-44ef4b09a69b,compativel,Diluir 1:10 em água morna
+137,8d53d6f1-6816-4530-b5d9-59d648360fad,nao_avaliado,1 colher de chá para 1L de água
+902816,939e534e-74d4-46b7-a6c4-a4120441aabe,nao_avaliado,"Aplicar puro, sem diluição"
+5,cb3aa9e2-c589-460d-bedb-35726d820180,atencao,2 colheres de sopa puro
+,usuario-invalido,compativel,
+100,1b8f9ea3-e78a-46ef-9157-eb3a5d32ae74,compativel,1 colher de chá para 1L de água
+929567,eed3f19e-e445-420f-9d26-e64e6713938c,compativel,
+59,f88c1db3-8ae4-41ed-866f-ea66c49d0321,atencao,1 colher de chá para 1L de água
+139,8f841585-e78e-4d43-9ab7-f2e663740eb5,incompativel,2 colheres de sopa puro
+135,7e276f36-f010-4bd8-9504-6640c5d6d446,incompativel,
+920715,8e9eeb5e-114f-4155-916c-b5c8836d283f,compativel,2 colheres de sopa puro
+38,3c56e3b0-63a1-4bf7-b36a-6471559bb070,nao_avaliado,"Aplicar puro, sem diluição"
+71,e6097d51-f9e0-4bbc-b840-ed75de016190,incompativel,1 tampa (30ml) para 5L de água
+69,8fab6499-6488-48bc-80fc-0d97af56049d,incompativel,2 colheres de sopa puro
+92,8940fed4-09d2-4cac-9475-ebb9a0bf5c96,nao_avaliado,
+48,edae2b0d-faa7-4f05-98b7-d5af80bc85cb,incompativel,2 colheres de sopa puro
+105,dd0e6e69-ebe7-4562-9da3-108af4acca01,,2 colheres de sopa puro
+52,c965f265-0667-440d-a106-3ba58fd1ee22,nao_avaliado,1 colher de chá para 1L de água
+84,cc4281ff-435c-48bb-84e7-ba4acba042cb,compativel,1 colher de chá para 1L de água
+98,b3d52ed2-e190-495c-94dd-eace8c006d30,compativel,1 colher de chá para 1L de água
+117,6cf3eb92-428a-4f54-a067-3fbe858e54d0,compatível!,1 colher de chá para 1L de água
+11,4356449f-b37a-43f6-95ab-61cd68fe5eb5,compativel,2 colheres de sopa puro
+102,492f1012-728e-45ba-8c64-c036d663da44,atencao,"Aplicar puro, sem diluição"
+76,2d9ecac0-d87c-48b4-b8d1-e0f6c19d044e,incompativel,"Aplicar puro, sem diluição"
+116,ca57cfcb-0723-4103-a8ae-3d351d9577fd,incompativel,"Aplicar puro, sem diluição"
+116,410e361f-d8b4-49bd-9a7e-ed7ed38c29ba,incompativel,"Aplicar puro, sem diluição"
+83,769f4334-cbb8-4862-b48f-5314ea47d7af,compativel,1 tampa (30ml) para 5L de água
+116,70e6e7a2-60cf-4ce0-8837-e92650996376,nao_avaliado,
+131,17a9c7ff-81e7-4c0d-abcf-5301219acb4a,nao_avaliado,1 tampa (30ml) para 5L de água
+86,20f5d2a7-f6c5-444b-b87e-3743e6cacdd4,compatível!,2 colheres de sopa puro
+14,2a8e6cb8-2457-46c4-91df-776ae231e2ff,nao_avaliado,Diluir 1:10 em água morna
+31,c193f650-6512-4113-a99e-122fe5d3b423,,1 tampa (30ml) para 5L de água
+65,0f0f1144-cdcb-41e5-9738-cf8c341946a2,talvez,1 colher de chá para 1L de água
+931179,20f5d2a7-f6c5-444b-b87e-3743e6cacdd4,nao_avaliado,"Aplicar puro, sem diluição"
+2,60430361-bcff-4a46-88c1-1ecab3c99a37,incompativel,1 tampa (30ml) para 5L de água
+15,c66163cc-ead9-49e1-a559-839763cfecd9,compativel,
+77,4436cdb2-0c52-4f28-ad41-eb0c2a705347,nao_avaliado,2 colheres de sopa puro
+73,36018b5f-97f8-4790-a35f-8b22d827a1bc,incompativel,"Aplicar puro, sem diluição"
+93,0dd0b660-c9b6-4edd-a6e6-104d83340284,atencao,Diluir 1:10 em água morna
+98,715bacb9-e701-4e44-bee1-210e73503709,compativel,Diluir 1:10 em água morna
+32,69f204d6-4db6-43bf-9666-6047f88d42b5,nao_avaliado,1 colher de chá para 1L de água
+54,f161c03c-cbfa-4bc4-9b08-932bf2a5c2d0,compativel,"Aplicar puro, sem diluição"
+74,cd1f3118-1242-4e2d-8f62-a6c6c10cd187,atencao,2 colheres de sopa puro
+128,86a3a13a-6c02-40d3-88cb-3c07030bd8db,incompativel,1 colher de chá para 1L de água
+75,usuario-invalido,compativel,"Aplicar puro, sem diluição"
+31,77a73ec9-ce76-4895-b914-06aa4b7b1328,nao_avaliado,"Aplicar puro, sem diluição"
+90,46f6a51b-fdfb-447b-ba70-e60e25ddb662,incompativel,
+18,67445489-f4ac-4386-9aa4-66edf07ab1c5,compativel,1 tampa (30ml) para 5L de água
+>>>>>>> ff95116cad443fdc5976cec38d8663ada506a0b7
