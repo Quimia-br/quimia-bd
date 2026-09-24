@@ -1,32 +1,3 @@
-    CREATE EXTENSION IF NOT EXISTS pgcrypto;
-    CREATE EXTENSION IF NOT EXISTS unaccent;
-    
-    DROP TABLE IF EXISTS historico_recomendacao CASCADE;
-    DROP TABLE IF EXISTS estante_produto CASCADE;
-    DROP TABLE IF EXISTS estante CASCADE;
-    DROP TABLE IF EXISTS localizacao_usuario CASCADE;
-    DROP TABLE IF EXISTS produto_superficie CASCADE;
-    DROP TABLE IF EXISTS sinonimo_pendente CASCADE;
-    DROP TABLE IF EXISTS incompatibilidade_regra CASCADE;
-    DROP TABLE IF EXISTS substancia_classe_quimica CASCADE;
-    DROP TABLE IF EXISTS substancia_sinonimo CASCADE;
-    DROP TABLE IF EXISTS fds_composto CASCADE;
-    DROP TABLE IF EXISTS fds_incompatibilidade CASCADE;
-    DROP TABLE IF EXISTS fds_descarte CASCADE;
-    DROP TABLE IF EXISTS fds_primeiro_socorro CASCADE;
-    DROP TABLE IF EXISTS fds CASCADE;
-    DROP TABLE IF EXISTS substancia CASCADE;
-    DROP TABLE IF EXISTS classe_quimica CASCADE;
-    DROP TABLE IF EXISTS empresa_produto CASCADE;
-    DROP TABLE IF EXISTS produto CASCADE;
-    DROP TABLE IF EXISTS ponto_parceiro CASCADE;
-    DROP TABLE IF EXISTS usuario CASCADE;
-    DROP TABLE IF EXISTS superficie CASCADE;
-    DROP TABLE IF EXISTS empresa CASCADE;
-    DROP TABLE IF EXISTS marca CASCADE;
-    DROP TABLE IF EXISTS historico_match CASCADE;
-    DROP TABLE IF EXISTS sessao_acesso CASCADE;
-
 DROP TABLE IF EXISTS historico_recomendacao CASCADE;
 DROP TABLE IF EXISTS estante_produto CASCADE;
 DROP TABLE IF EXISTS estante CASCADE;
