@@ -65,6 +65,19 @@ def main():
         "src/database/sql/routines/triggers/trg_processar_fds_raw_json.sql",
 
         "src/database/sql/ddl/constraints/foreign_keys.sql",
+
+        "src/database/sql/indexes/idx_fds_id_produto.sql",
+        "src/database/sql/indexes/idx_fds_produto_ativo.sql",
+        "src/database/sql/indexes/idx_fds_composto_id_fds.sql",
+        "src/database/sql/indexes/idx_fds_composto_id_substancia.sql",
+        "src/database/sql/indexes/idx_fds_incompat_id_fds.sql",
+        "src/database/sql/indexes/idx_fds_descarte_id_fds.sql",
+        "src/database/sql/indexes/idx_fds_primeiro_socorro_id_fds.sql",
+        "src/database/sql/indexes/idx_substancia_sinonimo_id_substancia.sql",
+        "src/database/sql/indexes/idx_produto_id_marca.sql",
+        "src/database/sql/indexes/idx_sessao_acesso_id_usuario.sql",
+        "src/database/sql/indexes/idx_sessao_acesso_ocorreu_em.sql",
+        "src/database/sql/indexes/idx_log_auditoria_tabela_data.sql",
     ])
 
     rodar_pipeline("usuario", "src/database/sql/data_load/mocks/usuario.csv")

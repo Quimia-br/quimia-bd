@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS idx_produto_id_marca ON produto (id_marca);
