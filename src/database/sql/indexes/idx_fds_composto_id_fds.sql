@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS idx_fds_composto_id_fds ON fds_composto(id_fds);
