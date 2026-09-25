@@ -1,301 +1,51 @@
-nome,cnpj,ativo
-da Luz S.A.,17.056.249/0001-11,true
-,18.632.790/0001-93,false
-Cassiano S/A,83.217.059/0001-63,true
-Aparecida Moreira S.A.,40.617.398/0001-24,true
-Barbosa,16.205.379/0001-06,true
-Rezende,78.610.453/0001-27,true
-Câmara,91.347.025/0001-11,true
-Pires,41.580.326/0001-12,false
-Almeida,14.625.837/0001-30,true
-Teixeira Rezende S.A.,26.839.140/0001-41,true
-Mendonça e Filhos,12.345,true
-Ribeiro,14.625.837/0001-30,false
-Cunha,63.092.518/0001-12,true
-Correia - ME,não tem cnpj,true
-Abreu,13.278.694/0001-75,false
-Gonçalves,12.470.596/0001-72,false
-Farias,54.631.972/0001-03,false
-Garcia,27.645.930/0001-59,false
-Oliveira - ME,71.632.890/0001-00,true
-Barbosa Araújo S/A,16.293.845/0001-52,true
-Moreira - EI,50.327.149/0001-58,false
-Abreu Novaes e Filhos,12.345,true
-da Mota,02.764.895/0001-66,false
-Abreu,82.406.157/0001-86,false
-Fogaça,65.137.489/0001-93,true
-Ribeiro - EI,54.013.276/0001-33,false
-Vasconcelos,67.980.312/0001-80,true
-das Neves - ME,72.105.463/0001-29,true
-Novaes Costela - ME,71.632.890/0001-00,false
-Ribeiro Abreu S.A.,26.104.579/0001-26,false
-Araújo e Filhos,64.971.082/0001-02,true
-Novaes Silva S/A,68.029.371/0001-30,true
-Andrade Ltda.,42.378.615/0001-04,true
-Viana,20.316.475/0001-07,true
-Melo S/A,19.254.807/0001-89,false
-Camargo,23.865.749/0001-05,true
-Leão,65.137.489/0001-93,true
-Nascimento,81.240.769/0001-89,true
-Rocha e Filhos,89.623.714/0001-60,true
-Ramos Lima e Filhos,53.412.789/0001-54,true
-Vargas,91.243.658/0001-80,false
-Brito Leão - ME,72.386.015/0001-40,true
-Melo Cavalcanti S.A.,07.386.125/0001-40,true
-da Mata Viana e Filhos,78.914.306/0001-40,true
-Aragão Camargo e Filhos,12.345,false
-,54.763.802/0001-82,true
-Mendes Ltda.,70.618.953/0001-01,true
-da Mata Vasconcelos - EI,56.017.239/0001-29,false
-Gomes,37.568.491/0001-81,true
-Cardoso,82.306.547/0001-84,true
-Aparecida,15.790.486/0001-86,true
-Barros,27.835.691/0001-08,false
-Freitas - EI,64.082.753/0001-76,true
-Campos,79.614.350/0001-06,true
-Freitas,58.793.642/0001-75,true
-Moreira,70.523.946/0001-18,true
-Cirino S.A.,71.369.284/0001-36,true
-Pastor,78.615.902/0001-20,true
-Cavalcanti Fogaça e Filhos,53.412.789/0001-54,false
-Pacheco,63.172.049/0001-41,true
-Sá S/A,83.796.154/0001-69,true
-Ramos,13.278.694/0001-75,false
-Pires Aparecida S/A,74.512.380/0001-80,false
-Lima,20.567.891/0001-70,true
-Garcia Melo e Filhos,42.197.038/0001-46,true
-Pires,75.813.460/0001-38,true
-Sampaio,60.482.193/0001-96,true
-Costa e Filhos,25.867.143/0001-26,true
-,51.704.892/0001-42,false
-Dias Cassiano - ME,12.345,true
-Fonseca Ltda.,15.039.246/0001-44,true
-Cavalcante - EI,25.938.476/0001-07,true
-,53.642.187/0001-93,true
-Vasconcelos,32.150.796/0001-55,true
-Alves,15.790.348/0001-05,true
-Macedo - EI,23.564.071/0001-12,true
-Vargas Albuquerque - EI,75.298.106/0001-12,true
-Abreu Pinto Ltda.,86.249.375/0001-05,true
-Silveira,30.785.496/0001-17,true
-Casa Grande Azevedo S/A,72.618.049/0001-13,true
-Farias - EI,28.794.163/0001-02,true
-Sampaio Silveira Ltda.,30.657.981/0001-05,false
-Castro Alves - ME,16.293.845/0001-52,false
-Farias,não tem cnpj,false
-Teixeira - ME,82.163.075/0001-58,false
-Cavalcanti Ltda.,72.149.530/0001-07,true
-Porto - EI,56.138.740/0001-43,true
-Carvalho da Cunha - EI,47.136.059/0001-75,true
-Rios Mendonça - EI,26.450.379/0001-25,true
-Andrade - ME,78.234.915/0001-59,true
-Lima,71.036.825/0001-04,true
-das Neves,00.000.000/0000-00,true
-Fonseca,08.456.937/0001-88,true
-Nunes,59.172.463/0001-83,false
-Jesus,29.531.684/0001-30,false
-,32.719.865/0001-07,true
-Rocha Araújo Ltda.,86.125.094/0001-40,false
-Leão,80.792.146/0001-56,true
-Rezende - EI,48.360.729/0001-03,true
-Rios,86.079.152/0001-47,true
-Aparecida Correia S.A.,85.610.923/0001-18,true
-da Conceição,70.624.953/0001-06,true
-da Rocha Pacheco S.A.,84.307.629/0001-79,false
-Ferreira Silveira e Filhos,54.396.127/0001-09,true
-Souza S/A,72.015.839/0001-04,true
-da Luz,39.412.578/0001-90,false
-Souza S/A,14.392.567/0001-65,true
-Barros S.A.,37.814.265/0001-33,true
-Silva,54.396.127/0001-09,true
-Barbosa Pimenta - ME,16.830.497/0001-05,false
-Vasconcelos e Filhos,14.306.928/0001-03,true
-Pires,53.874.921/0001-40,false
-Castro,64.378.190/0001-68,false
-Martins Ltda.,82.316.074/0001-04,false
-Santos,61.572.034/0001-45,false
-Moura,60.841.725/0001-34,true
-Moura Araújo S.A.,65.487.139/0001-57,true
-Farias Almeida e Filhos,10.435.267/0001-65,true
-Duarte das Neves Ltda.,06.281.397/0001-13,true
-Moura,53.827.106/0001-20,false
-Moreira,10.435.267/0001-65,true
-Albuquerque,32.416.975/0001-91,false
-Fogaça,64.592.073/0001-00,false
-Macedo Ltda.,80.792.146/0001-56,false
-Pacheco Ltda.,70.239.618/0001-94,true
-da Luz S.A.,61.352.897/0001-07,true
-Lima,58.379.146/0001-70,true
-Fogaça,64.095.812/0001-40,true
-Andrade - EI,36.125.479/0001-30,false
-da Conceição,35.491.760/0001-23,true
-Pastor Nunes e Filhos,53.412.789/0001-54,true
-Araújo,97.045.128/0001-03,false
-Teixeira,54.307.186/0001-55,false
-Câmara Marques - EI,10.597.234/0001-11,true
-Porto Albuquerque - EI,73.156.290/0001-30,true
-da Cunha,36.794.820/0001-40,true
-Campos Aparecida - EI,71.034.289/0001-08,false
-Moraes Ltda.,34.709.258/0001-83,true
-da Rocha Ltda.,29.346.057/0001-29,true
-Câmara,87.635.904/0001-71,false
-Melo da Cunha S/A,38.094.576/0001-38,true
-Gonçalves,87.460.253/0001-26,true
-,36.425.879/0001-60,true
-Mendonça,46.591.702/0001-98,true
-Aparecida Ltda.,não tem cnpj,false
-Porto,18.460.275/0001-73,false
-Montenegro Vasconcelos - EI,53.624.790/0001-42,true
-Novais Barbosa e Filhos,49.081.376/0001-67,false
-da Mata Fogaça - EI,47.269.581/0001-25,true
-Vargas,87.412.036/0001-60,true
-Vieira Fonseca - ME,15.963.084/0001-36,true
-das Neves,12.345,false
-Pinto S.A.,21.340.867/0001-66,true
-Moura - EI,04.325.768/0001-96,false
-Marques Ferreira - EI,12.345,true
-Barbosa,65.841.207/0001-34,false
-Gomes,50.748.619/0001-57,true
-Nogueira da Mata e Filhos,87.419.302/0001-87,false
-Novais Pacheco S/A,97.083.215/0001-55,true
-Abreu,50.412.836/0001-71,true
-Ribeiro - EI,,false
-Barbosa,59.037.268/0001-40,true
-Montenegro,75.469.810/0001-90,true
-Costa Ltda.,47.103.692/0001-67,false
-Farias,06.147.859/0001-04,true
-Sampaio,06.842.753/0001-20,true
-Vieira,80.694.751/0001-94,true
-Rocha,30.987.246/0001-60,true
-Abreu,00.000.000/0000-00,false
-Silveira,25.039.681/0001-22,false
-da Paz,61.829.704/0001-66,true
-Leão Cavalcante - ME,09.682.457/0001-06,true
-Mendes,26.905.743/0001-02,false
-Duarte Mendes e Filhos,39.504.761/0001-16,false
-Pastor - ME,73.960.814/0001-41,true
-Porto - EI,85.279.364/0001-05,true
-Camargo Porto S/A,74.189.235/0001-00,true
-Almeida Guerra Ltda.,24.578.163/0001-14,false
-Sousa Araújo S.A.,62.497.058/0001-40,true
-Mendes,00.000.000/0000-00,true
-Cavalcanti - ME,27.913.845/0001-24,false
-Novaes S/A,95.061.742/0001-33,true
-Vasconcelos,37.094.821/0001-44,true
-Rocha Cardoso - ME,74.932.081/0001-02,true
-Fonseca,18.547.296/0001-20,true
-Machado,75.630.482/0001-62,true
-Peixoto Campos - ME,47.916.850/0001-06,false
-Rodrigues,,false
-Viana S/A,26.953.807/0001-32,true
-Ferreira Viana e Filhos,20.158.793/0001-89,false
-da Cruz - EI,34.510.628/0001-59,true
-Barbosa,59.062.871/0001-82,true
-Novais,79.620.145/0001-45,true
-da Mata Costa Ltda.,61.389.025/0001-13,true
-Viana,57.829.013/0001-95,true
-Nunes Cavalcante - ME,56.017.239/0001-29,false
-Farias - ME,não tem cnpj,false
-Ferreira,43.261.590/0001-19,true
-Campos,,false
-das Neves S.A.,76.952.013/0001-22,true
-Fogaça,80.279.543/0001-29,true
-Marques,64.218.370/0001-82,false
-da Mata - EI,07.369.814/0001-47,true
-Costa,72.903.458/0001-61,true
-Novaes - ME,78.305.149/0001-76,true
-Rezende Moura - EI,90.732.584/0001-82,false
-Machado,não tem cnpj,false
-Cardoso,15.607.829/0001-24,true
-Rodrigues,78.152.960/0001-64,false
-Martins,19.865.430/0001-02,true
-Pacheco Nascimento S.A.,38.210.794/0001-90,true
-,35.810.496/0001-43,false
-Fogaça Martins S/A,86.137.402/0001-58,true
-da Mata,74.923.568/0001-10,true
-Novaes Novais S.A.,10.542.637/0001-63,true
-Vargas Alves S.A.,57.803.192/0001-91,true
-Mendonça da Cruz - EI,21.073.485/0001-13,true
-Nunes,84.590.612/0001-71,true
-Vasconcelos,87.923.465/0001-00,true
-da Mata,98.056.127/0001-27,false
-da Cruz Duarte S/A,03.427.195/0001-49,false
-Sampaio,87.624.150/0001-54,true
-Almeida,42.017.538/0001-59,true
-Carvalho S.A.,94.601.235/0001-82,false
-Melo - EI,26.491.837/0001-74,true
-Nunes,01.673.548/0001-65,false
-Fernandes - ME,41.279.803/0001-04,true
-Silva,32.107.849/0001-55,true
-Silveira,08.352.967/0001-44,true
-das Neves S/A,75.941.208/0001-04,true
-Sales e Filhos,28.107.536/0001-20,true
-Moura,62.370.814/0001-75,true
-Monteiro,08.453.769/0001-77,false
-Mendes,15.729.043/0001-80,false
-da Mata Mendonça - EI,97.042.136/0001-04,false
-Aparecida e Filhos,20.689.754/0001-08,true
-Monteiro,41.962.730/0001-50,true
-,50.987.436/0001-94,false
-Sá Nunes Ltda.,85.470.236/0001-44,true
-Pastor S/A,14.052.638/0001-80,true
-Casa Grande,45.169.780/0001-36,true
-Moreira Ribeiro e Filhos,90.637.841/0001-05,true
-Abreu,91.706.485/0001-99,true
-Rezende,23.890.715/0001-62,true
-Aragão,38.640.759/0001-01,true
-Carvalho,80.941.325/0001-08,true
-Lopes - EI,14.692.380/0001-87,true
-Moura,03.287.965/0001-03,true
-Costela Cunha S/A,67.135.984/0001-99,false
-Pacheco Gomes e Filhos,85.462.901/0001-58,true
-Freitas,62.908.571/0001-86,false
-Gonçalves,23.697.815/0001-77,true
-Carvalho S/A,95.381.072/0001-32,true
-Viana,64.537.182/0001-17,true
-Sá - ME,02.768.349/0001-01,true
-da Luz,47.059.613/0001-68,true
-Câmara Aparecida - EI,37.628.019/0001-97,true
-Carvalho,48.276.530/0001-93,true
-Costela,98.467.520/0001-03,true
-Costa Nogueira - EI,48.096.273/0001-08,true
-Machado Abreu e Filhos,74.013.869/0001-07,true
-da Costa,21.356.984/0001-18,false
-Viana,35.094.628/0001-88,true
-Cassiano,25.874.916/0001-00,true
-Gonçalves Ltda.,73.480.216/0001-75,true
-Garcia Vargas - ME,79.315.680/0001-92,true
-Almeida,59.643.127/0001-71,true
-Nogueira,91.682.305/0001-86,true
-Aparecida da Mota e Filhos,93.056.481/0001-38,true
-Aragão,64.183.597/0001-30,true
-Moreira Nogueira - EI,29.367.154/0001-06,true
-Cirino Ltda.,83.591.627/0001-91,true
-Peixoto,65.249.810/0001-21,true
-Vieira,84.206.715/0001-95,false
-Mendonça e Filhos,63.207.184/0001-85,true
-Araújo - ME,32.145.796/0001-67,true
-das Neves,85.396.214/0001-81,false
-Gomes Novaes - EI,21.095.384/0001-43,true
-Garcia e Filhos,69.185.407/0001-37,true
-Camargo Moraes Ltda.,,true
-,16.540.728/0001-46,true
-da Costa,08.473.156/0001-00,true
-da Costa,00.000.000/0000-00,false
-Montenegro Vargas e Filhos,54.307.186/0001-55,false
-Carvalho,62.539.184/0001-10,true
-Lima S/A,39.024.681/0001-63,true
-Cavalcanti S.A.,não tem cnpj,false
-Macedo,02.381.594/0001-53,true
-Novaes,06.749.528/0001-44,true
-das Neves S.A.,92.810.435/0001-10,true
-Gomes,83.962.451/0001-37,true
-Nascimento - ME,95.638.702/0001-01,false
-,35.170.649/0001-35,false
-Jesus,12.345,false
-Castro - ME,40.259.137/0001-80,true
-Casa Grande,29.186.475/0001-04,false
-Aparecida - ME,47.269.581/0001-25,false
-Monteiro - ME,38.679.451/0001-70,false
-Aragão Sales - EI,74.516.208/0001-02,true
-Vargas Moraes S.A.,97.812.035/0001-67,true
+nome,cnpj,ativo,senha,foto_url
+Araújo S/A,97.652.308/0001-53,true,$2b$12$wF6KFi63Be0J9jbXLfN2teqdJhss4hFo.4uZToUB9CeyP1mRtVF9i,
+Rocha,89.067.431/0001-89,true,$2b$12$JEzGW3VRyEvdulmty2sqHO7XDcAHdDY9pabSUk7Q6ATmmEhgfLdby,
+Fernandes e Filhos,27.863.159/0001-96,true,$2b$12$HTZABzBBMdayc094UB5KLO7mGOuQJQXS7D2XJZEaxBtdgi4VIuJTC,https://i.pravatar.cc/300?u=94318df3-c9bd-4cc5-b697-d582abe1d1c3
+da Luz,56.097.124/0001-91,true,$2b$12$hYP60lgaLCxJR9yXTVLCWuYi6SvZ.oQhz5to7tcFXOLFgMzeaa/52,https://i.pravatar.cc/300?u=33bdee3e-9a91-443a-a0c7-7c6759f45849
+Mendonça S.A.,90.145.632/0001-36,true,$2b$12$AUGsepMtmnVUOOCj3YvfX.54h4CuLOtskUlVVwhe.EfOyDSSA73Ym,https://i.pravatar.cc/300?u=eaf9826f-320a-45db-ab40-197ca66f6742
+Farias,31.584.296/0001-69,false,$2b$12$0RqhyoEmE.fO1EUbjSdcyuCKgwSOXWflVOvNeTr8b5xZz3CMeg9ne,https://i.pravatar.cc/300?u=8dc1d8e1-2acf-4516-978e-bb4a9ec1432d
+Vieira Câmara e Filhos,87.426.093/0001-07,true,$2b$12$UKRRBjUBHM2.IqqlHEFvce6I0lCt2Gfab9pN3N4lIGog1dhXDKMF6,
+Correia Vargas S/A,57.831.426/0001-04,false,$2b$12$FJDEbsNilsvPwiAZMfSASu/Y5jKxCm25H../kFZtjr6VX.1jMsGqe,https://i.pravatar.cc/300?u=2744bf93-3a25-40a6-9762-1ba427eb8f7c
+Siqueira S.A.,12.975.036/0001-70,true,$2b$12$.azpO7fp.Ex0cQdGhdKaB.uycDkYisngXvbf2QnzyKHKKuXCytfEi,https://i.pravatar.cc/300?u=bceb0fc5-da17-44af-a0aa-762d334c761a
+Cassiano - EI,13.264.789/0001-30,true,$2b$12$6O8jX2mDYWkn.xHsRvFPmuOEPjNvQOK7jy6ARqvDXnl1dMqu4sSJG,
+Novais,81.063.592/0001-92,true,$2b$12$o9T/2NQ8Yp8aqFSr/d3UX.PvL42jjk1Bnn/H2r9RPN1WbNk65DLOK,
+Carvalho Moreira - ME,92.134.507/0001-56,false,$2b$12$n7aIJHgCJWNWNgI2zEfezeuZS9/KQY.iEkTuqt.NgctQhqBUYw4Ku,https://i.pravatar.cc/300?u=7efbfdf8-9f43-48b0-ab79-df840b215afc
+Lopes Silva - ME,60.245.917/0001-88,true,$2b$12$U6PuaeOVT2Zo59eAM4ZuB.TNXwbs9yL2DFGgcZ09NO8V3vbEbhKKq,https://i.pravatar.cc/300?u=83fc362b-8005-436d-96c7-abbf459df657
+Casa Grande,40.382.651/0001-08,true,$2b$12$xCiHWI9ldIoVGJeMflLyZ.Su9zxZoHlz1qST31JiQmfAd7gLb1ukO,https://i.pravatar.cc/300?u=aeb8eda5-aa8d-40d9-8189-95df17b2a7f6
+Souza,86.907.521/0001-42,true,$2b$12$kbb0.aU8yShtfnAXR8eSIOgpiM2XUyxAZscd2VSWG34/KEq3WCz/u,
+Camargo e Filhos,,true,$2b$12$0g9iLQLyBqB2LO5Vgn2RD.DH6Pj82WZ6Oi7FX2o6AIUHZsgtGkLKG,https://i.pravatar.cc/300?u=c38e8ace-f2bc-4d49-b474-de8ee83b5bae
+Camargo,52.738.690/0001-84,true,$2b$12$9zvKTR9RjJqG3HTpa4ELJO6Y55dmruWP4dlqycI8xXroiDNAYrrSS,https://i.pravatar.cc/300?u=6c903e8f-a3b3-49da-bed0-f86d6a6fb7b0
+Pires,10.893.572/0001-09,true,$2b$12$g2xQ1ej/lLoVFw2euaL96OJXpWHwXbyazDDOz5DDxCFYMOBq8cvjq,
+da Costa,81.564.730/0001-17,true,$2b$12$2R5mt8PgDgbTef18vTdJX.CMfoXU7cCuTALch1YfZbh9jJ0dYQPTm,https://i.pravatar.cc/300?u=5e594241-f3ac-481d-86c6-ee9fce622a44
+Correia - ME,39.516.724/0001-28,true,$2b$12$EIC5DI2TC1h1RC2.ADuE1.msnaVQk5AL9BSk7b7pp3aVQL7HGNvd2,https://i.pravatar.cc/300?u=2e81897f-f198-4017-a4d4-3523741c5a7f
+Sampaio,40.932.657/0001-01,true,$2b$12$yth.HhByi3VYQI7wtksRV.OUMZqes7q2Yhk7DnEJGhaQqiveOkeqK,https://i.pravatar.cc/300?u=494025d7-7d81-44b0-bb59-d194793785b9
+,43.256.891/0001-54,true,$2b$12$GRMuQojNzywiZ0lcPPLm.OXbhSdBT8P9emWMghZ.sMARHty6si/dm,https://i.pravatar.cc/300?u=1db46385-0df3-469e-a557-8f65c147a23c
+Sá,98.740.623/0001-03,true,$2b$12$btZOeHNglYrvrjkInr.JlO9IVfJkeQrtBHsNp6R4GsjWSY.3EYbpG,https://i.pravatar.cc/300?u=29aef279-44c3-4fc1-bcac-b297fdd2c232
+Vasconcelos - EI,35.427.618/0001-17,true,$2b$12$XJhpDb19beBZfeTrFH9.GO.auweg6A07fokSu9pSDQiCJyHrYHs4C,https://i.pravatar.cc/300?u=bdf91b1a-ff72-43a2-948b-375796bbbec8
+Rodrigues Andrade - ME,71.905.823/0001-04,false,$2b$12$zG8PXoq0VnE76DXyGAZokOQgqIXeDBA2as2Qbd9YQvsVRxN.Oxdbm,https://i.pravatar.cc/300?u=8a1a650d-06a2-4860-91eb-d48212406903
+Novais,62.740.198/0001-05,true,$2b$12$OdmLYC5TYTxkXzI93mbFd.7ogha7sWd4RyGdTDKDYgyLVH5SxiqrO,
+Nascimento - ME,86.725.401/0001-24,false,$2b$12$BSACfIYAYvGoDo56f7oLR.jDSBeDfbMbcIafeDqX.GGCk79JrXinS,https://i.pravatar.cc/300?u=411473da-cd04-4ac2-9a30-25f45b35c07f
+da Luz,79.650.824/0001-67,true,$2b$12$A8BTtihdbY4zmJgm9tmcwettgt7iQ4pTzqK6kXheKnt1QBPiOvKlS,nao_e_uma_url
+Pimenta Oliveira S/A,58.473.621/0001-72,false,$2b$12$cWP2P8uSCpJul6D2w.dll.7EQ1QTp3WUEe4jJsLOyMMmtfbb.Jnqa,https://i.pravatar.cc/300?u=d48dfbd1-a6b6-4b0c-87ba-42c0cac0b45b
+Moura Macedo - EI,73.921.658/0001-00,true,$2b$12$Zpz64oFiBjts370948NoWeqmEzGcfnWiT58k5O2NvhrDMSobfbUNy,https://i.pravatar.cc/300?u=c0008853-174d-42d5-9956-708a64d73e59
+Lima,70.498.512/0001-05,false,$2b$12$WtV7GfYsntjwN4dUj2zSAON84WBFwTmez3AQJ.gXc5tNnbTx.Kya6,https://i.pravatar.cc/300?u=3e800ebb-101d-4248-9840-3c4db6228b89
+Alves S.A.,81.376.942/0001-70,false,$2b$12$DrLlQyAlYPErFJTckJye6.A7GeOhtKX4Q3acwAr46gNiYGaXfuWge,https://i.pravatar.cc/300?u=6c40f511-66b0-420a-b787-db79a85baf44
+Leão Azevedo S/A,21.895.763/0001-18,true,$2b$12$SuOu1/Po2ub3AAZebUXgTexG9u9OgHAvBNHYSSryetH8FsHV/BqgK,nao_e_uma_url
+Sales Monteiro e Filhos,12.345.678/0001,true,$2b$12$Nq3rNRT12NiH23IbhAn6mes.BvtziFD7WtFvc3V3sbIIEefeD1fhu,https://i.pravatar.cc/300?u=ff27a357-bc1e-465f-951f-95595aba3f4d
+Nascimento - ME,29.835.064/0001-94,true,$2b$12$pLOOr3dlgGJWX0GtNUa2DeHEypmijqJHWIgTlaCdej7ffJW0Q5CTC,
+Camargo,32.914.057/0001-92,true,$2b$12$pPTlPLvtsPoFxahk8iifVeTD6xeyzP3BNA8E6U9Nu/jgWSB5BB4WG,https://i.pravatar.cc/300?u=c33c74d3-af6b-483f-85d7-3b2088dbe00e
+da Rosa,62.158.973/0001-00,true,$2b$12$A0PJqjyxJeDH2mV2oZCz.exQ3B972W1CJ.ODhrE2P8imlf5ua8bxC,
+Jesus Ltda.,83.261.904/0001-06,true,$2b$12$jSSDNrKBxXhi8sZOBKCegu8B2mHAVZSkMbGBfn7jiLtX60uYj1wT.,
+da Costa - ME,32.981.065/0001-51,true,$2b$12$6Ng.AmTJCADJ/e5YUffqTeLZAD8UOkTWsJLTLttqk8uY4v9/goMcy,https://i.pravatar.cc/300?u=720e6a3c-a76a-4e08-9039-fab52f7eb46f
+Rios Machado - ME,76.051.492/0001-06,true,$2b$12$RIkcObAJEX1LwV3wevTx8uVoPOv7KV8r/zzBhgax2.qiiD.e7boGK,https://i.pravatar.cc/300?u=56f6071b-2998-448c-b3cb-7756079cbf69
+Mendonça,46.851.907/0001-65,true,$2b$12$WDklP8OVmA8iTz5OPkVenOdxqp56rAN27CiSf1McfA.pXzmOqO7T2,
+Barbosa S/A,abc.def.ghi/jklm-no,true,$2b$12$pFD/sXLqzPYnIndJFf/Ro.N4mhKiljlnDloTTgmXgHHbT/CQeXsSu,https://i.pravatar.cc/300?u=23796150-536a-4f0d-be9a-e38b746cf302
+Lima S/A,25.493.617/0001-17,true,$2b$12$YzA8lGvEvJMIgBDKXMS/1OLwTOxlsur2lbJjQPMtMjAykBmjmp2xO,https://i.pravatar.cc/300?u=2f158ef3-37e7-4d33-bfb3-312c688cfb32
+da Rocha,96.572.108/0001-28,true,$2b$12$pSfhXEDH32V5zgRbhK7.J.9C4s1lUGUbEhGeUEJpXz8leYG4ex1tW,
+Guerra Ltda.,84.091.235/0001-26,true,$2b$12$hU6DHY3Avoo//06JBxEtxetHXKMZDstzWCun7xAeh50V4lJWbyopu,https://i.pravatar.cc/300?u=d8b40aa7-c69f-4704-829c-8bbe0f3682b3
+Barbosa - EI,85.431.790/0001-12,true,$2b$12$iGZH8ibtJlvbiJfRM1vLyeiIUXQ.n/X5G2ozWSbkevf7Yh8l9fVG2,https://i.pravatar.cc/300?u=d574139b-e0df-4173-bce1-885afd41d4d3
+Cardoso,,true,$2b$12$mDfPReF9PqwdTaZQELLwo.fnIG/0g/qu0A7wuAtnEFg1XufGZhAV2,
+Carvalho da Mata S/A,60.245.917/0001-88,true,$2b$12$PiLw.l1DwSJgK8w0x6X0Cev2lBoSsvnjKNalETQJpkljKx6529jQe,
+Fernandes,37.518.402/0001-92,true,$2b$12$DczW9GfUInHLMIcoSj6Aj.ti4TqqgU0PHvx0.UDfxZLpiqRzz/CpW,https://i.pravatar.cc/300?u=caf6c5dc-54cb-4211-96a6-dd153bbeb44b
+Siqueira Dias - ME,42.165.809/0001-13,true,$2b$12$1ZqvLqipWE309HDEjhigWuu4LZN.mWCOh4/B6NsLEAJoWcb4RllDa,https://i.pravatar.cc/300?u=3a994f11-f560-42ac-9cae-4d46a2a229bd

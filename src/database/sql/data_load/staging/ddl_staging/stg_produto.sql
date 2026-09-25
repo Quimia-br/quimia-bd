@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS stg_produto (
     descricao_raw TEXT,
     tipo_produto_raw TEXT,
     cod_barras_raw TEXT,
+    foto_url_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
         CHECK (status IN ('pendente','ok','rejeitado')),
     motivo_rejeicao TEXT,

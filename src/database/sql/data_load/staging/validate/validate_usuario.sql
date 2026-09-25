@@ -1,10 +1,3 @@
--- ============================================================
--- VALIDATE — stg_usuario
--- Roda após o COPY bruto. Parâmetro :batch_id (UUID) do lote.
--- Cada UPDATE marca 'rejeitado' com motivo específico;
--- o que sobrar pendente no final vira 'ok'.
--- ============================================================
-
 UPDATE stg_usuario
 SET status = 'rejeitado', motivo_rejeicao = 'nome vazio'
 WHERE id_batch = :batch_id
@@ -42,6 +35,25 @@ WHERE su.id_batch = :batch_id
   AND EXISTS (
       SELECT 1 FROM usuario u WHERE lower(u.email) = lower(btrim(su.email_raw))
   );
+
+
+UPDATE stg_usuario
+SET status = 'rejeitado', motivo_rejeicao = 'senha vazia ou com formato inválido (esperado hash bcrypt de 60 caracteres)'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND (
+      senha_raw IS NULL
+      OR btrim(senha_raw) = ''
+      OR LENGTH(btrim(senha_raw)) <> 60
+  );
+
+UPDATE stg_usuario
+SET status = 'rejeitado', motivo_rejeicao = 'foto_url com formato inválido'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND foto_url_raw IS NOT NULL
+  AND btrim(foto_url_raw) <> ''
+  AND foto_url_raw !~* '^https?://';
 
 UPDATE stg_usuario
 SET status = 'rejeitado', motivo_rejeicao = 'data_nasc inválida'

@@ -1,20 +1,22 @@
-INSERT INTO usuario (nome, email, data_nasc, nivel_acesso, ultima_sessao)
+INSERT INTO usuario (nome, email, data_nasc, foto_url, senha, nivel_acesso, ultima_sessao)
 SELECT
     btrim(nome_raw),
     lower(btrim(email_raw)),
-    NULLIF(btrim(data_nasc_raw), '')::DATE,
+    NULLIF(btrim(data_nasc_raw), '')::date,
+    NULLIF(btrim(foto_url_raw), ''),
+    btrim(senha_raw),
     lower(btrim(nivel_acesso_raw)),
-    NULLIF(btrim(ultima_sessao_raw), '')::TIMESTAMP
+    NULLIF(btrim(ultima_sessao_raw), '')::timestamptz
 FROM stg_usuario
 WHERE id_batch = :batch_id
-  AND status = 'ok'
-ON CONFLICT (email) DO NOTHING;
+  AND status = 'ok';
 
-
-INSERT INTO empresa (nome, cnpj, ativo)
+  
+INSERT INTO empresa (nome, cnpj, senha, ativo)
 SELECT
     btrim(nome_raw),
     cnpj_raw,
+    senha_raw,
     CASE lower(btrim(ativo_raw))
         WHEN 'true' THEN TRUE
         WHEN 't'    THEN TRUE

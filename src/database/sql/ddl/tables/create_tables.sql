@@ -34,8 +34,11 @@ CREATE TABLE marca (
 CREATE TABLE empresa (
     id     INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome   VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
     cnpj   VARCHAR(20) UNIQUE,
-    ativo  BOOLEAN DEFAULT TRUE
+    ativo  BOOLEAN DEFAULT TRUE,
+    senha VARCHAR(100) NOT NULL,
+    foto_url VARCHAR(200)
 );
 
 CREATE TABLE usuario (
@@ -43,6 +46,8 @@ CREATE TABLE usuario (
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     data_nasc DATE,
+    foto_url VARCHAR(450),
+    senha VARCHAR(100) NOT NULL,
     nivel_acesso  VARCHAR(50) NOT NULL DEFAULT 'usuario'
         CHECK (nivel_acesso IN ('usuario', 'empresa', 'admin')),
     ultima_sessao TIMESTAMPTZ
@@ -86,7 +91,9 @@ CREATE TABLE produto (
             'limpeza_geral','desinfetante','desincrustante',
             'desengraxante','alvejante','aromatizante','outro'
         )),
-    cod_barras   VARCHAR(255) UNIQUE
+    cod_barras   VARCHAR(255) UNIQUE,
+    foto_url     VARCHAR(450)
+
 );
 
 CREATE TABLE fds (
