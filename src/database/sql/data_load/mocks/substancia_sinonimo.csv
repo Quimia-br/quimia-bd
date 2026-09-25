@@ -1,9 +1,8 @@
 id_substancia,sinonimo
-2,Facilis Amônia
-4,ÁCIDO ACÉTICO
-6,Peróxido de hidrogênio concentrado
-4,ÁCIDO ACÉTICO
-4,ÁCIDO ACÉTICO
+11,Hipoclorito de cálcio diluído
+1,HIPOCLORITO DE SÓDIO
+4,Ácido acético solução aquosa
+2,Amônia grau alimentício
 14,Dodecilbenzenossulfonato de sódio industrial
 13,ÁCIDO CÍTRICO
 3,Ácido clorídrico grau alimentício
@@ -11,36 +10,36 @@ id_substancia,sinonimo
 1,Hipoclorito de sódio PA
 13,Ácido cítrico grau alimentício
 3,Ácido c.
-12,Corrupti Ácido
+12,Magni Ácido
 12,ÁCIDO FOSFÓRICO
 13,Ácido c.
-2,Excepturi Amônia
+2,Libero Amônia
 10,CLORETO DE BENZALCÔNIO
 15,fragrância
 1,HIPOCLORITO DE SÓDIO
 14,
 11,HIPOCLORITO DE CÁLCIO
-15,Explicabo Fragrância
+15,Perferendis Fragrância
 2,amônia
 2,Amônia industrial
 10,Cloreto d.b.
 10,Cloreto d.b.
-10,Pariatur Cloreto
+10,Sequi Cloreto
 12,ÁCIDO FOSFÓRICO
-10,Pariatur Cloreto
+10,Sequi Cloreto
 14,Dodecilbenzenossulfonato de sódio técnico
-4,Officiis Ácido
-8,Quod Álcool
+4,Provident Ácido
+8,Vero Álcool
 2,amônia
 11,Hipoclorito d.c.
-3,Ut Ácido
+3,A Ácido
 14,DODECILBENZENOSSULFONATO DE SÓDIO
 2,amônia
-4,ÁCIDO ACÉTICO
+2,Amônia grau alimentício
 9,Lauril s.d.s.
 7,etanol
-4,Officiis Ácido
-4,ÁCIDO ACÉTICO
+4,Provident Ácido
+2,Amônia grau alimentício
 10,
 2,Amônia concentrado
 4,ÁCIDO ACÉTICO
@@ -57,28 +56,28 @@ id_substancia,sinonimo
 6,PERÓXIDO DE HIDROGÊNIO
 980981,Ácido clorídrico solução aquosa
 2,amônia
-7,Aliquid Etanol
+7,Hic Etanol
 7,etanol
 9,LAURIL SULFATO DE SÓDIO
 2,amônia
-10,Facere Cloreto
+10,Eos Cloreto
 5,HIDRÓXIDO DE SÓDIO
 10,CLORETO DE BENZALCÔNIO
 5,Hidróxido de sódio solução aquosa
 5,Hidróxido d.s.
-1,Placeat Hipoclorito
+1,Tempora Hipoclorito
 3,Ácido clorídrico técnico
 4,Ácido a.
 14,DODECILBENZENOSSULFONATO DE SÓDIO
 8,ÁLCOOL ISOPROPÍLICO
-4,Officiis Ácido
-12,Optio Ácido
+4,Provident Ácido
+12,Aliquid Ácido
 7,ETANOL
 3,
 3,Ácido clorídrico técnico
 6,PERÓXIDO DE HIDROGÊNIO
 14,DODECILBENZENOSSULFONATO DE SÓDIO
-10,Consectetur Cloreto
+10,Labore Cloreto
 7,etanol
 4,Ácido a.
 2,AMÔNIA
@@ -86,37 +85,37 @@ id_substancia,sinonimo
 14,Dodecilbenzenossulfonato de sódio concentrado
 5,Hidróxido de sódio concentrado
 13,ÁCIDO CÍTRICO
-13,Tenetur Ácido
-10,Ipsam Cloreto
+13,Pariatur Ácido
+10,Ratione Cloreto
 15,fragrância
 9,LAURIL SULFATO DE SÓDIO
-2,A Amônia
+2,Adipisci Amônia
 5,Hidróxido d.s.
 6,PERÓXIDO DE HIDROGÊNIO
 8,ÁLCOOL ISOPROPÍLICO
 14,Dodecilbenzenossulfonato d.s.
 14,DODECILBENZENOSSULFONATO DE SÓDIO
-9,Asperiores Lauril
+9,Dignissimos Lauril
 9,LAURIL SULFATO DE SÓDIO
 13,Ácido cítrico industrial
 9,Lauril sulfato de sódio PA
 13,Ácido c.
 2,
 3,ÁCIDO CLORÍDRICO
-8,Quibusdam Álcool
+8,Accusamus Álcool
 10,Cloreto de benzalcônio industrial
-5,Perferendis Hidróxido
+5,Aliquam Hidróxido
 6,PERÓXIDO DE HIDROGÊNIO
 11,Hipoclorito d.c.
-2,Voluptatem Amônia
+2,Unde Amônia
 12,Ácido fosfórico industrial
 11,Hipoclorito de cálcio industrial
-11,Corrupti Hipoclorito
+11,Laborum Hipoclorito
 12,ÁCIDO FOSFÓRICO
 7,etanol
 10,Cloreto de benzalcônio industrial
 3,ÁCIDO CLORÍDRICO
-966648,Provident Amônia
+966648,Iste Amônia
 6,Peróxido d.h.
 4,Ácido a.
 8,
@@ -127,16 +126,16 @@ id_substancia,sinonimo
 3,Ácido clorídrico solução aquosa
 10,Cloreto de benzalcônio diluído
 7,etanol
-4,Nulla Ácido
-13,Expedita Ácido
+4,Harum Ácido
+13,Nam Ácido
 4,Ácido a.
 13,
 14,Dodecilbenzenossulfonato de sódio industrial
-10,Exercitationem Cloreto
-5,Maxime Hidróxido
+10,Aliquid Cloreto
+5,Tenetur Hidróxido
 7,Etanol solução aquosa
 10,Cloreto de benzalcônio solução aquosa
-11,Libero Hipoclorito
+11,Illum Hipoclorito
 13,Ácido c.
 9,LAURIL SULFATO DE SÓDIO
 13,Ácido cítrico industrial
@@ -148,18 +147,18 @@ id_substancia,sinonimo
 6,PERÓXIDO DE HIDROGÊNIO
 5,Hidróxido d.s.
 3,ÁCIDO CLORÍDRICO
-14,Consectetur Dodecilbenzenossulfonato
-3,At Ácido
+14,Ex Dodecilbenzenossulfonato
+3,Id Ácido
 1,HIPOCLORITO DE SÓDIO
 4,Ácido acético grau alimentício
 10,
 2,amônia
 2,AMÔNIA
-11,Illo Hipoclorito
-14,Sint Dodecilbenzenossulfonato
+11,Exercitationem Hipoclorito
+14,Adipisci Dodecilbenzenossulfonato
 1,Hipoclorito de sódio diluído
 7,ETANOL
-4,Culpa Ácido
+4,Harum Ácido
 11,HIPOCLORITO DE CÁLCIO
 6,PERÓXIDO DE HIDROGÊNIO
 9,
@@ -175,27 +174,28 @@ id_substancia,sinonimo
 13,Ácido cítrico PA
 8,ÁLCOOL ISOPROPÍLICO
 1,Hipoclorito de sódio PA
-5,Quos Hidróxido
+5,Ratione Hidróxido
 9,
 1,Hipoclorito de sódio industrial
 13,ÁCIDO CÍTRICO
 4,Ácido a.
-6,Itaque Peróxido
-950678,Quis Ácido
-3,Accusantium Ácido
+6,Dolorem Peróxido
+950678,Architecto Ácido
+3,Totam Ácido
 6,Peróxido d.h.
-4,Nulla Ácido
+4,Harum Ácido
 10,Cloreto de benzalcônio grau alimentício
 2,AMÔNIA
 5,Hidróxido d.s.
-12,Illo Ácido
+12,Fuga Ácido
 8,Álcool i.
 12,Ácido f.
 7,etanol
 13,ÁCIDO CÍTRICO
-11,Id Hipoclorito
+11,Temporibus Hipoclorito
 13,Ácido cítrico PA
-10,Ullam Cloreto
+10,Inventore Cloreto
 2,Amônia solução aquosa
-6,Officia Peróxido
+6,Neque Peróxido
 1,
+11,Expedita Hipoclorito

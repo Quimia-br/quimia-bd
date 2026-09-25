@@ -122,9 +122,9 @@ def main():
 
     linhas_produto = gerar_produto(n=200, ids_marca=ids_marca)
     csv_produto = salvar_csv(
-        "src/database/sql/data_load/mocks/produto.csv",
-        linhas_produto,
-        ["nome", "id_marca", "descricao", "tipo_produto", "cod_barras"],
+    "src/database/sql/data_load/mocks/produto.csv",
+    linhas_produto,
+    ["nome", "id_marca", "descricao", "tipo_produto", "cod_barras", "foto_url"],
     )
     rodar_pipeline("produto", csv_produto)
 

@@ -1,8 +1,3 @@
--- ============================================================
--- VALIDATE — stg_empresa
--- Roda após o COPY bruto. Parâmetro :batch_id (UUID) do lote.
--- ============================================================
-
 UPDATE stg_empresa
 SET status = 'rejeitado', motivo_rejeicao = 'nome vazio'
 WHERE id_batch = :batch_id
@@ -10,30 +5,31 @@ WHERE id_batch = :batch_id
   AND (nome_raw IS NULL OR btrim(nome_raw) = '');
 
 UPDATE stg_empresa
-SET status = 'rejeitado', motivo_rejeicao = 'cnpj em formato inválido'
+SET status = 'rejeitado', motivo_rejeicao = 'senha vazia ou com formato inválido (esperado hash bcrypt de 60 caracteres)'
 WHERE id_batch = :batch_id
   AND status = 'pendente'
   AND (
-      cnpj_raw IS NULL
-      OR btrim(cnpj_raw) = ''
-      OR length(regexp_replace(cnpj_raw, '\D', '', 'g')) <> 14
+      senha_raw IS NULL
+      OR btrim(senha_raw) = ''
+      OR LENGTH(btrim(senha_raw)) <> 60
   );
 
 UPDATE stg_empresa
-SET status = 'rejeitado', motivo_rejeicao = 'cnpj inválido (todos os dígitos iguais)'
+SET status = 'rejeitado', motivo_rejeicao = 'foto_url com formato inválido'
 WHERE id_batch = :batch_id
   AND status = 'pendente'
-  AND regexp_replace(cnpj_raw, '\D', '', 'g') ~ '^(\d)\1{13}$';
+  AND foto_url_raw IS NOT NULL
+  AND btrim(foto_url_raw) <> ''
+  AND foto_url_raw !~* '^https?://';
 
 WITH duplicatas AS (
     SELECT id,
-           ROW_NUMBER() OVER (
-               PARTITION BY regexp_replace(cnpj_raw, '\D', '', 'g')
-               ORDER BY id
-           ) AS rn
+           ROW_NUMBER() OVER (PARTITION BY btrim(cnpj_raw) ORDER BY id) AS rn
       FROM stg_empresa
      WHERE id_batch = :batch_id
        AND status = 'pendente'
+       AND cnpj_raw IS NOT NULL
+       AND btrim(cnpj_raw) <> ''
 )
 UPDATE stg_empresa se
 SET status = 'rejeitado', motivo_rejeicao = 'cnpj duplicado no lote'
@@ -45,16 +41,11 @@ UPDATE stg_empresa se
 SET status = 'rejeitado', motivo_rejeicao = 'cnpj já cadastrado'
 WHERE se.id_batch = :batch_id
   AND se.status = 'pendente'
+  AND se.cnpj_raw IS NOT NULL
+  AND btrim(se.cnpj_raw) <> ''
   AND EXISTS (
-      SELECT 1 FROM empresa e
-      WHERE regexp_replace(e.cnpj, '\D', '', 'g') = regexp_replace(se.cnpj_raw, '\D', '', 'g')
+      SELECT 1 FROM empresa e WHERE e.cnpj = btrim(se.cnpj_raw)
   );
-
-UPDATE stg_empresa
-SET status = 'rejeitado', motivo_rejeicao = 'ativo não é um booleano válido'
-WHERE id_batch = :batch_id
-  AND status = 'pendente'
-  AND lower(btrim(ativo_raw)) NOT IN ('true', 'false', 't', 'f', '1', '0', '');
 
 UPDATE stg_empresa
 SET status = 'ok'

@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS stg_usuario (
     nome_raw TEXT,
     email_raw TEXT,
     data_nasc_raw TEXT,
+    foto_url_raw TEXT,
+    senha_raw TEXT,
     nivel_acesso_raw TEXT,
     ultima_sessao_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
@@ -22,8 +24,10 @@ CREATE TABLE IF NOT EXISTS stg_empresa (
     nome_raw TEXT,
     cnpj_raw TEXT,
     ativo_raw TEXT,
+    senha_raw TEXT,
+    foto_url_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
-    CHECK (status IN ('pendente','ok','rejeitado')),
+        CHECK (status IN ('pendente','ok','rejeitado')),
     motivo_rejeicao TEXT,
     criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );

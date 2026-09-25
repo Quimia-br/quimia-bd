@@ -39,11 +39,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent / "sql" / "data_load" /
 
 TABELAS = {
     "usuario": {
-        "stg_table": "stg_usuario",
-        "colunas": ["nome_raw", "email_raw", "data_nasc_raw", "nivel_acesso_raw", "ultima_sessao_raw"],
-        "validate_sql": BASE_DIR / "validate" / "validate_usuario.sql",
-        "migrate_sql": BASE_DIR / "migrate" / "migrate_usuario_empresa.sql",
-    },
+    "stg_table": "stg_usuario",
+    "colunas": [
+        "nome_raw", "email_raw", "data_nasc_raw", "foto_url_raw",
+        "senha_raw", "nivel_acesso_raw", "ultima_sessao_raw",
+        ],
+    "validate_sql": BASE_DIR / "validate" / "validate_usuario.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_usuario_empresa.sql",
+    },  
     "empresa": {
         "stg_table": "stg_empresa",
         "colunas": ["nome_raw", "cnpj_raw", "ativo_raw"],
@@ -116,12 +119,14 @@ TABELAS = {
     "validate_sql": BASE_DIR / "validate" / "validate_substancia_sinonimo.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_substancia_sinonimo.sql",
     }, 
-    "produto":{
-        "stg_table": "stg_produto",
-        "colunas":["nome_raw", "id_marca_raw", "descricao_raw",
-                "tipo_produto_raw", "cod_barras_raw"],
-        "validate_sql": BASE_DIR / "validate" / "validate_produto.sql",
-        "migrate_sql": BASE_DIR / "migrate" / "migrate_produto.sql",
+    "produto": {
+    "stg_table": "stg_produto",
+    "colunas": [
+        "nome_raw", "id_marca_raw", "descricao_raw",
+        "tipo_produto_raw", "cod_barras_raw", "foto_url_raw",
+    ],
+    "validate_sql": BASE_DIR / "validate" / "validate_produto.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_produto.sql",
     },
     "historico_recomendacao": {
     "stg_table": "stg_historico_recomendacao",

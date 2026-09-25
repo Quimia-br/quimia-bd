@@ -28,12 +28,20 @@ UPDATE stg_produto
 SET status = 'rejeitado', motivo_rejeicao = 'tipo_produto inválido'
 WHERE id_batch = :batch_id
   AND status = 'pendente'
-  AND btrim(tipo_produto_raw) <> ''
   AND tipo_produto_raw IS NOT NULL
+  AND btrim(tipo_produto_raw) <> ''
   AND tipo_produto_raw NOT IN (
       'limpeza_geral','desinfetante','desincrustante',
       'desengraxante','alvejante','aromatizante','outro'
   );
+
+UPDATE stg_produto
+SET status = 'rejeitado', motivo_rejeicao = 'foto_url com formato inválido'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND foto_url_raw IS NOT NULL
+  AND btrim(foto_url_raw) <> ''
+  AND foto_url_raw !~* '^https?://';
 
 
 WITH duplicatas AS (
