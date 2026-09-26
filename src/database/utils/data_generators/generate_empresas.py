@@ -108,8 +108,13 @@ def gerar_empresa(n=50):
             foto_url = gerar_foto_url(valida=False)
             cnpjs_usados.append(cnpj)
 
+        email = fake.company_email()
+        if random.random() < 0.04:
+            email = random.choice(["", "sem-arroba.com.br", "contato@"])
+
         linhas.append({
             "nome": nome,
+            "email": email,
             "cnpj": cnpj,
             "ativo": ativo,
             "senha": senha,
@@ -128,7 +133,7 @@ if __name__ == "__main__":
     linhas = gerar_empresa(n=args.n)
 
     with open(args.saida, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["nome", "cnpj", "ativo", "senha", "foto_url"])
+        writer = csv.DictWriter(f, fieldnames=["nome", "email", "cnpj", "ativo", "senha", "foto_url"])
         writer.writeheader()
         writer.writerows(linhas)
 

@@ -21,3 +21,5 @@ BEGIN
     RETURN v_json;
 END;
 $$;
+
+COMMENT ON FUNCTION buscar_dados_fds(INTEGER) IS 'Retorna o raw_json da FDS ativa mais recente do produto (NULL se não houver).';

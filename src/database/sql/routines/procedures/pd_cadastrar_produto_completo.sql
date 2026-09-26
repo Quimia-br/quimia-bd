@@ -36,3 +36,5 @@ BEGIN
     VALUES (v_id_produto, p_versao_fds, p_data_atualizacao, p_fonte_url, p_raw_json);
 END;
 $$;
+
+COMMENT ON PROCEDURE cadastrar_produto_completo(VARCHAR, INTEGER, TEXT, VARCHAR, VARCHAR, INTEGER, VARCHAR, DATE, TEXT, JSONB) IS 'Cadastra, numa única transação, o produto, o vínculo com a empresa parceira e a FDS; o raw_json dispara o processamento da ficha.';

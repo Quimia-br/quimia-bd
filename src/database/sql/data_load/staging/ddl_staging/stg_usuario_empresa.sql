@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS stg_empresa (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_batch UUID NOT NULL,
     nome_raw TEXT,
+    email_raw TEXT,
     cnpj_raw TEXT,
     ativo_raw TEXT,
     senha_raw TEXT,
@@ -62,3 +63,6 @@ EXCEPTION WHEN OTHERS THEN
     RETURN FALSE;
 END;
 $$ LANGUAGE plpgsql;
+
+-- stg_empresa já criada antes do e-mail de login: acrescenta a coluna sem precisar de DROP.
+ALTER TABLE stg_empresa ADD COLUMN IF NOT EXISTS email_raw TEXT;

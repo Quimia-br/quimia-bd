@@ -1,51 +1,51 @@
-nome,cnpj,ativo,senha,foto_url
-Araújo S/A,97.652.308/0001-53,true,$2b$12$wF6KFi63Be0J9jbXLfN2teqdJhss4hFo.4uZToUB9CeyP1mRtVF9i,
-Rocha,89.067.431/0001-89,true,$2b$12$JEzGW3VRyEvdulmty2sqHO7XDcAHdDY9pabSUk7Q6ATmmEhgfLdby,
-Fernandes e Filhos,27.863.159/0001-96,true,$2b$12$HTZABzBBMdayc094UB5KLO7mGOuQJQXS7D2XJZEaxBtdgi4VIuJTC,https://i.pravatar.cc/300?u=94318df3-c9bd-4cc5-b697-d582abe1d1c3
-da Luz,56.097.124/0001-91,true,$2b$12$hYP60lgaLCxJR9yXTVLCWuYi6SvZ.oQhz5to7tcFXOLFgMzeaa/52,https://i.pravatar.cc/300?u=33bdee3e-9a91-443a-a0c7-7c6759f45849
-Mendonça S.A.,90.145.632/0001-36,true,$2b$12$AUGsepMtmnVUOOCj3YvfX.54h4CuLOtskUlVVwhe.EfOyDSSA73Ym,https://i.pravatar.cc/300?u=eaf9826f-320a-45db-ab40-197ca66f6742
-Farias,31.584.296/0001-69,false,$2b$12$0RqhyoEmE.fO1EUbjSdcyuCKgwSOXWflVOvNeTr8b5xZz3CMeg9ne,https://i.pravatar.cc/300?u=8dc1d8e1-2acf-4516-978e-bb4a9ec1432d
-Vieira Câmara e Filhos,87.426.093/0001-07,true,$2b$12$UKRRBjUBHM2.IqqlHEFvce6I0lCt2Gfab9pN3N4lIGog1dhXDKMF6,
-Correia Vargas S/A,57.831.426/0001-04,false,$2b$12$FJDEbsNilsvPwiAZMfSASu/Y5jKxCm25H../kFZtjr6VX.1jMsGqe,https://i.pravatar.cc/300?u=2744bf93-3a25-40a6-9762-1ba427eb8f7c
-Siqueira S.A.,12.975.036/0001-70,true,$2b$12$.azpO7fp.Ex0cQdGhdKaB.uycDkYisngXvbf2QnzyKHKKuXCytfEi,https://i.pravatar.cc/300?u=bceb0fc5-da17-44af-a0aa-762d334c761a
-Cassiano - EI,13.264.789/0001-30,true,$2b$12$6O8jX2mDYWkn.xHsRvFPmuOEPjNvQOK7jy6ARqvDXnl1dMqu4sSJG,
-Novais,81.063.592/0001-92,true,$2b$12$o9T/2NQ8Yp8aqFSr/d3UX.PvL42jjk1Bnn/H2r9RPN1WbNk65DLOK,
-Carvalho Moreira - ME,92.134.507/0001-56,false,$2b$12$n7aIJHgCJWNWNgI2zEfezeuZS9/KQY.iEkTuqt.NgctQhqBUYw4Ku,https://i.pravatar.cc/300?u=7efbfdf8-9f43-48b0-ab79-df840b215afc
-Lopes Silva - ME,60.245.917/0001-88,true,$2b$12$U6PuaeOVT2Zo59eAM4ZuB.TNXwbs9yL2DFGgcZ09NO8V3vbEbhKKq,https://i.pravatar.cc/300?u=83fc362b-8005-436d-96c7-abbf459df657
-Casa Grande,40.382.651/0001-08,true,$2b$12$xCiHWI9ldIoVGJeMflLyZ.Su9zxZoHlz1qST31JiQmfAd7gLb1ukO,https://i.pravatar.cc/300?u=aeb8eda5-aa8d-40d9-8189-95df17b2a7f6
-Souza,86.907.521/0001-42,true,$2b$12$kbb0.aU8yShtfnAXR8eSIOgpiM2XUyxAZscd2VSWG34/KEq3WCz/u,
-Camargo e Filhos,,true,$2b$12$0g9iLQLyBqB2LO5Vgn2RD.DH6Pj82WZ6Oi7FX2o6AIUHZsgtGkLKG,https://i.pravatar.cc/300?u=c38e8ace-f2bc-4d49-b474-de8ee83b5bae
-Camargo,52.738.690/0001-84,true,$2b$12$9zvKTR9RjJqG3HTpa4ELJO6Y55dmruWP4dlqycI8xXroiDNAYrrSS,https://i.pravatar.cc/300?u=6c903e8f-a3b3-49da-bed0-f86d6a6fb7b0
-Pires,10.893.572/0001-09,true,$2b$12$g2xQ1ej/lLoVFw2euaL96OJXpWHwXbyazDDOz5DDxCFYMOBq8cvjq,
-da Costa,81.564.730/0001-17,true,$2b$12$2R5mt8PgDgbTef18vTdJX.CMfoXU7cCuTALch1YfZbh9jJ0dYQPTm,https://i.pravatar.cc/300?u=5e594241-f3ac-481d-86c6-ee9fce622a44
-Correia - ME,39.516.724/0001-28,true,$2b$12$EIC5DI2TC1h1RC2.ADuE1.msnaVQk5AL9BSk7b7pp3aVQL7HGNvd2,https://i.pravatar.cc/300?u=2e81897f-f198-4017-a4d4-3523741c5a7f
-Sampaio,40.932.657/0001-01,true,$2b$12$yth.HhByi3VYQI7wtksRV.OUMZqes7q2Yhk7DnEJGhaQqiveOkeqK,https://i.pravatar.cc/300?u=494025d7-7d81-44b0-bb59-d194793785b9
-,43.256.891/0001-54,true,$2b$12$GRMuQojNzywiZ0lcPPLm.OXbhSdBT8P9emWMghZ.sMARHty6si/dm,https://i.pravatar.cc/300?u=1db46385-0df3-469e-a557-8f65c147a23c
-Sá,98.740.623/0001-03,true,$2b$12$btZOeHNglYrvrjkInr.JlO9IVfJkeQrtBHsNp6R4GsjWSY.3EYbpG,https://i.pravatar.cc/300?u=29aef279-44c3-4fc1-bcac-b297fdd2c232
-Vasconcelos - EI,35.427.618/0001-17,true,$2b$12$XJhpDb19beBZfeTrFH9.GO.auweg6A07fokSu9pSDQiCJyHrYHs4C,https://i.pravatar.cc/300?u=bdf91b1a-ff72-43a2-948b-375796bbbec8
-Rodrigues Andrade - ME,71.905.823/0001-04,false,$2b$12$zG8PXoq0VnE76DXyGAZokOQgqIXeDBA2as2Qbd9YQvsVRxN.Oxdbm,https://i.pravatar.cc/300?u=8a1a650d-06a2-4860-91eb-d48212406903
-Novais,62.740.198/0001-05,true,$2b$12$OdmLYC5TYTxkXzI93mbFd.7ogha7sWd4RyGdTDKDYgyLVH5SxiqrO,
-Nascimento - ME,86.725.401/0001-24,false,$2b$12$BSACfIYAYvGoDo56f7oLR.jDSBeDfbMbcIafeDqX.GGCk79JrXinS,https://i.pravatar.cc/300?u=411473da-cd04-4ac2-9a30-25f45b35c07f
-da Luz,79.650.824/0001-67,true,$2b$12$A8BTtihdbY4zmJgm9tmcwettgt7iQ4pTzqK6kXheKnt1QBPiOvKlS,nao_e_uma_url
-Pimenta Oliveira S/A,58.473.621/0001-72,false,$2b$12$cWP2P8uSCpJul6D2w.dll.7EQ1QTp3WUEe4jJsLOyMMmtfbb.Jnqa,https://i.pravatar.cc/300?u=d48dfbd1-a6b6-4b0c-87ba-42c0cac0b45b
-Moura Macedo - EI,73.921.658/0001-00,true,$2b$12$Zpz64oFiBjts370948NoWeqmEzGcfnWiT58k5O2NvhrDMSobfbUNy,https://i.pravatar.cc/300?u=c0008853-174d-42d5-9956-708a64d73e59
-Lima,70.498.512/0001-05,false,$2b$12$WtV7GfYsntjwN4dUj2zSAON84WBFwTmez3AQJ.gXc5tNnbTx.Kya6,https://i.pravatar.cc/300?u=3e800ebb-101d-4248-9840-3c4db6228b89
-Alves S.A.,81.376.942/0001-70,false,$2b$12$DrLlQyAlYPErFJTckJye6.A7GeOhtKX4Q3acwAr46gNiYGaXfuWge,https://i.pravatar.cc/300?u=6c40f511-66b0-420a-b787-db79a85baf44
-Leão Azevedo S/A,21.895.763/0001-18,true,$2b$12$SuOu1/Po2ub3AAZebUXgTexG9u9OgHAvBNHYSSryetH8FsHV/BqgK,nao_e_uma_url
-Sales Monteiro e Filhos,12.345.678/0001,true,$2b$12$Nq3rNRT12NiH23IbhAn6mes.BvtziFD7WtFvc3V3sbIIEefeD1fhu,https://i.pravatar.cc/300?u=ff27a357-bc1e-465f-951f-95595aba3f4d
-Nascimento - ME,29.835.064/0001-94,true,$2b$12$pLOOr3dlgGJWX0GtNUa2DeHEypmijqJHWIgTlaCdej7ffJW0Q5CTC,
-Camargo,32.914.057/0001-92,true,$2b$12$pPTlPLvtsPoFxahk8iifVeTD6xeyzP3BNA8E6U9Nu/jgWSB5BB4WG,https://i.pravatar.cc/300?u=c33c74d3-af6b-483f-85d7-3b2088dbe00e
-da Rosa,62.158.973/0001-00,true,$2b$12$A0PJqjyxJeDH2mV2oZCz.exQ3B972W1CJ.ODhrE2P8imlf5ua8bxC,
-Jesus Ltda.,83.261.904/0001-06,true,$2b$12$jSSDNrKBxXhi8sZOBKCegu8B2mHAVZSkMbGBfn7jiLtX60uYj1wT.,
-da Costa - ME,32.981.065/0001-51,true,$2b$12$6Ng.AmTJCADJ/e5YUffqTeLZAD8UOkTWsJLTLttqk8uY4v9/goMcy,https://i.pravatar.cc/300?u=720e6a3c-a76a-4e08-9039-fab52f7eb46f
-Rios Machado - ME,76.051.492/0001-06,true,$2b$12$RIkcObAJEX1LwV3wevTx8uVoPOv7KV8r/zzBhgax2.qiiD.e7boGK,https://i.pravatar.cc/300?u=56f6071b-2998-448c-b3cb-7756079cbf69
-Mendonça,46.851.907/0001-65,true,$2b$12$WDklP8OVmA8iTz5OPkVenOdxqp56rAN27CiSf1McfA.pXzmOqO7T2,
-Barbosa S/A,abc.def.ghi/jklm-no,true,$2b$12$pFD/sXLqzPYnIndJFf/Ro.N4mhKiljlnDloTTgmXgHHbT/CQeXsSu,https://i.pravatar.cc/300?u=23796150-536a-4f0d-be9a-e38b746cf302
-Lima S/A,25.493.617/0001-17,true,$2b$12$YzA8lGvEvJMIgBDKXMS/1OLwTOxlsur2lbJjQPMtMjAykBmjmp2xO,https://i.pravatar.cc/300?u=2f158ef3-37e7-4d33-bfb3-312c688cfb32
-da Rocha,96.572.108/0001-28,true,$2b$12$pSfhXEDH32V5zgRbhK7.J.9C4s1lUGUbEhGeUEJpXz8leYG4ex1tW,
-Guerra Ltda.,84.091.235/0001-26,true,$2b$12$hU6DHY3Avoo//06JBxEtxetHXKMZDstzWCun7xAeh50V4lJWbyopu,https://i.pravatar.cc/300?u=d8b40aa7-c69f-4704-829c-8bbe0f3682b3
-Barbosa - EI,85.431.790/0001-12,true,$2b$12$iGZH8ibtJlvbiJfRM1vLyeiIUXQ.n/X5G2ozWSbkevf7Yh8l9fVG2,https://i.pravatar.cc/300?u=d574139b-e0df-4173-bce1-885afd41d4d3
-Cardoso,,true,$2b$12$mDfPReF9PqwdTaZQELLwo.fnIG/0g/qu0A7wuAtnEFg1XufGZhAV2,
-Carvalho da Mata S/A,60.245.917/0001-88,true,$2b$12$PiLw.l1DwSJgK8w0x6X0Cev2lBoSsvnjKNalETQJpkljKx6529jQe,
-Fernandes,37.518.402/0001-92,true,$2b$12$DczW9GfUInHLMIcoSj6Aj.ti4TqqgU0PHvx0.UDfxZLpiqRzz/CpW,https://i.pravatar.cc/300?u=caf6c5dc-54cb-4211-96a6-dd153bbeb44b
-Siqueira Dias - ME,42.165.809/0001-13,true,$2b$12$1ZqvLqipWE309HDEjhigWuu4LZN.mWCOh4/B6NsLEAJoWcb4RllDa,https://i.pravatar.cc/300?u=3a994f11-f560-42ac-9cae-4d46a2a229bd
+nome,email,cnpj,ativo,senha,foto_url
+Montenegro,fsousa@mendes.com,38.671.254/0001-04,true,$2b$12$N5Syb1aMFZeXNK9mpheSgens.FdX4/oHNfRCeHSV0noalhspLWJIK,
+Gomes - EI,vitoria98@farias.org,05.194.628/0001-99,true,$2b$12$8oIOHXEXQ6JX85tt2Cl1TuqFi8UHicmVKlAUNuPtlWxPamPq516J2,https://i.pravatar.cc/300?u=b9a676c0-3579-49ba-af5a-f808185d002a
+da Cruz Ltda.,lopesana-clara@silva.edu.br,13.249.085/0001-98,false,$2b$12$NtTBdg18vBCKSwr0T92lVOUBLKcgmdFrnEs/6PnYfPM3KWldVOfD.,https://i.pravatar.cc/300?u=83fc61d4-61d0-47d5-b15a-a9f1057da39e
+Porto,yda-paz@farias.com,95.703.861/0001-42,true,$2b$12$v1L3qkuLacx/dIX5eFFyh.Df1DNK.b3Lfw32LxdDpUYnbku3X81Ca,https://i.pravatar.cc/300?u=0dd173e8-775a-4ae7-af86-917e79f83464
+Sampaio Câmara - ME,emanuelcirino@cunha.edu.br,63.780.451/0001-09,false,$2b$12$cs6.b52yvXdAXYSCM3daRuEBGI2LGOvp/2K41mZJ4ICQUfEGKzFGi,https://i.pravatar.cc/300?u=3216af57-5dd9-41ad-94ad-48eb25aa838f
+,xcirino@sousa.org,39.620.847/0001-04,true,$2b$12$Ygk4wE61wIhYon/stk/5jOKFx3avVK80n/TkAyuuZWz5vkZfm8NCa,
+Aragão,bruna00@almeida.br,82.765.041/0001-33,true,$2b$12$AcKLl/T6Dx08aPy1wdL6teVEb9oVdl9tFHw/mY.Hajiq89Ru.b9e.,https://i.pravatar.cc/300?u=f87559d7-3fd0-47a9-81a1-a79f7d01d43b
+Mendonça,icardoso@costela.edu.br,31.096.285/0001-30,true,$2b$12$hPejOBnsKr4Ie04YXaOtS.5kq7rUAEHVlQnkulXabf8eaB9MUq9ai,https://i.pravatar.cc/300?u=96afa1f1-63c0-48c7-94be-e3a739a8f344
+Gomes,yan75@sampaio.com,85.769.140/0001-81,true,$2b$12$Z4eZZT72ylxsCZkc7AvyIOV37RPCN5CbSmgRykp2SySST/LIIwnK.,
+Rezende da Cruz e Filhos,joao-felipe64@duarte.gov.br,28.564.073/0001-25,false,$2b$12$sD1GuLqcXiwGXqRF6aeeCejxLoK2BwjeFIlY0vAUoCfGm4YK26q2.,https://i.pravatar.cc/300?u=bf60b4b8-cc3b-4425-b21d-cd5cf0eb8880
+Marques Macedo - ME,ceciliaabreu@leao.br,14.670.295/0001-18,true,$2b$12$AK3CuQ9DF.OXZSyO1Cyol.x4.YLvLGidqmo.6shKoGF/rJQpQ6xY.,https://i.pravatar.cc/300?u=c3a51bc8-ccb4-4ba2-94bf-107485c6529d
+Almeida Sousa S/A,rebeca51@montenegro.org,63.954.187/0001-82,true,$2b$12$RcMdBhsmvu1XmP33Z23ggeMD91en2NN5kvnuCkyZzHKBlmYECQCiO,
+,wribeiro@fernandes.com,18.293.460/0001-10,true,$2b$12$1QJsxQfgM9Hg88xykFGZF.QsIYj7/j3AtZNCv1Avop9VX/EDmyoNq,https://i.pravatar.cc/300?u=4b21dacd-7815-49d0-be67-634174d56272
+,joao-miguelviana@vieira.com.br,87.142.960/0001-74,true,$2b$12$NdQoAfHn0J4/YZr/kzy5U.uhJWHCuqrAHeqwNFOzAUV41apV1T4IG,https://i.pravatar.cc/300?u=12b5e0b5-8425-4f4a-b4e6-78c8617db6d7
+da Paz,luiz-henriquepastor@moraes.gov.br,17.846.023/0001-14,true,$2b$12$PRg.gktIWuETSXNPw8Jjb.qJLffxm4FZ0Eq5WyWP33Rz6xQrm0V0q,https://i.pravatar.cc/300?u=3b0692ad-5cc5-4213-aac0-5619f4842a57
+Silveira - ME,igarcia@guerra.com.br,93.284.051/0001-73,true,$2b$12$n8bp2slmLgZt/M4wp2HiKu6IGtSbxvxx1tmfmhPTffd5mecTyUkkG,https://i.pravatar.cc/300?u=9c0e574c-316e-477e-9869-eafe7811a263
+Rocha,sampaiohenry-gabriel@da.com,17.846.023/0001-14,true,$2b$12$IKOShZ.pt.EjQ5BTAyulGuF6CoHJ66ISKLZgvyyLaICnMHBEnPRQS,https://i.pravatar.cc/300?u=b9e2829c-1fd7-4b6c-879c-50a34e08de10
+,sem-arroba.com.br,82.450.793/0001-05,true,$2b$12$V7.JKjl2PrC36ZG.4gbwvOeVVqrf5M4B/.GO7M4JLGYLLCJX4Va4W,https://i.pravatar.cc/300?u=12f7a69b-8923-4b5b-ba94-0243ced4ebed
+Vieira Barbosa S/A,acamara@cassiano.com,08.465.397/0001-07,true,$2b$12$xGhAfCCN60VjBpzW3ZtEFOra.PZbKIIIeQoXeUWy89e7i5X7laGSa,https://i.pravatar.cc/300?u=dc032a37-a7e6-4537-ab4a-ca6cb24f30fc
+Freitas Ltda.,maria-alice28@da.com.br,abc.def.ghi/jklm-no,true,$2b$12$jCfPdug7gYezFYEiSFSYkeGNpZsCnjkBfDYjw0YsW27nsdyURnXB.,https://i.pravatar.cc/300?u=eba9ba8f-4002-4955-a1d4-e8b4ad4cbba8
+Fogaça Rocha S.A.,ravi-luccamelo@da.com,,true,$2b$12$nrMVrLQRqu050XyzmNeOte.g0N/oAQabz6UHQ7GseRzmBYEswxbPi,https://i.pravatar.cc/300?u=a0276f69-f01d-4158-b78a-9bc68ef559b1
+Pacheco,maria-lauranovais@moreira.com,31.048.762/0001-91,true,$2b$12$dOo9AJoOtA31TEIuxOT26.c0M4p3NiEWy7i82jzU96lCl6a9C5pEK,
+Cunha e Filhos,mariah07@alves.com,64.930.218/0001-28,true,$2b$12$cdRm6YMp14/QCB7FGkVT5u2r8m.WH4HI0SkpNiREcR2KQvvJq5Abm,https://i.pravatar.cc/300?u=f6ffdbcc-238e-4899-b7d3-15f39adcedc6
+Pereira,lucas28@da.com,39.752.410/0001-24,true,$2b$12$unkQFOWTFIeXBUk5WrEoyuCkGyKL1krGhxIidnK/THsWoEUnWaMhS,
+Cardoso Cirino S/A,cavalcantiliz@da.net,32.859.416/0001-56,true,$2b$12$ri3Gtr3lsg3cr9bzPEbD8.XEt95K5R6rmYKurP8aD172MvIR5Big2,
+Sales - EI,lsilva@fogaca.br,90.532.468/0001-10,false,$2b$12$z9oF8Oli/FnRqetVNtjqpOZJtc353Ywor8iLdAimwW3UaN.Y9R0Y.,https://i.pravatar.cc/300?u=5366498e-0d74-4ff6-8a6e-4459a5caf180
+Cassiano S/A,isales@azevedo.com.br,61.793.584/0001-94,true,$2b$12$Asiqp5SQo3uljIuAqGH5UevPW8Xt4r.7GwHpjU3ve4kiwgZFU0SVK,https://i.pravatar.cc/300?u=1501df3c-b62b-4d72-9978-3f8e27c8aa53
+Gomes,ocamargo@sampaio.com,abc.def.ghi/jklm-no,true,$2b$12$ZPAqIu7aPy1NIz0dabSVYul4ozc/qKAvGjdZrnagRR2XWFxmmOxWC,
+Souza Cardoso - ME,macedocaue@viana.gov.br,43.906.127/0001-87,true,$2b$12$TRoLqvXla6uuGhq8srTpiOFMcNhS4bMqbGgz/vO8oqdFY1T0MomDG,https://i.pravatar.cc/300?u=ed691789-c587-4a56-a1d1-69ce6a7a3a78
+Duarte,xborges@brito.com.br,abc.def.ghi/jklm-no,true,$2b$12$BLZlPGZ0b9oLhP7y0ew5gOPMQ/vLpvVHQ3JNxHiFdNZMvb3eaUo1.,
+Ramos,pietramendonca@silveira.com,32.947.061/0001-57,true,$2b$12$319TBz4nzc86uo3TeEonfOzfpUnHwjpyKmqD04sedoOB9JybrNNCm,
+Fernandes Ltda.,rnunes@freitas.com,58.941.032/0001-71,true,$2b$12$8GSwVGe55Sd.up1e4fY6TO51Ibe2eKoGjG5BGIgM4JfOXL.SHHJZG,https://i.pravatar.cc/300?u=1682d8b6-7c3d-47f9-814f-46e6dae60e03
+Moraes S/A,castroalana@duarte.br,08.432.697/0001-81,true,$2b$12$...B5iimRzBV5IqwBiNOTOkDqjXTXuvMZT7IAI71DhsrzCePFopPC,https://i.pravatar.cc/300?u=4a8f2eda-21ce-4552-b47c-38b232fae6b0
+Souza,fcavalcante@sa.org,06.874.153/0001-44,true,$2b$12$KE8zlxa3dlk43J8Brn.loufrmISOYYVFWnvq3xcklzqi5AFLdtAbK,
+Oliveira,hmendes@monteiro.com.br,21.780.695/0001-41,true,$2b$12$NMuCE1HBR.wrk1wKcHXG5.tQBv9Nzpf5oqjr2dtMZIrLNCUN1B2Py,https://i.pravatar.cc/300?u=f09b1b0e-209a-4c1a-90f0-5017f4097600
+Azevedo,monteironina@almeida.com,65.930.148/0001-70,false,$2b$12$Q/N/vcYF0zmaN7Vd1Tip4eu/dQoQ8fWuLF.Ny5wF6OgzlxeGnFrkq,
+Fernandes,clarice17@albuquerque.net,56.370.824/0001-08,true,$2b$12$4KlJ0OPYvELgU/yCvTlfqeOuNft.mMdeGJ9fwUglZ/v5aeajvLycy,https://i.pravatar.cc/300?u=9923a33c-cff2-4913-bf80-6679ab246843
+Ferreira,xvargas@freitas.br,42.816.953/0001-72,true,$2b$12$5IigUZunaNBO6eqfXtk6/eosy.xmb5GoyDFsXCuosgvWzrpYCWm9u,https://i.pravatar.cc/300?u=8f460eb6-ddc2-4edd-94cc-1abecb2ff1e9
+Novaes S.A.,gael42@moraes.gov.br,24.759.681/0001-34,true,   ,
+Montenegro Campos Ltda.,maria-helenasampaio@pereira.br,91.765.283/0001-18,false,$2b$12$UvpuswIOLwL8daUZr1sHjONRM1PNfhlz0XNBaS7Hhf0LTNfWCgg3K,
+Machado e Filhos,marquesmatteo@jesus.gov.br,67.831.594/0001-53,false,$2b$12$bgQs2PhyLt.goGwD8Dzr4eSK4RHYo9d4AYZxFcEVg4YwSyes98XHG,https://i.pravatar.cc/300?u=f4ce8edb-d7e7-4532-ab23-4b708bfbf5da
+Sampaio,contato@,23.076.549/0001-65,true,$2b$12$M.V4hnj75HnfPSaTNTCQU.5Lt9q1LHK02YgQE21Y4VkA2TJNkOoXG,https://i.pravatar.cc/300?u=9df1b979-480e-4138-b592-3a10d9dc5d6e
+Ramos,sem-arroba.com.br,29.130.476/0001-29,true,$2b$12$49yeuXGOAFQREmdxVwFkFeVjxI41szJ/TyK0EZ0SSk16v2o0TiQ26,https://i.pravatar.cc/300?u=db0028be-9c61-40db-b4c3-522f0a940c3c
+Montenegro das Neves Ltda.,cauesales@macedo.com,14.695.087/0001-73,true,$2b$12$/gnDgyZzASgbR6AmBqjRM.AFV3948slkwGEdWXYwq2q0inHplb7KK,https://i.pravatar.cc/300?u=1c721ee7-cea5-403d-b31d-8e177eee809a
+Pastor,jesusmaria-sophia@barros.br,93.561.780/0001-20,false,$2b$12$QZ793ybWI.z5MZAO/931uORnYR5birKUeuByIdFSwwVldue6ZBIUa,https://i.pravatar.cc/300?u=bd925c9a-dc56-48d1-9b87-0d5e6d5bc5e4
+Silveira da Conceição Ltda.,rhavirodrigues@machado.br,21.768.954/0001-19,true,$2b$12$MOOA2HJPPaIPgHyAeU2XL.6NnSYeDBLjHrYJE.90SY53dnltGcqjy,https://i.pravatar.cc/300?u=08a6036a-e618-43b3-9bf4-e320f3b7e856
+Siqueira Rezende S.A.,pda-luz@fonseca.br,34.189.750/0001-75,false,$2b$12$g9noOf30dakRmplkqvPT4eN7nM9uPdv1IqIWhEd8SAUmV9LHC.8Ti,
+Lopes Cardoso e Filhos,larissavieira@carvalho.com,56.014.938/0001-15,true,$2b$12$M2Q4PX8bVjr13qQdePbyBeWBjW6fm4DWh1KHayZgHgxuXO9DVth3m,https://i.pravatar.cc/300?u=737c0ed2-6d22-4482-9420-9cc1c5a20859
+,camposluiz-gustavo@borges.br,70.634.289/0001-86,true,$2b$12$UvpahFjpdiFJoUTzcmMD.ekGQqczmluH4ofzRVnA847vev6oehytW,https://i.pravatar.cc/300?u=61d3425a-aee9-4327-84a1-246c195a5b95
+Peixoto da Mota - ME,bcassiano@marques.br,29.764.035/0001-89,false,$2b$12$AkStAvJeVU.W/7tpgaGWxumQQaZmaRyMIWufCNPUp4eOHiLyER7Yy,https://i.pravatar.cc/300?u=036efb78-9ae3-4915-95a0-aed13f222281

@@ -1,5 +1,3 @@
-__pychache__/
 .env
-src/database/utils/data_generators/__pycache__/
 **/__pycache__/
 *.pyc

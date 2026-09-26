@@ -111,3 +111,5 @@ BEGIN
         END;
 END;
 $$;
+
+COMMENT ON FUNCTION fn_match_produtos(INTEGER, INTEGER) IS 'Motor de detecção de mistura perigosa: cruza substâncias e classes químicas das FDS ativas dos dois produtos com incompatibilidade_regra. Retorna incompativel (uma linha por regra, da mais grave para a menos grave), compativel ou nao_avaliado quando falta composto resolvido.';

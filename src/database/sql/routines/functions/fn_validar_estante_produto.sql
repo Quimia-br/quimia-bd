@@ -28,3 +28,5 @@ BEGIN
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
+
+COMMENT ON FUNCTION fn_validar_estante_produto() IS 'Função de trigger que garante que o produto só entre numa estante do mesmo usuário (estante_produto.id_usuario = estante.id_usuario).';

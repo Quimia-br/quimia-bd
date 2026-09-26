@@ -12,11 +12,13 @@ WHERE id_batch = :batch_id
   AND status = 'ok';
 
   
-INSERT INTO empresa (nome, cnpj, senha, ativo)
+INSERT INTO empresa (nome, email, cnpj, senha, foto_url, ativo)
 SELECT
     btrim(nome_raw),
+    lower(btrim(email_raw)),
     cnpj_raw,
-    senha_raw,
+    btrim(senha_raw),
+    NULLIF(btrim(foto_url_raw), ''),
     CASE lower(btrim(ativo_raw))
         WHEN 'true' THEN TRUE
         WHEN 't'    THEN TRUE

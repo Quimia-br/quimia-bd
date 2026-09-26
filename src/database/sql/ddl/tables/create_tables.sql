@@ -1,6 +1,14 @@
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 CREATE EXTENSION IF NOT EXISTS unaccent;
 
+-- Conceito de superficie removido do projeto: garante que nada dele sobre no banco.
+DROP TABLE IF EXISTS produto_superficie CASCADE;
+DROP TABLE IF EXISTS superficie CASCADE;
+DROP TABLE IF EXISTS stg_superficie CASCADE;
+DROP PROCEDURE IF EXISTS registrar_consulta(UUID, INTEGER, INTEGER, TEXT);
+DROP FUNCTION IF EXISTS buscar_compatibilidade(INTEGER, INTEGER);
+ALTER TABLE IF EXISTS stg_historico_recomendacao DROP COLUMN IF EXISTS id_superficie_raw;
+
 DROP TABLE IF EXISTS historico_recomendacao CASCADE;
 DROP TABLE IF EXISTS estante_produto CASCADE;
 DROP TABLE IF EXISTS estante CASCADE;
@@ -257,20 +265,4 @@ CREATE TABLE historico_match (
     descricao_risco   TEXT,
     data_consulta     TIMESTAMPTZ NOT NULL DEFAULT now(),
     CONSTRAINT chk_historico_match_par CHECK (id_produto_a < id_produto_b)
-);
-
-CREATE TABLE sessao_acesso (
-    id          INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_usuario  UUID NOT NULL REFERENCES usuario(id),
-    ocorreu_em  TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
-CREATE TABLE log_auditoria (
-    id              INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    tabela_afetada  VARCHAR(100) NOT NULL,
-    operacao        VARCHAR(10) NOT NULL CHECK (operacao IN ('INSERT','UPDATE','DELETE')),
-    dado_anterior   JSONB,
-    dado_novo       JSONB,
-    usuario_db      VARCHAR(100) NOT NULL,
-    alterado_em     TIMESTAMPTZ NOT NULL DEFAULT now()
 );

@@ -36,3 +36,5 @@ BEGIN
     COMMIT;
 END;
 $$;
+
+COMMENT ON PROCEDURE sp_registrar_consulta_match(UUID, INTEGER, INTEGER) IS 'Normaliza o par de produtos (menor id primeiro), roda fn_match_produtos e grava o resultado mais grave em historico_match.';

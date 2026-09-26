@@ -13,3 +13,5 @@ BEGIN
             RETURN NEW;
         END;
         $$;
+
+COMMENT ON FUNCTION fn_atualizar_ultima_sessao() IS 'Função de trigger: copia o horário do login (sessao_acesso.ocorreu_em) para usuario.ultima_sessao, só se for mais recente.';
