@@ -3,7 +3,7 @@ name: Publicar catálogo de dados
 
 on:
   push:
-    branches: [main, feat/QUI-86e3ee4w3]
+    branches: [main]
     paths:
       - "src/database/sql/**"
       - "src/catalog_site/**"
