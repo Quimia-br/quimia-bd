@@ -1,7 +1,7 @@
 """
 Quimia — Gerador de dados: classe_quimica
 
-Tabela raiz do dicionário químico, sem FK. Diferente de marca/superficie,
+Tabela raiz do dicionário químico, sem FK. Diferente de marca,
 aqui NÃO usamos Faker pra gerar nome — classe química precisa ser dado
 real e curado, mesmo em ambiente de teste, porque é a base do match de
 incompatibilidade. Lista fechada, não um catálogo aberto.

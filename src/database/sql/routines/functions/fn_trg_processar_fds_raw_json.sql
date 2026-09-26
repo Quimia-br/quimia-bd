@@ -7,3 +7,5 @@ BEGIN
     RETURN NEW;
 END;
 $$;
+
+COMMENT ON FUNCTION fn_trg_processar_fds_raw_json() IS 'Função de trigger que chama fn_processar_fds_raw_json para a FDS inserida ou alterada.';

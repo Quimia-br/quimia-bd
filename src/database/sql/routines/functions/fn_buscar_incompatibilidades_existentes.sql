@@ -21,3 +21,5 @@ BEGIN
      WHERE f.id_produto = p_id_produto;
 END;
 $$;
+
+COMMENT ON FUNCTION buscar_incompatibilidades(INTEGER) IS 'Lista as incompatibilidades declaradas nas FDS do produto (fds_incompatibilidade).';

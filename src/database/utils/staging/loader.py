@@ -49,7 +49,7 @@ TABELAS = {
     },  
     "empresa": {
         "stg_table": "stg_empresa",
-        "colunas": ["nome_raw", "cnpj_raw", "ativo_raw"],
+        "colunas": ["nome_raw", "email_raw", "cnpj_raw", "ativo_raw", "senha_raw", "foto_url_raw"],
         "validate_sql": BASE_DIR / "validate" / "validate_empresa.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_usuario_empresa.sql",
     },
@@ -130,7 +130,7 @@ TABELAS = {
     },
     "historico_recomendacao": {
     "stg_table": "stg_historico_recomendacao",
-    "colunas": ["id_produto_raw", "id_usuario_raw", "id_superficie_raw", "resultado_raw", "dosagem_sugerida_raw"],
+    "colunas": ["id_produto_raw", "id_usuario_raw", "resultado_raw", "dosagem_sugerida_raw"],
     "validate_sql": BASE_DIR / "validate" / "validate_historico_recomendacao.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_historico_recomendacao.sql",
     },

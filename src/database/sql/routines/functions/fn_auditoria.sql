@@ -18,3 +18,5 @@ BEGIN
     RETURN NEW;
 END;
 $$;
+
+COMMENT ON FUNCTION fn_auditoria() IS 'Função de trigger genérica de auditoria: grava em log_auditoria a tabela (TG_TABLE_NAME), a operação (TG_OP), OLD/NEW em JSONB e o CURRENT_USER.';

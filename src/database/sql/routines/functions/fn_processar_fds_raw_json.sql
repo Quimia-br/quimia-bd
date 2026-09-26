@@ -158,3 +158,5 @@ BEGIN
     END LOOP;
 END;
 $$;
+
+COMMENT ON FUNCTION fn_processar_fds_raw_json(INTEGER) IS 'Materializa fds.raw_json em fds_composto, fds_incompatibilidade e fds_descarte. Resolve cada composto por CAS, sinônimo normalizado e nome canônico; o que não resolver vira pendência em sinonimo_pendente. Idempotente.';

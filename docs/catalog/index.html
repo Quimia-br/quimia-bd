@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quimia · Catálogo de Dados</title>
+  <meta name="description" content="Documentação navegável do banco PostgreSQL do Quimia">
+  <link rel="icon" href="icons/logo-quimia-symbol.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <img class="fundo-logo" src="icons/logo-quimia.svg" alt="" aria-hidden="true">
+
+  <div class="app">
+    <aside class="aside" id="aside" aria-label="Navegação">
+      <a class="marca" href="#/" aria-label="Quimia, início do catálogo">
+        <img class="marca-simbolo" src="icons/logo-quimia-symbol.svg" width="36" height="40" alt="">
+        <span class="marca-texto"><span class="marca-nome">Quimia</span><span class="marca-sub">Catálogo de Dados</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Seções">
+        <a class="nav-item" href="#/" data-rota="inicio"><span data-icone="layout-dashboard"></span>Visão Geral</a>
+
+        <p class="nav-secao">Explorador</p>
+        <a class="nav-item" href="#/banco" data-rota="banco"><span data-icone="table"></span>Banco de Dados<span class="nav-contagem" data-contagem="banco"></span></a>
+        <a class="nav-item" href="#/modelagem" data-rota="modelagem"><span data-icone="network"></span>Modelagem</a>
+        <a class="nav-item" href="#/scripts" data-rota="scripts"><span data-icone="file-code"></span>Scripts<span class="nav-contagem" data-contagem="arquivos"></span></a>
+        <a class="nav-item" href="#/dataload" data-rota="dataload"><span data-icone="upload"></span>Data Load<span class="nav-contagem" data-contagem="dataload"></span></a>
+
+        <p class="nav-secao">Objetos</p>
+        <a class="nav-item" href="#/views" data-rota="views"><span data-icone="eye"></span>Views<span class="nav-contagem" data-contagem="view"></span></a>
+        <a class="nav-item" href="#/procedures" data-rota="procedures"><span data-icone="code"></span>Procedures<span class="nav-contagem" data-contagem="procedure"></span></a>
+        <a class="nav-item" href="#/functions" data-rota="functions"><span data-icone="code-xml"></span>Functions<span class="nav-contagem" data-contagem="funcao"></span></a>
+        <a class="nav-item" href="#/indices" data-rota="indices"><span data-icone="arrow-down-wide-narrow"></span>Índices<span class="nav-contagem" data-contagem="indice"></span></a>
+        <a class="nav-item" href="#/triggers" data-rota="triggers"><span data-icone="zap"></span>Triggers<span class="nav-contagem" data-contagem="trigger"></span></a>
+        <a class="nav-item" href="#/logs" data-rota="logs"><span data-icone="clock"></span>Logs<span class="nav-contagem" data-contagem="log"></span></a>
+
+        <p class="nav-secao">Ferramentas</p>
+        <a class="nav-item" href="#/dependencias" data-rota="dependencias"><span data-icone="link"></span>Dependências</a>
+        <a class="nav-item" href="#/impacto" data-rota="impacto"><span data-icone="circle-alert"></span>Análise de Impacto</a>
+        <a class="nav-item" href="#/plano" data-rota="plano"><span data-icone="circle-play"></span>Plano de Execução<span class="nav-contagem nav-alerta" data-contagem="plano" title="Pontos de atenção"></span></a>
+        <a class="nav-item" href="#/alteracoes" data-rota="alteracoes"><span data-icone="sparkles"></span>Alterações Locais<span class="nav-contagem" data-contagem="alteracoes"></span></a>
+        <a class="nav-item" href="#/historico" data-rota="historico"><span data-icone="history"></span>Histórico<span class="nav-contagem" data-contagem="historico"></span></a>
+
+        <p class="nav-secao">Governança</p>
+        <a class="nav-item" href="#/lgpd" data-rota="lgpd"><span data-icone="shield"></span>LGPD</a>
+      </nav>
+
+      <div class="rodape-aside" id="rodape-aside"></div>
+    </aside>
+
+    <div class="principal">
+      <header class="topo">
+        <button class="botao-icone pequeno menu-botao" data-acao="menu" aria-label="Abrir menu" aria-controls="aside" aria-expanded="false"><span data-icone="menu"></span></button>
+        <div class="busca-global">
+          <label class="busca">
+            <span data-icone="search"></span>
+            <input id="busca-global" type="search" placeholder="Pesquisar objetos, colunas ou arquivos" autocomplete="off"
+                   aria-label="Pesquisar no catálogo" aria-controls="resultados-busca" aria-expanded="false">
+            <kbd id="atalho-busca">Ctrl K</kbd>
+          </label>
+          <div class="resultados-busca" id="resultados-busca" role="listbox" hidden></div>
+        </div>
+        <button class="botao-icone" data-acao="tema" id="botao-tema" aria-label="Alternar tema"></button>
+      </header>
+
+      <main class="conteudo" id="conteudo" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <!-- Gerados por python -m src.catalog_site.generate_catalog (não edite). Todo o resto desta pasta é editado à mão. -->
+  <script src="icons.js"></script>
+  <script src="data.js"></script>
+  <!-- Código do site, em ordem de dependência: núcleo → componentes → páginas → ferramentas → shell.
+       Uma página nova: crie o arquivo em js/pages ou js/tools, chame Q.paginas.registrar()
+       e inclua o <script> abaixo, antes de js/shell/. -->
+  <script src="js/core/base.js"></script>
+  <script src="js/core/util.js"></script>
+  <script src="js/core/sql.js"></script>
+  <script src="js/components/basic.js"></script>
+  <script src="js/components/cards.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/listings.js"></script>
+  <script src="js/pages/modeling.js"></script>
+  <script src="js/pages/scripts.js"></script>
+  <script src="js/pages/dataload.js"></script>
+  <script src="js/pages/object.js"></script>
+  <script src="js/pages/lgpd.js"></script>
+  <script src="js/tools/diff.js"></script>
+  <script src="js/tools/dependencies.js"></script>
+  <script src="js/tools/impact.js"></script>
+  <script src="js/tools/plan.js"></script>
+  <script src="js/tools/changes.js"></script>
+  <script src="js/tools/history.js"></script>
+  <script src="js/shell/search.js"></script>
+  <script src="js/shell/app.js"></script>
+</body>
+</html>

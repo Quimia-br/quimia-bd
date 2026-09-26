@@ -5,6 +5,16 @@ WHERE id_batch = :batch_id
   AND (nome_raw IS NULL OR btrim(nome_raw) = '');
 
 UPDATE stg_empresa
+SET status = 'rejeitado', motivo_rejeicao = 'email em formato inválido'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND (
+      email_raw IS NULL
+      OR btrim(email_raw) = ''
+      OR email_raw !~ '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+  );
+
+UPDATE stg_empresa
 SET status = 'rejeitado', motivo_rejeicao = 'senha vazia ou com formato inválido (esperado hash bcrypt de 60 caracteres)'
 WHERE id_batch = :batch_id
   AND status = 'pendente'
