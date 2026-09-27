@@ -1,7 +1,6 @@
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 CREATE EXTENSION IF NOT EXISTS unaccent;
 
--- Conceito de superficie removido do projeto: garante que nada dele sobre no banco.
 DROP TABLE IF EXISTS produto_superficie CASCADE;
 DROP TABLE IF EXISTS superficie CASCADE;
 DROP TABLE IF EXISTS stg_superficie CASCADE;
@@ -33,6 +32,7 @@ DROP TABLE IF EXISTS marca CASCADE;
 DROP TABLE IF EXISTS historico_match CASCADE;
 DROP TABLE IF EXISTS sessao_acesso CASCADE;
 DROP TABLE IF EXISTS log_auditoria CASCADE;
+DROP TABLE IF EXISTS log_rpa_execucao CASCADE;
 
 CREATE TABLE marca (
     id   INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,

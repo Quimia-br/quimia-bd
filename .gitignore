@@ -1,3 +1,7 @@
 .env
 **/__pycache__/
 *.pyc
+src/database/utils/data_load/*.csv
+src/database/utils/data_generators/mocks/*.csv
+src/rpa/extratos/*.csv
+src/rpa/logs/*.csv
