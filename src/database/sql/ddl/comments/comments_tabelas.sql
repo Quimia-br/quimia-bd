@@ -1,9 +1,3 @@
--- =====================================================================
--- Catálogo de Dados — descrições de tabelas e colunas oficiais
--- Fonte única das descrições: fn_sincronizar_catalogo() copia estes
--- comentários (pg_description) para catalogo_tabela / catalogo_coluna.
--- =====================================================================
-
 -- marca ---------------------------------------------------------------
 COMMENT ON TABLE marca IS
 'Catálogo de marcas dos produtos de limpeza.';
@@ -271,6 +265,10 @@ COMMENT ON COLUMN catalogo_coluna.referencia_tabela IS 'Tabela apontada pela cha
 COMMENT ON COLUMN catalogo_coluna.descricao_negocio IS 'Descrição copiada do COMMENT ON da coluna.';
 COMMENT ON COLUMN catalogo_coluna.regra_negocio IS 'Regra de negócio aplicada à coluna (preenchida pelo seed de classificação).';
 COMMENT ON COLUMN catalogo_coluna.dado_pessoal_lgpd IS 'Indica se a coluna guarda dado pessoal protegido pela LGPD.';
+
+
+COMMENT ON TABLE log_rpa_execucao IS 'Rastreia cada execução do RPA de integração com o banco legado: status, volume processado e watermark usado na extração incremental.';
+
 
 -- Tabelas do backend Java (criadas por Flyway, fora deste repositório) --
 -- Só comentadas se existirem: num banco recriado apenas pelo setup_data.py
