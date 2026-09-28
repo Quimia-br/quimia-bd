@@ -11,6 +11,7 @@ ALTER TABLE IF EXISTS stg_historico_recomendacao DROP COLUMN IF EXISTS id_superf
 DROP TABLE IF EXISTS historico_recomendacao CASCADE;
 DROP TABLE IF EXISTS estante_produto CASCADE;
 DROP TABLE IF EXISTS estante CASCADE;
+DROP TABLE IF EXISTS comodo CASCADE;
 DROP TABLE IF EXISTS localizacao_usuario CASCADE;
 DROP TABLE IF EXISTS sinonimo_pendente CASCADE;
 DROP TABLE IF EXISTS incompatibilidade_regra CASCADE;
@@ -100,7 +101,8 @@ CREATE TABLE produto (
             'desengraxante','alvejante','aromatizante','outro'
         )),
     cod_barras   VARCHAR(255) UNIQUE,
-    foto_url     VARCHAR(450)
+    foto_url     VARCHAR(450),
+    id_comodo    INTEGER
 
 );
 
@@ -215,8 +217,14 @@ CREATE TABLE estante (
     id         INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario UUID NOT NULL,
     nome       VARCHAR(255),
-    ambiente   VARCHAR(255),
     criado_em  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE comodo (
+    id           INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_usuario   UUID NOT NULL,
+    nome         VARCHAR(100),
+    icone_comodo VARCHAR(250)
 );
 
 CREATE TABLE estante_produto (

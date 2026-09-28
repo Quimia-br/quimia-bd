@@ -152,6 +152,18 @@ ADD CONSTRAINT fk_estante_produto_usuario
 FOREIGN KEY (id_usuario) REFERENCES usuario(id)
 ON DELETE CASCADE;
 
+ALTER TABLE comodo DROP CONSTRAINT IF EXISTS fk_comodo_usuario;
+ALTER TABLE comodo
+ADD CONSTRAINT fk_comodo_usuario
+FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+ON DELETE CASCADE;
+
+ALTER TABLE produto DROP CONSTRAINT IF EXISTS fk_produto_comodo;
+ALTER TABLE produto
+ADD CONSTRAINT fk_produto_comodo
+FOREIGN KEY (id_comodo) REFERENCES comodo(id)
+ON DELETE CASCADE;
+
 ALTER TABLE historico_recomendacao DROP CONSTRAINT IF EXISTS fk_historico_recomendacao_produto;
 ALTER TABLE historico_recomendacao
 ADD CONSTRAINT fk_historico_recomendacao_produto

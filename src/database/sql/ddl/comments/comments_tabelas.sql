@@ -79,6 +79,7 @@ COMMENT ON COLUMN produto.descricao IS 'Descrição do produto e do seu uso.';
 COMMENT ON COLUMN produto.tipo_produto IS 'Categoria: limpeza_geral, desinfetante, desincrustante, desengraxante, alvejante, aromatizante ou outro.';
 COMMENT ON COLUMN produto.cod_barras IS 'Código de barras (EAN), único; usado na leitura pelo app.';
 COMMENT ON COLUMN produto.foto_url IS 'URL da foto da embalagem.';
+COMMENT ON COLUMN produto.id_comodo IS 'Cômodo onde o produto está guardado (opcional).';
 
 -- empresa_produto -----------------------------------------------------
 COMMENT ON TABLE empresa_produto IS
@@ -171,8 +172,15 @@ COMMENT ON TABLE estante IS
 COMMENT ON COLUMN estante.id IS 'Identificador da estante.';
 COMMENT ON COLUMN estante.id_usuario IS 'Usuário dono da estante.';
 COMMENT ON COLUMN estante.nome IS 'Nome dado pelo usuário à estante.';
-COMMENT ON COLUMN estante.ambiente IS 'Cômodo ou ambiente da casa onde os produtos ficam.';
 COMMENT ON COLUMN estante.criado_em IS 'Momento de criação da estante.';
+
+-- comodo ----------------------------------------------------------------
+COMMENT ON TABLE comodo IS
+'Cômodo da casa do usuário (ex.: "Cozinha", "Banheiro") onde os produtos ficam.';
+COMMENT ON COLUMN comodo.id IS 'Identificador do cômodo.';
+COMMENT ON COLUMN comodo.id_usuario IS 'Usuário a que o cômodo pertence.';
+COMMENT ON COLUMN comodo.nome IS 'Nome dado pelo usuário ao cômodo.';
+COMMENT ON COLUMN comodo.icone_comodo IS 'Ícone escolhido pelo usuário para representar o cômodo.';
 
 -- estante_produto -----------------------------------------------------
 COMMENT ON TABLE estante_produto IS
