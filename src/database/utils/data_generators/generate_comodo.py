@@ -60,9 +60,9 @@ def gerar_nome_e_icone():
 def gerar_linha_valida(ids_usuario):
     nome, icone = gerar_nome_e_icone()
     return {
-        "id_usuario_raw": str(random.choice(ids_usuario)),
-        "nome_raw": nome,
-        "icone_comodo_raw": icone,
+        "id_usuario": str(random.choice(ids_usuario)),
+        "nome": nome,
+        "icone_comodo": icone,
     }
 
 
@@ -84,19 +84,19 @@ def gerar_linha_ruido(ids_usuario):
 
     nome, icone = gerar_nome_e_icone()
     linha = {
-        "id_usuario_raw": str(random.choice(ids_usuario)),
-        "nome_raw": nome,
-        "icone_comodo_raw": icone,
+        "id_usuario": str(random.choice(ids_usuario)),
+        "nome": nome,
+        "icone_comodo": icone,
     }
 
     if tipo == "id_usuario_invalido":
-        linha["id_usuario_raw"] = "usuario-123-invalido"
+        linha["id_usuario"] = "usuario-123-invalido"
     elif tipo == "id_usuario_inexistente":
-        linha["id_usuario_raw"] = str(uuid.uuid4())
+        linha["id_usuario"] = str(uuid.uuid4())
     elif tipo == "id_usuario_vazio":
-        linha["id_usuario_raw"] = ""
+        linha["id_usuario"] = ""
     elif tipo == "nome_muito_longo":
-        linha["nome_raw"] = fake.text(max_nb_chars=250)
+        linha["nome"] = fake.text(max_nb_chars=250)
 
     return linha
 
@@ -115,10 +115,10 @@ def gerar_comodos(ids_usuario, quantidade=1000, proporcao_ruido=0.15):
     return linhas
 
 
-def salvar_csv(linhas, caminho="src/database/utils/data_generators/mocks/comodo.csv"):
+def salvar_csv(linhas, caminho="src/database/sql/data_load/mocks/comodo.csv"):
     with open(caminho, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
-            f, fieldnames=["id_usuario_raw", "nome_raw", "icone_comodo_raw"]
+            f, fieldnames=["id_usuario", "nome", "icone_comodo"]
         )
         writer.writeheader()
         writer.writerows(linhas)
@@ -126,7 +126,7 @@ def salvar_csv(linhas, caminho="src/database/utils/data_generators/mocks/comodo.
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--saida", default="src/database/utils/data_generators/mocks/comodo.csv",
+    parser.add_argument("--saida", default="src/database/sql/data_load/mocks/comodo.csv",
                          help="caminho do CSV de saída")
     parser.add_argument("--quantidade", type=int, default=1000)
     parser.add_argument("--ruido", type=float, default=0.0,
