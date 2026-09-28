@@ -56,10 +56,13 @@ CREATE TABLE usuario (
     email VARCHAR(255) UNIQUE NOT NULL,
     data_nasc DATE,
     foto_url VARCHAR(450),
-    senha VARCHAR(100) NOT NULL,
+    senha_hash VARCHAR(100) NOT NULL,
     nivel_acesso  VARCHAR(50) NOT NULL DEFAULT 'usuario'
         CHECK (nivel_acesso IN ('usuario', 'empresa', 'admin')),
-    ultima_sessao TIMESTAMPTZ
+    ultima_sessao TIMESTAMPTZ,
+    falhas_login INTEGER NOT NULL DEFAULT 0,
+    bloqueado_ate TIMESTAMPTZ,
+    ultima_falha_em TIMESTAMPTZ
 );
 
 CREATE TABLE classe_quimica (
