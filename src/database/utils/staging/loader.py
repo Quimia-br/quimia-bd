@@ -103,9 +103,15 @@ TABELAS = {
         "migrate_sql": BASE_DIR / "migrate" / "migrate_substancia.sql"
     }, "estante": {
     "stg_table": "stg_estante",
-    "colunas": ["id_usuario_raw", "nome_raw", "ambiente_raw"],
+    "colunas": ["id_usuario_raw", "nome_raw"],
     "validate_sql": BASE_DIR / "validate" / "validate_estante.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_estante.sql",
+    },
+    "comodo": {
+    "stg_table": "stg_comodo",
+    "colunas": ["id_usuario_raw", "nome_raw", "icone_comodo_raw"],
+    "validate_sql": BASE_DIR / "validate" / "validate_comodo.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_comodo.sql",
     },
     "substancia_classe_quimica": {
     "stg_table": "stg_substancia_classe_quimica",
@@ -123,7 +129,7 @@ TABELAS = {
     "stg_table": "stg_produto",
     "colunas": [
         "nome_raw", "id_marca_raw", "descricao_raw",
-        "tipo_produto_raw", "cod_barras_raw", "foto_url_raw",
+        "tipo_produto_raw", "cod_barras_raw", "foto_url_raw", "id_comodo_raw",
     ],
     "validate_sql": BASE_DIR / "validate" / "validate_produto.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_produto.sql",

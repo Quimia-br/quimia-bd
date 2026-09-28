@@ -1,501 +1,501 @@
 id_usuario,cep,estado,bairro,rua,numero,complemento
-8c80d5cf-8b6e-4b94-83ee-27455ba6a8d1,84029-853,AC,do Norte,Distrito Araújo,1299,
-45ab4302-2404-44c6-87c5-d404a7efbf00,36271-887,TO,Alegre,Favela de Peixoto,2450,Bloco B
-dc2d2a61-15a0-46b5-b870-925fdaf42b3a,97349-347,MA,da Mata,Vereda de Albuquerque,3894,Casa 2
-1b484795-7149-4ed7-9fd8-a5a9a5bd87f9,55976-102,ES,do Oeste,Morro Bryan Garcia,6879,Bloco B
-1bd89900-9970-49d7-b650-24a928720f04,68366-944,TO,do Campo,Feira Aparecida,8190,
-1a16e564-81fa-472e-88f5-74bf6be92434,93489-151,RJ,das Flores,Praia Luiz Henrique Guerra,3964,Apto 12
-b52d13d5-425f-4aa4-8617-97dde7d516d7,08086250,AC,do Norte,Praia de Guerra,5781,Apto 12
-473e9224-eeab-4c93-a5fa-672cd1c3b0a9,48850039,CE,do Oeste,Vila de Rezende,1403,Casa 2
-64ebf955-0f80-48ad-bd2b-f8ba53e2ee58,44718-097,PE,de Minas,Praia de Correia,8915,
-6081b888-2ffb-4757-b934-416a36647878,14673538,PR,de Goiás,Setor Helena Sampaio,714,Bloco B
-81d868fb-f7d1-45e6-ad52-7045a55ce78b,12345,SC,do Campo,Residencial Ana Júlia Souza,267,
-df688b0e-038b-46d9-8890-a2af8c2c4170,87873-184,AP,de Minas,Núcleo de Nunes,5650,Apto 12
-e4f48918-3117-4178-8396-6ddec23bbe3b,61535991,RS,das Flores,Setor Vargas,1699,Casa 2
-be33da47-168e-4bb6-911d-c360d408a8ef,48117180,MS,do Campo,Distrito de Machado,8946,Casa 2
-29979e32-2854-4bb2-bbf0-6309b1734f95,84614333,CE,Alegre,Sítio Pietra Alves,7613,Bloco B
-c46be7c7-1e3e-4db0-985e-01efce04b180,20979-070,SE,do Oeste,Pátio Eduardo Peixoto,2210,
-c0ebb2be-efee-4b27-ab12-7060e8693275,82258-901,PB,das Pedras,Pátio de Abreu,606,Casa 2
-48c6ce9e-3faf-4f12-aaea-a0ac6f14ef97,64149771,SE,de Goiás,Vereda de Moura,3269,
-a0a0ee89-2aec-421e-bad5-fe93e98ad4d4,19897-315,MA,das Flores,Conjunto de Montenegro,8445,Bloco B
-045d800d-88da-4243-8d4e-c5db350a38ec,cep-invalido,PR,do Amparo,Morro Santos,4151,
-d25b376d-2fbd-4ee4-bd9c-62257d85af5c,37453443,RS,do Sul,Setor de Costela,3132,Casa 2
-5d3ccbac-687e-42af-83af-32dafd0a0c32,99516740,SP,Verde,Avenida de Siqueira,784,Casa 2
-299be476-2b01-492e-9143-8a571cfce3c2,26406-195,SE,do Amparo,Passarela Daniela Ferreira,6030,Bloco B
-não-é-um-uuid,78027-134,SC,de Goiás,Estrada Câmara,7205,
-não-é-um-uuid,05298238,MG,da Serra,Vila Moraes,5555,
-cc763780-6edc-4cd8-80be-6f8a6ac76732,12345,RR,do Oeste,Conjunto Melo,8152,
-2324a6bd-fade-4b5a-9588-741ab5275e30,92416745,SE,das Flores,Largo de Sampaio,8508,Casa 2
-b1e15399-0943-4df0-9c28-fb58696dd58b,90615391,SC,das Pedras,Estação Cardoso,6956,
-a9b0c616-e3c9-4c16-9b1f-814d7309f1ad,79006472,TO,de Goiás,Morro Araújo,2957,Casa 2
-642a2a13-0bb7-48d2-a9e5-55be872da6b9,91435-892,AP,de Goiás,Aeroporto de Novais,5373,Casa 2
-0e14441d-1748-4427-aec6-7cc46f352910,05319-468,RN,do Norte,Avenida Guilherme Rezende,6982,Apto 12
-67fc87e2-8ae9-45ad-bd5e-da05dc491691,33188-466,MS,das Pedras,Vale de Nogueira,7326,
-8690619e-ac56-4bad-ac67-3fd2b1733b26,24318215,MS,Grande,Núcleo de Campos,7127,Casa 2
-b79df35f-10f3-47e1-b2e1-59d1b5f86ec9,37975-050,SE,da Praia,Recanto Danilo Fonseca,940,
-5d758cb1-56af-46e6-b7d1-d91382136759,44066404,MG,dos Dourados,Lagoa Agatha Teixeira,5953,Apto 12
-4ccecb77-ef4b-4048-911e-22f4fbb2a55e,,RN,do Sul,Feira Fonseca,7180,
-004f867e-2a63-4f4e-8633-112f37ae9b20,93241-417,AP,do Amparo,Colônia de da Rosa,3867,Casa 2
-14bab466-9250-4dfb-bdac-1103267d1a1c,16548-740,RJ,Verde,Via Alícia Sá,531,Apto 12
-29324a9c-b563-4d44-b1d9-56ba3d9aefbf,53581-971,MS,da Serra,Lagoa Aylla Teixeira,6096,Bloco B
-69dbc567-301b-41d2-9296-a9997a19377f,11401666,RJ,dos Dourados,Residencial Vinícius Almeida,2256,Casa 2
-b478d375-8d98-45b9-809d-449b21b7143e,30542-247,RS,de Goiás,Vereda Pacheco,4567,Apto 12
-b3317909-4fa4-4295-a3e6-3121565435e3,,SC,das Pedras,Travessa de Lima,3049,
-bf504c6f-804d-4fc9-9ba5-58ab6d1db2be,99918442,MG,Grande,Via Aragão,9203,
-e7f5242b-a5ce-4d7c-bd06-60e6f5b0ab2c,95199-821,GO,da Serra,Via Nascimento,7312,Apto 12
-3f4cdd2c-942f-420d-9d56-deb2d5444825,12345,RR,das Pedras,Sítio de Nogueira,8048,
-d9d225b3-4e63-415a-9a4a-2db65d888a77,30935131,BA,do Campo,Sítio de Casa Grande,1214,Bloco B
-b90dd9eb-838f-4ed7-ab5a-48013831b02f,97350-301,RR,do Norte,Núcleo de Cassiano,7293,
-bd2ea4f5-714f-4e69-8f24-d9e130d9a2cb,64851-851,MT,Alegre,Distrito Ribeiro,5693,
-f7b55ba7-eb5a-4e4b-96ac-17283de8e9ae,03022-909,MA,do Campo,Quadra Ana Luiza Campos,4915,Apto 12
-3b5b4d05-6666-4f1b-b3fc-ca22ee84b1f0,42560963,RR,de Minas,Sítio de Casa Grande,2853,Casa 2
-58c92acc-22a9-4ab3-b9d1-9d2cbd87d76f,17013804,AM,do Galho,Parque de da Rocha,3293,Apto 12
-b9749739-0731-41c3-b198-47373ca6bd06,43269-499,PR,do Amparo,Jardim de Albuquerque,431,Casa 2
-5b670efe-4b35-4486-92ea-de770c26421b,30185674,MS,do Campo,Sítio Cunha,7658,Apto 12
-1e71ce6a-8cfc-4a92-bff9-8eee65eb79f0,79550-901,AP,Alegre,Largo de Aparecida,1078,Casa 2
-e48b3ff5-bd0b-4131-8648-3faebad090b9,97987241,RR,do Norte,Núcleo de Nunes,7843,Bloco B
-7565c236-b7c2-41f3-9007-73e76f6b766c,94607497,TO,das Flores,Chácara de Moreira,9420,
-0b9584ab-1582-4847-8495-ca06099dbe0e,73097-305,MT,Grande,Lagoa Maitê Cunha,1216,Bloco B
-09cd8cdd-a1f4-4943-b568-0e6599389d4e,28340-162,PE,Paulista,Jardim Casa Grande,5645,Apto 12
-não-é-um-uuid,84521240,SP,do Sul,Praça Isis Alves,9033,
-bb0ebba8-5a5c-4c1f-a927-7e26f8bb00c2,90216-504,CE,da Praia,Pátio Sales,2115,Bloco B
-b978c665-ede4-4a7c-8354-8a1afd959994,81612602,AL,da Praia,Aeroporto Stella Duarte,2035,Apto 12
-d470a31f-4002-4585-9c4d-e0a14b348cf2,13782-586,CE,do Oeste,Distrito de Pires,5287,Apto 12
-22b174c2-487c-45fa-98da-99e212a75f39,23948292,PE,Alegre,Viela Andrade,4654,
-607c9491-6fab-47bf-b078-2fa77b8f08da,25354-416,RS,do Campo,Lagoa de da Mota,9025,Casa 2
-fb374c36-5129-4e8d-97fe-a2d3ed30e439,65923-042,MA,Paulista,Campo de Rodrigues,8741,
-60d2153f-5bc9-4567-8cec-b68e42d7a2b8,98223530,CE,do Galho,Estação Francisco Monteiro,9697,Apto 12
-036ce2d3-656b-450d-903e-c687370f4fe7,28797422,RN,do Oeste,Alameda Benicio Martins,9915,Casa 2
-8f58c3dd-0a7c-412a-adc5-342d01ed16b7,93093041,RJ,dos Dourados,Via Mendonça,675,
-9438d723-d940-42c6-86f6-d7af6ee1b655,69325-072,AC,de Goiás,Campo Cardoso,1331,
-c7074efb-6b7c-4c3e-b893-2739eaf34923,60126865,RS,Grande,Vila Casa Grande,9450,Casa 2
-9dcbcedd-62c3-4b01-ab57-2bc53ec360c8,90116381,SP,das Pedras,Chácara de Pereira,9374,Bloco B
-48cddb6d-328b-44c0-a7f9-59e2e4d9098c,79430-397,AC,dos Dourados,Pátio Ian Sá,8160,Casa 2
-1478f2a5-f0fa-45d1-a79e-020c0bc76d6f,15594564,MA,Paulista,Morro Yan da Paz,7913,Apto 12
-8d4eaffe-09b0-4e4e-8b8e-fd8613802f50,93045037,RO,dos Dourados,Estrada Ana Lívia Aragão,6654,Casa 2
-1968f788-7739-4e88-b012-df45791a376d,93753-220,RR,do Norte,Estrada de Gomes,982,Apto 12
-c3ef3565-9ac9-4237-ae67-582dc6735975,48941728,PR,de Minas,Área Stephany Freitas,7610,Apto 12
-f3394d1c-f270-45c5-9ac3-da6d0c7b4652,72561-798,BA,do Campo,Distrito Jesus,5122,Casa 2
-d3486640-60e2-4e3e-8a3b-e6ea24e4d73f,28645-766,MS,do Campo,Esplanada Gabriel Pacheco,6533,Apto 12
-b35efac7-307f-4a69-b7c6-7bc2ca18208e,58355-741,PE,de Minas,Vale Luiz Miguel da Conceição,9203,
-0c928707-9f83-439f-adae-b24c570ff510,62776-831,PB,das Pedras,Residencial Pimenta,2008,Casa 2
-40a2ced2-d6bf-4458-ad5f-8c04e2ecf52b,68486-804,BA,do Oeste,Viaduto Andrade,1587,
-5a61773f-c4a5-4af9-8ccc-02c0f353d126,12413-229,MG,de Goiás,Estação Aragão,6851,Apto 12
-01c34b98-ac3e-4dc8-8e12-a71858b14067,,TO,das Pedras,Quadra Leandro Pinto,5365,
-c366c7bf-07ba-4d73-93b2-d058519d323d,06110-534,SPP,do Oeste,Viela Porto,3111,
-8cb7ea21-cf27-4564-bf90-de45c60ae1eb,79440-191,PR,de Minas,Avenida Fernandes,8434,Bloco B
-cd824089-9a76-45fe-bb3a-6aaf5aadf0e6,18828709,MA,de Minas,Aeroporto Maria Clara Albuquerque,8149,
-915916c0-e4e6-4bb8-8d9e-ecc3c0737fd9,76221-644,MG,Verde,Condomínio Camila Vasconcelos,8282,Bloco B
-9f396d7e-9c21-4436-b0ae-67c9f04940de,,RJ,do Galho,Distrito de Macedo,5782,
-0ffff626-a0ab-4149-9a0d-824f3613abb8,88409-738,MA,Paulista,Morro Caroline Silva,8109,Bloco B
-853fff6d-d8cf-4f45-a406-c228fe74f674,02127-760,AC,do Sul,Conjunto Igor Leão,1762,Bloco B
-5b96f7a8-1e47-4c71-a6c0-f609e96a77cd,75526310,GO,de Goiás,Via José Albuquerque,5993,Bloco B
-1f4d7852-c9b3-4980-a3ce-0564bf93de17,47198972,MG,do Sul,Via Lunna da Cunha,839,Apto 12
-8c4c5899-4a31-4466-b057-b17fec90cdf8,88731-494,MA,da Mata,Esplanada Castro,1205,Bloco B
-0ee2aee7-aa3f-4371-8698-6469dd825a78,50193261,SP,da Mata,Lagoa Maitê Lopes,9009,Casa 2
-405f05c5-01d1-41d8-89f0-ca83457fc8e3,91280549,RN,da Mata,Trevo Teixeira,1947,
-ba246d85-43b1-4260-85dc-a2cd062efec3,07116-887,AM,das Flores,Feira Liz Camargo,6454,Casa 2
-727ab7f4-b3c9-46f6-b791-1e58c19c10df,71687247,MT,do Norte,Via Lima,9140,Casa 2
-f9f03198-efc3-4d1c-9bfd-f037c2ef3516,26845569,DF,dos Dourados,Praça Carvalho,9871,Bloco B
-a060823f-e066-41f4-a022-8fde0119da1a,02995-629,AL,da Mata,Sítio Cassiano,638,Apto 12
-e1eeccff-b121-4d0a-b5d5-026eb780ea23,30565144,SE,Verde,Chácara Brito,7762,Bloco B
-c40e3dae-d0e2-4f65-b212-8ecbd5178d6f,51750606,PE,da Serra,Núcleo Francisco da Mota,2291,Casa 2
-213be02b-81d4-48ae-970d-d8b3aaa3c387,32260514,SPP,da Praia,Sítio de Andrade,2663,
-41ad7cb0-bc4f-47f4-ab3f-972df43f613b,41608-041,RN,da Serra,Favela de Rezende,4903,Casa 2
-d83fcf21-fff1-4b2d-afeb-0c4658784ede,34396777,PE,do Norte,Parque de Jesus,8722,Bloco B
-72af44be-9a32-4f01-ab3d-bbc4ac4e2194,74463054,MA,do Sul,Colônia de Moura,7781,
-0ccacfc4-1c38-4f6c-a995-297fdbdcc883,10502170,RO,da Mata,Ladeira Marques,1796,Bloco B
-f48db9c7-274b-406b-a610-4b76c891ad64,30159555,SE,Verde,Parque Maria Luísa Albuquerque,437,Bloco B
-3cc6d636-086a-4175-a171-feef75352379,53597-145,RS,das Pedras,Aeroporto Vargas,9478,Apto 12
-71644b25-5d86-454e-87cc-bf6f2ac9cab6,34645-539,RJ,de Goiás,Feira Caldeira,7872,Apto 12
-96b508f9-d566-4c0d-ac00-1ac7ab4a7831,00164-712,SC,Paulista,Quadra da Cunha,6230,Apto 12
-6d7d51fb-187b-4f8c-b98d-02a6b17111d4,15412-744,ES,das Pedras,Quadra Pedro Henrique da Rocha,518,
-d7134bf7-7f74-4e9f-b9d7-83324a670462,39815-498,RR,das Flores,Rua Carlos Eduardo Câmara,1801,Apto 12
-31d4bb87-e351-4fd7-969b-a2b6b3d07934,63056164,MT,do Amparo,Vale da Costa,6862,Apto 12
-c70191a3-8456-4aeb-8fce-9e8e7336c20a,18835-879,DF,da Serra,Loteamento da Mota,6724,Bloco B
-não-é-um-uuid,03085387,SC,Paulista,Feira Duarte,1021,
-a22fffb5-e93c-4a6f-ba00-d696f1d64a8f,64987-963,PE,da Mata,Distrito João Guilherme Sales,3398,Casa 2
-d12bd1aa-56f2-498b-8d4b-8b4193d5dc38,12345,PE,da Prata,Condomínio de Fonseca,6174,
-cc8c49ac-3c57-46e6-b475-4330665a29a8,90486381,CE,da Praia,Ladeira Rael Ramos,7532,Casa 2
-fd8c1e6b-6968-47d5-b073-8283690f2b84,37788069,RO,das Flores,Distrito Guerra,4332,Bloco B
-8612673d-6719-46e1-89c9-68165a4916b8,80683-297,ES,do Amparo,Trevo Câmara,4572,Casa 2
-abdeb095-3696-4bea-821a-d37a7fd82804,77023-826,MA,do Oeste,Rua de da Cruz,4736,Apto 12
-ab0313d5-f4fd-4a51-833a-e2cd2880caea,67255-174,PR,do Norte,Residencial Novaes,5195,Bloco B
-b88b40bd-8b21-41d0-81fe-b6d448d4d01f,92125-690,SE,dos Dourados,Viela Costela,4481,Casa 2
-32f4b58a-09fc-4b85-bea4-96cb6ec8815f,69475506,RO,do Amparo,Pátio de Nunes,8900,Bloco B
-não-é-um-uuid,32347627,MG,do Sul,Viela de Campos,5655,
-3042b0d2-4d40-4537-81c1-f87a8f65b0e5,,MA,da Serra,Núcleo Almeida,690,
-1c313950-14ef-4536-9108-5db384cfc9f7,49438052,RR,da Prata,Recanto de Mendes,1295,Casa 2
-d5c451fc-da99-448c-9d9f-46fe105a5581,43087648,SPP,da Praia,Viaduto Azevedo,7850,
-d4f8bba3-ba4f-4886-a885-e1483f437adf,76851775,TO,Grande,Feira de Montenegro,8825,Casa 2
-a08bedf5-3219-41ac-a5e7-268d6f9b5608,28226-128,SPP,da Mata,Estação da Mota,2250,
-ae879517-9994-4301-8c69-2a8feefd346d,78464406,SC,Paulista,Vale Otávio Marques,9615,Apto 12
-19115543-34ee-438d-b514-796525a40a6c,64146-629,RO,Paulista,Núcleo da Mota,8701,Apto 12
-fdf80433-4f08-4560-a03b-7ef403ddd007,72142-743,AL,da Mata,Condomínio de Camargo,1642,Bloco B
-efe73b27-5393-43ba-be93-38b21317e838,42599923,PR,do Amparo,Aeroporto de Correia,1648,Apto 12
-326e2625-1576-42e2-aec6-7beb6904083e,41626931,PI,do Sul,Trecho Calebe Azevedo,2588,Bloco B
-e9911045-e2aa-4e12-a97f-4fc121100090,46286346,PR,do Amparo,Fazenda de Machado,7823,Apto 12
-dd7a7a4b-0ccc-4a6a-a6af-0c229bcfe9d5,03651333,MA,Verde,Travessa Luiz Gustavo Cirino,5263,Casa 2
-a6e6d786-9b9e-446b-a0c9-167f2e5f4f13,58885-721,SP,das Pedras,Vale Rezende,1466,Apto 12
-11847d5d-8608-4f7d-9d35-fe5adf0aff5f,83190-471,SC,da Mata,Loteamento Augusto Brito,612,Apto 12
-12c3dc18-96d2-4b0d-b225-42163c3fa18c,03328926,TO,das Pedras,Sítio Cunha,2881,
-02bbd72f-53ad-4bcf-b56a-d3d4c8733707,12345,SE,de Minas,Trecho de Casa Grande,8117,
-a973a9a5-7485-467d-a3ae-af192fcd75ff,94368482,SC,do Galho,Praia Costa,4743,
-c35e6588-7f37-4fbe-bb1e-6f772baceb27,80576-274,RJ,das Pedras,Conjunto Gonçalves,9876,
-3393e487-97c8-4ad4-9459-aa9d74ab4b2d,31972996,SPP,das Pedras,Trevo José Miguel Duarte,4663,
-4eb62231-a133-4551-9084-b211208f1a8c,15014-878,RS,Paulista,Rodovia de Câmara,8902,Bloco B
-não-é-um-uuid,95407350,BA,do Oeste,Avenida Cardoso,8262,
-221547ee-1396-42c1-bda7-b9c264e73343,17976-169,DF,do Oeste,Via de Peixoto,1846,Casa 2
-d9c9a6c4-dd72-4f0e-830c-d7fbe56f3607,65051-847,PB,do Galho,Morro João Pedro Costa,4216,Apto 12
-c24f731f-235f-432e-9aed-a92f1b9172fb,97352-702,MT,do Sul,Viela Heloisa Cunha,4834,Apto 12
-8506b03c-cf86-45b9-88c6-15a460a3c9a0,01722799,RS,do Norte,Núcleo Lucca Ribeiro,6644,Bloco B
-87e6f679-1826-4efc-b357-ccff200e6bda,17814738,AP,de Minas,Avenida Pietro Pires,6568,
-35bb8968-974f-45bd-8aa1-f7bc54fa19f8,60204310,BA,do Campo,Viela de Campos,7823,Casa 2
-ca5a8cb5-f31e-43f2-9eee-05f71b1269a8,20557-878,São Paulo,da Prata,Vale Eloá Farias,4273,
-3ccc45de-9815-4662-a126-7f06a033d907,35732-350,PB,de Minas,Largo Luiz Fernando Nascimento,4375,Casa 2
-92d983d0-5913-44b7-aa48-e0f475a71487,88934419,SC,da Serra,Chácara de Sá,9387,
-3d3b454d-0465-4681-a232-0dda55c96551,84209976,MS,do Galho,Vila Benjamin Nunes,3872,
-fee08e8e-bd28-40fe-b0bc-4f111eda672e,35214-759,PB,dos Dourados,Vila Borges,5027,Apto 12
-decca319-9acc-4080-a6f6-26f07ae1b488,39128-114,PE,do Sul,Sítio da Rosa,5096,
-f6661f7a-b5e5-4bf4-b35a-e8013f501e4d,90228544,MA,dos Dourados,Área de Martins,6022,Apto 12
-223cc570-5648-452c-8d87-d74011679811,75268-323,BA,de Goiás,Distrito de Silva,7835,Apto 12
-7d3ec930-44b7-4b7e-a5a8-8328d5a7460c,08131559,RN,dos Dourados,Quadra Caldeira,6122,Bloco B
-049be4d2-ee8c-4cef-80aa-d7b1fe6869c3,39349-503,PR,do Norte,Feira Nicole Moreira,8807,Apto 12
-49f84fa8-c174-4635-8fc9-9362623ca236,77066117,RO,do Oeste,Distrito Nicole Araújo,9762,
-827e9fdd-c352-4049-b167-6a73b434d51c,38332-918,PE,do Amparo,Fazenda de Rodrigues,5928,
-116c1145-ee5d-4229-b1fd-13c472db759f,05305701,São Paulo,do Amparo,Esplanada de da Rocha,1012,
-2ce6e460-1ef8-47a3-9405-98292ad27207,49636-433,PE,do Sul,Conjunto de Alves,3313,
-122ae3af-6708-4be9-8870-eb161825a913,10024370,BA,de Goiás,Loteamento Marques,2696,Casa 2
-64f5d904-9bc6-438b-b8eb-72f460cd7b15,91359-816,PB,das Pedras,Recanto Maria Cecília Peixoto,1905,
-9bcea7ea-b46f-4b43-9d05-3f350bc1e0b8,38795-424,RR,das Flores,Distrito Maitê Monteiro,9555,Bloco B
-66f38ca7-c00d-42cc-a2da-b9feeb0f954a,87654-403,PE,da Prata,Rua de Sá,7299,
-382abf91-4b0e-4ea5-b5f2-d758137f3b65,96915164,PE,do Oeste,Parque Fernandes,6807,Bloco B
-a8266f32-ecc5-4e40-9247-faa07de05b7d,33228-072,PI,do Amparo,Loteamento Gomes,7576,Casa 2
-da4c6725-5ff2-451a-a302-32e22de27ab9,17694391,MG,da Prata,Morro Fernandes,4170,
-c015749d-57e4-4d54-8bf9-8166d43f4450,34307650,RJ,dos Dourados,Pátio de Almeida,1197,
-b45451c0-dbb9-4782-84eb-84cc4ab8632d,51538618,RR,do Sul,Jardim de Cavalcanti,1045,
-fc84e959-efb0-42ec-806a-a01d237ef18f,16602-317,São Paulo,do Sul,Esplanada de da Rocha,7735,
-60ca0235-d1d4-419a-a959-1b93b78a0857,92510014,PA,Grande,Feira Guerra,2949,Apto 12
-2969f5c4-1ef4-40bd-a9de-a1a1c82fd0a1,88340596,SC,do Oeste,Alameda de Abreu,6888,Casa 2
-ccb58d16-58d3-438e-bd68-296c047e3d5f,12345,PB,Verde,Pátio de Ribeiro,6185,
-1aa38219-5fa0-468b-9acf-c61b41cd8dd2,35459-260,RO,Alegre,Residencial Natália Camargo,8836,Apto 12
-f669ec29-c89d-4dfd-8cd7-c26fa5dbd6a4,47411-518,MS,dos Dourados,Rodovia Alexandre Lopes,1944,Apto 12
-a1a25276-db45-49bb-8ad0-a0f69825cd60,12345,PE,Alegre,Vale de Viana,2087,
-6caf9b34-c006-4319-814c-4e7986a55133,37579162,ES,da Serra,Rodovia Borges,57,
-41c64a1e-ff38-4d41-a0c0-ebce123d8e49,12345,RO,do Norte,Viela Rezende,8921,
-ad6a790d-5d67-4683-90d0-61801fa2f9e7,05421969,MG,da Serra,Quadra Silva,3763,Apto 12
-570a859a-7db0-442e-89aa-ab3a480ac24b,57055-398,BA,de Goiás,Feira Lorenzo Oliveira,4517,Apto 12
-18578e3f-6ddb-4ecd-b511-31a25cf25a83,77327-281,São Paulo,do Amparo,Travessa Brenda Sales,528,
-3fc9d643-a66b-4300-9bae-d750d5cf50cc,40087035,PA,do Sul,Conjunto de da Rocha,257,Apto 12
-e0e8a83e-0560-42fc-a74d-8e3d9e7a18c4,12775869,AM,da Praia,Chácara de Correia,9732,
-8b0cc925-6344-4704-b927-a26599c9b072,00917359,RO,do Campo,Colônia de Moreira,798,Apto 12
-29a28b84-0c08-4f79-aeb2-83df57c6d5c5,68382-970,MG,Alegre,Via Alves,7192,Apto 12
-7d17020c-4a13-4e0f-b2da-a43067d0173e,45488-352,SP,Alegre,Parque Emilly Moura,925,Apto 12
-2a58e327-ffcc-4716-994d-995b35799f42,91886090,MA,do Campo,Rua de Vargas,3837,Casa 2
-8bd92ff7-55d6-4cf4-92e5-07422dfdc448,56475988,SP,de Goiás,Chácara Vasconcelos,5254,Apto 12
-484b41ea-325d-4e4c-bfdf-519925809da9,11416-116,BA,da Serra,Residencial de Rocha,8541,Apto 12
-8c09d59b-2512-4d79-83b1-267f6cbd1b68,19160217,GO,da Prata,Conjunto de Sales,999,Apto 12
-a76d6c99-631c-4507-9c60-a70ee1f92bb1,71686510,PA,de Minas,Residencial Gabriel Moreira,9108,Bloco B
-4a53d97d-408d-4f8b-9021-0aa526cda574,06882-599,MS,do Campo,Vale de Silva,6245,Casa 2
-cad56ebe-5502-4ff6-8c5c-739bf3ec4d8d,26059148,PA,da Prata,Praça Antony da Mota,2445,Casa 2
-690f7b86-3bc7-4dd9-af58-70239264125d,70903-845,SP,da Serra,Colônia de Borges,8814,Bloco B
-e79f3728-b3f3-45e1-b0cc-5dbf6b3a3b0e,10364713,ES,do Campo,Favela Nascimento,4928,Apto 12
-398b4c01-94a8-4318-a159-c269c7a5b3f1,45907555,AL,da Prata,Setor de Dias,9215,Bloco B
-78deedf1-b149-4660-8857-f4e8c5739ce0,cep-invalido,PE,Verde,Vila Porto,2197,
-964534a3-be25-4f43-9a7f-1758e6f904f2,72639-244,GO,das Pedras,Estrada Ana Laura Siqueira,3332,Casa 2
-ef341590-b8c8-478c-a455-72083de97b78,17084147,PB,Paulista,Feira das Neves,6080,
-d663330d-96f7-426d-89bc-77a4b369e2d5,91654242,TO,do Galho,Trevo Guerra,3121,
-bc24ed9c-ca6c-4a81-9f30-767157076aa5,64984211,RO,Grande,Travessa de Aparecida,9912,
-não-é-um-uuid,64281-493,DF,Paulista,Viaduto Santos,9627,
-4a8d0972-94e5-43b9-8424-524773d2004d,86091347,PI,da Mata,Campo de Nogueira,3556,Bloco B
-51521d2b-5ee3-4700-a998-baf6803d612b,62383142,MT,Grande,Passarela de Cassiano,4968,
-e3dd222e-b1e1-4406-834b-edce354eb599,57589-685,DF,Verde,Lago de Duarte,1923,Bloco B
-57707cac-98e8-4e93-a061-336b1fc2a77b,50252-077,sao paulo,do Oeste,Aeroporto de Costela,6499,
-7b2bf3e4-0dac-41c2-8646-6beef4e7c3cd,66183-588,SPP,do Campo,Favela Sales,4638,
-44204825-f374-47b9-a543-122628564f23,22334-009,PI,da Mata,Feira Ferreira,5887,Casa 2
-a6f935cb-860e-4cd8-8287-e81b5efe5015,23590218,PE,do Sul,Aeroporto Allana Silva,8148,Bloco B
-5891a7a1-50ba-40fd-a15c-ce2eba1652d7,65226-610,SC,do Amparo,Viela Nicolas Vieira,7693,Casa 2
-2fc83fbe-aab4-4c32-b57e-d24cea18fc2a,41086-044,SPP,Paulista,Parque Teixeira,5127,
-072d810f-bb1d-423b-9009-fdf223eae241,52295-858,RJ,do Oeste,Passarela de Pacheco,3626,Apto 12
-6078fb2b-ac02-43b4-8849-437afb0ccdf2,26348-378,PI,dos Dourados,Distrito Fonseca,9569,Bloco B
-7c2694d4-d89b-403e-8234-e6e7b98a3363,09338-570,DF,das Flores,Parque Pimenta,5405,Apto 12
-354b94ca-5658-4fba-a332-cde2909dbb3d,18817311,TO,das Flores,Quadra Pastor,4027,Bloco B
-9492593d-0ca7-4622-ae2f-cc2a164b1c08,09008812,RO,de Minas,Fazenda de Albuquerque,5531,Casa 2
-be75262f-a1fa-432f-afe9-9be953ca169f,10419-145,PR,da Mata,Aeroporto de Moreira,8038,Bloco B
-8e9ea153-6e4c-4adc-a7bd-f70ccd30f24c,75258-694,SE,Grande,Setor Daniela Teixeira,5771,Apto 12
-44a1ecaf-b810-44c5-86ec-df2f03d3ca5f,91179-846,PI,do Sul,Lago de Duarte,8001,Apto 12
-8e012408-cc8e-4a41-9cf4-0f4ea7392895,04531-803,São Paulo,do Oeste,Conjunto Teixeira,8585,
-54adfb59-2376-4328-bfd7-556575624aa4,38544004,AP,de Goiás,Alameda Manuela Camargo,795,
-bbdd0853-28a7-4724-bdb0-9b392c77fcd8,16514-814,TO,Grande,Estação Costela,3792,
-48f39b8c-eaac-4f70-87e2-39db3f80e687,38575-332,AC,de Minas,Favela Vieira,3584,Bloco B
-7f46dd7d-7f80-44ef-8d6d-c719343141df,20312955,RN,das Pedras,Sítio Davi Lucas da Mota,7917,Bloco B
-b7417a95-2122-43db-b78c-1b113b0717d5,06630195,PI,das Pedras,Esplanada Pinto,9039,Bloco B
-0445ae55-67d4-4c5c-901c-5d08760cb268,04616-804,PE,das Pedras,Distrito de Correia,4502,Casa 2
-3aff90ea-28a0-422a-8f91-d65f5a01470d,26439162,TO,do Galho,Avenida João Vitor Teixeira,7055,Apto 12
-7b5915fe-d78f-49a8-99c8-c3a5a4cf071d,55968980,AM,do Campo,Largo Costa,8592,Apto 12
-a263c27c-b650-493b-ad98-4b0da107ef48,35466-153,RN,Alegre,Morro de das Neves,8626,Casa 2
-ce38f8a6-3f3c-4521-8911-a5a4e9c0e099,95127-864,GO,do Oeste,Trevo de Costa,6503,
-e7dfabed-bf98-48ce-ac33-8018b83db70b,96798082,MG,da Prata,Aeroporto de Viana,7521,Apto 12
-0e71b769-681b-4937-b66a-f6393d1060df,,MA,do Norte,Vale Araújo,1321,
-84ac46ca-6a70-4966-a8ac-ff18cd26a899,88011979,RS,da Serra,Estrada de Pacheco,520,
-14b4dba0-366d-4026-b841-d516970b54c1,16629-320,MG,do Campo,Área Oliveira,9056,Bloco B
-14b38a3e-c0ec-4da9-bb5a-4a09e4376fea,05534-158,AC,Alegre,Lagoa de da Luz,2808,
-5885b26e-e30e-4909-8504-09a93d377fce,57400-265,PA,do Norte,Campo da Mata,5428,
-não-é-um-uuid,74049-106,AL,do Galho,Residencial Andrade,3765,
-67fc5223-4d11-4887-9657-a49ca55c9782,24313242,RR,de Minas,Área Pires,9287,Bloco B
-a613e621-c9b1-4331-92c6-e353abb29547,61415-848,AP,do Sul,Sítio Nathan Vieira,4594,
-57e0aab7-8889-413f-a0f9-84fc506a10cd,23802800,MT,do Norte,Quadra de Viana,257,Apto 12
-544fcc86-ed38-4699-8440-c33d9c1b77c3,57076-761,SP,do Oeste,Vila Borges,6526,
-e93ef85e-d95d-4ada-8e44-89f078616be6,94456-233,RJ,das Pedras,Lago de Monteiro,3940,Bloco B
-541da273-c9e5-4479-9ab7-af85dcd954b4,20685002,PI,do Oeste,Praia Santos,5436,Bloco B
-81f7b0b4-549f-4d57-aea6-5d798a8f480a,53846-826,BA,do Galho,Condomínio Gabriela Campos,1285,Casa 2
-30188d15-71fe-4c75-8ae5-5d828b163065,58586-735,PA,do Oeste,Praia Bernardo Aparecida,3804,
-3c8fec95-03b0-4ce4-bc89-b6871e8020eb,05314-766,SP,das Flores,Loteamento de Garcia,9759,Bloco B
-7e97ead2-e0a9-46e2-9756-f124e268897d,12345,AC,da Serra,Vereda Campos,4479,
-7eb8fa55-e0b2-43a3-adc9-e6ebef01b8d9,16115-363,PB,de Goiás,Via de Nogueira,8039,Apto 12
-f3538b13-749f-4fd3-b13f-d0e6545dd1bd,50174-496,MG,do Galho,Distrito Milena das Neves,7076,Apto 12
-593d24cc-5f71-427b-bf00-dbf556542903,01693-770,RO,Verde,Quadra Lucas da Mata,6228,
-a61bf579-3fff-47f5-b15f-d3c8ea4e3404,01541029,MA,do Amparo,Aeroporto Guerra,4038,
-15dd61a3-3a67-496b-91c8-dd4827fa6799,03887-536,BA,do Norte,Via Alves,6226,Apto 12
-f67c410d-f251-40cc-ac1b-17dcec2751e5,94556-416,MT,do Campo,Pátio Pietra Alves,5910,
-ed592995-a6e6-4867-9549-5956be2795dc,92554264,MA,da Prata,Ladeira de Pacheco,7287,Casa 2
-ca6ac500-23f7-4f0b-8fe9-fa6aba7ddd7b,10012-556,AM,da Serra,Largo Joana Aragão,2171,
-d3246fce-4d50-4def-ae7c-527876ac0897,88740-470,PB,do Galho,Lago de Almeida,9126,Bloco B
-f80f3ac6-35a9-49d4-837e-d6beecde3ce4,20320-014,AP,do Galho,Vila Luana Mendes,5799,
-3a9ab173-29bd-4f58-b91b-857e1d5a1091,61335551,SE,do Galho,Residencial Marques,5316,Bloco B
-e1b7405c-33a1-413b-b35d-ef5432c4922c,75796-944,PA,da Praia,Esplanada Cunha,6354,
-7aaedb71-8b03-4147-93c4-35da66bd7b62,22989-722,PI,da Prata,Quadra Pereira,3978,Apto 12
-407bfadf-773c-4f1b-a749-7856b814233f,55676980,CE,do Campo,Estrada Vieira,2275,Casa 2
-5154cf6c-133f-4292-896f-d5ea2195e296,38503943,PR,da Prata,Rua de Sampaio,2391,
-3af37780-e774-48ef-91c2-725b6b8fba7b,69646463,GO,de Minas,Recanto Gustavo Nunes,6900,Casa 2
-87efb38c-47fc-48d7-b52c-29776ce80453,96016898,AP,do Campo,Loteamento da Mota,5917,Casa 2
-e1c7a606-ffb3-4b6f-bc85-07190c52ad12,90666336,,do Norte,Sítio Caldeira,9729,
-ca45fb89-b918-42e8-b0bd-eb0a4d628eae,04028370,PB,de Goiás,Sítio Aparecida,1753,Apto 12
-a564d0fa-7cd9-4288-94b9-d45c6f99293c,35428-905,MG,Alegre,Área de Cunha,5444,Bloco B
-351e40cf-6d49-4f0d-80c5-ea0ea2cc9441,97162-762,MT,Grande,Vila da Costa,7213,Casa 2
-597cbdc2-39d8-4044-98de-20dc5188c30f,90743932,TO,do Amparo,Vale Isadora Duarte,9739,Apto 12
-1e9b6193-bea8-4ad5-8467-242765a32f4f,32176365,RN,do Campo,Condomínio Caroline Machado,3291,Bloco B
-35dd782f-9ca5-4975-adc8-3ed7e4c5dc3a,26260916,MG,do Amparo,Parque de Nunes,5229,Casa 2
-a932d364-5c93-42f7-894b-b9b9bd4cc5a6,35870953,RS,Verde,Trevo Cavalcante,8045,Apto 12
-968fbc85-7318-4da6-92d0-a24a760a1ace,86859-148,GO,dos Dourados,Parque Ísis Souza,6438,Casa 2
-768ff7c6-b207-4c91-869c-b3aa9fbb5a22,67428-787,RJ,da Serra,Via Luiz Felipe Alves,3274,Apto 12
-636d8ad5-0ed8-4b14-8e5d-c94df85af3ae,41477658,PI,do Oeste,Trevo Anthony Gabriel Vargas,441,Bloco B
-5e847167-21a2-468b-ac88-6f6e69f94308,05261-548,sao paulo,Verde,Avenida de Andrade,7184,
-f04b0293-412c-4b30-9fef-22f019c87aaf,20213303,TO,da Mata,Passarela Fernanda da Mata,1134,Bloco B
-fab3d970-a4de-4a2b-9aa0-9afe17506f3e,31315-268,BA,da Serra,Aeroporto Costa,4962,Apto 12
-b749a3ce-c9c3-4ef2-a8c0-41648ebe76f3,49994-683,BA,Grande,Vale Mendes,6933,Bloco B
-f2ecbf95-c320-4289-84d8-2e08ade07e13,44763245,RN,de Minas,Distrito Hellena Sales,7852,Bloco B
-0eca536d-aff0-4600-95af-3c29e5cbb020,53310-629,RR,de Minas,Parque de Pimenta,6854,
-fe4d90da-48e4-43ce-a48a-74a0d0aa83ab,40011-584,MS,do Galho,Colônia Novaes,8797,
-ad8179cc-62e1-4c70-8e85-dfc4fea19127,02016-229,ES,de Goiás,Morro Monteiro,5817,Apto 12
-162b9816-0279-46ca-9a85-7641584cf8e8,76375621,AL,da Praia,Quadra Aylla Souza,9228,Bloco B
-439fe817-23c9-47dd-8579-3f9e3de55963,12345,SE,do Sul,Lago de Cardoso,7053,
-a3b8e233-4201-49c3-be5f-04a8766e6ab2,44861018,AM,do Galho,Alameda de Moraes,4240,Apto 12
-708f9f22-729b-4e70-837b-ec2e6079479b,35984548,PE,Paulista,Área Yan Farias,9143,Apto 12
-1a7b1b5a-0db5-4f1b-adcc-2495d5e61332,33494-714,MG,da Serra,Rua Caio Mendonça,7587,Apto 12
-44ab65ea-4f46-4e38-9be1-0b4f8bdea120,07115-918,AC,da Praia,Quadra Camargo,7910,
-f6190cfc-e463-4ad9-98af-c2b532a8d152,40121449,AP,do Galho,Conjunto Gonçalves,1902,Apto 12
-6815754c-475b-4628-a4fd-0b02307b9c3d,12335-121,MT,da Mata,Rua de da Paz,7461,Apto 12
-42b2d7f1-3753-47c4-9fe7-affe1d68328a,82498-921,MS,da Praia,Favela de Gomes,7802,
-524b0d46-1804-4eb2-93a1-1f237f5ebd18,87225988,RR,da Serra,Rodovia Macedo,7413,Casa 2
-4b89da12-9ff3-4809-a638-92175bf30757,68213-347,AL,do Campo,Via de Azevedo,1886,
-579c53b4-a6e4-474c-8a93-440430c1fb00,09992-826,RS,Paulista,Área de Nunes,1792,
-8e196307-2d46-4f92-9ebd-2b475fcd119f,37180982,CE,Paulista,Pátio Marques,3997,Apto 12
-79501361-de5f-4de8-a075-50713620000b,16090793,MT,da Mata,Praça Bryan Mendes,9173,Bloco B
-d2394751-eef1-463a-ae47-90669fb3e159,,SE,de Goiás,Chácara Vitória Vargas,6637,
-57a08e49-5b60-47c6-ba39-6cc013f55dee,83318-211,CE,da Prata,Pátio Eduarda Guerra,7081,Bloco B
-17fb3af6-d9c2-4765-b6a4-f7cf5be27517,45949-116,RN,do Sul,Trecho de Castro,3233,Bloco B
-1467c2f6-6746-472b-92fd-65e00f59d14b,84923-169,MG,Paulista,Favela de Guerra,73,Apto 12
-2aad17a4-ddff-4c2d-b4ab-a268034aecff,75325181,SP,Verde,Loteamento de Souza,1026,
-325e9ca7-4cff-4db6-ba63-54901a20f183,35226299,PI,do Amparo,Travessa Bernardo Fogaça,3064,Casa 2
-703b2028-61da-42b2-835e-17ae2c0e3d35,01630165,PB,do Norte,Distrito Aparecida,1868,Casa 2
-dbebea43-8ff2-49dc-9846-34fae83bbc40,22008-438,PR,das Flores,Travessa Paulo Andrade,8647,Casa 2
-7c4f160e-dd3e-42b5-b2b7-184e6daabcc4,88088509,RN,de Minas,Pátio de Correia,6432,
-f2ddd85e-ac5b-4083-8aef-8b3c65314f36,69515-130,PB,do Oeste,Chácara de Ferreira,2827,Casa 2
-ae1e4430-ee72-46d1-b1b3-31f52a586932,71591-492,São Paulo,do Amparo,Colônia de Marques,2195,
-5b8c37e7-2c66-4442-ab03-c9201a271504,90932929,ES,Alegre,Área Nathan das Neves,5004,
-184460e9-3c85-48dd-b83b-abd99290f7ae,38419-010,RR,do Oeste,Jardim Novaes,2317,Bloco B
-a7dd5067-7d00-48e2-a013-525bb69699b6,99329-612,BA,Grande,Vereda Fonseca,9418,Bloco B
-a60d799d-22a6-457a-b8c0-f7679771bcfe,60073-952,PR,do Oeste,Setor Isaac Ramos,8805,Apto 12
-83f8ccf4-5b73-4cf4-a022-c3c68973d37f,24260293,PR,da Prata,Vereda Fernandes,4733,Apto 12
-2ddfc087-7176-4c87-9f72-38793d6f8042,39829-144,TO,do Galho,Vale Henry Gabriel Nascimento,7390,
-5f6fd1a5-ee14-405e-b782-81de2abe129f,55763-999,AC,do Sul,Trevo Bryan Câmara,7940,
-921168a0-67bb-4006-b138-df4070938167,18073-585,TO,Grande,Sítio Isabel Novaes,6291,Bloco B
-7556efa1-5ea2-485c-9b8d-0db9b603c362,91040909,PR,do Oeste,Favela de Nunes,6810,Bloco B
-0181a31b-554e-4a5f-8a92-bf44d2b2c92c,39222-153,AP,da Praia,Núcleo de Cassiano,9264,
-313b8053-b1e3-4bab-a545-385f3db8b02a,62510-610,ES,do Campo,Ladeira de Borges,4786,
-47a14dba-6a21-4999-bb28-5c1c07975198,21914-447,PI,da Praia,Rua de Caldeira,4730,Apto 12
-ae016ff9-aab2-4688-ae81-21b0803e4b9f,55900643,RJ,da Mata,Rua de Monteiro,8116,
-61b17fa1-9b7a-4222-9fc7-2fc6920f50de,78149-025,GO,da Praia,Conjunto Mariah das Neves,8899,Casa 2
-3d2ecaa3-5ef1-4207-a18a-9c3a508f83f1,31048-401,SP,Grande,Avenida de Sampaio,682,Bloco B
-aa18bfb1-9849-486d-801b-efeb6f547f02,05409402,PA,da Mata,Ladeira Emilly Nunes,1678,Apto 12
-66fc3426-d708-40cc-8d0f-a240c9760b05,72252-324,AL,de Minas,Colônia de Freitas,7369,Casa 2
-6c154991-61ce-4785-8d2f-6eadbf111854,77188980,TO,do Norte,Sítio Moura,1426,Bloco B
-1d94bd42-5e71-494f-8acd-13beb8098ff8,95407-360,AM,da Praia,Viaduto Agatha Nascimento,3883,
-b155f1e3-d19b-4f8d-b0a3-090b8b5502a1,17093392,SC,das Pedras,Quadra Fogaça,9633,Casa 2
-cb8fbd80-0308-4c0c-8f83-29b26855a0d4,80643361,RN,Grande,Ladeira Rebeca Moura,7016,
-49466255-acd6-437d-9f57-11d0f43d6323,38042493,BA,Paulista,Trevo Raquel Dias,3386,Apto 12
-565488c3-e882-4ab4-be7a-9375f500c490,97240-304,RJ,do Norte,Parque Gonçalves,5748,Casa 2
-9187bdb6-68d6-4566-91e2-acaeed3c2cc9,85372-679,CE,da Praia,Fazenda Gustavo Gomes,5303,Casa 2
-a4d838a3-4a2e-4b05-8ea8-3fa7cb3f8179,91780-790,GO,das Flores,Área Lopes,8429,
-292bb220-036e-4b4f-a61f-20a771a26bd3,21081-451,SP,do Amparo,Campo de Pacheco,6744,
-f0d5b4d5-4377-487b-915b-d924788ce2ef,cep-invalido,BA,Grande,Residencial Marques,2175,
-c03bdaa8-82ce-4a93-9cb1-422e27583b36,58066-950,RR,Verde,Esplanada Cassiano,5278,Apto 12
-25ead986-f00d-4cca-a861-de24f091eed7,92114927,RO,de Goiás,Esplanada de Pereira,6435,Bloco B
-b84bd53d-d357-4118-9c56-b7ce1b0dff8c,84678-288,RS,da Serra,Pátio de Almeida,4403,Bloco B
-0b2bc424-f5c2-44e1-a363-602f502cc38c,65111-231,AP,do Oeste,Jardim Martins,1526,Bloco B
-2060b559-e25b-4032-9581-83b02e087b05,78941349,GO,das Pedras,Condomínio Sá,6047,Bloco B
-46559c73-30c7-452b-afd9-62d5e19889a5,12345,RJ,do Amparo,Área Fonseca,41,
-5b64995e-c65a-4dc0-9f20-61a83d011783,58282-517,SC,Grande,Viaduto Pinto,1527,
-c772418e-72ed-4bd6-83e5-a97eb7653079,81261-739,PB,do Norte,Via Azevedo,5870,
-2fe1ed7b-aafe-4c4f-a2d2-16329971a2f8,21843277,MG,do Sul,Trevo de Aparecida,3569,Bloco B
-6f27e6bb-4ad7-471f-a5f7-2c1975b33c31,28298-610,PR,Verde,Travessa Eduardo Freitas,4400,
-1b2dd7b6-3405-4357-985b-c3297ab9e7eb,76435-694,MA,do Campo,Residencial de Cunha,5534,Apto 12
-f2fe047e-05e7-41dc-8638-a28b751a5985,78605-925,PR,da Mata,Esplanada Aylla Nascimento,5632,
-accc1073-f559-4f22-836a-bbe1d96e5559,47938374,RS,da Praia,Avenida de da Mata,7530,
-bd02346a-3bfd-4c61-8c61-cf0ad95d6268,54234521,CE,da Praia,Estrada de Lopes,7231,Bloco B
-ec93a99f-f073-4c5e-9e70-06e24bd89116,05134236,PA,de Goiás,Alameda Ramos,3315,Apto 12
-não-é-um-uuid,38337-383,MA,do Sul,Parque de Silva,2605,
-não-é-um-uuid,37212-532,GO,Verde,Avenida de Ribeiro,1530,
-afa0701b-7e12-47a1-ac91-23c239a80cd9,72348-878,GO,da Praia,Fazenda Theodoro Vasconcelos,1351,Casa 2
-3f798cbd-bb95-43b4-a9d3-e15399062695,44889485,RS,do Campo,Lago Novaes,2712,
-40799b25-de63-4f77-ba5b-9f6232d316a1,88702549,MA,da Praia,Rua Heitor Siqueira,3837,Bloco B
-a3db6e75-0cf5-40b9-a8bc-5fdace465867,87413861,RR,do Galho,Parque de Duarte,1560,
-ed98790a-a3a5-49a1-9fae-8fca520f01f9,94704-378,AP,do Amparo,Morro Rocha,2175,Apto 12
-33f0bd04-3613-4e03-9128-bf7564c40026,05661792,PB,das Pedras,Ladeira Maria Monteiro,153,
-33dff960-a3ea-4ece-9881-599c9f7d2966,23972779,TO,Alegre,Viela Lima,1976,Bloco B
-aa02b1ef-9e35-48c2-9132-9b974de01be2,54486-877,PR,Alegre,Vereda Oliver Camargo,1161,Apto 12
-8c3b664a-5025-4e2d-9863-bef81acb57fe,22118869,SC,das Flores,Colônia Lorena Cavalcante,1679,
-824f7697-956a-4013-85e2-55471b97c7db,92476-562,MA,do Campo,Área Aparecida,2247,Bloco B
-9afb7070-2815-496b-9aea-fc3df1684e9a,32834-140,SP,Grande,Morro Levi Câmara,2182,Apto 12
-05a45426-450a-42df-abd8-b5304902220b,91384291,RJ,das Pedras,Condomínio Isabela Sá,139,Apto 12
-d55614b8-7154-4068-a80e-7daa7d06d74a,78207741,SC,do Oeste,Condomínio de Albuquerque,3491,Apto 12
-0b27666e-8c65-4cba-92f8-6f6e19e34351,32771664,,do Norte,Trevo Freitas,3560,
-66a33445-d132-40a8-99d5-c9513631ef84,41629204,AM,Grande,Residencial de das Neves,2294,
-1359e630-694d-44c4-8e85-a731b453cfa9,82644-124,MG,das Flores,Jardim de Aparecida,5760,Bloco B
-dd07d804-b048-4f07-98ad-f80053430514,66694-191,BA,do Sul,Quadra Souza,4060,Casa 2
-a6541fb4-d23c-443f-a48a-9171790881f5,18903-990,ES,das Flores,Recanto Aparecida,9067,Casa 2
-8b2b3da0-971a-43ba-b7a0-ad55a5d9dba8,35638338,RR,do Sul,Pátio Caldeira,440,Casa 2
-634b9191-a625-4ace-9362-766de41ae745,33391-855,RN,do Sul,Vila de Lopes,8349,Apto 12
-25b9cc98-a1e0-4ddb-83d7-7b88efb16c06,12667874,MA,Grande,Quadra Pacheco,895,Apto 12
-9761b533-3a6a-4e4f-8f0b-c601c64db241,22180113,AM,do Sul,Vale da Cunha,3950,Bloco B
-b8d9efd9-0f92-4f54-8f2d-d60fbfc6d64c,10176070,AP,das Flores,Trevo Vieira,8656,
-3538ca85-bbfe-42d9-aea7-37ca9fbd0e8e,12345,BA,Alegre,Jardim de Almeida,6338,
-b07a6d57-ffc6-411a-855f-1147a28e4d55,82476-289,RJ,das Flores,Passarela de Pacheco,6896,
-b9e7472c-94b5-40ea-9a4e-32c7b90220a2,10876-685,RO,da Serra,Setor Maitê Camargo,2831,Bloco B
-82f7910e-a5f4-42b4-9a75-77f6803732c9,,AC,de Goiás,Quadra de Câmara,9624,
-0184d6fe-9528-4e34-a8e9-c1e37ff65eea,06920640,GO,da Mata,Condomínio Caldeira,3535,
-babfa43b-cd7c-4b78-a1e3-d6db82b70e26,36564-129,,do Amparo,Conjunto Fernandes,8301,
-dcc88dec-d9d3-485a-8091-394dc9e4f91e,39088833,RR,Verde,Feira de Fonseca,8210,Bloco B
-d9671f93-986d-4029-bb51-a434c0013ec1,46552-409,MG,Paulista,Aeroporto Rafaela Nascimento,1351,Apto 12
-637a414d-5d54-46b2-82b9-e33d9cdd5457,32938341,MA,Verde,Recanto Ana Luiza Cunha,1295,Apto 12
-f22dbc96-5384-4892-abd5-60042bec92f0,,PI,de Goiás,Largo Vicente Castro,5354,
-5a4eb125-5e14-41a4-83b1-8e1526c26e11,32936-833,RS,do Amparo,Chácara Nunes,1084,Casa 2
-074cd185-2cd6-469b-b012-568f9a438f33,10312-485,SC,da Serra,Trecho Machado,3910,
-cc2b837f-b0fb-41c2-a71b-2df1185fda33,27456846,PA,dos Dourados,Lagoa Júlia Nogueira,1901,Bloco B
-981f2645-eb76-4164-a7f5-a73eeca752e2,37102740,AL,das Flores,Residencial de Ribeiro,5068,Apto 12
-365883ed-0872-43f9-9341-3f1acee383b0,83858-229,RR,Paulista,Chácara da Paz,2249,
-14665e0e-818c-4ada-9a4d-eab7dabfaec0,68692-474,MS,Verde,Vereda Noah Castro,8569,Casa 2
-870463c0-bc50-4f64-ad8b-1af3b0788515,60782390,BA,da Serra,Travessa Duarte,4404,
-1f0878dd-662b-49cb-a9e5-58cf596c8e1a,50357574,AC,de Goiás,Parque de Costa,5489,Bloco B
-7519af66-2cd2-41b8-88e7-8d24602bdf63,55739595,AP,das Pedras,Parque Nicole Albuquerque,4309,
-a21e62a0-6b97-4153-a126-254c74234b75,46658-678,PE,do Oeste,Condomínio João Gabriel Fernandes,5901,
-0dab3d6c-e7f2-4480-873f-71aefd2f4941,79490-714,RJ,da Mata,Sítio Pinto,2735,Casa 2
-75e0b4bc-3c09-492d-a78f-5113a7706358,58558-231,SP,da Prata,Quadra Aragão,1686,
-16c49ca4-7fec-4320-9d8f-f8a753b581dc,64522703,PE,Grande,Avenida de Caldeira,43,
-d8088511-e521-4fd4-b162-7ac23020a7a3,10976828,AC,do Oeste,Trevo Pietra Gomes,4007,
-1629ab73-8ea3-4c28-b862-20a2bf68fe24,27062947,MS,Alegre,Ladeira Natália Campos,6275,Apto 12
-e1e7fa8a-eb14-4ad2-bc0c-42b5835bab14,99043-508,AL,de Goiás,Área de da Costa,9059,Bloco B
-f8780816-c478-4c7b-9c56-161d2dad9de8,11749-429,ES,do Norte,Sítio Pereira,6820,Casa 2
-c36a8178-6c92-40db-bfaa-a2eb1741f825,28293-297,AP,da Praia,Via Anna Liz Sampaio,9365,Casa 2
-1553dff2-058e-4e50-93d9-12d3234e8d84,91989-192,RO,do Campo,Lagoa de Rezende,863,Apto 12
-5b0be430-8b92-41f4-bc4c-60ff37b1b702,07325923,PE,do Oeste,Trecho Silveira,753,Bloco B
-7ea89826-9aac-4358-bd86-4aa93eaf85a7,69752649,PB,do Campo,Núcleo de Fernandes,4626,Casa 2
-d31b7899-9d24-4602-9738-b55efbaf55d1,60926688,PI,da Serra,Praça Maya Moura,7484,
-583616f2-5b00-46b3-9cf1-8b98638fe383,87687-690,MA,do Amparo,Campo de Leão,9238,Casa 2
-6ab724ef-9a3d-46d1-adee-aaca6ed9556f,85384170,ES,do Oeste,Lago de Pinto,7601,Casa 2
-9a139f64-8672-41f7-9f74-984843c3ead3,46575-111,PR,de Goiás,Chácara Davi Miguel Viana,3202,Apto 12
-4bc2788a-bcb1-40ab-9240-395d63e31bc4,02351-103,PA,da Praia,Pátio de Gonçalves,392,Apto 12
-3b5a1886-b747-430d-bed7-c97784813dd5,57056982,RS,do Campo,Área de Pires,158,Casa 2
-59ac19a3-7648-4bd5-a7e1-f2462106c373,77075247,RO,Grande,Alameda Cardoso,6165,Casa 2
-fe318e9d-f5c7-4321-af43-d07195656d3d,18083249,PE,das Flores,Fazenda Henry Gabriel Moura,3903,Bloco B
-bc0b43b3-2e84-45f2-add7-3c1643c9d3ba,01518-339,AL,da Mata,Quadra Camargo,2333,Casa 2
-b47ca8a6-0153-449f-97c7-81cbfc60f498,60471-314,ES,do Galho,Alameda de da Mota,8516,Bloco B
-7ab14548-f5f1-4e1e-97d8-f3120ec2ab2b,49418869,MS,dos Dourados,Jardim Allana da Costa,7512,
-64a0d809-4bdc-4858-966e-ab660be2b68d,68834042,PE,da Prata,Sítio Leão,2188,Bloco B
-1268dd91-afda-48e2-9f9d-e618eb8caa71,03243059,RJ,da Serra,Lagoa Machado,1021,Bloco B
-33e90c24-939a-45fa-9871-caeb294b67a9,74313857,BA,do Norte,Campo Sales,3880,Casa 2
-1c36a4b1-881c-4eab-8026-c977890e0421,98676-861,MT,do Amparo,Parque da Paz,6439,Casa 2
-77215c79-fcba-49bf-9473-3b6a9202f1b6,50479-937,GO,da Praia,Avenida Maria Cecília Nogueira,3828,
-71acf56a-15e4-47fe-ba22-ea94aa898af0,56346-464,sao paulo,dos Dourados,Morro Nicole da Cunha,9580,
-09c6dc32-033d-43d7-a160-023372daa391,00523875,AM,Alegre,Praça Freitas,2694,Bloco B
-df08ebd6-2f89-4473-87f4-2a68c8947dbe,96006679,PA,Verde,Alameda de Farias,1979,Casa 2
-dca2ed38-b414-43c4-8f4a-7cb2b33544ac,,PB,da Mata,Chácara Luan Siqueira,5052,
-6b7f1db8-1c27-4b29-b630-d0ebe4afec6d,55608-096,AM,Verde,Esplanada Luna da Mata,1482,Apto 12
-e29c2062-4a78-49f5-bb96-00fd766ed411,40846-096,MA,do Sul,Distrito Rafaela Moraes,9885,
-67153d48-ed92-4ff4-814c-d58ddf38185a,82524-122,MT,do Oeste,Núcleo de Almeida,2431,
-10701e4e-94f8-43db-8504-4830c313547d,72466-971,MS,da Serra,Sítio Macedo,6493,
-96e4d794-76fe-4d08-943a-eb8f7f4cdda9,46571-133,GO,da Praia,Pátio Montenegro,2849,
-472f5369-d9f7-41cc-aa39-cbbe178f2fc7,12345,PI,Grande,Lago da Paz,9014,
-052bd61c-737c-4a17-8a89-cce9eb6e87d2,96963825,PB,do Campo,Trecho Ana Carolina Guerra,1670,Apto 12
-c0127ff6-c26f-4ac1-b996-08c2c367582b,30670-990,AL,da Prata,Vereda Lucas Barros,3642,Apto 12
-ed265d75-cb82-414d-a662-d3fae0f95765,09289-379,MG,do Norte,Viaduto Melo,6099,
-cd9aa53e-5214-42d8-b94e-0fb7ec91edeb,24676-239,GO,do Sul,Estação de Sales,1229,
-baa6c248-b5fd-422b-8d3b-cb17d95832e9,,RS,das Flores,Condomínio Pedro Lucas Pacheco,7266,
-911636ba-0507-4166-b9ad-dcc594fba3ea,50128184,AP,do Galho,Estação de Moura,5433,
-cc5c2d7c-fa30-4b21-8b5d-2fd9bbd55fcf,89815401,PB,do Campo,Condomínio de Carvalho,830,Apto 12
-587db6ab-9d94-483b-96ab-a8a2ca798588,80663-473,,Verde,Via Farias,6472,
-fdbafdb0-b00a-4051-8120-81740161b918,22355-922,MG,Verde,Ladeira Ferreira,6991,Apto 12
-9ab6792a-7054-45b4-baec-04ada21bd921,46203748,CE,das Flores,Via Câmara,4506,Casa 2
-06552b77-8f9d-4fea-a504-af55c038a815,80076-266,BA,Paulista,Condomínio de Cardoso,568,Apto 12
-569135e6-7222-4fdc-8800-85caaad3fd40,09574-952,PR,Grande,Via Gomes,6751,Bloco B
-f6783742-1fa2-45fd-9d5a-301c4eb755a1,10898-187,GO,da Serra,Campo de Silva,6276,Apto 12
-44be934b-1f02-4458-846c-63dcd61d75da,94484089,RS,da Serra,Avenida de Fogaça,8615,Apto 12
-812c0a6f-f892-4f1f-9caa-192f009a6625,64859644,SE,de Goiás,Residencial José Pedro Casa Grande,8908,
-a461e287-2e6b-4b28-b609-4d6f192d34aa,cep-invalido,MS,do Oeste,Avenida de Peixoto,7860,
-97b40795-93a2-4d69-8366-3e868b801892,47695-246,PR,do Amparo,Rua Fernando Sousa,5637,Casa 2
-b41a2cc6-f5ff-4130-92be-cac79ca7a0bd,20218959,CE,da Serra,Núcleo de Ferreira,428,Casa 2
-f98cd01e-34e1-4347-b667-a0545ba8b5f0,13143309,AC,da Serra,Passarela Mathias Rocha,4603,
-d15b7a88-344d-4188-97f1-7a3ce0805c25,91860999,PR,Verde,Morro de Souza,8675,Casa 2
-40c6f99a-f4c0-485a-9f83-34d824ec4200,73159040,ES,da Serra,Chácara Raquel Câmara,2616,
-5637bbe2-8a7d-4939-a832-8bc61527d332,92133-150,ES,do Galho,Distrito Maria Clara da Cunha,4367,
-8d9e9aa0-4edf-428e-9b42-0dfcba3e662b,81355505,ES,do Sul,Estrada Beatriz Rodrigues,9433,Bloco B
-295217b3-8e3e-4e8a-b3b7-459f098b025d,54345486,TO,dos Dourados,Viela Silva,2847,Apto 12
-f2e02b52-0227-4666-a3a4-aec97650ecc5,78056-048,MT,da Prata,Largo José Pedro Farias,5879,
-12f81c9e-5521-4aac-82eb-9bb271625289,47902446,MS,das Flores,Favela Matheus Barros,9301,Apto 12
-603cd66d-d510-4532-965a-326ba900a792,09943123,DF,Alegre,Área de da Conceição,8065,Casa 2
-d48fac4d-b067-4126-a4c8-74b60e01b666,22443-514,AL,da Praia,Área de Cunha,1479,
-8b242445-2e6c-4b25-b521-7da2432a52ff,82211953,ES,das Pedras,Chácara Alves,327,Bloco B
-3edfceb5-42ae-448e-bec0-9a891b9e854a,84634-918,RN,dos Dourados,Feira Isaac Martins,3301,Apto 12
-c6825a5e-35e1-48fe-b103-efc8aa6a0014,36231-802,CE,do Galho,Feira de da Rosa,5302,
-71c76817-fa3c-4111-a773-3e4284973861,97702749,RJ,de Goiás,Via Marques,2321,
-e3334f15-bb5f-4f89-a32a-30ce7af2cfe9,06640-989,MS,do Sul,Loteamento Leão,1189,
-f3518de3-82da-47a5-a497-4ece9b9805ba,95969-565,RO,Alegre,Lagoa de Vieira,6482,
-842b1df0-856f-4c71-b63f-b9e648b3cec8,44714842,MT,do Oeste,Praia Leão,2236,Apto 12
-1abf9b12-9b92-47ba-ad5b-1d95aa510552,97409521,PA,Alegre,Estação Melissa Ribeiro,7983,Casa 2
-f6768274-2c64-4193-ad83-992d2eba385e,09443494,PI,da Praia,Viela Guilherme Campos,5847,Apto 12
-0e199063-9dd3-40d3-ac47-5601f18cfc37,68983-621,TO,Verde,Colônia Gael Henrique Sousa,2873,Bloco B
-868de75b-c456-4018-b849-91110f447d75,66674612,RR,do Norte,Parque de Cavalcanti,4826,Apto 12
-90d03afb-93de-4f97-92a4-402a8739a492,96755101,AC,Alegre,Viaduto Sá,9386,Bloco B
-56d9990e-3290-4bab-87e8-e8d40341c0de,80278228,SP,do Galho,Lagoa Ribeiro,9298,
-56aa1de3-8562-4e3a-87a0-990d02b9ffe4,07663-190,RN,do Sul,Conjunto de Abreu,5214,Apto 12
-a25a932a-16ff-40cc-9172-dc79512fb7bc,48725-057,AM,dos Dourados,Loteamento Pedro Silveira,8130,Apto 12
-d2ce4e88-7de5-45f6-80b2-cf5413e951a6,10904-255,AP,de Goiás,Travessa Lucca da Rocha,3900,Casa 2
-bb1053f6-227e-4b17-a812-8d9aecd4d95f,,RS,Verde,Parque de Vieira,1454,
-c377864d-85d0-4e29-aa6b-c5bec5bac6f2,38134013,RO,das Pedras,Largo de Moreira,5501,
-fc679f02-0d1b-4925-97c4-18a086f1e21e,99060731,GO,da Prata,Favela Liz da Costa,3436,Apto 12
-b8e0dc5c-7acf-4c4f-a3c6-2a000c1a1f1a,42662983,MS,de Goiás,Via Raquel Lima,4206,
-07c3ec58-0abb-44a4-84ff-6cf1c2fa9eb7,42457204,AL,dos Dourados,Praça Marques,6324,Bloco B
-a6b2b723-c84a-491a-81a2-3faf863fb52e,92286766,CE,de Goiás,Parque Henry Rios,6784,Bloco B
-não-é-um-uuid,12428-751,MS,de Minas,Residencial Lunna da Costa,8947,
-614feb33-23b7-44f0-90f3-19229e52093a,04025-596,TO,dos Dourados,Chácara Azevedo,7856,Apto 12
-4483cfbc-f9e1-4201-8a88-e33fe6d6de82,32825837,AP,do Norte,Campo Jesus,548,Casa 2
-ad0a493b-969d-46d8-9977-2232822346d0,23420506,GO,de Goiás,Lago da Cruz,1716,
-b8a4d0ed-c0c1-470c-85ad-4469b4525af1,74975-105,MG,do Sul,Lagoa Novaes,2637,
-86d89409-2572-4345-a659-66e2135050fd,18694-121,AP,Verde,Jardim Raquel Correia,5537,Bloco B
-8622e2fb-72fc-41f3-a213-dfd464c0bd50,69786-749,PA,do Sul,Via João Lucas Barbosa,2704,Bloco B
-eb581f24-143d-41a7-9040-521afdc7595b,53779-022,AM,da Prata,Estrada de Pastor,5425,Apto 12
-58f1c880-abc7-4a20-a920-20d595e9ea8e,12345,RR,Verde,Conjunto Fonseca,9079,
-0131011b-58bf-44a2-bd54-521d0ebe9607,67544-870,SC,de Minas,Campo Joana Caldeira,8850,Casa 2
-4d64a6c0-f56c-4dfb-bcff-caa68ef77547,51343-753,MA,Grande,Quadra da Luz,3892,
-f2009432-fa87-4a56-924b-10c32f6776a5,00181907,RJ,Grande,Ladeira Montenegro,9006,Bloco B
+743a536b-8e6d-4b85-878f-77d141f90bb6,96888795,AC,do Norte,Parque de Câmara,1299,
+ee1459f9-1018-4e06-9bb6-32b2af760904,41466879,TO,do Campo,Viela Monteiro,2450,Bloco B
+7848b312-b1c8-45ca-b403-a78f8e23d1a0,46609-650,MA,do Oeste,Passarela Gustavo Henrique Vargas,3894,Casa 2
+e8c0adf3-eb3a-45cb-a71f-c469b039155d,88761353,ES,do Amparo,Conjunto Yago Martins,6879,Bloco B
+aa378319-bd43-4f90-984b-7fc012428d08,50740371,TO,da Serra,Pátio de Farias,8190,
+148827a2-f71e-413a-a16b-3d67dc357a5d,32039-592,RJ,do Campo,Trecho Vitória Moreira,3964,Apto 12
+6c0e64be-5a02-410c-a9e6-c9d8ccff0c44,13035884,AC,do Norte,Fazenda Pietro da Mota,5781,Apto 12
+23280f38-1136-40f6-8a6a-4721cfa6c617,79133916,CE,de Goiás,Viaduto de Carvalho,1403,Casa 2
+5b339c0f-a015-4d84-bc04-bdc52d4dc34d,74431738,PE,da Praia,Passarela Rodrigues,8915,
+2212bb11-1029-4c8c-9da6-b8e02c3267ca,92941-029,PR,das Pedras,Setor Yago Novaes,714,Bloco B
+2544e7ae-caa8-42f3-8c19-97fb0bed5b20,12345,SC,da Mata,Distrito Isabela Leão,267,
+3500ea7a-c554-48de-b210-c540b798bd52,33972-501,AP,de Minas,Esplanada Machado,5650,Apto 12
+779e2e48-de44-45a4-b67f-81c21a71612c,80993428,RS,do Sul,Esplanada Pereira,1699,Casa 2
+23d82718-dcf8-4663-b2d1-5524a3a0172d,53717178,MS,Verde,Vereda Cassiano,8946,Casa 2
+75aeedfd-57e0-487c-b556-7e9c38956a9f,67893658,CE,do Galho,Vale de Abreu,7613,Bloco B
+6ebb2a7e-b7ed-4a06-8074-f61708f8ca3d,51521-718,SE,das Pedras,Chácara de Correia,2210,
+2595dee2-46fc-47fc-951e-ac3f4123d2e6,87451630,PB,de Goiás,Alameda Fonseca,606,Casa 2
+3e1042e9-c62b-48ff-a7cd-c610beef3f39,80956689,SE,de Minas,Aeroporto Thiago da Rosa,3269,
+b6907ae7-cc89-4e3e-bec3-250cd443a40f,06852-247,MA,Alegre,Esplanada Borges,8445,Bloco B
+fe747dbf-ea7a-4790-8c4a-3412829bdba4,cep-invalido,PR,da Prata,Estação Isabel Pereira,4151,
+dc7e5fd2-e035-40e9-b674-e0e0d9df8739,02921-831,RS,da Praia,Passarela Rezende,3132,Casa 2
+f218a3ae-f94f-4a8e-946d-abf772307acf,87838-729,SP,do Campo,Setor Duarte,784,Casa 2
+a8d1e7d7-5458-4618-a720-64da3ccd562b,29877235,SE,da Praia,Alameda da Costa,6030,Bloco B
+não-é-um-uuid,21731-253,SC,do Norte,Vereda Yago Pastor,7205,
+não-é-um-uuid,59730-707,MG,de Minas,Lago Isaac da Luz,5555,
+eeb00dc9-3d4f-40d3-ab91-c942e3d5056a,12345,RR,Grande,Sítio de Siqueira,8152,
+ffedd72c-726a-4155-9351-35eec0a6391b,60404-451,SE,do Sul,Trevo de da Conceição,8508,Casa 2
+ab84208a-2a24-4814-9792-25062b64a19a,52674-020,SC,da Serra,Vale Cecilia Pinto,6956,
+94b86e11-f98a-4228-98a3-be47a1a92fc1,90826-024,TO,dos Dourados,Área Enzo Gabriel das Neves,2957,Casa 2
+46d10d3a-66c9-4b4d-94e4-2357603ac33e,96941014,AP,do Amparo,Setor de Dias,5373,Casa 2
+2ead1fe4-b1d6-4290-ae7d-3a9013254571,51044986,RN,da Praia,Área Sarah Gonçalves,6982,Apto 12
+4007d86f-9853-404b-8156-4f9eb5db41a4,65455864,MS,do Norte,Ladeira de Albuquerque,7326,
+22cef18a-cdb2-461a-b114-73d6aa497c59,46620909,MS,do Galho,Estrada Mariah Fogaça,7127,Casa 2
+b925e60a-32d3-4f8c-ad25-87229e0129e0,50881-322,SE,dos Dourados,Travessa Sousa,940,
+9edc39ff-89f8-4ba1-8a17-17c151670a59,84651-146,MG,da Praia,Lago de Campos,5953,Apto 12
+e7298724-7613-4c4f-bb8d-5aef95a896df,,RN,da Prata,Sítio de Lopes,7180,
+db2d7645-d6aa-4d07-9b5d-c44170bdd86d,77995731,AP,da Serra,Praça Kamilly Garcia,3867,Casa 2
+b19d8e94-9f0e-4f83-aa2f-b790d8112e1d,00358-604,RJ,Paulista,Quadra de Abreu,531,Apto 12
+a1a433c1-f189-488e-902e-32b04a56a4f0,08583-301,MS,da Serra,Estrada Luiz Felipe da Paz,6096,Bloco B
+41d98cc1-3195-47fb-aee4-b693cc5a066c,05296-341,RJ,do Oeste,Morro Theo Campos,2256,Casa 2
+6d5d87dc-8020-4326-8c7c-ed93b09b15c0,67622373,RS,do Oeste,Fazenda de Cunha,4567,Apto 12
+764a8f47-ef53-4976-85e4-436c5660741b,,SC,do Amparo,Fazenda de Rezende,3049,
+05d1861a-9765-4d8b-8292-c574ea241270,11802-246,MG,da Praia,Quadra Nunes,9203,
+3f1af8cf-0c7a-4ca3-8564-ba3cff57ee5c,54645967,GO,da Prata,Passarela de Ferreira,7312,Apto 12
+a84dad64-4457-43df-a465-f5bdf9b321b2,12345,RR,dos Dourados,Condomínio Gabriela Fonseca,8048,
+34a1df4c-b785-4605-8053-c45f139ab7a7,09676-800,BA,do Sul,Lago Olivia Gomes,1214,Bloco B
+abf3c7e7-68e6-4b3b-bd99-9ebb040b8d5d,00169524,RR,do Amparo,Viaduto Teixeira,7293,
+76d8e854-9483-4110-807d-c897f7e0aaf8,09040161,MT,Grande,Travessa Joana da Costa,5693,
+645e6c3a-4185-4df2-b872-04c25adc11ab,16867238,MA,Alegre,Praça de Barros,4915,Apto 12
+4ca743b8-1348-437b-a4dc-f9cfcb01d482,68346-843,RR,das Pedras,Favela Luiz Felipe Vargas,2853,Casa 2
+eedbdd91-37b9-4cec-a608-e638644f3f40,48980952,AM,dos Dourados,Feira Pimenta,3293,Apto 12
+85218e2e-277e-43c1-9fa0-2bcbe06bd3dd,13456-840,PR,da Mata,Lagoa de Gonçalves,431,Casa 2
+28484d9c-2f35-46da-9438-57411503a6d3,30504424,MS,Paulista,Via Murilo Pastor,7658,Apto 12
+13b9cba0-e350-4471-aea1-79d6a026fa9a,10078236,AP,do Oeste,Avenida de das Neves,1078,Casa 2
+dc09de90-0c29-4066-bc25-243e59b7c403,45151-756,RR,Alegre,Alameda Alexandre Mendes,7843,Bloco B
+a81d6b70-56ce-48ef-b623-2225ba5a0d0c,36152887,TO,da Prata,Setor Nogueira,9420,
+2a6664c0-325c-49c8-9887-d9d771e6a3b8,78717361,MT,das Pedras,Lagoa de da Mata,1216,Bloco B
+7446806a-2f74-4300-94ba-e1e934880e23,07514-901,PE,dos Dourados,Rua Moraes,5645,Apto 12
+não-é-um-uuid,57131-871,SP,da Prata,Rodovia Fernando da Luz,9033,
+224971b2-5d2f-4874-9f12-5981dc28300e,56625914,CE,da Mata,Trevo de Sousa,2115,Bloco B
+dac23b2d-b3d8-4dd9-909b-9f826fbf72ed,15888-680,AL,Grande,Largo de Casa Grande,2035,Apto 12
+0f9c52c3-ab3d-4b09-93c5-8a94020bcf63,30159-223,CE,Verde,Setor de Sousa,5287,Apto 12
+07187310-5197-4785-b20f-34abaa740374,54169-373,PE,do Galho,Rua de Santos,4654,
+b60e8654-6171-46a2-bcc8-9cce27de2449,70362217,RS,do Amparo,Passarela da Paz,9025,Casa 2
+a89ed1d1-e8b1-4dd0-be97-3aed2f3273de,27657-835,MA,do Norte,Fazenda de Teixeira,8741,
+dff66ff9-4bf4-44bc-9907-ee042bb64b73,46184-974,CE,da Praia,Fazenda de Guerra,9697,Apto 12
+c0aa2b81-0ddb-4434-acfc-390faf003c3f,65866195,RN,da Mata,Vereda de Pimenta,9915,Casa 2
+882faccd-dd91-4ef1-b5ad-a412aa069375,59861-918,RJ,do Amparo,Campo Cunha,675,
+b14eec6d-fc8d-4fe5-ae49-e03d8606ccad,83760-684,AC,Grande,Campo de Pinto,1331,
+25fadd40-60c3-4d90-98d2-3f572c5c3d01,97880556,RS,Alegre,Lago Laís Santos,9450,Casa 2
+bebd23d4-1edf-4699-82e4-1d3a6f1037e8,67024-180,SP,Grande,Área de Garcia,9374,Bloco B
+3e8c36c8-9753-468e-a8bc-249ab4902d19,64187-512,AC,do Oeste,Passarela Alves,8160,Casa 2
+7aa8291a-884d-47c9-99a7-25051ad275a9,93492260,MA,Paulista,Residencial Theo Lopes,7913,Apto 12
+8b43dbae-cd11-4bde-8b2e-4ab2baba6913,73585733,RO,Verde,Vereda Melo,6654,Casa 2
+1a8e9ef4-5224-47d5-a1e9-05fbf57ab5f1,55907657,RR,dos Dourados,Rodovia de Barros,982,Apto 12
+4a0e137a-288f-4337-89e3-d5faa07a710f,19409682,PR,da Mata,Conjunto Davi Barros,7610,Apto 12
+dfee170c-f11a-42b6-98fc-56ec280f67d7,24598-963,BA,do Amparo,Vila Alves,5122,Casa 2
+0446096e-6a2a-4791-8b3c-ba29ae6bee34,74208-433,MS,Verde,Área Pimenta,6533,Apto 12
+9ff2a9d8-3d08-48c8-b8dc-af1aa9595642,98378-164,PE,de Minas,Lagoa Lopes,9203,
+e5accaa9-ecfe-4f21-95ff-bed392cf92d6,65253124,PB,Verde,Recanto Maria Luiza Oliveira,2008,Casa 2
+b56a7507-375f-41ce-9488-c6a5bef18d6a,17300576,BA,da Praia,Conjunto de Azevedo,1587,
+56b1e2a3-2325-489a-a76a-7ab70a66f4c8,23746-253,MG,das Pedras,Rua de Costela,6851,Apto 12
+84f827ad-1f39-4c05-a381-24dac4833565,,TO,do Norte,Rua de Ferreira,5365,
+cc24bc64-0ec2-48dd-a693-7cf14c595b47,52461927,SPP,Verde,Lago Novaes,3111,
+690613cd-dff9-42b2-8812-d89773533331,30383-296,PR,da Serra,Travessa de Martins,8434,Bloco B
+a4902993-ba73-4514-8f10-5b2f9a2084d2,55515-226,MA,do Amparo,Ladeira Thales Aparecida,8149,
+97da4b96-5470-4bc8-8671-2ee4c6a0ef74,02348674,MG,do Galho,Trecho Fogaça,8282,Bloco B
+ba870403-0d82-4709-99d9-0dbc1ff0190e,,RJ,do Oeste,Feira Lima,5782,
+aebc37e1-a17e-4239-9156-5a3684896155,97690-249,MA,do Amparo,Trevo de Casa Grande,8109,Bloco B
+fbc60889-2981-43ad-a3b3-c6ca3d469267,62873-888,AC,da Praia,Área Gabriel Marques,1762,Bloco B
+734168e0-1f73-4a10-8a91-5255f827819e,47168-748,GO,Paulista,Vila Vicente Garcia,5993,Bloco B
+a08bd21a-d1f6-4c16-93dc-3f20fc5f73b0,71138-840,MG,da Serra,Travessa Carlos Eduardo da Rocha,839,Apto 12
+3b3ee2bc-0ecf-4e45-91e0-f786466c9ee3,95701-854,MA,da Prata,Área Alexandre da Cunha,1205,Bloco B
+b0085026-e732-4dbb-aa54-d2089a3ef19b,11911-824,SP,da Mata,Conjunto Carlos Eduardo da Luz,9009,Casa 2
+66084d6d-b87c-4d5f-a935-1837cf850906,44395-834,RN,da Serra,Núcleo de Sá,1947,
+c3f35fd3-7a1c-40eb-8975-1c2d3991db75,86178-756,AM,da Serra,Distrito Dias,6454,Casa 2
+df196299-0c8b-432f-b4a1-ff20956dbc6b,25827-873,MT,da Praia,Lago Alves,9140,Casa 2
+a8763b41-2674-4a25-895c-8a1964bdea23,32306-035,DF,do Galho,Passarela da Conceição,9871,Bloco B
+d6f777dd-5709-4a74-9b46-026f3b4205d2,60932-443,AL,de Goiás,Via Alana Novaes,638,Apto 12
+6e7441c4-382d-4ebe-861a-36ef1f6f3629,58842-359,SE,Grande,Rodovia Brito,7762,Bloco B
+0ae6e69e-a574-4997-97aa-37bc0bc2b890,94263-141,PE,do Amparo,Trecho de Sales,2291,Casa 2
+3b3b05ad-a197-47dd-ac92-9d078a03f59c,30097563,SPP,da Prata,Rodovia Isaque Barros,2663,
+6f8fca21-b56f-4b52-b9fd-f23699d9a872,95361-387,RN,da Mata,Setor de Moreira,4903,Casa 2
+8762dd38-672d-48f8-924d-501a2c8f03ba,32379481,PE,da Praia,Travessa de Porto,8722,Bloco B
+13f7d6f5-2581-4923-accf-8f422d15322b,33957-651,MA,de Minas,Vereda de Jesus,7781,
+1aa2c3ed-3bac-4565-a34a-5ca788b75591,85224845,RO,do Campo,Vereda de da Costa,1796,Bloco B
+72a74afd-aad5-4082-ab96-4e3e23ee62a2,41822-658,SE,da Mata,Avenida Isabela Ferreira,437,Bloco B
+68850453-fd4b-485e-91e2-0c25b01ee44b,53486-128,RS,Grande,Estrada Aparecida,9478,Apto 12
+d061ad20-314e-4024-8cfb-26cd66bfd58b,45953-167,RJ,das Flores,Viela Matteo Almeida,7872,Apto 12
+4226e0ad-7d3d-40c8-9691-977e9cb3add7,01663-088,SC,das Pedras,Campo Farias,6230,Apto 12
+6e908fb8-1a47-406f-9ce3-0dc74c7c4eca,36528-640,ES,Verde,Avenida de Barros,518,
+9afb3fc2-7ed8-4e91-9c65-df5759dd12db,16801807,RR,da Mata,Feira de Fernandes,1801,Apto 12
+8ec02ce3-5f2c-4e7a-8cdf-bba93803bdee,95368224,MT,das Pedras,Parque Costa,6862,Apto 12
+a025f541-552b-41dd-835b-e332c8428846,08076-992,DF,do Sul,Colônia Danilo Gonçalves,6724,Bloco B
+não-é-um-uuid,60918791,SC,do Norte,Área Ferreira,1021,
+2d0dea31-61bf-4f09-acc9-0ef4be95131c,94484732,PE,do Campo,Loteamento Bryan da Luz,3398,Casa 2
+ffa02562-bb92-4bc4-ac73-7b85b293f7b6,12345,PE,Paulista,Recanto Felipe Albuquerque,6174,
+69c22bd5-1fc6-4007-8450-b3b019421237,46864-107,CE,Paulista,Estação Guerra,7532,Casa 2
+0476e348-9364-4375-a8c1-2a35ba9d2de1,72968915,RO,do Sul,Praça Pimenta,4332,Bloco B
+13eeb57f-8b1f-4863-b29f-3f8c011e2b29,70535-476,ES,da Serra,Esplanada Emanuelly Mendonça,4572,Casa 2
+62c4208c-befe-42e6-ae36-e7164bb37673,35108-803,MA,do Galho,Fazenda Cardoso,4736,Apto 12
+0a94ea6e-239c-4315-93a8-174c13980270,33215601,PR,das Pedras,Ladeira Benicio Gonçalves,5195,Bloco B
+a1939d73-7168-48e0-94a1-914dcd62d02a,60301784,SE,das Pedras,Avenida Martins,4481,Casa 2
+71b74539-5964-46b2-9b61-f6692b5a3cbc,81516-987,RO,Paulista,Passarela Pereira,8900,Bloco B
+não-é-um-uuid,08064528,MG,dos Dourados,Rodovia Laís Ramos,5655,
+0c53c0a1-5e43-4d1a-b9b1-3b09e6e96a59,,MA,Paulista,Alameda Maysa Albuquerque,690,
+24fc68f5-ae15-4f6f-bdae-89cfc45780dd,45648243,RR,do Amparo,Ladeira Alves,1295,Casa 2
+12c4bfc2-0172-4679-a9bf-0a217e8365da,86593888,SPP,das Pedras,Rodovia Zoe Camargo,7850,
+735fd40b-28f9-4deb-80a6-35b0cd67411c,47913-595,TO,do Galho,Residencial Gael Henrique Pinto,8825,Casa 2
+e69862bb-61f6-41c8-96f4-0a52b018ec59,01041064,SPP,do Galho,Passarela Vieira,2250,
+8e4dfb4b-3bc8-4df7-a111-941b57774fca,42671557,SC,do Amparo,Condomínio Pires,9615,Apto 12
+08cdc61f-9072-4282-b59b-a88d3b3fb0e4,06269-940,RO,do Sul,Estrada de da Mata,8701,Apto 12
+81e2a2f8-434f-427e-90c7-372fc68ae50c,30460449,AL,Paulista,Pátio de Aparecida,1642,Bloco B
+b5c32641-a7af-4a42-991e-b672110f9a80,50266-997,PR,da Mata,Trecho de Pereira,1648,Apto 12
+4cde4f8d-a935-42d5-8fef-68ea3bfb3276,28060-402,PI,do Amparo,Colônia Zoe Costela,2588,Bloco B
+b58d97e6-3dd2-418e-9684-1d4af1fe6f84,88063-443,PR,do Campo,Viaduto Costela,7823,Apto 12
+bd861ff2-9c82-4dbd-8797-2369e69a7912,98852-424,MA,Verde,Viaduto de Sá,5263,Casa 2
+20594617-7925-41da-9903-e1555c36940f,06168-070,SP,da Mata,Setor de Fernandes,1466,Apto 12
+f6fd9524-ea93-465c-a95a-590fbac916f1,90332-381,SC,Alegre,Lago Pimenta,612,Apto 12
+f1803b54-2edd-40d9-9877-9a920ff74de8,69900-055,TO,da Prata,Praça de Ramos,2881,
+5645c1ca-3017-4295-91f3-c486ca40872d,12345,SE,do Sul,Esplanada Lara Pastor,8117,
+11cc6105-6c04-492f-9629-3863bcb175bb,86001-238,SC,Alegre,Avenida de Fogaça,4743,
+d22f4842-d59e-4e6c-9579-741b3d27c1dc,11899-615,RJ,dos Dourados,Colônia Luara Melo,9876,
+a82a223a-5eff-4b21-8c49-9f8d1754e6c2,14288190,SPP,do Norte,Aeroporto Novaes,4663,
+d6a21345-e0a3-44df-9abf-59c6bf9bb9b3,66173771,RS,do Sul,Pátio Levi da Mota,8902,Bloco B
+não-é-um-uuid,55391075,BA,da Mata,Ladeira de Aparecida,8262,
+21b35558-f958-4376-a7e3-d9d59274df24,98742-350,DF,da Serra,Vila de Pires,1846,Casa 2
+ae9fb1b2-a859-4875-af4a-d0667beaa198,21182-954,PB,de Minas,Trecho Valentim Duarte,4216,Apto 12
+d1260668-a5cd-4c00-93ff-f5381c3e6603,78158-243,MT,do Oeste,Fazenda Hadassa Campos,4834,Apto 12
+158c9ec2-17b0-4773-be75-68f2b667bb83,46391-595,RS,das Pedras,Rodovia Siqueira,6644,Bloco B
+efb1d719-62ac-45b8-9d79-93ae40d970a6,12980620,AP,do Amparo,Trevo Ribeiro,6568,
+3c579ab1-bbfe-425f-903c-74799a9c23d8,11229213,BA,do Norte,Conjunto de Barbosa,7823,Casa 2
+e0a1108e-6ae7-4ed9-9835-0fa9daa06cf9,07581981,São Paulo,da Praia,Núcleo Cunha,4273,
+3ccb7c22-039e-48f1-a463-320fb9ca832a,37933-410,PB,do Galho,Via Kamilly Vieira,4375,Casa 2
+90e07be2-523e-4331-aebb-d88308e43d90,62338-385,SC,dos Dourados,Quadra de Ferreira,9387,
+fd10e4ee-4282-48f0-b8f3-1ac672acf85e,38707-491,MS,Alegre,Vale de Fernandes,3872,
+94dd8a63-4de7-4032-b4b8-574df8e652dc,42200145,PB,do Amparo,Estação de Pereira,5027,Apto 12
+87edcbad-5391-4821-9050-b8c8674a82c1,53890-937,PE,do Campo,Campo Caleb Santos,5096,
+0032138c-a42f-4258-aba4-b956e7734318,42934-481,MA,da Serra,Jardim Felipe Rodrigues,6022,Apto 12
+378f2e67-2413-4e39-94b5-7475ed682a8e,95435-329,BA,das Flores,Vila Fernandes,7835,Apto 12
+8402bb82-3116-4a5f-aea0-e23abfa97cb1,40665-525,RN,do Oeste,Pátio José Camargo,6122,Bloco B
+e8b6612c-d06d-4b83-bd9a-743554c91b90,39840-678,PR,de Minas,Largo Ana Laura Peixoto,8807,Apto 12
+21300bb5-ded9-4193-b835-659031f06ef2,23972-264,RO,do Oeste,Fazenda de Araújo,9762,
+99388b36-2900-46a3-8da9-ad2d8eaa0445,06557-611,PE,da Serra,Quadra de Nascimento,5928,
+43f05b46-fc9b-4ff4-be7e-248c127897f3,17721148,São Paulo,da Praia,Trecho Silveira,1012,
+61cf4ee8-79f2-45ab-933a-55ef40d27806,76694856,PE,do Sul,Passarela de Camargo,3313,
+e8040092-2391-4ce6-81cf-a76a11384536,15235085,BA,dos Dourados,Condomínio de Aragão,2696,Casa 2
+6aa260d6-024e-4c0e-b0c0-bcfb2aecd1c7,01997-340,PB,da Praia,Largo Carolina da Rosa,1905,
+19fd4bc5-3766-4fec-bf67-e07944bc4ef9,20623900,RR,da Prata,Esplanada Ryan Fonseca,9555,Bloco B
+ec167378-699a-429b-bce9-f77f389becca,94963986,PE,do Amparo,Praça Monteiro,7299,
+b371f7e1-60b1-4669-b8d5-7a9dbd65ef8c,29272-750,PE,da Serra,Residencial Manuela Cavalcante,6807,Bloco B
+e78f09b5-2645-458f-924a-b9f6ceed1d90,40960-377,PI,do Norte,Distrito de Siqueira,7576,Casa 2
+0b569cc6-9b94-4767-a4eb-b4dd4e3c4474,44133602,MG,das Pedras,Condomínio Ana Luiza Dias,4170,
+9fb16b99-8df0-48f7-93f6-006d379f25e8,79377179,RJ,do Campo,Chácara de Viana,1197,
+b9cc06d9-3ab3-44e9-b102-cb395e4cc42a,96455000,RR,da Serra,Morro de Novais,1045,
+0acd4cce-76c2-415a-84c8-afe18b829a56,14573-302,São Paulo,Alegre,Jardim de Monteiro,7735,
+c6ce1299-ef8c-4b3b-8b6f-c6250a615383,83578-113,PA,das Flores,Largo de Cavalcante,2949,Apto 12
+0d30ae4c-fa31-41e1-b0b5-1601edde4a84,31466-321,SC,das Flores,Via Pedro Miguel Nunes,6888,Casa 2
+e627305d-7619-49a5-b5bb-c2f8fae8422b,12345,PB,do Campo,Aeroporto de Vargas,6185,
+d0cd04ab-e79c-4b48-bc87-48f3fff1aaac,98212519,RO,das Pedras,Esplanada de Carvalho,8836,Apto 12
+e60f9bbc-81d2-4636-8cc1-35cb47c290cf,54810-900,MS,da Mata,Lagoa de Marques,1944,Apto 12
+fbd996e8-05de-41fa-b36f-71c3e3308d3b,12345,PE,das Flores,Condomínio de Moraes,2087,
+3daef9b8-ec6f-4d52-8a04-51b84be42c76,55598869,ES,Paulista,Trevo Vinícius Alves,57,
+4113a81e-880d-4ad5-ad8e-d46c4dbad293,12345,RO,do Oeste,Sítio de Gonçalves,8921,
+7e659a9a-d992-45c8-906d-dbb2e3a8729b,14963825,MG,da Mata,Campo Sá,3763,Apto 12
+af3b98db-4e18-46e9-bbdf-49edb39fd200,96038533,BA,da Serra,Aeroporto de Gomes,4517,Apto 12
+2dcb3847-cd32-442b-8a08-a4f42e29447b,09417-023,São Paulo,da Prata,Loteamento de da Conceição,528,
+03d183a2-7c95-4eb1-a360-f6f6c310d841,67475887,PA,da Serra,Sítio de Silveira,257,Apto 12
+bd1997cf-b882-46d0-b632-61caff94c094,47888197,AM,do Galho,Condomínio de da Rocha,9732,
+7e469afd-ee31-4844-8665-5a12122d1d4b,15616164,RO,da Mata,Vereda Ribeiro,798,Apto 12
+299b825d-e826-492b-81da-1c16fa039538,79379275,MG,da Praia,Residencial Pedro Lucas Brito,7192,Apto 12
+360dff27-1722-482a-94aa-3517a868a06c,12484-266,SP,das Pedras,Sítio Caldeira,925,Apto 12
+eeeb4cf7-8b67-419a-9469-f3e6db1b76b6,65722-438,MA,dos Dourados,Vereda Thiago da Conceição,3837,Casa 2
+5e14a6a9-9998-416a-b364-0f81572c19f9,24233814,SP,das Pedras,Conjunto Davi Lucca Fernandes,5254,Apto 12
+849df679-b252-4f73-aee4-60370e81d59d,47333240,BA,da Mata,Viaduto de Barros,8541,Apto 12
+c4ff310c-f109-4c26-9c4a-9f70bd9fe040,63455235,GO,dos Dourados,Praça de da Paz,999,Apto 12
+d0a29d0e-898d-443b-9dfd-9a4b5840140e,15353-293,PA,Alegre,Loteamento Ribeiro,9108,Bloco B
+fbf5c71f-5400-481c-b23c-401bb9122750,42732193,MS,da Praia,Residencial Heitor da Mata,6245,Casa 2
+08bd8d6c-78cb-42fe-b5db-20e32ad3d8e0,68442372,PA,Paulista,Núcleo de da Paz,2445,Casa 2
+a5a1f934-e664-4cf8-bfd7-3b84cc490f11,04226-091,SP,Grande,Fazenda de Abreu,8814,Bloco B
+413074f2-4474-4a19-9338-1db225da4aac,17594483,ES,da Mata,Condomínio Sales,4928,Apto 12
+5486bbef-62e2-4cd9-9b47-359de3f30453,04168838,AL,do Oeste,Estrada de Garcia,9215,Bloco B
+ef5deb03-e25b-49c6-b6fe-0cbb2b89bf89,cep-invalido,PE,da Mata,Rua Sá,2197,
+ff130a02-ee8d-41ca-983b-1f66b2800878,90464-020,GO,da Prata,Vereda de Souza,3332,Casa 2
+d2f639db-8355-48c6-a55e-7162e5768313,78305669,PB,das Pedras,Conjunto de Monteiro,6080,
+7748d583-ce50-4f93-9219-0785fa136c6b,75077-321,TO,Verde,Pátio Pedro Miguel Fogaça,3121,
+e2f31d60-7a44-40be-88a9-2d794e9894ce,90290-679,RO,do Oeste,Condomínio Rodrigo da Mata,9912,
+não-é-um-uuid,00545645,DF,do Norte,Passarela Pacheco,9627,
+a0bad3bb-42e3-4dd7-9daa-6a55a76b1fb5,76608202,PI,do Oeste,Feira Brito,3556,Bloco B
+396ee6e6-b9ad-4e76-8c41-dadeb6f00216,49703-156,MT,das Pedras,Distrito Pires,4968,
+5cd6c27b-cd5b-458c-967a-261f1d464ea5,30316172,DF,de Minas,Jardim Duarte,1923,Bloco B
+d61e0210-f92d-4b4b-9c9c-c73679df0de1,72137915,sao paulo,do Campo,Distrito de Costa,6499,
+43b2ad8b-0eaf-486f-9b82-196706bd3e1c,65931-271,SPP,da Praia,Morro Costela,4638,
+5f1da86d-4252-4c61-bd19-cd07ddff3d2d,59401-467,PI,Verde,Chácara Bárbara Duarte,5887,Casa 2
+172dd414-5338-40e1-a319-e425e1666711,40841912,PE,da Prata,Favela Benjamim Cavalcante,8148,Bloco B
+71ef2b48-e248-4b10-9663-8a63c916b1dc,71015365,SC,Verde,Praça Costa,7693,Casa 2
+3356a721-dcbd-4eef-ab7b-6bf39debaf7d,12281828,SPP,do Amparo,Vila Campos,5127,
+9efbbf17-2204-4f52-a4a7-c86b7f929246,25324-524,RJ,do Sul,Loteamento de Rios,3626,Apto 12
+3a88b7ca-6fee-42b0-ae94-e089672d5a74,39498-728,PI,do Sul,Residencial Matheus Costa,9569,Bloco B
+80da0332-549a-4cb0-a910-301b1d1ae2bd,50220262,DF,da Serra,Ladeira Diogo Martins,5405,Apto 12
+373264af-4332-47ae-af08-ea0389d2b34d,00792743,TO,do Campo,Vereda Enzo Gabriel Sousa,4027,Bloco B
+e7ccd6b2-48d8-40ff-bb49-640e91fb0e94,71955-022,RO,do Galho,Rua de Cassiano,5531,Casa 2
+7fbc5a5f-f005-41f7-9a3a-27fcfca64108,30052-298,PR,do Amparo,Viaduto de Mendes,8038,Bloco B
+deec47af-e60b-43e5-ad24-481249443598,00372-871,SE,Alegre,Vale Maria Ferreira,5771,Apto 12
+4aa19b3c-8002-4f58-a091-5c847e477cbc,29802343,PI,Alegre,Condomínio de Castro,8001,Apto 12
+6eb47be8-fd04-4f35-bf00-af73efcfc40b,39700416,São Paulo,da Serra,Distrito Freitas,8585,
+ff086d57-0511-457e-9390-d3661be1aa97,12574123,AP,Grande,Viaduto Vieira,795,
+71ea7fa5-07ce-4b55-9a44-96a4431a76f3,27061-157,TO,da Serra,Estação Apollo Nascimento,3792,
+b70cc211-47cf-425e-9488-bc34bbd0663b,28147197,AC,da Serra,Distrito Renan Ferreira,3584,Bloco B
+1ead3961-5dd0-4fc9-a1cd-383bf25cff12,66250353,RN,do Galho,Rua Gustavo Henrique da Paz,7917,Bloco B
+20aebd96-136f-4efc-8174-2eb1cea5a5e6,46813290,PI,Alegre,Vila Pimenta,9039,Bloco B
+41859b66-5769-46d7-bb83-1a2199bdda89,62112-982,PE,Verde,Viela Caldeira,4502,Casa 2
+6bc520de-528b-4ede-b662-1a3140300e7f,04393-054,TO,do Norte,Jardim Kevin Souza,7055,Apto 12
+1334c8d2-3b36-4f29-bdff-648ec6bff04f,69851-762,AM,das Pedras,Estação Mariane da Cruz,8592,Apto 12
+899c23d2-0611-46c5-8f9e-902ad0c2c95f,87712854,RN,do Sul,Viaduto Duarte,8626,Casa 2
+b6d453a3-3a1a-4d8d-b47e-f1898ac65131,30977773,GO,da Mata,Vale de Machado,6503,
+6a25835d-8b82-4137-901f-151a3129f344,78506-253,MG,do Amparo,Parque Caldeira,7521,Apto 12
+b25cfac4-43aa-4912-9c12-71cf97b1a7cb,,MA,da Mata,Trecho Levi Casa Grande,1321,
+acb49b2f-e1cd-4aa0-ab12-8b3f62369619,72636-591,RS,do Oeste,Sítio de Barbosa,520,
+0b30cf38-9003-4722-b86f-0cb761282c30,89482902,MG,do Amparo,Parque Borges,9056,Bloco B
+c0986bbd-efc6-418d-8edc-4a560f24dbc1,69007457,AC,Paulista,Trevo Moura,2808,
+ee92b08d-0e5d-495e-bd0e-0371d5eb0b28,48162-380,PA,da Praia,Colônia de Viana,5428,
+não-é-um-uuid,26690622,AL,da Serra,Núcleo Maria Luiza Macedo,3765,
+51199272-964f-4fa6-a39e-08ef7ed302f0,74896-178,RR,da Prata,Quadra Aragão,9287,Bloco B
+309e8551-3492-44a1-9aba-1faa4cd0c93d,37028003,AP,do Norte,Largo de Macedo,4594,
+4cb59322-0343-4db9-8a5f-3fac6d75f135,06472484,MT,dos Dourados,Favela de Mendonça,257,Apto 12
+ad1ee66c-671a-4710-b43b-9b081bb9dd3f,14073-290,SP,das Pedras,Recanto da Mata,6526,
+8e8aa26a-04f1-450c-887f-fa0471bc3ef8,89719391,RJ,da Prata,Ladeira Pacheco,3940,Bloco B
+81ed9f14-42f8-4dae-9048-7295f7986dc2,23715836,PI,de Minas,Esplanada de Novaes,5436,Bloco B
+0ea0dee7-a69b-4b61-84ae-952c99da4da9,72102-603,BA,da Praia,Núcleo de Santos,1285,Casa 2
+27356566-ab1b-4cf1-8b99-bd63c64f6607,89081-163,PA,da Mata,Trecho Olívia Sales,3804,
+9f6d83d8-4de0-4363-bdbf-fa2fa1fbc8eb,94005220,SP,dos Dourados,Lagoa de Silva,9759,Bloco B
+c3378dc3-1de4-4f77-8440-4d63bedc86b8,12345,AC,da Prata,Praia de Ribeiro,4479,
+65e5cd6e-dc76-4af1-b023-a9b0111b344c,47868900,PB,da Praia,Praça de Cunha,8039,Apto 12
+97f5b24c-121c-4dda-887e-7f7bb12772c9,39542-518,MG,Grande,Avenida de Melo,7076,Apto 12
+8f16d1a3-14e3-4db2-a7fd-22df3286067a,60206366,RO,do Amparo,Quadra Emanuel Brito,6228,
+d74357f6-8cf0-45a1-8b3e-57ec5269950a,87439-221,MA,Verde,Trevo Ana Vitória Rodrigues,4038,
+51091786-8705-464b-9cf2-f47986c2ddcf,80551396,BA,Paulista,Lagoa das Neves,6226,Apto 12
+82bc0a06-24a6-4fe9-aa21-2c7002847a94,57703532,MT,de Minas,Alameda Davi Lucca Alves,5910,
+4a01ebe5-fb05-4968-9c9a-01d28bb3bd61,51563-343,MA,da Serra,Estrada de Dias,7287,Casa 2
+fa19b715-0a53-4b2e-a56b-e8e3d0d2959d,08946-679,AM,do Oeste,Passarela de Freitas,2171,
+06884178-2cfd-4e63-9e95-635e66d4e957,71667186,PB,Grande,Condomínio de Rodrigues,9126,Bloco B
+3fd7a287-0a33-4046-90ba-f6f67c90f641,61017-712,AP,de Goiás,Condomínio Samuel Lopes,5799,
+8c77e568-ea81-410e-a007-28c539b0b4f3,40343-897,SE,da Mata,Setor de Marques,5316,Bloco B
+e9413aee-b662-44e5-bd2f-bf49540ac8a9,60537-895,PA,das Flores,Rua Otávio Santos,6354,
+a2d3a700-5abd-4c72-b76d-18aa0f8b871e,79903712,PI,do Amparo,Largo Novaes,3978,Apto 12
+1c882b63-89d9-430b-92cb-0fa34cd5d83c,18865721,CE,das Flores,Lagoa Maysa Martins,2275,Casa 2
+6571ff3f-bc19-4cfd-baf5-a33583bbd304,19731129,PR,de Goiás,Chácara de Viana,2391,
+be406624-1801-4aed-9cb2-c361238d44f9,99084-371,GO,da Prata,Estação Matheus Pereira,6900,Casa 2
+494697dd-37c4-4b04-9aef-2fae9d8ce6df,92594-470,AP,do Galho,Lagoa da Cruz,5917,Casa 2
+6f343b5f-9e69-43b1-9c5e-e89607679ee1,15599-946,,do Oeste,Viaduto Gustavo Nunes,9729,
+86bd1b6f-9308-4b4c-8059-190c26f89ee4,33798-633,PB,do Sul,Lago de Fogaça,1753,Apto 12
+3d9f4861-7e8b-42d4-8098-4418035d71e9,99512721,MG,da Serra,Distrito Yan Andrade,5444,Bloco B
+9ff2d7ac-e56c-4656-ba03-300dc7152649,91553-609,MT,das Flores,Morro João Felipe Castro,7213,Casa 2
+ac77d3aa-4a06-411f-af23-9549c7a2cf09,31325649,TO,dos Dourados,Conjunto Igor da Rosa,9739,Apto 12
+82009009-13bc-4586-88f5-c711ed6a51a1,54827-841,RN,de Minas,Vale Liam Macedo,3291,Bloco B
+77bd2376-83f5-4f63-a944-8a4afc993c22,78608557,MG,do Norte,Viaduto de Pimenta,5229,Casa 2
+c046443f-8df4-4d56-9ff6-c3d3a2ded953,29411-017,RS,do Campo,Praia de Barros,8045,Apto 12
+e93d0d6d-2d90-44c0-a850-3a8c331d129d,21222-172,GO,Paulista,Viela de da Mata,6438,Casa 2
+f01ac93a-0e25-4dfe-967e-94e1c4502ba0,29654761,RJ,do Galho,Via Anthony Gabriel da Mota,3274,Apto 12
+19c1b53b-5bb5-439f-b56e-162580e39cdc,84840-102,PI,do Amparo,Trecho Andrade,441,Bloco B
+b40b88d9-375e-4f4c-8803-c614fec24b47,55531455,sao paulo,Alegre,Praia Dias,7184,
+a0a823a7-cb88-434b-9f7c-b0391f712c20,15357-907,TO,do Galho,Pátio de Mendonça,1134,Bloco B
+b6b03a81-c8c7-468c-940e-a5bf4f4a84b3,91578-539,BA,da Praia,Colônia Ana Vitória da Mata,4962,Apto 12
+57cf6e7d-e2ff-4b62-882b-dd1dccfbff08,67564070,BA,do Campo,Passarela Kevin Fogaça,6933,Bloco B
+9b2802cf-06dd-4513-b3ae-829b3dff9624,27796-451,RN,do Norte,Viela Rocha,7852,Bloco B
+ceb25821-e8f4-44b4-88ee-aaea94dbc778,76222712,RR,da Serra,Rua de Marques,6854,
+ec99338b-19cf-4882-9e4e-facbd951087a,23362883,MS,da Mata,Residencial Aparecida,8797,
+f5f61ccd-2277-476a-a28b-2ab92b4d779e,24503123,ES,Verde,Praia de Nunes,5817,Apto 12
+dfc5fe63-3e39-44aa-a64b-e0a4d986193b,64944583,AL,do Amparo,Parque de Novais,9228,Bloco B
+9c55abd3-188d-4a0d-a0fa-1dfe012aa91c,12345,SE,Alegre,Parque Caio das Neves,7053,
+fe99c2d5-da1b-4bec-89e1-836f52db2cf4,78976726,AM,da Praia,Conjunto Sofia Pastor,4240,Apto 12
+b2744d37-780d-43d2-b8eb-017dae20a2ff,52553010,PE,Paulista,Rodovia Ana Clara Campos,9143,Apto 12
+d993cc4c-7276-4758-bb38-2026ea85b287,29240-018,MG,do Sul,Pátio Brenda Gomes,7587,Apto 12
+61bc853f-f258-4798-82fa-79c6a8f4f6c9,17080-204,AC,do Campo,Viaduto Ana Carolina da Rosa,7910,
+660dfef5-0e7a-4177-989c-83d01a78f6d4,44341-647,AP,do Campo,Vila Montenegro,1902,Apto 12
+c100df09-9441-428e-96b6-455eb662cd17,89449854,MT,Verde,Estrada Raul da Rocha,7461,Apto 12
+c2038d7b-d98c-465c-b0d1-aa302c58f6f0,29605-599,MS,Paulista,Conjunto Pacheco,7802,
+ccde5b5d-f5c5-4b2d-b02b-0c67ebf44b4c,55157881,RR,do Norte,Travessa da Mata,7413,Casa 2
+bfd12b53-67ed-452c-9491-621ca1000495,05776-654,AL,Paulista,Distrito Diego Rios,1886,
+cd45ac13-6607-4f2c-b9de-470ddd3e4bc9,62745108,RS,Verde,Sítio Santos,1792,
+846a2a08-7e8b-4c90-a045-6f9e42581d47,07452641,CE,do Amparo,Rodovia Isabelly Teixeira,3997,Apto 12
+86a71c00-61a4-4552-889e-5369d72322eb,20101-677,MT,da Serra,Travessa Rodrigues,9173,Bloco B
+7a7169c0-9dfb-46f6-bb9a-64a1141c8ca7,,SE,dos Dourados,Chácara Pacheco,6637,
+716462e6-036d-4e49-83f3-48c3306033b9,84764-002,CE,das Pedras,Núcleo Cavalcanti,7081,Bloco B
+2a91e3c5-a316-4a19-a33d-f5810b03190c,33880-512,RN,do Sul,Rua Maya Casa Grande,3233,Bloco B
+a3f51b37-094b-4b46-8a6c-532c05f42a4b,99169001,MG,de Goiás,Loteamento da Mota,73,Apto 12
+dda8677c-a740-4653-a821-63fa1bed1f9c,12623987,SP,da Mata,Passarela de Nunes,1026,
+e874d093-d96c-4cae-9317-b723e6ccc6ca,59284818,PI,do Oeste,Vale Davi Lucas da Cruz,3064,Casa 2
+4c25006c-8dbd-42cc-a87e-b5e190d30437,97544615,PB,do Campo,Sítio de Caldeira,1868,Casa 2
+451ec974-c7e7-4b88-b311-44a90425e98a,82100-022,PR,da Prata,Parque Souza,8647,Casa 2
+4634f9de-385e-4f72-b65b-2f6d2cfd7de4,28472-760,RN,do Campo,Residencial Cassiano,6432,
+b54984a2-9f69-44d3-9850-41f099840e2a,67054-672,PB,de Goiás,Pátio de da Mata,2827,Casa 2
+89093212-ef07-4746-ad4a-3e27383d7616,28361207,São Paulo,de Minas,Núcleo Rodrigues,2195,
+b38b9f94-81dd-42f4-b61f-6117e8652c9d,69450-820,ES,dos Dourados,Ladeira Pastor,5004,
+56e379d9-65c6-4e1d-afe9-862a5f10eaff,41019568,RR,da Mata,Aeroporto Borges,2317,Bloco B
+f879dfcd-9bb9-4049-a5a7-ae4abfa6294b,06946259,BA,de Goiás,Travessa Ryan da Costa,9418,Bloco B
+b5d4db2c-6b3f-4630-8da7-bd24b937d010,34521851,PR,de Minas,Via Luan Lopes,8805,Apto 12
+cbe6b94e-f3ae-4ad6-9b73-80567e889732,66375-826,PR,Paulista,Residencial Nascimento,4733,Apto 12
+6d8f8154-0266-4ce6-b60f-ac7bb804d4f4,89141683,TO,Paulista,Avenida Rebeca das Neves,7390,
+49c6ac02-d9bf-46f1-bc3a-ecbbf11531cb,73156-508,AC,das Flores,Vila de Duarte,7940,
+45d5222b-caf3-400a-937b-58d47c4a5611,64695-415,TO,da Praia,Esplanada Ravi Lucca da Costa,6291,Bloco B
+5764d045-6abe-4c28-9968-be70de4b2867,90923-588,PR,do Sul,Travessa Barbosa,6810,Bloco B
+0c8b5be7-3bf5-469f-89cd-bdde025435c9,73194658,AP,do Campo,Aeroporto de Vasconcelos,9264,
+cc662a4e-43ef-4d17-8ba6-708a74a2eb65,81439-889,ES,do Norte,Avenida Barbosa,4786,
+6d8350e1-4631-4ca8-a814-939dd08274ef,38251153,PI,de Minas,Recanto Levi Andrade,4730,Apto 12
+f4c4fd61-13d2-49b7-9623-80d2bff31015,84208206,RJ,do Campo,Lagoa Azevedo,8116,
+75ae734c-c8cf-48dc-bd01-8f48eca175fd,63162034,GO,do Norte,Setor Danilo Garcia,8899,Casa 2
+ae2d019a-f676-433f-92c9-fca73673d7e5,04903687,SP,Verde,Largo de Cunha,682,Bloco B
+2205b21e-f51e-4a30-b778-c0dc00786c71,38387-369,PA,das Flores,Recanto de Barros,1678,Apto 12
+df7aec78-1dff-4e0a-933b-9bf79341e89d,54901012,AL,Verde,Parque Oliveira,7369,Casa 2
+910b9a3a-9413-4cd6-98ec-87ac935eb4ce,51343234,TO,da Mata,Núcleo Pereira,1426,Bloco B
+cd8b1cc2-c391-4f97-b7ba-47ff8119aec5,45172653,AM,de Minas,Fazenda Siqueira,3883,
+fd24de60-ea55-4a07-9640-6de592c487db,45055-193,SC,da Serra,Condomínio Viana,9633,Casa 2
+c672b486-358f-4fb5-88ed-538399787670,40970058,RN,da Serra,Lago Fernandes,7016,
+1034b0e6-3b6d-46b9-a64d-7d6afa90fee2,61513-866,BA,do Amparo,Trecho Eduardo Barros,3386,Apto 12
+e573f0b0-8be0-4035-896c-3b0722ca0d9f,01069-614,RJ,de Goiás,Fazenda de Porto,5748,Casa 2
+e5005e8a-2188-481c-961c-9c87290b6d6a,59206617,CE,dos Dourados,Esplanada Cavalcanti,5303,Casa 2
+148efd23-a345-4eb2-9787-ef5940aae73f,27688-091,GO,do Oeste,Travessa Júlia Barros,8429,
+e9812dd8-683d-4cc3-8cce-56ab9cd12b58,57528518,SP,dos Dourados,Jardim Evelyn Ribeiro,6744,
+0f6a6659-4fc8-40e2-801a-f3fbc5a40cfa,cep-invalido,BA,do Campo,Lagoa Melo,2175,
+8b3794e4-5a41-416b-8504-94d722324f40,91414234,RR,da Praia,Via Freitas,5278,Apto 12
+8826d950-d909-4f4b-be1a-cdc708bf8fc8,96849216,RO,dos Dourados,Alameda Benjamim Novais,6435,Bloco B
+a577e3a4-c428-491d-ab66-87b1517f07f0,10799384,RS,de Goiás,Quadra Vieira,4403,Bloco B
+2d561581-98f8-48a5-aa21-b110ac2941e4,32873-483,AP,do Amparo,Largo Martins,1526,Bloco B
+4259ebd7-f930-4977-92b9-1d2bb0b95ebd,59120-859,GO,da Praia,Parque Rezende,6047,Bloco B
+bf1f23bd-98e8-4572-8d81-af45f71d71ef,12345,RJ,da Mata,Trecho Souza,41,
+66c8685f-b509-4a57-87c1-8c1dc1155ce1,03827673,SC,do Oeste,Setor Lima,1527,
+8044a096-5360-486b-8264-0c9c7c9d1c3d,03846207,PB,da Prata,Vereda Levi Cavalcanti,5870,
+d150e35f-8aae-44a8-b0c8-0acf13cb344a,90080206,MG,da Serra,Estação Rebeca Costela,3569,Bloco B
+d9696515-d8e0-475c-b74c-c4bdf7438259,27042795,PR,das Pedras,Viela Aparecida,4400,
+e4dbe32c-62b9-4859-bf2f-15f8ad4454cc,25300470,MA,do Oeste,Viaduto de Fernandes,5534,Apto 12
+a2506762-2137-479f-8f74-5e1f0d4e7b22,30827-012,PR,do Campo,Vale de Guerra,5632,
+eebf736f-5998-49d0-80d9-2b51ce1741d2,79289135,RS,dos Dourados,Ladeira de Araújo,7530,
+7defeeed-3cf8-43c3-905d-175adbff132b,80416664,CE,da Serra,Distrito de Viana,7231,Bloco B
+e38b5bb9-5f5c-4a6c-a5a1-4b09b6e47afa,26940375,PA,das Pedras,Residencial Sampaio,3315,Apto 12
+não-é-um-uuid,14070-603,MA,dos Dourados,Chácara Martins,2605,
+não-é-um-uuid,06413091,GO,da Serra,Esplanada Leonardo Costa,1530,
+bcceaeae-db52-4fa1-9ce7-c4a04f5e746e,32035618,GO,da Mata,Alameda de das Neves,1351,Casa 2
+c619f8f8-8783-463a-9648-53f7405e7742,23003-214,RS,Verde,Núcleo Mariana da Rocha,2712,
+c4e0d81d-55e1-4a21-833b-2a18009b7879,10753-251,MA,do Galho,Largo Sophia Moura,3837,Bloco B
+1f3f81a3-1b51-4e48-945e-002e8a2317d4,07238-394,RR,dos Dourados,Fazenda de Ramos,1560,
+1984b52e-dd13-4e3c-b5fa-5082b2abbe3b,25654596,AP,Verde,Esplanada Brito,2175,Apto 12
+d4fb5585-5941-4276-a736-18bbddcbb5f5,10660865,PB,do Oeste,Condomínio de Mendes,153,
+044408cf-3c17-4296-8409-88617094c731,71533214,TO,da Praia,Rodovia Vargas,1976,Bloco B
+00f993a6-2204-468e-b6dc-ebc7d25c9856,06847-206,PR,do Oeste,Trevo Raquel Cunha,1161,Apto 12
+fe1f9afb-2f69-447a-be9a-930a9220b836,97719900,SC,do Norte,Setor de Nunes,1679,
+b14dc8c4-50c8-4989-92c6-2669edf1e106,91441-068,MA,da Praia,Esplanada de Lopes,2247,Bloco B
+2e8f30a7-9b20-43c7-8fd4-9770f455a56e,45217-648,SP,dos Dourados,Loteamento Heitor Lopes,2182,Apto 12
+202f915e-a8a6-4aaa-826e-726209a1dade,79420502,RJ,do Sul,Viaduto Cavalcanti,139,Apto 12
+30641e87-a31e-4b32-a82d-c449e1334074,77088-675,SC,Paulista,Lago Fogaça,3491,Apto 12
+dc12a63f-c69e-4d05-ac7f-17d631446d30,18976826,,da Prata,Via de Aparecida,3560,
+b30e68f7-15b7-4e48-91d1-802541091aa3,97314548,AM,do Norte,Feira Moraes,2294,
+3d01189c-33f2-40fa-a389-0ac882cbcd15,65881061,MG,do Sul,Trecho de Teixeira,5760,Bloco B
+efa037fb-3f04-42c1-9f87-af69df96b9ef,82099-919,BA,do Sul,Praça Fonseca,4060,Casa 2
+81c45b99-9b3a-4c0e-a278-fa9baa9771c5,00495-862,ES,da Prata,Vale Noah Mendes,9067,Casa 2
+19c6699d-6b62-4d4d-9886-b2065343027a,69690544,RR,Paulista,Chácara de Cavalcanti,440,Casa 2
+3a8799f2-a241-416e-a1dd-be3c142e7070,11057385,RN,do Galho,Conjunto de Ferreira,8349,Apto 12
+2ec3d5a3-c948-4e63-bba3-0532b537f4b2,76927364,MA,do Galho,Quadra Mendes,895,Apto 12
+def2993b-d9ee-46c6-8e2f-b3b030ba8eb1,18825-946,AM,Verde,Vereda Rael Aparecida,3950,Bloco B
+1d504d7b-5607-42c4-a5f3-af5d427ba35b,62987-051,AP,dos Dourados,Praça Maria Cecília Azevedo,8656,
+6f851e4d-cf3d-455b-8d85-7ed12062efa4,12345,BA,de Goiás,Condomínio Milena Cassiano,6338,
+2208db7c-cf0c-4dc0-a643-f151b07841f9,96197-794,RJ,das Pedras,Parque Montenegro,6896,
+61a5e253-a96d-4776-bd2f-a4114bc7e4a9,19875846,RO,da Mata,Setor Elisa Abreu,2831,Bloco B
+e62ee280-8de5-4bb0-a62d-a7aa4456b3b5,,AC,do Oeste,Morro Duarte,9624,
+98613ae3-a61a-4c4b-ba15-5e21e0ec1487,16667-447,GO,Grande,Via de Ribeiro,3535,
+280c07f0-c10e-492f-a461-a6f4218fd000,66693-678,,dos Dourados,Praça de Nascimento,8301,
+f63abe01-050d-478a-a69d-beec89ae1a45,09643657,RR,das Flores,Condomínio Igor Fonseca,8210,Bloco B
+715d19a0-ffff-417a-a181-bfccbec5cf0e,58348559,MG,do Campo,Condomínio de Borges,1351,Apto 12
+ab588d99-2e1d-48b4-b53f-542c32776078,73447-170,MA,da Praia,Passarela de Ribeiro,1295,Apto 12
+150313b3-7169-4fc6-921b-f8a05b898648,,PI,das Flores,Aeroporto Manuela Souza,5354,
+6f452536-6de1-44a7-881e-40cb1b76436e,99585-055,RS,do Galho,Viela Andrade,1084,Casa 2
+9f23ba00-6291-4841-958a-abf1e65d9823,34755-545,SC,do Campo,Loteamento Léo Leão,3910,
+f9bde6a5-06f7-4b2e-ba50-0f0d7507dfe1,54478662,PA,do Galho,Praia Melo,1901,Bloco B
+82c2db93-0f82-40e6-a50b-292656be206b,87619742,AL,Grande,Trevo Ian Pimenta,5068,Apto 12
+d6c5997b-b8de-460b-a363-d26cddd1076d,02626-697,RR,Paulista,Lago de Fonseca,2249,
+ac170dfc-d761-455f-941c-66c70e0431fc,78585082,MS,dos Dourados,Núcleo Sales,8569,Casa 2
+747f6ad6-0803-4845-b193-bf07dd588636,45395-994,BA,Verde,Viela Freitas,4404,
+76b3c4ee-34c1-40c1-949e-26d7317204a3,20558-028,AC,Alegre,Vereda Fernandes,5489,Bloco B
+b8a7264d-228a-4721-821f-6dbc6ee907fb,26344-643,AP,de Goiás,Quadra de Santos,4309,
+e4517c95-795c-4c83-9234-1647a3f4ad51,48865163,PE,das Pedras,Quadra Vargas,5901,
+1f220c92-16b7-4b58-a414-ec1f93b19c7c,69079884,RJ,da Serra,Feira de Melo,2735,Casa 2
+b80a7d18-97b1-4597-99f6-8d5bddff12de,58305-116,SP,da Mata,Alameda de Vargas,1686,
+4cdb9628-732a-4cb9-9e8a-e1855d7ea3be,85772007,PE,do Sul,Condomínio Pinto,43,
+3f7459d4-05ca-47ed-ac8c-99e69ad49d87,52503-497,AC,da Praia,Vereda de Abreu,4007,
+cb0e1d9b-3da1-432c-ba00-e2aac0a13de9,03766-857,MS,do Norte,Feira Macedo,6275,Apto 12
+eeb5598c-4e17-4044-9b7c-a986ec9e35a1,07373140,AL,de Goiás,Sítio Kamilly Camargo,9059,Bloco B
+54911b72-33c2-4b3c-a2e9-810f4a67554b,25398188,ES,do Campo,Viaduto Gael Vargas,6820,Casa 2
+c66c86ce-3023-48b4-9575-f2b997ec0b9a,23812-979,AP,do Galho,Colônia de Sampaio,9365,Casa 2
+03599695-c5fa-4d40-ac31-2e37fffaab99,58930558,RO,da Prata,Residencial Luísa Moura,863,Apto 12
+ec31e331-aa9a-4743-b02a-0c40f3721014,69398486,PE,do Amparo,Campo de Rios,753,Bloco B
+f4650562-3c51-4636-bbed-4cc8d929b3b5,72881-218,PB,da Serra,Área Peixoto,4626,Casa 2
+ace6497d-019c-4eda-8a4f-6e4024f4f025,67553-737,PI,das Flores,Sítio de Castro,7484,
+f98fe427-e2e2-4cd6-85e6-628a75e79a46,98269-648,MA,do Oeste,Trevo de Mendonça,9238,Casa 2
+7e0fb40d-6c1c-47ac-a783-d70974afc2d6,25236-502,ES,da Prata,Quadra Aylla Ribeiro,7601,Casa 2
+50b864c4-9a06-4270-a2b7-96c29e75a9a9,69574102,PR,do Amparo,Setor Borges,3202,Apto 12
+b9ec721e-9626-4aa6-8963-6297a9f46a52,28819932,PA,da Prata,Rodovia Sampaio,392,Apto 12
+b737094e-282b-4269-beb3-138c5eda5942,38449-949,RS,do Norte,Jardim João Miguel Nogueira,158,Casa 2
+813e8f20-6914-442f-bc5c-cd18d236102b,41084-441,RO,da Praia,Jardim de Barros,6165,Casa 2
+367280d1-f911-423b-b3d7-835cffc8c30d,75282414,PE,do Campo,Rua de Cirino,3903,Bloco B
+aa952a28-8f98-4c95-83c0-3319a984d652,23504-912,AL,do Amparo,Viaduto de da Luz,2333,Casa 2
+5c0d0f76-06ad-4005-83c8-1eb3360f609e,69441023,ES,das Flores,Aeroporto de Araújo,8516,Bloco B
+27e4836e-9414-4ae6-b9cf-a1ffa08bd226,71301-664,MS,do Amparo,Jardim Maria Luiza Melo,7512,
+988585cf-f397-4f0b-9319-0fd18a460511,15490258,PE,do Oeste,Chácara Letícia Moura,2188,Bloco B
+35bcf6c6-1ab3-4527-9f2a-cd99c1ac0f20,30537287,RJ,Verde,Passarela de Souza,1021,Bloco B
+ee80091d-9748-4fc7-a46e-a7c329bb1ed3,37105-191,BA,Grande,Chácara Bruno Pastor,3880,Casa 2
+26bb62fe-ab06-4f4d-85a3-3c81bce66d45,99205-605,MT,da Praia,Fazenda de Rodrigues,6439,Casa 2
+75edd22b-0e03-43f2-9327-7394edca62e9,44386-385,GO,da Praia,Campo Ana Vargas,3828,
+16bec8ed-3f48-401b-a4e7-c0d0701e4e40,81813160,sao paulo,do Campo,Pátio Borges,9580,
+a9626bda-7127-42c7-aa75-d03614f03b40,76115341,AM,de Goiás,Praça Rezende,2694,Bloco B
+a667ad47-aea7-4a13-8eee-2f7daa42e951,06828620,PA,das Flores,Morro Rios,1979,Casa 2
+ae7674d0-718a-4b03-b32b-37de333f25c6,,PB,das Pedras,Estação Moura,5052,
+01cb95f6-8a1d-4a4e-9864-34cb71b34667,39750753,AM,Paulista,Viela Allana Sales,1482,Apto 12
+1162ee8d-686e-4d3f-96e4-be7b9d6b44b7,78294-184,MA,Grande,Jardim Hellena Caldeira,9885,
+e154521c-5483-4bf1-bc3b-ab518f9f7963,35107304,MT,da Mata,Viaduto Bruna Machado,2431,
+dcbc5594-a892-4bdc-bdf0-acec498f77ee,32193-578,MS,Verde,Passarela de Machado,6493,
+26a55110-79ff-47a4-8bd7-73867fdcbc3b,78109161,GO,do Norte,Travessa Siqueira,2849,
+61f42071-b48f-4d2a-a057-53d59d5a118b,12345,PI,Verde,Pátio Pires,9014,
+ae2be27f-fcc3-4a18-ad94-fbb5d6c481d6,93286889,PB,das Flores,Área Mendonça,1670,Apto 12
+e2217e3c-466b-43c6-9102-0025fcd54942,66734-392,AL,Paulista,Distrito Brito,3642,Apto 12
+02ccefe9-3e31-4acd-8cff-5fbccde85867,89121531,MG,Grande,Rua Maria Flor Borges,6099,
+5f611a95-2cb7-48e3-b9d8-aa2c8c0ba3c5,47023960,GO,das Flores,Alameda Gabriel Monteiro,1229,
+422d7b18-f203-4caf-8d5d-aabd640146c8,,RS,dos Dourados,Vale de da Rocha,7266,
+431fdad1-0f82-4bf2-a347-8510d2c86d99,39895402,AP,do Sul,Praia Clara Siqueira,5433,
+cab21ad1-9dbf-4910-9205-edf6818824a5,57643273,PB,das Flores,Estação Henry Gabriel Cavalcanti,830,Apto 12
+a9b89236-7fc4-4e4c-abc7-7e4930134ac5,79484-013,,de Goiás,Avenida de Novaes,6472,
+00a1ebd7-75b9-474b-87c1-c10d82d23c39,66156152,MG,do Galho,Fazenda de Guerra,6991,Apto 12
+486b0529-37c5-45cf-a7fc-5cd1fb1f0386,20418882,CE,do Amparo,Conjunto Caio Sá,4506,Casa 2
+ed5118d2-e03c-44f2-9dfc-073f8527dc55,82499845,BA,Alegre,Residencial Maria Laura Almeida,568,Apto 12
+f2608dd4-1ece-495f-ae95-2ef9adb58fce,17878805,PR,Paulista,Núcleo de Araújo,6751,Bloco B
+30528657-ce43-4e75-8916-bb088ed2bcce,77158783,GO,Verde,Morro de Rocha,6276,Apto 12
+b0ad89a5-022e-4eb6-a933-c2848dd77ab6,71904752,RS,de Minas,Trecho de Abreu,8615,Apto 12
+1a58602f-edb8-4ab3-8c92-d25228e069d1,97073979,SE,da Prata,Campo da Paz,8908,
+d48cef00-3896-424a-a078-4840226c793c,cep-invalido,MS,Alegre,Núcleo de Aparecida,7860,
+1cc68e90-804c-45e0-ac0e-68f2ea40c4d6,20093-566,PR,do Campo,Avenida de da Mata,5637,Casa 2
+173b81b6-b534-4851-ac9c-620757c98a24,79036540,CE,do Amparo,Parque Cirino,428,Casa 2
+d63b1d7b-5dee-47ec-9de2-d81488f7b027,84185842,AC,da Praia,Sítio de Barros,4603,
+1f2f25dc-049d-43e4-950c-b10933c9bab9,76880049,PR,Verde,Via de Teixeira,8675,Casa 2
+86152b1e-d09b-4ba5-88a8-f720ffe60bca,88646-719,ES,da Praia,Loteamento da Costa,2616,
+2a707b24-c903-4c00-918d-cf4c1a0ed82c,27792822,ES,Paulista,Passarela Asafe da Rosa,4367,
+117ffb5d-8613-40ab-92e9-8f01ccc75964,43744905,ES,do Sul,Feira Leonardo Monteiro,9433,Bloco B
+ef01835a-6f08-4d0f-8a28-7bf8c64c5896,45748-673,TO,dos Dourados,Colônia Lima,2847,Apto 12
+23225b1b-523d-4ef5-80ec-b25fcd574289,15271-332,MT,do Galho,Aeroporto Guerra,5879,
+941876c4-cb8c-45e0-816f-e8a36c483220,42856-727,MS,do Oeste,Favela Silveira,9301,Apto 12
+31e0c8d5-7d40-4ae1-9694-7b020f9eebb2,08986268,DF,da Prata,Lagoa Fernando Lima,8065,Casa 2
+dd75e64e-e07b-4199-a6f6-93916a15c495,59178-581,AL,das Pedras,Conjunto de Aparecida,1479,
+a2744a57-484f-4eb2-9500-f3b6756e9b70,12064066,ES,de Goiás,Distrito Kaique Pereira,327,Bloco B
+1cf34d08-decd-4b77-8793-4aa5214d134b,77548-530,RN,Grande,Vereda Caroline Cunha,3301,Apto 12
+d4d191ad-793d-479b-9495-46bed6b202a9,73208276,CE,de Minas,Esplanada Novais,5302,
+e391b33e-1ca4-41ce-b857-bd7fee5e0886,22449025,RJ,da Serra,Conjunto Carvalho,2321,
+28ac7ab7-763a-49b2-8861-36e220af0d9c,30671347,MS,Paulista,Vila de Cirino,1189,
+4123b63c-9006-4239-8917-8ef547933d87,19422152,RO,do Galho,Núcleo Luan Albuquerque,6482,
+7dec4179-e2af-45be-8b25-2699f617d310,87912607,MT,dos Dourados,Trecho Vitor Hugo Barros,2236,Apto 12
+cd5fd6a8-394b-4b09-a781-168628e477f6,33086-993,PA,do Norte,Campo Castro,7983,Casa 2
+102f6413-c6e4-4a2f-a99b-d41fdc38aae8,26390-285,PI,do Galho,Estrada de Macedo,5847,Apto 12
+21070acb-adee-470b-b796-cda35b53e507,61246-166,TO,do Norte,Loteamento de Machado,2873,Bloco B
+a29392f3-c898-4681-8956-d07f56001b35,02143-453,RR,Alegre,Recanto Benjamim Farias,4826,Apto 12
+43505c59-e9e4-497f-b76f-826a751eafb7,15482-719,AC,Verde,Condomínio de Dias,9386,Bloco B
+c968a8cf-17d5-4dbb-a92f-155e83c86916,43559-809,SP,da Praia,Via de Aragão,9298,
+1eb8d910-5d2c-4dfe-b175-122021379981,80236375,RN,Alegre,Estação Jade Moraes,5214,Apto 12
+d2382a10-8493-42e8-b9d3-80e0b251fc5d,24330818,AM,da Prata,Praia Cardoso,8130,Apto 12
+c4e09e50-a4d9-4bf6-81ce-ca3079979906,14999141,AP,das Pedras,Chácara Carolina da Mota,3900,Casa 2
+8a2e1c99-70db-4cda-9aab-d14046881ccc,,RS,de Minas,Núcleo Santos,1454,
+4467015b-fc1e-4a7b-a12d-89340872d8c2,43316740,RO,da Praia,Feira Pinto,5501,
+172e54ee-471b-421b-b07d-582bf41851f0,37534817,GO,do Sul,Alameda de Pimenta,3436,Apto 12
+066457b2-264f-4456-ba7e-d99c4a3d673b,41057-447,MS,da Mata,Campo Santos,4206,
+d897eeed-8583-4c70-b694-62d000bdec7e,97766170,AL,de Minas,Viela de Casa Grande,6324,Bloco B
+5890cb24-6306-4744-8ee2-02e8a3592fe2,87401-308,CE,das Pedras,Largo de Nunes,6784,Bloco B
+não-é-um-uuid,31159-322,MS,do Norte,Passarela das Neves,8947,
+9d17c64e-f33e-4bc6-ab43-d0dbb3c5905b,30152-218,TO,do Norte,Travessa Aparecida,7856,Apto 12
+13815223-46d9-4af5-a487-ff2d8be87136,92384758,AP,Alegre,Colônia Ana Moreira,548,Casa 2
+14d5cd76-f290-4bc9-ac70-f139b28b7565,34271272,GO,da Mata,Aeroporto Leão,1716,
+9d1105f2-f84f-4e6d-88ea-eaae1718a0a5,79568-935,MG,da Mata,Praça Rios,2637,
+aebc6441-c71a-484e-ad94-560af6d8ac53,43363931,AP,do Norte,Trevo de Leão,5537,Bloco B
+60371b8f-6b47-4ec6-9c28-620cde92c884,23145391,PA,da Mata,Vila Rezende,2704,Bloco B
+d7951dd6-065a-442f-bea1-7fba02acdfab,97075315,AM,das Pedras,Trevo de Cavalcante,5425,Apto 12
+535ade46-6d61-4e8c-813d-b1cc51b6450d,12345,RR,das Pedras,Chácara Siqueira,9079,
+75b2485b-501b-4e4b-90ad-6fa3aeeb3550,46945920,SC,dos Dourados,Viaduto da Paz,8850,Casa 2
+53ddcc51-8552-48a0-8524-3ffbd37b52dd,01315-218,MA,das Flores,Viela de Gonçalves,3892,
+4b5e19a9-9c6d-4e99-bd7c-87fe6591e942,29717265,RJ,do Amparo,Lago de Marques,9006,Bloco B

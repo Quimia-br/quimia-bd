@@ -1,6 +1,3 @@
--- VALIDATE — stg_estante
--- Roda após o COPY bruto. Parâmetro :batch_id (UUID) do lote.
-
 UPDATE stg_estante
 SET status = 'rejeitado', motivo_rejeicao = 'nome vazio'
 WHERE id_batch = :batch_id

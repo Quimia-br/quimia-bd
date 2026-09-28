@@ -1,4 +1,6 @@
-CREATE TABLE IF NOT EXISTS stg_produto (
+DROP TABLE IF EXISTS stg_produto;
+
+CREATE TABLE stg_produto (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_batch UUID NOT NULL,
     nome_raw TEXT,
@@ -7,6 +9,7 @@ CREATE TABLE IF NOT EXISTS stg_produto (
     tipo_produto_raw TEXT,
     cod_barras_raw TEXT,
     foto_url_raw TEXT,
+    id_comodo_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
         CHECK (status IN ('pendente','ok','rejeitado')),
     motivo_rejeicao TEXT,
