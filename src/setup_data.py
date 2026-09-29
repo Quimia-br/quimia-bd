@@ -25,6 +25,7 @@ from src.database.utils.data_generators.generate_incompatibilidade_regra import 
     gerar_incompatibilidade_regra, buscar_ids as buscar_ids_ir,
 )
 from src.database.utils.data_generators import generate_comodo as gerador_comodo
+from src.database.utils.data_generators.generate_users import mockar_seguranca_login
 
 def salvar_csv(caminho: str, linhas: list[dict], fieldnames: list[str]):
     with open(caminho, "w", newline="", encoding="utf-8") as f:
@@ -96,13 +97,14 @@ def main():
     rodar_pipeline("usuario", "src/database/sql/data_load/mocks/usuario.csv")
     rodar_pipeline("empresa", "src/database/sql/data_load/mocks/empresa.csv")
 
-    # Os ids de usuario (gen_random_uuid) e de empresa (serial) mudam a cada setup,
-    # então os CSVs que apontam para eles são gerados agora, com os ids recém-migrados.
+
     conn = get_connection()
     ids_usuario = buscar_usuarios_existentes(conn)
     with conn.cursor() as cur:
         cur.execute("SELECT id FROM empresa")
         ids_empresa = [linha[0] for linha in cur.fetchall()]
+    n_mockados = mockar_seguranca_login(conn)
+    print(f"[usuario] {n_mockados} usuário(s) com histórico de login malsucedido simulado")
     conn.close()
 
     csv_ponto = salvar_csv(

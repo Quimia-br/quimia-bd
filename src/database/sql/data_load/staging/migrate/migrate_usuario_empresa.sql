@@ -1,4 +1,4 @@
-INSERT INTO usuario (nome, email, data_nasc, foto_url, senha, nivel_acesso, ultima_sessao)
+INSERT INTO usuario (nome, email, data_nasc, foto_url, senha_hash, nivel_acesso, ultima_sessao)
 SELECT
     btrim(nome_raw),
     lower(btrim(email_raw)),
