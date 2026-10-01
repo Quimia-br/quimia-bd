@@ -12,7 +12,7 @@ WHERE id_batch = :batch_id
   AND status = 'ok';
 
   
-INSERT INTO empresa (nome, email, cnpj, senha, foto_url, ativo)
+INSERT INTO empresa (nome, email, cnpj, senha_hash, foto_url, ativo)
 SELECT
     btrim(nome_raw),
     lower(btrim(email_raw)),

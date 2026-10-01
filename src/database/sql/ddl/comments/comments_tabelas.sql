@@ -12,7 +12,7 @@ COMMENT ON COLUMN empresa.nome IS 'Razão social ou nome fantasia da empresa.';
 COMMENT ON COLUMN empresa.email IS 'E-mail de login da empresa.';
 COMMENT ON COLUMN empresa.cnpj IS 'CNPJ da empresa, único no sistema.';
 COMMENT ON COLUMN empresa.ativo IS 'Indica se a parceria está ativa.';
-COMMENT ON COLUMN empresa.senha IS 'Hash bcrypt da senha. A senha em texto nunca é armazenada.';
+COMMENT ON COLUMN empresa.senha_hash IS 'Hash bcrypt da senha. A senha em texto nunca é armazenada.';
 COMMENT ON COLUMN empresa.foto_url IS 'URL do logotipo da empresa.';
 
 -- usuario -------------------------------------------------------------
