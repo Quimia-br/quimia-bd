@@ -74,7 +74,7 @@ UPDATE catalogo_coluna AS cc SET dado_pessoal_lgpd = TRUE
         ('localizacao_usuario', 'cep'), ('localizacao_usuario', 'bairro'),
         ('localizacao_usuario', 'rua'), ('localizacao_usuario', 'numero'),
         ('localizacao_usuario', 'complemento'),
-        ('empresa', 'email'), ('empresa', 'senha'),
+        ('empresa', 'email'), ('empresa', 'senha_hash'),
         ('log_auditoria', 'dado_anterior'), ('log_auditoria', 'dado_novo'),
         ('refresh_token', 'token_hash')
    );
@@ -89,7 +89,7 @@ UPDATE catalogo_coluna AS cc SET regra_negocio = v.regra
         ('usuario', 'ultima_sessao',                 'Mantida por trigger; não atualizar manualmente.'),
         ('usuario', 'falhas_login',                  'Incrementado a cada login malsucedido; zerado em login bem-sucedido.'),
         ('usuario', 'bloqueado_ate',                 'Enquanto no futuro, login deve ser recusado mesmo com credenciais corretas.'),
-        ('empresa', 'senha',                         'Armazenar apenas hash bcrypt.'),
+        ('empresa', 'senha_hash',                    'Armazenar apenas hash bcrypt.'),
         ('empresa', 'cnpj',                          'Único no sistema.'),
         ('localizacao_usuario', 'id_usuario',        'Único: no máximo um endereço por usuário.'),
         ('marca', 'nome',                            'Único no sistema.'),

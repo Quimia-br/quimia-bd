@@ -46,7 +46,7 @@ CREATE TABLE empresa (
     email VARCHAR(255) NOT NULL,
     cnpj   VARCHAR(20) UNIQUE,
     ativo  BOOLEAN DEFAULT TRUE,
-    senha VARCHAR(100) NOT NULL,
+    senha_hash VARCHAR(100) NOT NULL,
     foto_url VARCHAR(200)
 );
 
