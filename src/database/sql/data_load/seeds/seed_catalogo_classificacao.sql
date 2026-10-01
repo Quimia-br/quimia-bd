@@ -70,11 +70,11 @@ UPDATE catalogo_coluna AS cc SET dado_pessoal_lgpd = TRUE
  WHERE ct.id = cc.id_catalogo_tabela
    AND (ct.nome_tabela, cc.nome_coluna) IN (
         ('usuario', 'nome'), ('usuario', 'email'), ('usuario', 'data_nasc'),
-        ('usuario', 'foto_url'), ('usuario', 'senha_hash'),
+        ('usuario', 'foto_url'), ('usuario', 'senha'),
         ('localizacao_usuario', 'cep'), ('localizacao_usuario', 'bairro'),
         ('localizacao_usuario', 'rua'), ('localizacao_usuario', 'numero'),
         ('localizacao_usuario', 'complemento'),
-        ('empresa', 'email'), ('empresa', 'senha_hash'),
+        ('empresa', 'email'), ('empresa', 'senha'),
         ('log_auditoria', 'dado_anterior'), ('log_auditoria', 'dado_novo'),
         ('refresh_token', 'token_hash')
    );
@@ -83,13 +83,13 @@ UPDATE catalogo_coluna AS cc SET dado_pessoal_lgpd = TRUE
 UPDATE catalogo_coluna AS cc SET regra_negocio = v.regra
   FROM catalogo_tabela ct,
        (VALUES
-        ('usuario', 'senha_hash',                    'Armazenar apenas hash bcrypt.'),
+        ('usuario', 'senha',                         'Armazenar apenas hash bcrypt.'),
         ('usuario', 'email',                         'Único no sistema.'),
         ('usuario', 'nivel_acesso',                  'Valores permitidos: usuario, empresa, admin (CHECK).'),
         ('usuario', 'ultima_sessao',                 'Mantida por trigger; não atualizar manualmente.'),
         ('usuario', 'falhas_login',                  'Incrementado a cada login malsucedido; zerado em login bem-sucedido.'),
         ('usuario', 'bloqueado_ate',                 'Enquanto no futuro, login deve ser recusado mesmo com credenciais corretas.'),
-        ('empresa', 'senha_hash',                    'Armazenar apenas hash bcrypt.'),
+        ('empresa', 'senha',                         'Armazenar apenas hash bcrypt.'),
         ('empresa', 'cnpj',                          'Único no sistema.'),
         ('localizacao_usuario', 'id_usuario',        'Único: no máximo um endereço por usuário.'),
         ('marca', 'nome',                            'Único no sistema.'),

@@ -12,7 +12,7 @@ COMMENT ON COLUMN empresa.nome IS 'Razão social ou nome fantasia da empresa.';
 COMMENT ON COLUMN empresa.email IS 'E-mail de login da empresa.';
 COMMENT ON COLUMN empresa.cnpj IS 'CNPJ da empresa, único no sistema.';
 COMMENT ON COLUMN empresa.ativo IS 'Indica se a parceria está ativa.';
-COMMENT ON COLUMN empresa.senha_hash IS 'Hash bcrypt da senha. A senha em texto nunca é armazenada.';
+COMMENT ON COLUMN empresa.senha IS 'Hash bcrypt da senha. A senha em texto nunca é armazenada.';
 COMMENT ON COLUMN empresa.foto_url IS 'URL do logotipo da empresa.';
 
 -- usuario -------------------------------------------------------------
@@ -23,7 +23,7 @@ COMMENT ON COLUMN usuario.nome IS 'Nome completo do usuário (dado pessoal).';
 COMMENT ON COLUMN usuario.email IS 'E-mail de login, único no sistema.';
 COMMENT ON COLUMN usuario.data_nasc IS 'Data de nascimento (dado pessoal).';
 COMMENT ON COLUMN usuario.foto_url IS 'URL da foto de perfil (dado pessoal).';
-COMMENT ON COLUMN usuario.senha_hash IS 'Hash bcrypt da senha (60 caracteres). A senha em texto nunca é armazenada.';
+COMMENT ON COLUMN usuario.senha IS 'Hash bcrypt da senha (60 caracteres). A senha em texto nunca é armazenada.';
 COMMENT ON COLUMN usuario.nivel_acesso IS 'Perfil de acesso: usuario, empresa ou admin.';
 COMMENT ON COLUMN usuario.falhas_login IS 'Quantidade de tentativas de login malsucedidas consecutivas.';
 COMMENT ON COLUMN usuario.bloqueado_ate IS 'Momento até o qual o login do usuário fica bloqueado (NULL se não bloqueado).';
