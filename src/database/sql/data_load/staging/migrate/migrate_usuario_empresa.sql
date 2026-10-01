@@ -1,4 +1,4 @@
-INSERT INTO usuario (nome, email, data_nasc, foto_url, senha_hash, nivel_acesso, ultima_sessao)
+INSERT INTO usuario (nome, email, data_nasc, foto_url, senha, nivel_acesso, ultima_sessao)
 SELECT
     btrim(nome_raw),
     lower(btrim(email_raw)),
@@ -12,7 +12,7 @@ WHERE id_batch = :batch_id
   AND status = 'ok';
 
   
-INSERT INTO empresa (nome, email, cnpj, senha_hash, foto_url, ativo)
+INSERT INTO empresa (nome, email, cnpj, senha, foto_url, ativo)
 SELECT
     btrim(nome_raw),
     lower(btrim(email_raw)),

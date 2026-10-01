@@ -46,7 +46,7 @@ CREATE TABLE empresa (
     email VARCHAR(255) NOT NULL,
     cnpj   VARCHAR(20) UNIQUE,
     ativo  BOOLEAN DEFAULT TRUE,
-    senha_hash VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
     foto_url VARCHAR(200)
 );
 
@@ -56,7 +56,7 @@ CREATE TABLE usuario (
     email VARCHAR(255) UNIQUE NOT NULL,
     data_nasc DATE,
     foto_url VARCHAR(450),
-    senha_hash VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
     nivel_acesso  VARCHAR(50) NOT NULL DEFAULT 'usuario'
         CHECK (nivel_acesso IN ('usuario', 'empresa', 'admin')),
     ultima_sessao TIMESTAMPTZ,
