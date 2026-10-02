@@ -43,25 +43,6 @@ WHERE id_batch = :batch_id
   AND btrim(foto_url_raw) <> ''
   AND foto_url_raw !~* '^https?://';
 
-UPDATE stg_produto
-SET status = 'rejeitado', motivo_rejeicao = 'id_comodo com formato inválido'
-WHERE id_batch = :batch_id
-  AND status = 'pendente'
-  AND id_comodo_raw IS NOT NULL
-  AND btrim(id_comodo_raw) <> ''
-  AND id_comodo_raw !~ '^[0-9]+$';
-
-UPDATE stg_produto sp
-SET status = 'rejeitado', motivo_rejeicao = 'comodo não encontrado'
-WHERE sp.id_batch = :batch_id
-  AND sp.status = 'pendente'
-  AND sp.id_comodo_raw IS NOT NULL
-  AND btrim(sp.id_comodo_raw) <> ''
-  AND NOT EXISTS (
-      SELECT 1 FROM comodo c WHERE c.id = sp.id_comodo_raw::integer
-  );
-
-
 WITH duplicatas AS (
     SELECT id,
            ROW_NUMBER() OVER (PARTITION BY btrim(cod_barras_raw) ORDER BY id) AS rn
