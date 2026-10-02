@@ -21,6 +21,7 @@ COMMENT ON COLUMN dim_produto.nome_produto IS 'Nome comercial do produto.';
 COMMENT ON COLUMN dim_produto.tipo_produto IS 'Categoria do produto.';
 COMMENT ON COLUMN dim_produto.nome_marca IS 'Nome da marca fabricante.';
 COMMENT ON COLUMN dim_produto.cod_barras IS 'Código de barras (EAN).';
+COMMENT ON COLUMN dim_produto.ativo IS 'false = produto excluído no portal (soft-delete em empresa_produto.ativo); permanece na dimensão para preservar o histórico.';
 
 COMMENT ON VIEW dim_usuario IS
 'Dimensão de usuários sem nome nem e-mail, de propósito (LGPD); expõe apenas perfil e região.';
