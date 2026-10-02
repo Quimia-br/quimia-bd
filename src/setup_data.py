@@ -68,6 +68,7 @@ def main():
 
         "src/database/sql/routines/procedures/pd_cadastrar_produto_completo.sql",
         "src/database/sql/routines/procedures/pd_registrar_consulta_match.sql",
+        "src/database/sql/routines/procedures/pd_guardar_produto_estante.sql",
 
         "src/database/sql/routines/triggers/trg_atualizar_ultima_sessao.sql",
         "src/database/sql/routines/triggers/trg_auditoria_fds.sql",

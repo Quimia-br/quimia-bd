@@ -37,7 +37,8 @@ DROP TABLE IF EXISTS log_rpa_execucao CASCADE;
 
 CREATE TABLE marca (
     id   INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL UNIQUE
+    nome VARCHAR(255) NOT NULL UNIQUE,
+    logo_url VARCHAR(450)
 );
 
 CREATE TABLE empresa (
@@ -104,8 +105,7 @@ CREATE TABLE produto (
             'desengraxante','alvejante','aromatizante','outro'
         )),
     cod_barras   VARCHAR(255) UNIQUE,
-    foto_url     VARCHAR(450),
-    id_comodo    INTEGER
+    foto_url     VARCHAR(450)
 
 );
 
@@ -116,7 +116,8 @@ CREATE TABLE fds (
     data_atualizacao DATE,
     ativo            BOOLEAN NOT NULL DEFAULT TRUE,
     fonte_url        TEXT,
-    raw_json         JSONB
+    raw_json         JSONB,
+    resumo_simplificado TEXT
 );
 
 CREATE TABLE fds_primeiro_socorro (
@@ -220,7 +221,8 @@ CREATE TABLE estante (
     id         INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario UUID NOT NULL,
     nome       VARCHAR(255),
-    criado_em  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    criado_em  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT estante_usuario_unique UNIQUE (id_usuario)
 );
 
 CREATE TABLE comodo (
@@ -235,6 +237,7 @@ CREATE TABLE estante_produto (
     id_produto  INTEGER NOT NULL,
     id_usuario  UUID NOT NULL,
     id_estante  INTEGER NOT NULL,
+    id_comodo   INTEGER,
     CONSTRAINT estante_produto_unique UNIQUE (id_estante, id_produto)
 );
 

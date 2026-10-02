@@ -3,6 +3,7 @@ COMMENT ON TABLE marca IS
 'Catálogo de marcas dos produtos de limpeza.';
 COMMENT ON COLUMN marca.id IS 'Identificador da marca.';
 COMMENT ON COLUMN marca.nome IS 'Nome comercial da marca, único no sistema.';
+COMMENT ON COLUMN marca.logo_url IS 'URL da logo da marca.';
 
 -- empresa -------------------------------------------------------------
 COMMENT ON TABLE empresa IS
@@ -82,7 +83,6 @@ COMMENT ON COLUMN produto.descricao IS 'Descrição do produto e do seu uso.';
 COMMENT ON COLUMN produto.tipo_produto IS 'Categoria: limpeza_geral, desinfetante, desincrustante, desengraxante, alvejante, aromatizante ou outro.';
 COMMENT ON COLUMN produto.cod_barras IS 'Código de barras (EAN), único; usado na leitura pelo app.';
 COMMENT ON COLUMN produto.foto_url IS 'URL da foto da embalagem.';
-COMMENT ON COLUMN produto.id_comodo IS 'Cômodo onde o produto está guardado (opcional).';
 
 -- empresa_produto -----------------------------------------------------
 COMMENT ON TABLE empresa_produto IS
@@ -90,7 +90,7 @@ COMMENT ON TABLE empresa_produto IS
 COMMENT ON COLUMN empresa_produto.id IS 'Identificador da associação.';
 COMMENT ON COLUMN empresa_produto.id_empresa IS 'Empresa parceira.';
 COMMENT ON COLUMN empresa_produto.id_produto IS 'Produto vinculado; o par empresa x produto é único.';
-COMMENT ON COLUMN empresa_produto.ativo IS 'Indica se o vínculo está ativo.';
+COMMENT ON COLUMN empresa_produto.ativo IS 'Soft-delete do produto no portal: false = excluído (nunca se dá DELETE em produto).';
 COMMENT ON COLUMN empresa_produto.data_cadastro IS 'Momento em que o vínculo foi criado.';
 
 -- fds -----------------------------------------------------------------
@@ -103,6 +103,7 @@ COMMENT ON COLUMN fds.data_atualizacao IS 'Data de revisão da ficha informada p
 COMMENT ON COLUMN fds.ativo IS 'Indica se é a ficha vigente do produto.';
 COMMENT ON COLUMN fds.fonte_url IS 'URL de origem do PDF da ficha.';
 COMMENT ON COLUMN fds.raw_json IS 'JSON canônico gerado pelo parser de PDF; fonte de verdade. Chaves de seção são strings ("03", "10", "13"). Processado por trg_processar_fds_raw_json.';
+COMMENT ON COLUMN fds.resumo_simplificado IS 'Resumo da ficha em linguagem simples, exibido ao usuário.';
 
 -- fds_primeiro_socorro ------------------------------------------------
 COMMENT ON TABLE fds_primeiro_socorro IS
@@ -173,7 +174,7 @@ COMMENT ON COLUMN sinonimo_pendente.resolvido_em IS 'Momento em que a pendência
 COMMENT ON TABLE estante IS
 'Agrupamento pessoal de produtos do usuário (ex.: "Área de serviço").';
 COMMENT ON COLUMN estante.id IS 'Identificador da estante.';
-COMMENT ON COLUMN estante.id_usuario IS 'Usuário dono da estante.';
+COMMENT ON COLUMN estante.id_usuario IS 'Usuário dono da estante; único (uma estante por usuário, criada no primeiro "Guardar" por guardar_produto_estante).';
 COMMENT ON COLUMN estante.nome IS 'Nome dado pelo usuário à estante.';
 COMMENT ON COLUMN estante.criado_em IS 'Momento de criação da estante.';
 
@@ -192,6 +193,7 @@ COMMENT ON COLUMN estante_produto.id IS 'Identificador do item na estante.';
 COMMENT ON COLUMN estante_produto.id_produto IS 'Produto guardado.';
 COMMENT ON COLUMN estante_produto.id_usuario IS 'Usuário dono; deve ser o mesmo dono da estante.';
 COMMENT ON COLUMN estante_produto.id_estante IS 'Estante onde o produto está; o par estante x produto é único.';
+COMMENT ON COLUMN estante_produto.id_comodo IS 'Cômodo onde o produto está guardado (opcional).';
 
 -- historico_recomendacao ----------------------------------------------
 COMMENT ON TABLE historico_recomendacao IS

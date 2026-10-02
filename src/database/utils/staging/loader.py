@@ -129,7 +129,7 @@ TABELAS = {
     "stg_table": "stg_produto",
     "colunas": [
         "nome_raw", "id_marca_raw", "descricao_raw",
-        "tipo_produto_raw", "cod_barras_raw", "foto_url_raw", "id_comodo_raw",
+        "tipo_produto_raw", "cod_barras_raw", "foto_url_raw",
     ],
     "validate_sql": BASE_DIR / "validate" / "validate_produto.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_produto.sql",
