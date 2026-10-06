@@ -24,7 +24,8 @@ from src.database.utils.data_generators.generate_historico_recomendacao import (
 from src.database.utils.data_generators.generate_incompatibilidade_regra import (
     gerar_incompatibilidade_regra, buscar_ids as buscar_ids_ir,
 )
-
+from src.database.utils.data_generators import generate_sessao_acesso as gerador_sessao_acesso
+ 
 
 def salvar_csv(caminho: str, linhas: list[dict], fieldnames: list[str]):
     with open(caminho, "w", newline="", encoding="utf-8") as f:
@@ -36,35 +37,37 @@ def salvar_csv(caminho: str, linhas: list[dict], fieldnames: list[str]):
 
 def main():
     executar_scripts([
-        "src/database/sql/ddl/tables/create_tables.sql",
-        "src/database/sql/logs/sessao_acesso.sql",
-        "src/database/sql/logs/log_auditoria.sql",
+         "src/database/sql/ddl/tables/create_tables.sql",
+         "src/database/sql/logs/sessao_acesso.sql",
+         "src/database/sql/logs/log_auditoria.sql",
+         "src/database/sql/logs/log_rpa_execucao.sql",
         "src/database/sql/ddl/tables/catalogo.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_usuario_empresa.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_ponto_parceiro.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_localizacao_usuario.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_marca.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_usuario_empresa.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_ponto_parceiro.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_localizacao_usuario.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_marca.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_classe_quimica.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_substancia.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_estante.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_substancia_classe_quimica.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_substancia_sinonimo.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_produto.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_historico_recomendacao.sql",
-        "src/database/sql/data_load/staging/ddl_staging/stg_incompatibilidade_regra.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_substancia.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_estante.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_substancia_classe_quimica.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_substancia_sinonimo.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_produto.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_historico_recomendacao.sql",
+         "src/database/sql/data_load/staging/ddl_staging/stg_incompatibilidade_regra.sql",
+        "src/database/sql/data_load/staging/ddl_staging/stg_sessao_acesso.sql",
 
-        "src/database/sql/routines/functions/fn_auditoria.sql",
-        "src/database/sql/routines/functions/fn_atualizar_ultima_sessao.sql",
-        "src/database/sql/routines/functions/fn_buscar_dados_fds.sql",
-        "src/database/sql/routines/functions/fn_buscar_incompatibilidades_existentes.sql",
-        "src/database/sql/routines/functions/fn_match.sql",
-        "src/database/sql/routines/functions/fn_processar_fds_raw_json.sql",
-        "src/database/sql/routines/functions/fn_validar_estante_produto.sql",
-        "src/database/sql/routines/functions/fn_trg_processar_fds_raw_json.sql",
-        "src/database/sql/routines/functions/fn_sincronizar_catalogo.sql",
+         "src/database/sql/routines/functions/fn_auditoria.sql",
+         "src/database/sql/routines/functions/fn_atualizar_ultima_sessao.sql",
+         "src/database/sql/routines/functions/fn_buscar_dados_fds.sql",
+         "src/database/sql/routines/functions/fn_buscar_incompatibilidades_existentes.sql",
+         "src/database/sql/routines/functions/fn_match.sql",
+         "src/database/sql/routines/functions/fn_processar_fds_raw_json.sql",
+         "src/database/sql/routines/functions/fn_validar_estante_produto.sql",
+         "src/database/sql/routines/functions/fn_trg_processar_fds_raw_json.sql",
+         "src/database/sql/routines/functions/fn_sincronizar_catalogo.sql",
 
-        "src/database/sql/routines/procedures/pd_cadastrar_produto_completo.sql",
-        "src/database/sql/routines/procedures/pd_registrar_consulta_match.sql",
+         "src/database/sql/routines/procedures/pd_cadastrar_produto_completo.sql",
+         "src/database/sql/routines/procedures/pd_registrar_consulta_match.sql",
 
         "src/database/sql/routines/triggers/trg_atualizar_ultima_sessao.sql",
         "src/database/sql/routines/triggers/trg_auditoria_fds.sql",
@@ -93,8 +96,7 @@ def main():
     rodar_pipeline("usuario", "src/database/sql/data_load/mocks/usuario.csv")
     rodar_pipeline("empresa", "src/database/sql/data_load/mocks/empresa.csv")
 
-    # Os ids de usuario (gen_random_uuid) e de empresa (serial) mudam a cada setup,
-    # então os CSVs que apontam para eles são gerados agora, com os ids recém-migrados.
+
     conn = get_connection()
     ids_usuario = buscar_usuarios_existentes(conn)
     with conn.cursor() as cur:
@@ -206,6 +208,18 @@ def main():
     )
     rodar_pipeline("incompatibilidade_regra", csv_incompatibilidade)
 
+
+    conn = get_connection()
+    ids_usuario_sessao = gerador_sessao_acesso.buscar_ids(conn)
+    conn.close()
+ 
+    linhas_sessao = gerador_sessao_acesso.gerar_sessoes(ids_usuario_sessao, dias=60, proporcao_ruido=0)
+    caminho_csv_sessao = gerador_sessao_acesso.salvar_csv(
+    linhas_sessao,
+    caminho="src/database/sql/data_load/mocks/sessao_acesso.csv",
+    )
+    rodar_pipeline("sessao_acesso", caminho_csv_sessao)
+    
     executar_scripts([
         "src/database/sql/data_mart/dim/dim_tempo.sql",
         "src/database/sql/data_mart/dim/dim_produto.sql",
