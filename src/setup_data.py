@@ -89,6 +89,7 @@ def main():
         "src/database/sql/indexes/idx_sessao_acesso_id_usuario.sql",
         "src/database/sql/indexes/idx_sessao_acesso_ocorreu_em.sql",
         "src/database/sql/indexes/idx_log_auditoria_tabela_data.sql",
+        
 
         "src/database/sql/ddl/comments/comments_tabelas.sql",
     ])
@@ -102,6 +103,8 @@ def main():
     with conn.cursor() as cur:
         cur.execute("SELECT id FROM empresa")
         ids_empresa = [linha[0] for linha in cur.fetchall()]
+    n_mockados = mockar_seguranca_login(conn)
+    print(f"[usuario] {n_mockados} usuário(s) com histórico de login malsucedido simulado")
     conn.close()
 
     csv_ponto = salvar_csv(
@@ -127,7 +130,7 @@ def main():
     csv_estante = salvar_csv(
         "src/database/sql/data_load/mocks/estante.csv",
         linhas_estante,
-        ["id_usuario", "nome", "ambiente"],
+        ["id_usuario", "nome"],
     )
     rodar_pipeline("estante", csv_estante)
 

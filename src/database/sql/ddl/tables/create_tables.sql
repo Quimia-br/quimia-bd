@@ -11,6 +11,7 @@ ALTER TABLE IF EXISTS stg_historico_recomendacao DROP COLUMN IF EXISTS id_superf
 DROP TABLE IF EXISTS historico_recomendacao CASCADE;
 DROP TABLE IF EXISTS estante_produto CASCADE;
 DROP TABLE IF EXISTS estante CASCADE;
+DROP TABLE IF EXISTS comodo CASCADE;
 DROP TABLE IF EXISTS localizacao_usuario CASCADE;
 DROP TABLE IF EXISTS sinonimo_pendente CASCADE;
 DROP TABLE IF EXISTS incompatibilidade_regra CASCADE;
@@ -36,7 +37,8 @@ DROP TABLE IF EXISTS log_rpa_execucao CASCADE;
 
 CREATE TABLE marca (
     id   INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL UNIQUE
+    nome VARCHAR(255) NOT NULL UNIQUE,
+    logo_url VARCHAR(450)
 );
 
 CREATE TABLE empresa (
@@ -58,7 +60,10 @@ CREATE TABLE usuario (
     senha VARCHAR(100) NOT NULL,
     nivel_acesso  VARCHAR(50) NOT NULL DEFAULT 'usuario'
         CHECK (nivel_acesso IN ('usuario', 'empresa', 'admin')),
-    ultima_sessao TIMESTAMPTZ
+    ultima_sessao TIMESTAMPTZ,
+    falhas_login INTEGER NOT NULL DEFAULT 0,
+    bloqueado_ate TIMESTAMPTZ,
+    ultima_falha_em TIMESTAMPTZ
 );
 
 CREATE TABLE classe_quimica (
@@ -111,7 +116,8 @@ CREATE TABLE fds (
     data_atualizacao DATE,
     ativo            BOOLEAN NOT NULL DEFAULT TRUE,
     fonte_url        TEXT,
-    raw_json         JSONB
+    raw_json         JSONB,
+    resumo_simplificado TEXT
 );
 
 CREATE TABLE fds_primeiro_socorro (
@@ -215,8 +221,15 @@ CREATE TABLE estante (
     id         INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario UUID NOT NULL,
     nome       VARCHAR(255),
-    ambiente   VARCHAR(255),
-    criado_em  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    criado_em  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT estante_usuario_unique UNIQUE (id_usuario)
+);
+
+CREATE TABLE comodo (
+    id           INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_usuario   UUID NOT NULL,
+    nome         VARCHAR(100),
+    icone_comodo VARCHAR(250)
 );
 
 CREATE TABLE estante_produto (
@@ -224,6 +237,7 @@ CREATE TABLE estante_produto (
     id_produto  INTEGER NOT NULL,
     id_usuario  UUID NOT NULL,
     id_estante  INTEGER NOT NULL,
+    id_comodo   INTEGER,
     CONSTRAINT estante_produto_unique UNIQUE (id_estante, id_produto)
 );
 

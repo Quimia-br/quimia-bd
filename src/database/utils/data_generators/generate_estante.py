@@ -25,11 +25,6 @@ from src.database.connection import get_connection
 fake = Faker("pt_BR")
 random.seed(42)
 
-AMBIENTES = [
-    "Cozinha", "Banheiro", "Lavanderia", "Área de serviço",
-    "Quintal", "Garagem", "Sala", "Quarto", "Despensa",
-]
-
 
 def buscar_usuarios_existentes(conn):
     """Busca os UUIDs já migrados na tabela oficial `usuario`."""
@@ -81,7 +76,6 @@ def gerar_estante(n=100, ids_usuario=None):
     linhas = []
     for _ in range(n):
         roll = random.random()
-        ambiente = random.choice(AMBIENTES)
 
         if roll < 0.85:
             id_usuario = random.choice(ids_usuario)
@@ -97,7 +91,6 @@ def gerar_estante(n=100, ids_usuario=None):
         linhas.append({
             "id_usuario": id_usuario,
             "nome": nome,
-            "ambiente": ambiente,
         })
 
     return linhas
@@ -116,7 +109,7 @@ if __name__ == "__main__":
     linhas = gerar_estante(n=args.n, ids_usuario=ids_usuario)
 
     with open(args.saida, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["id_usuario", "nome", "ambiente"])
+        writer = csv.DictWriter(f, fieldnames=["id_usuario", "nome"])
         writer.writeheader()
         writer.writerows(linhas)
 

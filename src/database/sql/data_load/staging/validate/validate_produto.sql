@@ -43,7 +43,6 @@ WHERE id_batch = :batch_id
   AND btrim(foto_url_raw) <> ''
   AND foto_url_raw !~* '^https?://';
 
-
 WITH duplicatas AS (
     SELECT id,
            ROW_NUMBER() OVER (PARTITION BY btrim(cod_barras_raw) ORDER BY id) AS rn

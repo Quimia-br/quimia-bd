@@ -1,4 +1,6 @@
-CREATE TABLE IF NOT EXISTS stg_produto (
+DROP TABLE IF EXISTS stg_produto;
+
+CREATE TABLE stg_produto (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_batch UUID NOT NULL,
     nome_raw TEXT,

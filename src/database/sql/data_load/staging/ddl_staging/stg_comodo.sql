@@ -1,4 +1,4 @@
--- STAGING DDL — estante
+-- STAGING DDL — comodo
 -- Staging COMUM (não persistente) — TRUNCATE a cada rodada,
 -- feito pelo loader.py antes do COPY.
 --
@@ -7,11 +7,12 @@
 -- inválido (ex: "uuid-invalido-123") e rejeitar no validate, em vez
 -- de estourar erro de tipo já no COPY.
 
-CREATE TABLE IF NOT EXISTS stg_estante (
+CREATE TABLE IF NOT EXISTS stg_comodo (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_batch UUID NOT NULL,
     id_usuario_raw TEXT,
     nome_raw TEXT,
+    icone_comodo_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
         CHECK (status IN ('pendente','ok','rejeitado')),
     motivo_rejeicao TEXT,
