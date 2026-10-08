@@ -149,6 +149,11 @@ TABELAS = {
     ],
     "validate_sql": BASE_DIR / "validate" / "validate_incompatibilidade_regra.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_incompatibilidade_regra.sql",
+    },"sessao_acesso": {
+    "stg_table": "stg_sessao_acesso",
+    "colunas": ["id_usuario_raw", "ocorreu_em_raw"],
+    "validate_sql": BASE_DIR/"validate"/"validate_sessao_acesso.sql",
+    "migrate_sql": BASE_DIR/"migrate"/"migrate_sessao_acesso.sql",
     },
 }   
 

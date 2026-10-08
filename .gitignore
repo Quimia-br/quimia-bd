@@ -1,7 +1,7 @@
 .env
 **/__pycache__/
 *.pyc
-src/database/sql/data_load/seeds/*.csv
-src/database/sql/data_load/mocks/*.csv
+src/database/utils/data_load/*.csv
 src/rpa/extractors/*.csv
 src/rpa/logs/*.csv
+src\database\sql\data_load\mocks
