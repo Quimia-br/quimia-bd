@@ -103,8 +103,8 @@ def main():
     with conn.cursor() as cur:
         cur.execute("SELECT id FROM empresa")
         ids_empresa = [linha[0] for linha in cur.fetchall()]
-    n_mockados = mockar_seguranca_login(conn)
-    print(f"[usuario] {n_mockados} usuário(s) com histórico de login malsucedido simulado")
+    #n_mockados = mockar_seguranca_login(conn)
+    #print(f"[usuario] {n_mockados} usuário(s) com histórico de login malsucedido simulado")
     conn.close()
 
     csv_ponto = salvar_csv(
