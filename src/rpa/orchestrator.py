@@ -4,7 +4,7 @@ Ponto de entrada único do RPA — chamado pelo agendador (cron / Task Scheduler
 import logging
 import os
 
-from src.database.utils.staging import loader  # pipeline stg_* -> validate -> migrate já existente
+from src.database.utils.staging import loader
 from src.rpa import log_execucao
 from src.rpa.extractors import extrair_usuario
 
@@ -47,7 +47,6 @@ def rodar_processo(nome_processo: str, funcao_extracao, tabela_loader: str) -> N
 def _salvar_csv_temporario(df, nome_processo: str) -> str:
     os.makedirs("src/rpa/_tmp", exist_ok=True)
     caminho = f"src/rpa/_tmp/{nome_processo}.csv"
-    # o loader lê com csv.DictReader (vírgula) e converte "" em NULL
     df.to_csv(caminho, index=False)
     return caminho
 

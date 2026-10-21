@@ -1,58 +1,70 @@
 """
-Extractor de usuario: banco legado (modelo da outra equipe) -> staging do Quimia.
+Extrator de usuario do banco legado -> Quimia (RPA).
 
-Devolve as colunas que o generate_users.py produz e que o loader lê
-(nome, email, data_nasc, foto_url, senha, nivel_acesso, ultima_sessao),
-mais data_alteracao, que o orchestrator usa como watermark e o loader ignora.
-
-Tabela do legado: public.usuarios (confirmada no banco do RPA).
-
-Legado -> Quimia
-    nome             -> nome
-    email            -> email
-    data_nascimento  -> data_nasc
-    url_foto         -> foto_url
-    senha_hash       -> senha   (precisa ser bcrypt de 60 chars, senão o validate rejeita)
-    data_cadastro    -> data_alteracao (só existe data de cadastro, então a carga
-                        incremental só pega usuários novos, não edições)
-    status           -> descartado (usuario não tem coluna de status)
-    id_usuario (INT) -> descartado (o id do Quimia é UUID; a chave natural é o email)
+    usuarios.nome            -> nome
+    usuarios.email           -> email (UNIQUE no legado)
+    usuarios.data_nascimento -> data_nasc
+    usuarios.data_cadastro   -> cadastro (também usado como watermark)
+    usuarios.url_foto        -> foto_url (CHECK no legado: só http:// ou https://)
+    usuarios.status          -> filtro (ver STATUS_IMPORTAVEIS); NÃO vai pro CSV
+    usuarios.senha_hash      -> NÃO copiado (ver decisão abaixo)
+    usuarios.id_usuario      -> id_legado (só referência, não vai pro CSV)
 """
+import bcrypt
 import pandas as pd
 from sqlalchemy import text
 
 from src.rpa.config import ENGINE_LEGADO
 
-TABELA_LEGADO = "usuarios"
 
-def main():
+STATUS_IMPORTAVEIS = {"ATIVO", "INATIVO", "PENDENTE", "BLOQUEADO", "DESATIVADO"}
 
-    def extrair(desde=None) -> pd.DataFrame:
-        """
-        desde=None     -> extração completa
-        desde=<data>   -> só usuários cadastrados depois dessa data/hora.
-        """
-        query = f"""
-            SELECT nome,
-                email,
-                data_nascimento AS data_nasc,
-                url_foto        AS foto_url,
-                senha_hash      AS senha,
-                data_cadastro   AS data_alteracao
-            FROM {TABELA_LEGADO}
-        """
+_SENHA_TEMPORARIA_HASH = bcrypt.hashpw(b"trocar_no_primeiro_login", bcrypt.gensalt()).decode()
+
+
+def extrair(desde=None) -> pd.DataFrame:
+    if desde is not None:
+        query = text("SELECT * FROM usuarios WHERE data_cadastro > :desde")
+        params = {"desde": desde}
+    else:
+        query = text("SELECT * FROM usuarios")
         params = {}
-        if desde is not None:
-            query += " WHERE data_cadastro > :desde"
-            params["desde"] = desde
 
-        with ENGINE_LEGADO.connect() as conn:
-            df = pd.read_sql(text(query), conn, params=params)
+    with ENGINE_LEGADO.connect() as conn:
+        df = pd.read_sql(query, conn, params=params)
 
-        df["nivel_acesso"] = "usuario"  # legado não separa nível; admin/empresa são tabelas próprias lá
-        df["ultima_sessao"] = None
-        return df[["nome", "email", "data_nasc", "foto_url", "senha",
-                "nivel_acesso", "ultima_sessao", "data_alteracao"]]
+    if df.empty:
+        return df
 
-if __name__ == "__main__":
-    main()
+
+    df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
+
+    print("DEBUG - colunas que vieram do banco legado:", list(df.columns))
+
+    df = df.rename(columns={
+        "id_usuario": "id_legado",
+        "nome": "nome_raw",
+        "email": "email_raw",
+        "data_nascimento": "data_nasc_raw",
+        "data_cadastro": "cadastro_raw",
+        "url_foto": "foto_url_raw",
+        "status": "status_legado_raw",
+    })
+
+    df["senha_raw"] = _SENHA_TEMPORARIA_HASH
+    df["nivel_acesso_raw"] = "padrao"
+
+    if "foto_url_raw" not in df.columns:
+        df["foto_url_raw"] = None
+
+    df = df[df["status_legado_raw"].str.upper().isin(STATUS_IMPORTAVEIS)]
+    if df.empty:
+        return df
+
+
+    colunas_staging = [
+        "nome_raw", "email_raw", "data_nasc_raw",
+        "senha_raw", "nivel_acesso_raw", "foto_url_raw", "cadastro_raw",
+    ]
+
+    return df[colunas_staging]
