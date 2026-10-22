@@ -12,7 +12,6 @@ CREATE TABLE IF NOT EXISTS stg_estante (
     id_batch UUID NOT NULL,
     id_usuario_raw TEXT,
     nome_raw TEXT,
-    ambiente_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
         CHECK (status IN ('pendente','ok','rejeitado')),
     motivo_rejeicao TEXT,

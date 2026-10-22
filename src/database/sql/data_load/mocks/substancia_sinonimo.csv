@@ -41,7 +41,7 @@ id_substancia,sinonimo
 2,AMÔNIA
 980455,Veritatis Hipoclorito
 14,DODECILBENZENOSSULFONATO DE SÓDIO
-5,HIDRÓXIDO DE SÓDIO
+15,FRAGRÂNCIA
 15,fragrância
 13,Ácido c.
 13,Ácido cítrico PA
@@ -61,7 +61,7 @@ id_substancia,sinonimo
 14,DODECILBENZENOSSULFONATO DE SÓDIO
 13,Ácido cítrico grau alimentício
 7,Etanol concentrado
-4,ÁCIDO ACÉTICO
+3,Ácido clorídrico industrial
 1,Hipoclorito de sódio técnico
 15,fragrância
 5,Hidróxido d.s.
@@ -97,6 +97,7 @@ id_substancia,sinonimo
 15,Veritatis Fragrância
 4,Ácido a.
 3,Ácido clorídrico grau alimentício
+4,ÁCIDO ACÉTICO
 14,Dodecilbenzenossulfonato d.s.
 14,Dodecilbenzenossulfonato d.s.
 7,etanol

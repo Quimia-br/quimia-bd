@@ -8,7 +8,7 @@ bcrypt (60 caracteres).
 
 Uso:
     python generate_empresa.py
-    python generate_empresa.py --n 50 --saida empresa.csv
+    python generate_empresa.py --n 600 --saida empresa.csv
 
 Dependência: bcrypt (pip install bcrypt)
 """
@@ -126,7 +126,7 @@ def gerar_empresa(n=50):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--n", type=int, default=50, help="quantidade de linhas a gerar")
+    parser.add_argument("--n", type=int, default=600, help="quantidade de linhas a gerar")
     parser.add_argument("--saida", default="empresa.csv", help="caminho do CSV de saída")
     args = parser.parse_args()
 

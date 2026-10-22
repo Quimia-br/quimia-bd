@@ -6,15 +6,14 @@ já validado antes: e-mail inválido, CNPJ malformado, duplicata dentro
 do lote, campo vazio).
 
 Uso:
-    python gerar_dados_usuario_empresa.py
-
-Saída:
-    usuario.csv  (1000 linhas, ~92% válidas)
+    python generate_users.py
+    python generate_users.py --n 500 --saida usuario.csv
 
 Dependência nova: bcrypt (pip install bcrypt) — senhas são hasheadas
 aqui, nunca gravadas em texto puro no CSV.
 """
 
+import argparse
 import csv
 import random
 from datetime import datetime, timedelta
@@ -80,85 +79,157 @@ def gerar_foto_url(valida=True):
     return ""
 
 
-usuarios = []
-emails_usados = set()
+def gerar_usuarios(n=N_USUARIO):
+    usuarios = []
+    emails_usados = set()
 
-for i in range(N_USUARIO):
-    roll = random.random()
+    for i in range(n):
+        roll = random.random()
 
-    if roll < 0.80:
-        nome = fake.name()
-        email = fake.unique.email()
-        data_nasc = gerar_data_nasc(valida=True)
-        nivel_acesso = random.choice(NIVEIS_VALIDOS)
-        ultima_sessao = gerar_ultima_sessao()
-        senha = gerar_senha_hash(valida=True)
-        foto_url = gerar_foto_url(valida=True)
+        if roll < 0.80:
+            nome = fake.name()
+            email = fake.unique.email()
+            data_nasc = gerar_data_nasc(valida=True)
+            nivel_acesso = random.choice(NIVEIS_VALIDOS)
+            ultima_sessao = gerar_ultima_sessao()
+            senha = gerar_senha_hash(valida=True)
+            foto_url = gerar_foto_url(valida=True)
 
-    elif roll < 0.86:
-        nome = fake.name()
-        email = gerar_email_invalido()
-        data_nasc = gerar_data_nasc(valida=True)
-        nivel_acesso = random.choice(NIVEIS_VALIDOS)
-        ultima_sessao = gerar_ultima_sessao()
-        senha = gerar_senha_hash(valida=True)
-        foto_url = gerar_foto_url(valida=True)
+        elif roll < 0.86:
+            nome = fake.name()
+            email = gerar_email_invalido()
+            data_nasc = gerar_data_nasc(valida=True)
+            nivel_acesso = random.choice(NIVEIS_VALIDOS)
+            ultima_sessao = gerar_ultima_sessao()
+            senha = gerar_senha_hash(valida=True)
+            foto_url = gerar_foto_url(valida=True)
 
-    elif roll < 0.90:
-        nome = random.choice(["", "   "])
-        email = fake.unique.email()
-        data_nasc = gerar_data_nasc(valida=True)
-        nivel_acesso = random.choice(NIVEIS_VALIDOS)
-        ultima_sessao = gerar_ultima_sessao()
-        senha = gerar_senha_hash(valida=True)
-        foto_url = gerar_foto_url(valida=True)
+        elif roll < 0.90:
+            nome = random.choice(["", "   "])
+            email = fake.unique.email()
+            data_nasc = gerar_data_nasc(valida=True)
+            nivel_acesso = random.choice(NIVEIS_VALIDOS)
+            ultima_sessao = gerar_ultima_sessao()
+            senha = gerar_senha_hash(valida=True)
+            foto_url = gerar_foto_url(valida=True)
 
-    elif roll < 0.94:
-        nome = fake.name()
-        email = fake.unique.email()
-        data_nasc = gerar_data_nasc(valida=True)
-        nivel_acesso = random.choice(["superusuario", "root", "", "ADMIN "])
-        ultima_sessao = gerar_ultima_sessao()
-        senha = gerar_senha_hash(valida=True)
-        foto_url = gerar_foto_url(valida=True)
+        elif roll < 0.94:
+            nome = fake.name()
+            email = fake.unique.email()
+            data_nasc = gerar_data_nasc(valida=True)
+            nivel_acesso = random.choice(["superusuario", "root", "", "ADMIN "])
+            ultima_sessao = gerar_ultima_sessao()
+            senha = gerar_senha_hash(valida=True)
+            foto_url = gerar_foto_url(valida=True)
 
-    elif roll < 0.97:
-        nome = fake.name()
-        email = fake.unique.email()
-        data_nasc = gerar_data_nasc(valida=False)
-        nivel_acesso = random.choice(NIVEIS_VALIDOS)
-        ultima_sessao = gerar_ultima_sessao()
-        senha = gerar_senha_hash(valida=True)
-        foto_url = gerar_foto_url(valida=True)
+        elif roll < 0.97:
+            nome = fake.name()
+            email = fake.unique.email()
+            data_nasc = gerar_data_nasc(valida=False)
+            nivel_acesso = random.choice(NIVEIS_VALIDOS)
+            ultima_sessao = gerar_ultima_sessao()
+            senha = gerar_senha_hash(valida=True)
+            foto_url = gerar_foto_url(valida=True)
 
-    else:
-        nome = fake.name()
-        email = random.choice(list(emails_usados)) if emails_usados else fake.unique.email()
-        data_nasc = gerar_data_nasc(valida=True)
-        nivel_acesso = random.choice(NIVEIS_VALIDOS)
-        ultima_sessao = gerar_ultima_sessao()
-        senha = gerar_senha_hash(valida=random.random() > 0.5)
-        foto_url = gerar_foto_url(valida=True)
+        else:
+            nome = fake.name()
+            email = random.choice(list(emails_usados)) if emails_usados else fake.unique.email()
+            data_nasc = gerar_data_nasc(valida=True)
+            nivel_acesso = random.choice(NIVEIS_VALIDOS)
+            ultima_sessao = gerar_ultima_sessao()
+            senha = gerar_senha_hash(valida=random.random() > 0.5)
+            foto_url = gerar_foto_url(valida=True)
 
-    emails_usados.add(email)
-    usuarios.append(
-        {
-            "nome": nome,
-            "email": email,
-            "data_nasc": data_nasc,
-            "foto_url": foto_url,
-            "senha": senha,
-            "nivel_acesso": nivel_acesso,
-            "ultima_sessao": ultima_sessao,
-        }
-    )
+        emails_usados.add(email)
+        usuarios.append(
+            {
+                "nome": nome,
+                "email": email,
+                "data_nasc": data_nasc,
+                "foto_url": foto_url,
+                "senha": senha,
+                "nivel_acesso": nivel_acesso,
+                "ultima_sessao": ultima_sessao,
+            }
+        )
 
-with open("usuario.csv", "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(
-        f,
-        fieldnames=["nome", "email", "data_nasc", "foto_url", "senha", "nivel_acesso", "ultima_sessao"],
-    )
-    writer.writeheader()
-    writer.writerows(usuarios)
+    return usuarios
 
-print(f"usuario.csv gerado com {len(usuarios)} linhas")
+
+def salvar_csv(usuarios, caminho="usuario.csv"):
+    with open(caminho, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=["nome", "email", "data_nasc", "foto_url", "senha", "nivel_acesso", "ultima_sessao"],
+        )
+        writer.writeheader()
+        writer.writerows(usuarios)
+    return caminho
+
+
+def mockar_seguranca_login(conn, proporcao_com_falha=0.12, proporcao_bloqueado=0.04):
+    """
+    Simula, para uma fração dos usuários já migrados, um histórico de
+    tentativas de login malsucedidas (falhas_login, ultima_falha_em e,
+    para os que excederam o limite, bloqueado_ate).
+
+    Roda como UPDATE direto na tabela oficial `usuario`, DEPOIS da
+    migração — e não pelo pipeline de staging — porque essas colunas são
+    estado operacional escrito pela aplicação a cada tentativa de login,
+    não dado de cadastro vindo de uma fonte externa. Colocar isso no CSV/
+    validate exigiria replicar ali a regra de negócio do limiar de bloqueio
+    só pra gerar dado de teste, sem ganho real de cobertura de validação.
+    """
+    with conn.cursor() as cur:
+        cur.execute("SELECT id FROM usuario")
+        ids_usuario = [row[0] for row in cur.fetchall()]
+
+    agora = datetime.now()
+    atualizados = 0
+
+    with conn.cursor() as cur:
+        for id_usuario in ids_usuario:
+            roll = random.random()
+
+            if roll < proporcao_bloqueado:
+                # excedeu o limite de tentativas
+                falhas = random.randint(5, 8)
+                ultima_falha = agora - timedelta(minutes=random.randint(1, 30))
+                if random.random() < 0.5:
+                    bloqueado_ate = agora + timedelta(minutes=random.randint(5, 30))  # ainda travado
+                else:
+                    bloqueado_ate = agora - timedelta(hours=random.randint(1, 48))  # já destravou
+            elif roll < proporcao_bloqueado + proporcao_com_falha:
+                # errou algumas vezes, mas não travou
+                falhas = random.randint(1, 4)
+                ultima_falha = agora - timedelta(hours=random.randint(1, 72))
+                bloqueado_ate = None
+            else:
+                continue  # mantém o default: 0 falhas, nunca travou
+
+            cur.execute(
+                """
+                UPDATE usuario
+                   SET falhas_login = %s,
+                       ultima_falha_em = %s,
+                       bloqueado_ate = %s
+                 WHERE id = %s
+                """,
+                (falhas, ultima_falha, bloqueado_ate, id_usuario),
+            )
+            atualizados += 1
+
+    conn.commit()
+    return atualizados
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--n", type=int, default=N_USUARIO, help="quantidade de linhas a gerar")
+    parser.add_argument("--saida", default="usuario.csv", help="caminho do CSV de saída")
+    args = parser.parse_args()
+
+    usuarios = gerar_usuarios(n=args.n)
+    caminho = salvar_csv(usuarios, caminho=args.saida)
+
+    print(f"{caminho} gerado com {len(usuarios)} linhas")
