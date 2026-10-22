@@ -39,6 +39,7 @@ def main():
         "src/database/sql/ddl/tables/create_tables.sql",
         "src/database/sql/logs/sessao_acesso.sql",
         "src/database/sql/logs/log_auditoria.sql",
+        "src/database/sql/logs/log_rpa_execucao.sql",
         "src/database/sql/ddl/tables/catalogo.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_usuario_empresa.sql",
         "src/database/sql/data_load/staging/ddl_staging/stg_ponto_parceiro.sql",
@@ -93,8 +94,7 @@ def main():
     rodar_pipeline("usuario", "src/database/sql/data_load/mocks/usuario.csv")
     rodar_pipeline("empresa", "src/database/sql/data_load/mocks/empresa.csv")
 
-    # Os ids de usuario (gen_random_uuid) e de empresa (serial) mudam a cada setup,
-    # então os CSVs que apontam para eles são gerados agora, com os ids recém-migrados.
+
     conn = get_connection()
     ids_usuario = buscar_usuarios_existentes(conn)
     with conn.cursor() as cur:
