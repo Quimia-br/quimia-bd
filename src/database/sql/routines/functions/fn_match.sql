@@ -70,6 +70,7 @@ BEGIN
         FROM incompatibilidade_regra ir
         WHERE ir.ativo = TRUE
           AND (
+            (
               (
                   (ir.id_substancia_a IS NOT NULL AND EXISTS (SELECT 1 FROM compostos_a WHERE id_substancia = ir.id_substancia_a))
                   OR (ir.id_classe_a IS NOT NULL AND EXISTS (SELECT 1 FROM classes_a WHERE id_classe_quimica = ir.id_classe_a))
@@ -90,25 +91,30 @@ BEGIN
                   (ir.id_substancia_b IS NOT NULL AND EXISTS (SELECT 1 FROM compostos_a WHERE id_substancia = ir.id_substancia_b))
                   OR (ir.id_classe_b IS NOT NULL AND EXISTS (SELECT 1 FROM classes_a WHERE id_classe_quimica = ir.id_classe_b))
               )
+            )
           )
     )
-    SELECT 'incompativel'::VARCHAR(20), id_regra, severidade, descricao_risco
-    FROM regras_batidas
+    SELECT u.resultado, u.id_regra, u.severidade, u.descricao_risco
+    FROM (
+        SELECT 'incompativel'::VARCHAR(20) AS resultado,
+               rb.id_regra, rb.severidade, rb.descricao_risco
+        FROM regras_batidas rb
 
-    UNION ALL
+        UNION ALL
 
-    -- só emite a linha "compativel" quando NENHUMA regra bateu
-    SELECT 'compativel'::VARCHAR(20), NULL::INTEGER, NULL::VARCHAR(20), NULL::TEXT
-    WHERE NOT EXISTS (SELECT 1 FROM regras_batidas)
-
+        -- só emite a linha "compativel" quando NENHUMA regra bateu
+        SELECT 'compativel'::VARCHAR(20), NULL::INTEGER, NULL::VARCHAR(20), NULL::TEXT
+        WHERE NOT EXISTS (SELECT 1 FROM regras_batidas)
+    ) u
     ORDER BY
-        CASE severidade
+        CASE u.severidade
             WHEN 'critica' THEN 1
             WHEN 'alta'    THEN 2
             WHEN 'media'   THEN 3
             WHEN 'baixa'   THEN 4
             ELSE 5
-        END;
+        END,
+        u.id_regra;
 END;
 $$;
 
