@@ -600,8 +600,8 @@ details.ver-sql[open] summary { margin-bottom: 12px; }
   background: var(--surface-background);
 }
 .neo4j-card-icone img { width: 24px; height: 24px; object-fit: contain; }
-.neo4j-modelo { display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 24px; background: #000; }
-.neo4j-modelo img { display: block; width: 100%; max-width: 932px; height: auto; object-fit: contain; }
+.neo4j-modelo { overflow: auto; max-height: 75vh; border-radius: 24px; background: var(--surface-background); }
+.neo4j-modelo img { display: block; width: 100%; max-width: none; height: auto; margin-inline: auto; object-fit: contain; }
 :root[data-theme="dark"] img[src$="share-2.svg"],
 :root[data-theme="dark"] img[src$="building-2.svg"] { filter: invert(1); }
 @media (prefers-color-scheme: dark) {

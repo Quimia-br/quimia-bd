@@ -2,8 +2,9 @@
 (function (Q) {
   'use strict';
   if (!Q) return;
-  const { esc } = Q.util;
+  const { esc, icone } = Q.util;
   const { cabecalho, blocoCodigo } = Q.ui;
+  let zoomNeo4j = 1;
 
   const CRIACAO = `// Exemplo fictício e independente dos dados do PostgreSQL.
 MERGE (p1:Produto:CatalogoDemo {id: 'produto-1'})
@@ -74,11 +75,39 @@ RETURN p1.nome AS produto_1,
     return `${cabecalho({ secao: 'Explorador', titulo: 'Modelagem', subtitulo: 'Neo4j · entidades principais e relações do grafo demonstrativo.' })}
       ${abas('modelagem')}
       <div class="barra-filtros">${seletorBancos('modelagem', 'Neo4j')}</div>
-      <section class="cartao"><div class="cartao-topo"><h2>Modelo do grafo</h2><a class="botao" href="#/neo4j-grafo">Ver query</a></div>
+      <section class="cartao"><div class="cartao-topo"><h2>Modelo do grafo</h2>
+        <div class="diagrama-controles">
+          <button class="botao-icone pequeno fundo" data-acao="neo4j-zoom-menos" aria-label="Diminuir zoom">${icone('minus')}</button>
+          <button class="botao" data-acao="neo4j-zoom-ajustar">${icone('rotate-ccw')}Ajustar</button>
+          <button class="botao-icone pequeno fundo" data-acao="neo4j-zoom-mais" aria-label="Aumentar zoom">${icone('plus')}</button>
+          <a class="botao" href="#/neo4j-grafo">Ver query</a>
+        </div></div>
         <div class="neo4j-modelo"><img src="icons/visualisation.png" alt="Visualização do Neo4j Aura: produto-1 e produto-2 têm FDS próprias; as duas FDS contêm a mesma substância."></div>
         <p class="legenda">Um produto tem uma FDS; uma FDS pode conter várias substâncias; a mesma substância pode constar em FDS de produtos diferentes.</p>
       </section>`;
   }
+
+  function aplicarZoomNeo4j() {
+    const palco = document.querySelector('.neo4j-modelo');
+    const imagem = palco?.querySelector('img');
+    if (!imagem) return;
+    imagem.style.width = `${Math.round(Math.min(932, palco.clientWidth) * zoomNeo4j)}px`;
+    palco.scrollLeft = Math.max(0, (imagem.offsetWidth - palco.clientWidth) / 2);
+    palco.scrollTop = Math.max(0, (imagem.offsetHeight - palco.clientHeight) / 2);
+  }
+
+  document.addEventListener('click', (evento) => {
+    const acao = evento.target.closest('[data-acao]')?.dataset.acao;
+    if (acao === 'neo4j-zoom-mais') zoomNeo4j = Math.min(2.5, zoomNeo4j * 1.25);
+    else if (acao === 'neo4j-zoom-menos') zoomNeo4j = Math.max(0.5, zoomNeo4j / 1.25);
+    else if (acao === 'neo4j-zoom-ajustar') zoomNeo4j = 1;
+    else return;
+    aplicarZoomNeo4j();
+  });
+
+  window.addEventListener('resize', () => {
+    if (Q.rotaAtual?.().pagina === 'modelagem-neo4j') aplicarZoomNeo4j();
+  });
 
   function detalhe(tipo) {
     const grafo = tipo === 'grafo';
@@ -96,7 +125,7 @@ RETURN p1.nome AS produto_1,
 
   Q.ui.seletorBancos = seletorBancos;
   Q.paginas.registrar('banco-neo4j', { render: banco, titulo: 'Neo4j · Banco de Dados', secaoNav: () => 'banco' });
-  Q.paginas.registrar('modelagem-neo4j', { render: modelagem, titulo: 'Neo4j · Modelagem', secaoNav: () => 'modelagem' });
+  Q.paginas.registrar('modelagem-neo4j', { render: modelagem, aoRenderizar: aplicarZoomNeo4j, titulo: 'Neo4j · Modelagem', secaoNav: () => 'modelagem' });
   Q.paginas.registrar('neo4j-grafo', { render: () => detalhe('grafo'), titulo: 'Neo4j · Grafo' });
   Q.paginas.registrar('neo4j-negocio', { render: () => detalhe('negocio'), titulo: 'Neo4j · Negócio' });
 })(window.Quimia);
