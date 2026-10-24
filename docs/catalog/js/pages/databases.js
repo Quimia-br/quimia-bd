@@ -1,4 +1,4 @@
-/* Complemento do catálogo: navegação entre bancos e documentação do grafo Neo4j. */
+/* Complemento do catálogo: navegação entre bancos, Neo4j e MongoDB. */
 (function (Q) {
   'use strict';
   if (!Q) return;
@@ -38,7 +38,7 @@ RETURN p1.nome AS produto_1,
   const BANCOS = [
     { nome: 'PostgreSQL', logo: 'postgrees_logo.svg', paginas: { banco: '#/banco', modelagem: '#/modelagem' } },
     { nome: 'Neo4j', logo: 'neo4j_logo.svg', paginas: { banco: '#/banco-neo4j', modelagem: '#/modelagem-neo4j' } },
-    { nome: 'MongoDB', logo: 'mongo_logo.svg' },
+    { nome: 'MongoDB', logo: 'mongo_logo.svg', paginas: { banco: '#/banco-mongodb', modelagem: '#/modelagem-mongodb' } },
     { nome: 'Redis', logo: 'redis_logo.svg' }
   ];
 
@@ -52,8 +52,8 @@ RETURN p1.nome AS produto_1,
     }).join('')}</div>`;
   }
 
-  function abas(ativa) {
-    return `<nav class="abas" aria-label="Visualização"><a class="aba${ativa === 'banco' ? ' ativa' : ''}" href="#/banco-neo4j">${Q.util.icone('table')}Lista</a><a class="aba${ativa === 'modelagem' ? ' ativa' : ''}" href="#/modelagem-neo4j">${Q.util.icone('network')}Modelagem</a></nav>`;
+  function abas(ativa, banco = 'neo4j') {
+    return `<nav class="abas" aria-label="Visualização"><a class="aba${ativa === 'banco' ? ' ativa' : ''}" href="#/banco-${banco}">${Q.util.icone('table')}Lista</a><a class="aba${ativa === 'modelagem' ? ' ativa' : ''}" href="#/modelagem-${banco}">${Q.util.icone('network')}Modelagem</a></nav>`;
   }
 
   function card(titulo, texto, imagem, rota) {
@@ -123,9 +123,67 @@ RETURN p1.nome AS produto_1,
       </section>${grafo ? '' : '<section class="cartao"><h2>Resultado esperado</h2><p>Produto fictício A e Produto fictício B compartilham a Substância fictícia X nas suas FDS.</p><p class="legenda">A consulta atravessa quatro relações; a condição p1.id &lt; p2.id evita repetir o mesmo par na ordem inversa.</p></section>'}`;
   }
 
+  function conteudoKemi() {
+    return `<section class="cartao">
+      <div class="cartao-topo"><h2>Kemi · chatbot do aplicativo</h2><span class="neo4j-card-icone"><img src="icons/bot.svg" alt=""></span></div>
+      <p>O Kemi usa o MongoDB para guardar o histórico das conversas. No banco <code>quimia</code>, a coleção <code>chat_turns</code> contém um documento para cada pergunta respondida.</p>
+      <p class="legenda">A implementação fica no repositório <code>quimia-agent</code>, na rota <code>POST /chat</code>.</p>
+    </section>
+    <div class="grade-2">
+      <section class="cartao"><h2>Guardar as conversas</h2>
+        <p>Após o Kemi concluir uma resposta, grava o identificador do usuário, a sessão, a pergunta, a resposta e a data do turno.</p></section>
+      <section class="cartao"><h2>Dar contexto às respostas</h2>
+        <p>Antes de responder, busca até oito turnos anteriores do mesmo usuário e da mesma sessão. Envia esses turnos em ordem cronológica ao fluxo do chatbot para interpretar a pergunta atual.</p></section>
+    </div>
+    <section class="cartao"><h2>Limite do histórico</h2>
+      <p>O histórico ajuda a entender referências a mensagens anteriores, mas não comprova informações técnicas sobre produtos nem a segurança de misturas.</p>
+      <p class="legenda">A rota de teste recebe <code>user_id</code> do cliente; a integração com o aplicativo precisa validar a identidade do usuário antes de expor esse histórico.</p>
+    </section>`;
+  }
+
+  function bancoMongo() {
+    return `${cabecalho({ secao: 'Explorador', titulo: 'Banco de Dados', subtitulo: 'MongoDB · histórico de conversas do Kemi, chatbot do aplicativo.' })}
+      ${abas('banco', 'mongodb')}
+      <div class="barra-filtros">${seletorBancos('banco', 'MongoDB')}</div>
+      ${conteudoKemi()}`;
+  }
+
+  function modelagemMongo() {
+    const campos = [
+      ['_id', 'ObjectId', 'Identificador gerado pelo MongoDB'],
+      ['user_id', 'string', 'UUID do usuário convertido em texto'],
+      ['session_id', 'string', 'Identificador da sessão de conversa'],
+      ['pergunta', 'string', 'Mensagem enviada ao Kemi'],
+      ['resposta', 'string', 'Resposta concluída pelo Kemi'],
+      ['criado_em', 'Date', 'Data e hora do turno em UTC']
+    ];
+    return `${cabecalho({ secao: 'Explorador', titulo: 'Modelagem', subtitulo: 'MongoDB · modelo documental do histórico de conversas do Kemi.' })}
+      ${abas('modelagem', 'mongodb')}
+      <div class="barra-filtros">${seletorBancos('modelagem', 'MongoDB')}</div>
+      <section class="cartao"><div class="cartao-topo"><h2>Modelo documental</h2></div>
+        <div class="mongo-modelo"><div class="mongo-documento" role="table" aria-label="Campos da coleção chat_turns">
+          <div class="mongo-documento-titulo" role="row"><strong>chat_turns</strong><span>coleção · quimia</span></div>
+          ${campos.map(([nome, tipo, descricao]) => `<div class="mongo-campo" role="row" title="${esc(descricao)}"><code role="cell">${esc(nome)}</code><span role="cell">${esc(tipo)}</span></div>`).join('')}
+        </div></div>
+        <p class="legenda">Cada documento representa um turno concluído. <code>user_id</code> e <code>session_id</code> identificam a conversa usada na busca do histórico; não são referências a outras coleções MongoDB.</p>
+      </section>
+      <section class="cartao"><h2>Campos da coleção</h2>
+        <div class="lista"><div class="lista-cabecalho" style="--colunas:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)"><span>Campo</span><span>Tipo</span><span>Função</span></div>
+          ${campos.map(([nome, tipo, descricao]) => `<div class="linha" style="--colunas:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)"><code>${esc(nome)}</code><span data-rotulo="Tipo">${esc(tipo)}</span><span data-rotulo="Função">${esc(descricao)}</span></div>`).join('')}
+        </div></section>`;
+  }
+
+  function detalheKemi() {
+    return `${cabecalho({ secao: 'MongoDB', titulo: 'Kemi', subtitulo: 'Como o chatbot do aplicativo usa o histórico salvo no MongoDB.' })}
+      ${conteudoKemi()}`;
+  }
+
   Q.ui.seletorBancos = seletorBancos;
   Q.paginas.registrar('banco-neo4j', { render: banco, titulo: 'Neo4j · Banco de Dados', secaoNav: () => 'banco' });
   Q.paginas.registrar('modelagem-neo4j', { render: modelagem, aoRenderizar: aplicarZoomNeo4j, titulo: 'Neo4j · Modelagem', secaoNav: () => 'modelagem' });
   Q.paginas.registrar('neo4j-grafo', { render: () => detalhe('grafo'), titulo: 'Neo4j · Grafo' });
   Q.paginas.registrar('neo4j-negocio', { render: () => detalhe('negocio'), titulo: 'Neo4j · Negócio' });
+  Q.paginas.registrar('banco-mongodb', { render: bancoMongo, titulo: 'MongoDB · Banco de Dados', secaoNav: () => 'banco' });
+  Q.paginas.registrar('modelagem-mongodb', { render: modelagemMongo, titulo: 'MongoDB · Modelagem', secaoNav: () => 'modelagem' });
+  Q.paginas.registrar('mongodb-kemi', { render: detalheKemi, titulo: 'MongoDB · Kemi' });
 })(window.Quimia);
