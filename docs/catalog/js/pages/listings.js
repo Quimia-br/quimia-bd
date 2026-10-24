@@ -108,7 +108,7 @@
     return `<div class="barra-filtros" role="search" aria-label="Filtrar ${esc(rota)}">
         <label class="busca busca-local">${icone('search')}
           <input type="search" data-filtro-campo="termo" value="${esc(filtros.termo)}" placeholder="${esc(config.placeholder)}" aria-label="${esc(config.placeholder)}" autocomplete="off"></label>
-        ${seletores}${agrupar}
+        ${seletores}${rota === 'banco' ? Q.ui.seletorBancos('banco', 'PostgreSQL') : ''}${agrupar}
         <button class="botao" data-acao="limpar-filtros">Limpar filtros</button>
       </div>`;
   }

@@ -570,6 +570,44 @@ details.ver-sql[open] summary { margin-bottom: 12px; }
 
 /* Ferramentas ======================================================== */
 .nav-item .nav-alerta { background: var(--feedback-warning); color: #404040; }
+
+/* Bancos do catálogo: usa as superfícies, bordas e estados já usados no site. */
+.nav-icone-arquivo {
+  width: 24px; height: 24px; object-fit: contain; flex: none;
+  border: 1px solid var(--border-primary); border-radius: 8px;
+  padding: 3px; background: var(--surface-base);
+}
+.nav-item .nav-icone-arquivo { border: 0; border-radius: 0; padding: 0; background: none; }
+.bancos-seletor { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.banco-opcao {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; padding: 9px;
+  border: 1px solid var(--border-primary); border-radius: 16px;
+  background: var(--surface-base); cursor: pointer;
+}
+.banco-opcao img { width: 100%; height: 100%; object-fit: contain; }
+.banco-opcao img[src$="mongo_logo.svg"] { transform: translateX(-4px) rotate(-5deg); transform-origin: center; }
+.banco-opcao:hover { background: var(--secondary-primary); }
+.banco-opcao.ativa { border: 2px solid var(--primary-pressed); background: var(--brand-secondary); }
+.banco-opcao:disabled { opacity: .5; cursor: default; }
+.neo4j-card { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; color: inherit; }
+.neo4j-card:hover { box-shadow: 0 0 0 2px var(--primary-primary); }
+.neo4j-card h2, .neo4j-card p { margin: 0; }
+.neo4j-card .botao { margin-top: auto; }
+.neo4j-card-icone {
+  display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center;
+  border: 1px solid var(--border-primary); border-radius: 14px;
+  background: var(--surface-background);
+}
+.neo4j-card-icone img { width: 24px; height: 24px; object-fit: contain; }
+.neo4j-modelo { display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 24px; background: #000; }
+.neo4j-modelo img { display: block; width: 100%; max-width: 932px; height: auto; object-fit: contain; }
+:root[data-theme="dark"] img[src$="share-2.svg"],
+:root[data-theme="dark"] img[src$="building-2.svg"] { filter: invert(1); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) img[src$="share-2.svg"],
+  :root:not([data-theme="light"]) img[src$="building-2.svg"] { filter: invert(1); }
+}
 .metrica.metrica-alerta { background: var(--feedback-warning); }
 .metrica.metrica-alerta .metrica-valor, .metrica.metrica-alerta .metrica-rotulo { color: #404040; }
 
