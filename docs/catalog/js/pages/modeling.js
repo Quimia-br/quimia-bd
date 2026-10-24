@@ -90,6 +90,7 @@
       <span class="sutil" data-rotulo="Ao excluir">${esc(r.on_delete ?? 'NO ACTION')}</span><span class="sutil" data-rotulo="Preenchimento">${r.obrigatoria ? 'Obrigatória' : 'Opcional'}</span></div>`).join('');
     return `${cabecalho({ secao: 'Explorador', titulo: 'Modelagem', subtitulo: 'Diagrama físico lido dos scripts: tabelas, colunas e chaves estrangeiras. PK chave primária · FK chave estrangeira · UK valor único.' })}
       ${abasBanco('modelagem')}
+      <div class="barra-filtros">${Q.ui.seletorBancos('modelagem', 'PostgreSQL')}</div>
       <section class="cartao">
         <div class="cartao-topo"><h2>Diagrama</h2>
           <div class="diagrama-controles">

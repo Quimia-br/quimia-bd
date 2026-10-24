@@ -29,7 +29,7 @@
       : '<p class="legenda">Todos os arquivos foram processados sem avisos: cada tabela, coluna e view tem descrição e classificação.</p>';
     const gerado = new Date(dados.gerado_em).toLocaleString('pt-BR', { dateStyle: 'long', timeStyle: 'short' });
 
-    return `${cabecalho({ secao: 'Quimia', titulo: 'Visão Geral', subtitulo: 'O mapa do banco PostgreSQL do Quimia, gerado a partir dos scripts SQL do repositório.' })}
+    return `${cabecalho({ secao: 'Quimia', titulo: 'Visão Geral', subtitulo: 'O mapa dos bancos do Quimia, gerado a partir dos scripts SQL e NoSQL.' })}
       <section class="destaque">
         <p class="sobretitulo">O laboratório analítico</p>
         <h2>Quimia Database Workspace</h2>
@@ -38,6 +38,18 @@
         <img class="destaque-marca" src="icons/logo-quimia-symbol.svg" width="130" height="145" alt="" aria-hidden="true">
       </section>
       <div class="metricas">${metricas}</div>
+      <div class="grade-2">
+        <a class="cartao neo4j-card" href="#/banco-neo4j">
+          <span class="neo4j-card-icone"><img src="icons/neo4j_logo.svg" alt=""></span>
+          <h2>Neo4j</h2><p class="sutil">Grafo demonstrativo de Produto, FDS e Substância, com queries de criação e consulta.</p>
+          <span class="botao">Explorar</span>
+        </a>
+        <a class="cartao neo4j-card" href="#/banco-mongodb">
+          <span class="neo4j-card-icone"><img src="icons/mongo_logo.svg" alt=""></span>
+          <h2>MongoDB</h2><p class="sutil">Histórico das conversas do Kemi na coleção <code>chat_turns</code>.</p>
+          <span class="botao">Explorar</span>
+        </a>
+      </div>
       <div class="grade-2">
         <section class="cartao">
           <div class="cartao-topo"><h2>Scripts recentes</h2><a class="botao" href="#/scripts">Explorar</a></div>
