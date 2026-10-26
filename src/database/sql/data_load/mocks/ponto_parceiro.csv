@@ -1,201 +1,201 @@
 id_empresa,nome,cep,estado,bairro,rua,numero,complemento,tipo,ativo
-2,Aragão - ME,54449-443,SC,do Galho,Pátio Martins,4507,,compra,true
-7,Montenegro,90498-810,RO,do Sul,Feira da Paz,8936,,compra,true
-3,Rezende,87450093,AC,de Goiás,Estrada Arthur Miguel Leão,1536,,compra,true
-39,Vargas - EI,74744531,AC,da Prata,Rodovia Luiz Henrique Correia,9196,,compra,true
-35,Pastor S.A.,12495922,PA,da Praia,Parque de Farias,3612,,descarte,true
-1,Castro,54642602,SP,da Serra,Ladeira Fernando Costela,2616,,descarte,true
-10,Albuquerque - EI,02375-324,DF,Alegre,Travessa João Felipe Viana,5515,,compra,true
-7,Rios,73981275,MS,Grande,Lagoa Ana Vitória Castro,5636,,descarte,true
-,Ponto de coleta Sampaio Verde,08317790,SC,do Norte,Feira de Cardoso,7528,,descarte,true
-25,Garcia,86537901,AP,da Serra,Praia Gabriel da Mata,9045,,descarte,true
-,Ponto de coleta Correia,20620-899,RN,Paulista,Colônia Ester Pereira,5926,,descarte,true
-5,Duarte S/A,87874-301,AL,Alegre,Condomínio de da Costa,3734,,descarte,true
-15,,51945312,AM,de Minas,Condomínio Pedro Henrique Brito,6228,,descarte,true
-24,Castro Costa Ltda.,60793-512,CE,Grande,Núcleo de Peixoto,6066,,descarte,true
-18,Pimenta da Costa S.A.,72241-591,RR,da Serra,Largo Freitas,1170,,compra,true
-16,Fernandes Garcia - ME,63402-934,CE,do Amparo,Alameda de Novaes,7574,,descarte,true
-36,da Rosa,02823-501,ES,de Minas,Aeroporto de Aparecida,5314,,compra,true
-3,Sampaio - ME,00057727,SE,do Sul,Passarela de Garcia,5169,,descarte,true
-14,Rocha,72403531,RJ,Paulista,Praia Lima,5156,,compra,true
-26,Costa,48663090,RS,do Galho,Largo Nascimento,7518,,compra,true
-16,Aragão,92550-443,SC,da Praia,Vila Cauã Andrade,9198,,descarte,true
-28,Pacheco,66510-077,RJ,do Sul,Aeroporto de Pereira,6544,,descarte,true
-9,Correia S/A,90891416,PE,do Oeste,Distrito Guerra,8086,,compra,true
-,Ponto de coleta Rocha,80637-767,AM,do Oeste,Residencial Isaac Costa,2505,,descarte,true
-28,Rodrigues Cavalcanti S/A,71879586,RN,de Minas,Esplanada de das Neves,1041,,descarte,true
-30,Pires S.A.,33608147,PE,do Galho,Feira Carlos Eduardo da Conceição,4120,,compra,true
-8,Pereira,04375-304,RO,do Sul,Trecho Castro,8798,,descarte,true
-,Ponto de coleta Monteiro,46415-588,MT,da Prata,Praia de Siqueira,1828,,descarte,true
-11,Moraes,49979514,PB,da Prata,Conjunto de Azevedo,54,,descarte,true
-12,,50154212,PE,da Mata,Chácara de Teixeira,1744,,descarte,true
-,Ponto de coleta Sá de Moura,57109957,PE,de Minas,Área Cirino,9978,,descarte,true
-24,Rodrigues S.A.,48426-933,SP,de Minas,Rua de Ferreira,2647,,compra,true
-32,Costela e Filhos,84503-289,AC,do Sul,Largo Garcia,1833,,descarte,true
-1000032,Fogaça Albuquerque - EI,69289875,TO,do Campo,Campo Carvalho,5039,,compra,true
-37,Sá Guerra e Filhos,27356-695,AP,da Prata,Alameda Cavalcante,1404,,descarte,true
-,Ponto de coleta Pereira de Minas,94396854,SP,Alegre,Praça Heitor Vasconcelos,8728,,descarte,true
-,Ponto de coleta da Costa do Amparo,65258756,BA,da Praia,Viela de Brito,7788,,descarte,true
-11,Rocha Araújo S.A.,13937596,GO,Alegre,Vila Duarte,8646,,,true
-14,Melo Vargas S.A.,48965200,PI,Grande,Núcleo Lavínia Dias,3296,,descarte,true
-24,Andrade,51729-462,PB,do Sul,Praia Otto Sousa,8480,,descarte,true
-15,da Cunha,38479700,AP,do Galho,Fazenda João Vitor Campos,5540,,compra,true
-15,da Cunha Viana Ltda.,08043345,RJ,de Minas,Viaduto Cunha,3609,,compra,true
-4,Vasconcelos,13204113,ES,da Mata,Vila Novais,1105,,compra,true
-1000042,Peixoto Camargo Ltda.,28499-889,AP,do Sul,Praia de Macedo,8424,,compra,true
-32,Borges,70119-166,DF,de Minas,Praia de Pires,8835,,compra,true
-37,Pereira,39037-993,RJ,do Oeste,Ladeira Moura,7745,,compra,true
-,Ponto de coleta Lopes,13126-548,SE,Grande,Recanto de Cavalcante,6670,,descarte,true
-7,Costa Novais S/A,69769-333,RO,do Norte,Feira de Leão,7063,,descarte,true
-30,Andrade Fernandes e Filhos,57098154,SC,da Praia,Praia da Luz,888,,compra,true
-22,Cavalcante,09497180,SE,do Sul,Morro de Andrade,1791,,compra,true
-35,Ramos da Rosa - ME,07428798,PB,Grande,Travessa Luiz Otávio Dias,2297,,descarte,true
-30,Silva Castro - EI,69148448,ES,do Campo,Favela de Melo,1236,,descarte,true
-,Ponto de coleta Pinto,03329199,PI,do Oeste,Estação Mendonça,1605,,descarte,true
-35,Albuquerque,72105-431,TO,do Norte,Pátio de Pereira,242,,compra,true
-16,Siqueira Silva S/A,66598-584,CE,do Sul,Aeroporto de Ribeiro,6659,,atacado,true
-26,Rocha,67131-445,AL,da Mata,Alameda Carlos Eduardo Viana,2698,,descarte,true
-25,da Cruz,66323-115,GO,Alegre,Chácara de Cavalcanti,7455,,descarte,true
-36,Ramos,34222761,RO,Verde,Ladeira Nicolas Cavalcanti,7974,,compra,true
-14,Pereira,88294956,AL,dos Dourados,Setor de Rezende,9490,,compra,true
-4,Gomes Machado S.A.,38897-628,AL,da Praia,Praça de Vasconcelos,9572,,descarte,true
-34,das Neves - ME,48884-020,CE,Grande,Quadra Maria Laura Moreira,932,,compra,true
-1000060,Costa S/A,33287-183,AP,do Sul,Quadra de Freitas,9750,,compra,true
-16,Alves S.A.,07503-188,MG,das Flores,Núcleo de Aragão,1965,,compra,true
-3,Teixeira - ME,86814100,RN,do Norte,Via de Cunha,1344,,descarte,true
-37,Rios Rios - EI,07997298,PE,do Sul,Favela de Ribeiro,5184,,descarte,true
-21,da Costa - EI,38598701,ES,do Oeste,Estrada Lucca Viana,4352,,descarte,true
-20,Campos - EI,08675915,PB,Verde,Praia Carvalho,5181,,compra,true
-37,Borges,93749403,AM,do Galho,Rua Sophia Correia,1201,,compra,true
-9,Borges Ltda.,63707-633,MS,Verde,Recanto Carlos Eduardo Teixeira,1128,,compra,true
-11,Silveira,63068-246,PB,Alegre,Parque de Freitas,8901,,descarte,true
-34,Dias,44738-053,AC,da Serra,Vereda de Pires,9087,,descarte,true
-7,Gomes Viana - ME,73370-120,BA,do Campo,Passarela Lorena Sales,4334,,varejo,true
-1000071,Brito - EI,93463-797,SC,da Serra,Vereda de da Luz,9065,,compra,true
-39,Pereira,21691-791,DF,da Praia,Avenida Vitória da Rocha,5618,,compra,true
-17,Freitas Ltda.,79037966,PE,do Norte,Favela de Costela,8005,,descarte,true
-4,Nunes,28375320,AP,da Mata,Estação de Silveira,6940,,atacado,true
-22,Macedo,97765542,SP,Grande,Setor Davi Ferreira,2144,,descarte,true
-29,Pacheco,48855-321,PI,de Goiás,Quadra Léo Correia,7008,,compra,true
-10,Ribeiro,42117560,PI,Paulista,Rodovia Cirino,591,,descarte,true
-10,Vargas e Filhos,57714-735,PA,das Flores,Quadra Luna Duarte,2089,,compra,true
-3,Mendonça,80592-788,MS,da Mata,Praça Araújo,3442,,compra,true
-23,Melo,40778-415,SP,da Prata,Esplanada Casa Grande,9174,,descarte,true
-10,,52312-456,ES,do Amparo,Distrito de da Conceição,2663,,compra,true
-1000082,Cardoso,36772-892,AC,Verde,Estação de Nunes,2939,,descarte,true
-,Ponto de coleta Porto de Rios,57823956,PA,da Prata,Praia de Vargas,4066,,descarte,true
-7,Novaes,23554602,MG,da Praia,Vale de Monteiro,635,,descarte,true
-30,Ribeiro,11165902,MS,da Mata,Trevo Josué Souza,5001,,compra,true
-13,Ferreira S/A,79731-195,MG,do Sul,Residencial Pacheco,5379,,descarte,true
-1000087,Moraes Costela - ME,34482-432,SP,de Minas,Condomínio de Souza,4574,,descarte,true
-26,da Rocha,64494-054,RO,do Sul,Morro Ravy da Cruz,8786,,descarte,true
-8,Alves,31068509,GO,da Serra,Ladeira Siqueira,2926,,,true
-17,,27632-173,AL,de Minas,Loteamento Macedo,1777,,descarte,true
-21,Cassiano,69485-802,PA,do Norte,Condomínio Guerra,9933,,compra,true
-37,Araújo S/A,11783-257,DF,Alegre,Estrada Pinto,4174,,compra,true
-1,Machado,00812084,PE,da Prata,Trevo Ana Lívia Siqueira,8822,,compra,true
-5,Pires Fogaça S.A.,93964-529,RO,Grande,Via Oliveira,5410,,descarte,true
-8,Montenegro S/A,71621-085,SC,das Flores,Esplanada Mendes,4921,,descarte,true
-21,Pires S.A.,54332-084,MG,do Galho,Setor de Fernandes,4845,,compra,true
-25,Lima,25027385,RO,do Oeste,Trecho Matheus Fernandes,2852,,descarte,true
-1,Alves,06484-308,MA,Grande,Vila de Vieira,4701,,compra,true
-38,Abreu,56038518,RN,Paulista,Esplanada Ana Liz Cirino,5280,,descarte,true
-14,Castro - EI,44839-963,PE,das Pedras,Conjunto Ana Vitória Rocha,7753,,compra,true
-19,Farias - ME,73038731,PE,da Prata,Campo de da Cunha,5492,,compra,true
-,Ponto de coleta Fonseca de Monteiro,72228-371,SP,Verde,Estação de Mendes,3849,,descarte,true
-15,Farias S.A.,66352093,SE,do Campo,Via de Castro,3263,,compra,true
-16,Jesus - EI,58541-932,PR,de Minas,Avenida Casa Grande,1194,,descarte,true
-37,Aragão Mendonça e Filhos,81703661,DF,do Campo,Conjunto Gael Henrique da Costa,6292,,descarte,true
-10,Borges,12645529,RS,Paulista,Esplanada Fonseca,91,,compra,true
-,Ponto de coleta Rezende de da Rosa,86213045,ES,Verde,Praça de Novais,2882,,descarte,true
-,Ponto de coleta Nascimento,50967297,RR,de Minas,Condomínio Melo,8487,,descarte,true
-36,Peixoto Souza S.A.,68786-567,ES,da Praia,Praça Maria Liz Marques,1989,,descarte,true
-30,Alves,42606600,RO,da Praia,Lago de Sá,8703,,descarte,true
-29,,42267-102,RN,da Mata,Esplanada Luara Nascimento,8271,,descarte,true
-,Ponto de coleta Fogaça,44712-567,PI,do Amparo,Parque Vasconcelos,7306,,descarte,true
-1000113,Fonseca,33041-375,SC,de Goiás,Feira da Rocha,7778,,descarte,true
-16,Rocha - EI,36113513,TO,dos Dourados,Rodovia de Guerra,4544,,descarte,true
-18,Alves Ltda.,07458955,PB,Grande,Via de Santos,1270,,descarte,true
-22,Azevedo,55079-379,MT,da Praia,Rodovia de Novaes,8850,,compra,true
-15,Abreu,31519-289,MG,da Prata,Vereda Oliver Vieira,2504,,compra,true
-27,Sales,22701303,MT,Paulista,Rodovia Pinto,8891,,descarte,true
-14,Rodrigues Gomes S/A,29383-862,TO,Paulista,Aeroporto Siqueira,6884,,descarte,true
-38,Novaes Rezende - ME,68138640,RR,Paulista,Lago Rezende,321,,,true
-1,Macedo,47517-568,MS,de Minas,Feira Novaes,4893,,descarte,true
-1000122,Silveira Dias S/A,67023933,TO,das Pedras,Área Fonseca,6866,,compra,true
-18,Pires,42156-396,PA,de Goiás,Ladeira Alexia Cassiano,7957,,compra,true
-26,da Cruz Ltda.,41989434,SC,da Prata,Pátio de da Rosa,2705,,descarte,true
-35,Rocha,35118936,AC,do Campo,Núcleo Antonella Macedo,6456,,,true
-2,Araújo Borges - ME,69629-545,AP,Verde,Conjunto das Neves,7023,,compra,true
-1000127,Alves S/A,18743-644,CE,do Amparo,Jardim Diogo Novaes,824,,descarte,true
-14,Costela,22129-825,PB,dos Dourados,Vale Vinicius Fernandes,5356,,descarte,true
-,Ponto de coleta Nascimento,46652094,MG,do Campo,Colônia Pinto,4559,,descarte,true
-,Ponto de coleta Teixeira do Norte,61613325,TO,da Mata,Vereda Ana Laura Novais,6907,,descarte,true
-6,Dias,24050-156,PR,do Sul,Rodovia Fogaça,318,,compra,true
-23,,75949-119,ES,dos Dourados,Trevo de Câmara,1125,,compra,true
-,Ponto de coleta Castro,44037-966,ES,do Amparo,Distrito Moreira,3267,,descarte,true
-,Ponto de coleta Costela,27136-757,RN,do Campo,Distrito Cunha,2497,,descarte,true
-31,das Neves e Filhos,91149-186,RO,das Pedras,Via de Fernandes,1875,,compra,true
-17,Viana,80169625,SP,da Praia,Favela das Neves,6044,,compra,true
-8,Vieira,78777818,SP,das Pedras,Chácara Nicolas Mendonça,2684,,descarte,true
-2,Sampaio Cassiano S/A,53283-228,MA,das Pedras,Trecho João Miguel Barros,9434,,descarte,true
-13,Moura,32418134,AP,do Campo,Estrada Marcela Martins,9701,,compra,true
-20,Nascimento,18672-147,RO,do Sul,Alameda Ana Monteiro,9838,,compra,true
-,Ponto de coleta Pacheco,60808724,RJ,dos Dourados,Morro Mariah Gomes,673,,descarte,true
-28,das Neves,16076-623,RO,de Goiás,Condomínio de Pacheco,6072,,compra,true
-22,Moraes,38870378,AC,do Amparo,Campo de Cirino,6883,,descarte,true
-24,Sá,08753053,RS,do Sul,Pátio Bárbara Siqueira,7533,,compra,true
-34,Rezende,95184-671,RS,Verde,Vereda de Cassiano,4426,,descarte,true
-38,das Neves Ltda.,04927-722,GO,do Amparo,Viaduto Costa,5281,,compra,true
-,Ponto de coleta da Paz de Nogueira,85730-903,AP,do Galho,Estrada Albuquerque,4570,,descarte,true
-1000148,Vieira Ltda.,04932631,ES,do Sul,Sítio Isabela Pires,7614,,descarte,true
-32,Vargas,79270-934,MT,do Oeste,Rodovia Pedro Moura,2980,,descarte,true
-17,Ferreira,54149248,MT,Verde,Vale Viana,4582,,descarte,true
-34,Fonseca,36100-659,DF,dos Dourados,Condomínio Cassiano,1403,,compra,true
-32,Pastor,01926377,PI,de Minas,Vale de Rios,3938,,descarte,true
-32,Nascimento,82477008,PB,do Campo,Condomínio de Gonçalves,283,,compra,true
-26,Guerra,50185-549,RR,da Prata,Praia de Pereira,3987,,descarte,true
-24,Abreu,38234-322,PR,das Pedras,Área Barbosa,9069,,descarte,true
-36,da Luz,73934191,MT,das Flores,Área de Mendes,5765,,descarte,true
-17,Machado,06433430,ES,Alegre,Vila de Leão,1977,,compra,true
-35,Teixeira,86740261,SP,da Mata,Chácara Eloah Nascimento,3034,,compra,true
-31,da Conceição,63907120,GO,Paulista,Viela Mendes,9660,,descarte,true
-13,,83918-741,MA,do Galho,Campo da Mota,3728,,descarte,true
-1,Fonseca - EI,37633826,RR,do Sul,Fazenda Sarah Pacheco,8752,,compra,true
-4,da Luz,15100187,PI,das Pedras,Lago de Vasconcelos,4787,,compra,true
-32,da Luz - ME,07042-533,AM,do Galho,Quadra de Sampaio,201,,descarte,true
-29,Sousa,07203-326,MT,da Mata,Vereda João Vitor Ramos,3021,,compra,true
-31,das Neves Carvalho S.A.,65945-101,AM,Alegre,Lago da Rosa,1071,,descarte,true
-37,da Luz - EI,95528-593,RS,da Praia,Morro da Rocha,879,,compra,true
-37,Peixoto S.A.,27592883,MA,da Prata,Trevo de Correia,1396,,compra,true
-27,Barros,01404-800,RN,do Galho,Condomínio Maria Liz Gomes,9767,,compra,true
-,Ponto de coleta Silva Grande,57963-744,MG,das Pedras,Núcleo de Cassiano,7382,,descarte,true
-20,da Rocha,52834-577,RJ,do Amparo,Estação Davi Lucas Caldeira,7026,,atacado,true
-4,Pereira,47698641,RN,do Sul,Praça Luiz Miguel Silva,1626,,compra,true
-17,da Cunha Ltda.,89141912,RO,do Amparo,Lagoa Luiz Felipe Siqueira,1331,,compra,true
-36,Cunha das Neves - ME,56084-265,AP,do Oeste,Conjunto da Costa,2565,,compra,true
-39,Sales Silva e Filhos,61650-870,PR,da Mata,Distrito Ribeiro,4772,,compra,true
-19,Fonseca,23987-035,RR,do Amparo,Trevo Barbosa,7439,,compra,true
-17,Brito,83783-980,SE,do Sul,Feira Heitor Ferreira,9664,,compra,true
-35,Abreu,91129188,ES,Verde,Vale Nicole Moura,2442,,descarte,true
-,Ponto de coleta Santos,38673-978,AP,Grande,Lagoa de Aparecida,978,,descarte,true
-20,Sá S.A.,96848-104,RN,do Norte,Jardim de Ribeiro,9326,,descarte,true
-30,da Conceição,81740-081,RR,da Prata,Morro Peixoto,4983,,descarte,true
-33,Alves Guerra e Filhos,35674468,PI,Paulista,Ladeira Anna Liz Correia,8091,,atacado,true
-3,Silva Borges - EI,61147691,PA,das Flores,Residencial de Pires,5281,,descarte,true
-15,Rios,39730129,RO,da Praia,Viaduto de Casa Grande,9425,,compra,true
-18,,16189-037,RJ,de Goiás,Fazenda Costa,660,,compra,true
-29,Machado,09329059,GO,de Goiás,Vila Gabriela Souza,2974,,descarte,true
-32,da Cunha,50963228,AP,de Minas,Favela de Costa,7701,,descarte,true
-21,Fernandes,46667204,RO,de Goiás,Fazenda Carvalho,1714,,compra,true
-32,Porto S.A.,21950393,MA,de Minas,Chácara Pires,6562,,compra,true
-21,Aparecida,95233-681,GO,das Pedras,Conjunto Allana Fernandes,5297,,compra,true
-26,,05903-807,PE,da Praia,Colônia Cassiano,19,,descarte,true
-13,Fernandes,38675-279,PE,da Prata,Viela Anthony Gabriel Fonseca,5928,,descarte,true
-4,Gomes Freitas - EI,25301-871,DF,das Flores,Largo Nascimento,4376,,compra,true
-29,da Mata,95707-231,RR,Alegre,Campo Marques,7942,,varejo,true
-39,da Mota,09471451,SE,Paulista,Vereda Macedo,3921,,compra,true
-1,Alves da Cunha - EI,59251-422,PI,Alegre,Pátio Nina Silva,6685,,compra,true
-8,Costa,03938-187,PB,do Amparo,Jardim Rodrigues,1925,,compra,true
-19,Cirino,02180541,PE,do Amparo,Rua de Marques,4480,,descarte,true
-,Ponto de coleta Mendes do Oeste,51192-637,PR,Verde,Favela de Jesus,3994,,descarte,true
+2,Abreu,54745945,SC,da Prata,Distrito Milena Silva,4507,,compra,true
+7,Costela e Filhos,58578407,RO,das Pedras,Rodovia das Neves,8936,,compra,true
+3,Silveira S/A,87380-374,AC,do Norte,Campo Kaique Araújo,1536,,compra,true
+39,Rodrigues,39519062,AC,do Norte,Rodovia de da Paz,9196,,compra,true
+35,Barros Pereira S.A.,73864-756,PA,do Norte,Chácara Joana da Mata,3612,,descarte,true
+1,Sampaio,63734666,SP,da Prata,Parque João Felipe Lopes,2616,,descarte,true
+10,Peixoto Monteiro S/A,18104710,DF,das Pedras,Pátio de Caldeira,5515,,compra,true
+7,Duarte Pimenta S/A,57164-436,MS,das Flores,Viela Aragão,5636,,descarte,true
+,Ponto de coleta Siqueira,70201389,SC,de Minas,Chácara Maria Isis Porto,7528,,descarte,true
+25,Moraes e Filhos,68971-151,AP,Verde,Favela Ferreira,9045,,descarte,true
+,Ponto de coleta Rezende de Pacheco,28270222,RN,da Serra,Passarela de Silveira,5926,,descarte,true
+5,Fonseca,41046763,AL,da Prata,Passarela de da Costa,3734,,descarte,true
+15,,78375367,AM,da Praia,Jardim Luna Cardoso,6228,,descarte,true
+24,Martins,84537598,CE,do Sul,Avenida Diogo Fernandes,6066,,descarte,true
+18,Cunha,24435311,RR,Alegre,Viaduto Montenegro,1170,,compra,true
+16,Cirino,12261283,CE,de Minas,Praça Milena Cirino,7574,,descarte,true
+36,das Neves,58143045,ES,Alegre,Travessa de Rodrigues,5314,,compra,true
+3,Azevedo,75890-853,SE,do Campo,Esplanada Maitê Moreira,5169,,descarte,true
+14,Campos Vargas S/A,79528-136,RJ,do Norte,Alameda Moraes,5156,,compra,true
+26,Fernandes,45285323,RS,da Serra,Alameda Jesus,7518,,compra,true
+16,Rodrigues,32440-438,SC,da Prata,Núcleo Luiz Felipe Silveira,9198,,descarte,true
+28,Borges - EI,17625-435,RJ,do Amparo,Conjunto de Costa,6544,,descarte,true
+9,Sá,43280452,PE,Verde,Trecho de Mendes,8086,,compra,true
+,Ponto de coleta da Mota,20122066,AM,do Campo,Praia Cassiano,2505,,descarte,true
+28,Ribeiro,53058820,RN,da Mata,Chácara de Moraes,1041,,descarte,true
+30,Jesus,44672-293,PE,do Norte,Chácara de Pacheco,4120,,compra,true
+8,Souza Cavalcante e Filhos,86364712,RO,de Minas,Esplanada Barros,8798,,descarte,true
+,Ponto de coleta Farias de Farias,85571-590,MT,Verde,Estrada de Monteiro,1828,,descarte,true
+11,Almeida S.A.,99842611,PB,de Goiás,Trevo de Pacheco,54,,descarte,true
+12,,54164-193,PE,da Serra,Viaduto Bento Novais,1744,,descarte,true
+,Ponto de coleta Martins,87559053,PE,do Campo,Vale de Rocha,9978,,descarte,true
+24,Brito,09440-277,SP,das Pedras,Jardim das Neves,2647,,compra,true
+32,Aparecida,70427-162,AC,do Amparo,Condomínio de Nunes,1833,,descarte,true
+1000032,Sampaio,98146-760,TO,de Minas,Quadra Larissa Rios,5039,,compra,true
+37,Teixeira,56680177,AP,Alegre,Largo Vasconcelos,1404,,descarte,true
+,Ponto de coleta Peixoto,44167-174,SP,da Prata,Estrada de Rocha,8728,,descarte,true
+,Ponto de coleta Pimenta do Oeste,78189-411,BA,do Oeste,Via Laís Moreira,7788,,descarte,true
+11,Barbosa,91690063,GO,da Praia,Residencial Vasconcelos,8646,,,true
+14,Araújo Sousa - ME,75829830,PI,Grande,Viela de da Costa,3296,,descarte,true
+24,Garcia S/A,42562739,PB,da Praia,Fazenda Benicio Castro,8480,,descarte,true
+15,Fonseca e Filhos,07600-259,AP,das Flores,Vila Abreu,5540,,compra,true
+15,Sousa Ltda.,37381668,RJ,do Galho,Fazenda Gonçalves,3609,,compra,true
+4,Borges,42718089,ES,do Norte,Viela de Cassiano,1105,,compra,true
+1000042,Cassiano S.A.,21652-355,AP,do Norte,Passarela Câmara,8424,,compra,true
+32,Pimenta,11024-518,DF,do Galho,Parque de Araújo,8835,,compra,true
+37,Teixeira,37135-673,RJ,das Pedras,Estrada de Santos,7745,,compra,true
+,Ponto de coleta Carvalho,79441-129,SE,de Goiás,Passarela Fogaça,6670,,descarte,true
+7,Casa Grande Ltda.,42940456,RO,do Campo,Vila Helena Novais,7063,,descarte,true
+30,Viana,46868548,SC,dos Dourados,Pátio Larissa Pires,888,,compra,true
+22,Leão,90816477,SE,do Campo,Favela João Guilherme Pacheco,1791,,compra,true
+35,Caldeira Pacheco Ltda.,42940-548,PB,Verde,Viela Danilo Rocha,2297,,descarte,true
+30,Teixeira e Filhos,83713-039,ES,da Mata,Largo de da Mota,1236,,descarte,true
+,Ponto de coleta Cavalcante do Sul,27899763,PI,Paulista,Sítio de Alves,1605,,descarte,true
+35,Rezende,38832774,TO,do Oeste,Trecho de Machado,242,,compra,true
+16,da Mata,49087827,CE,do Galho,Favela de da Paz,6659,,atacado,true
+26,Mendonça Moraes S.A.,43493236,AL,do Galho,Viela Lorenzo da Cruz,2698,,descarte,true
+25,Vieira,61787856,GO,da Serra,Via Erick Vieira,7455,,descarte,true
+36,Pires,27029248,RO,da Praia,Vila Ágatha da Mata,7974,,compra,true
+14,Martins S/A,44895-101,AL,do Amparo,Conjunto Anthony Gabriel Azevedo,9490,,compra,true
+4,Gonçalves,78751-769,AL,Paulista,Largo da Costa,9572,,descarte,true
+34,Fonseca,52554977,CE,da Mata,Distrito de Sampaio,932,,compra,true
+1000060,Vieira,77546-858,AP,do Sul,Favela de Andrade,9750,,compra,true
+16,Abreu S/A,69595-810,MG,Verde,Chácara Campos,1965,,compra,true
+3,Sales Ltda.,49272252,RN,Alegre,Condomínio Rodrigo Vargas,1344,,descarte,true
+37,Sales,89094-064,PE,Paulista,Viela da Costa,5184,,descarte,true
+21,Rodrigues S.A.,43789-227,ES,da Mata,Campo de Duarte,4352,,descarte,true
+20,Fogaça,41471-979,PB,de Goiás,Largo de Gonçalves,5181,,compra,true
+37,Moreira da Luz S/A,93107-760,AM,dos Dourados,Alameda Anthony Gabriel Leão,1201,,compra,true
+9,Guerra - EI,26759-231,MS,da Mata,Esplanada Abreu,1128,,compra,true
+11,da Costa Aparecida e Filhos,04290-404,PB,do Campo,Ladeira Albuquerque,8901,,descarte,true
+34,Leão - EI,40287047,AC,do Campo,Conjunto Ana Julia Campos,9087,,descarte,true
+7,Sousa Almeida Ltda.,50414412,BA,do Amparo,Condomínio de das Neves,4334,,varejo,true
+1000071,Ribeiro,73881-417,SC,Grande,Núcleo Cardoso,9065,,compra,true
+39,Pinto - EI,67546458,DF,Paulista,Chácara de Dias,5618,,compra,true
+17,Rios,26335127,PE,da Mata,Aeroporto Teixeira,8005,,descarte,true
+4,Pires,34287-806,AP,Grande,Travessa de Carvalho,6940,,atacado,true
+22,Machado Melo - EI,04344-646,SP,do Oeste,Estrada Brito,2144,,descarte,true
+29,da Mata,59493170,PI,do Oeste,Rodovia da Mata,7008,,compra,true
+10,Nogueira,72598-946,PI,das Pedras,Viela de Farias,591,,descarte,true
+10,Marques S.A.,85865-012,PA,das Pedras,Viaduto Fernanda da Rosa,2089,,compra,true
+3,Carvalho Brito Ltda.,29792-441,MS,da Praia,Parque de da Cruz,3442,,compra,true
+23,Pires Pimenta Ltda.,11283-116,SP,da Praia,Viela Lopes,9174,,descarte,true
+10,,96822-144,ES,Alegre,Chácara Nogueira,2663,,compra,true
+1000082,Fonseca,13754-406,AC,das Pedras,Travessa Albuquerque,2939,,descarte,true
+,Ponto de coleta Machado das Pedras,69461-568,PA,de Goiás,Recanto de Casa Grande,4066,,descarte,true
+7,Azevedo,91698-620,MG,da Serra,Quadra de da Rocha,635,,descarte,true
+30,da Luz,09549-970,MS,do Galho,Rodovia de Rocha,5001,,compra,true
+13,da Costa,41511-789,MG,Grande,Recanto de Silva,5379,,descarte,true
+1000087,da Mota,29602905,SP,Alegre,Condomínio de Monteiro,4574,,descarte,true
+26,Pinto,00004935,RO,de Minas,Morro Pedro Lucas Montenegro,8786,,descarte,true
+8,Teixeira,72564249,GO,Verde,Estrada Ramos,2926,,,true
+17,,60312002,AL,Paulista,Vereda Cavalcanti,1777,,descarte,true
+21,Macedo Ltda.,88513399,PA,da Praia,Praça de Pires,9933,,compra,true
+37,Siqueira Pereira - ME,35483-207,DF,Alegre,Área Vicente Vasconcelos,4174,,compra,true
+1,Montenegro,75945-095,PE,do Norte,Parque Caldeira,8822,,compra,true
+5,Casa Grande,22595-793,RO,da Mata,Distrito Aragão,5410,,descarte,true
+8,Cavalcante,03112-062,SC,da Prata,Vereda de Moreira,4921,,descarte,true
+21,Ribeiro - ME,37561-505,MG,Verde,Rua Novaes,4845,,compra,true
+25,Barbosa Teixeira S/A,82313235,RO,dos Dourados,Ladeira da Cunha,2852,,descarte,true
+1,Caldeira Ltda.,92541-466,MA,Verde,Colônia Vargas,4701,,compra,true
+38,Teixeira Mendes S/A,49143497,RN,Verde,Avenida de Porto,5280,,descarte,true
+14,Melo Barbosa - EI,92679-921,PE,da Mata,Quadra de Brito,7753,,compra,true
+19,Nunes da Cruz Ltda.,22738-155,PE,da Mata,Colônia de Nunes,5492,,compra,true
+,Ponto de coleta Camargo,15498-166,SP,do Oeste,Via da Costa,3849,,descarte,true
+15,Mendes S.A.,70516748,SE,Verde,Aeroporto Noah Macedo,3263,,compra,true
+16,Sousa S/A,03874-645,PR,do Campo,Chácara Azevedo,1194,,descarte,true
+37,Garcia S/A,81837182,DF,do Campo,Travessa Sousa,6292,,descarte,true
+10,Campos,19368-974,RS,da Mata,Viela Eloah Machado,91,,compra,true
+,Ponto de coleta Rezende,42865-060,ES,da Prata,Residencial de Barros,2882,,descarte,true
+,Ponto de coleta Peixoto,24696-866,RR,da Praia,Alameda Vinicius das Neves,8487,,descarte,true
+36,Monteiro Ltda.,16700-435,ES,do Oeste,Feira Yan Brito,1989,,descarte,true
+30,Marques S/A,55289403,RO,do Amparo,Rodovia Fogaça,8703,,descarte,true
+29,,93326259,RN,do Campo,Recanto Sousa,8271,,descarte,true
+,Ponto de coleta Azevedo do Campo,53690010,PI,do Norte,Chácara Marina da Luz,7306,,descarte,true
+1000113,Moura,94671-157,SC,do Norte,Praia Maria Eduarda Albuquerque,7778,,descarte,true
+16,Brito Cirino S.A.,54690-279,TO,das Pedras,Fazenda da Cruz,4544,,descarte,true
+18,Brito,13114787,PB,de Minas,Área Igor Cassiano,1270,,descarte,true
+22,Pinto S.A.,54884-321,MT,Paulista,Vereda de Moura,8850,,compra,true
+15,da Costa - ME,89209-536,MG,das Pedras,Ladeira de Porto,2504,,compra,true
+27,Vieira,65975-385,MT,de Goiás,Vale Maya Moraes,8891,,descarte,true
+14,Melo Ltda.,34637-551,TO,de Goiás,Vale Araújo,6884,,descarte,true
+38,Carvalho Ltda.,55917-356,RR,da Prata,Aeroporto de Pastor,321,,,true
+1,Martins,77618-520,MS,Verde,Favela de Alves,4893,,descarte,true
+1000122,Duarte,14216635,TO,dos Dourados,Chácara Montenegro,6866,,compra,true
+18,Moraes - EI,29247597,PA,de Minas,Lago Abreu,7957,,compra,true
+26,Almeida e Filhos,42605-030,SC,das Pedras,Travessa Aparecida,2705,,descarte,true
+35,Peixoto - EI,83578-643,AC,do Norte,Largo de Rios,6456,,,true
+2,Almeida,34445-902,AP,de Minas,Núcleo de Silva,7023,,compra,true
+1000127,Peixoto Ltda.,54785464,CE,da Serra,Estrada Matteo Vieira,824,,descarte,true
+14,Albuquerque Caldeira S.A.,90283621,PB,da Serra,Ladeira de Guerra,5356,,descarte,true
+,Ponto de coleta da Cruz,46735-034,MG,do Amparo,Trevo de Costa,4559,,descarte,true
+,Ponto de coleta da Luz,32348-002,TO,Paulista,Recanto Cassiano,6907,,descarte,true
+6,Santos,44804136,PR,de Minas,Loteamento Cassiano,318,,compra,true
+23,,16940-783,ES,Paulista,Área Cavalcanti,1125,,compra,true
+,Ponto de coleta Cirino de Melo,14870-821,ES,das Pedras,Vale de Teixeira,3267,,descarte,true
+,Ponto de coleta Duarte,01320047,RN,do Amparo,Núcleo de Câmara,2497,,descarte,true
+31,Sampaio,84733916,RO,dos Dourados,Favela de Brito,1875,,compra,true
+17,Fernandes,91831-728,SP,de Minas,Praça Gomes,6044,,compra,true
+8,Camargo Fogaça e Filhos,97170472,SP,de Goiás,Distrito Dias,2684,,descarte,true
+2,da Mota,96547-652,MA,do Galho,Parque Valentim Fogaça,9434,,descarte,true
+13,Almeida Rocha S/A,31615-009,AP,das Flores,Estação Luara Pereira,9701,,compra,true
+20,da Paz,47080260,RO,da Serra,Fazenda Cauê Campos,9838,,compra,true
+,Ponto de coleta Duarte,00017711,RJ,de Minas,Quadra Pietra Cassiano,673,,descarte,true
+28,Araújo,49508838,RO,dos Dourados,Vale Enrico Freitas,6072,,compra,true
+22,Cardoso Garcia S.A.,88261-712,AC,das Pedras,Núcleo Ester Duarte,6883,,descarte,true
+24,Peixoto,25519-447,RS,Grande,Parque de Cardoso,7533,,compra,true
+34,Andrade,09786160,RS,do Norte,Condomínio de da Paz,4426,,descarte,true
+38,Freitas S.A.,84139-540,GO,do Norte,Largo Peixoto,5281,,compra,true
+,Ponto de coleta Novais,92280255,AP,de Minas,Trecho Rael Castro,4570,,descarte,true
+1000148,Rios,40219-639,ES,da Mata,Lagoa Davi Miguel Marques,7614,,descarte,true
+32,Mendes,61072999,MT,de Minas,Área Vitor Hugo Novais,2980,,descarte,true
+17,Campos,44991-642,MT,da Serra,Aeroporto Daniela Cirino,4582,,descarte,true
+34,da Luz,63642-938,DF,do Sul,Setor Fernandes,1403,,compra,true
+32,Almeida Nogueira Ltda.,44469867,PI,do Norte,Jardim Gabriel Duarte,3938,,descarte,true
+32,Cunha,15674437,PB,Grande,Campo de Azevedo,283,,compra,true
+26,Nogueira,27433-591,RR,do Campo,Lagoa de Monteiro,3987,,descarte,true
+24,Cassiano Casa Grande S/A,34067775,PR,da Praia,Trecho Lopes,9069,,descarte,true
+36,Albuquerque,97832388,MT,das Pedras,Condomínio de Aragão,5765,,descarte,true
+17,Jesus - EI,06046688,ES,das Pedras,Viela de Dias,1977,,compra,true
+35,Souza - EI,17170-922,SP,dos Dourados,Alameda Rocha,3034,,compra,true
+31,da Conceição,44000-113,GO,do Norte,Viela de da Cruz,9660,,descarte,true
+13,,61662646,MA,do Campo,Parque Teixeira,3728,,descarte,true
+1,da Mota,97005-905,RR,do Oeste,Avenida Pereira,8752,,compra,true
+4,Cardoso,35525309,PI,do Campo,Passarela de Moreira,4787,,compra,true
+32,Mendes e Filhos,12208018,AM,Paulista,Lago Novaes,201,,descarte,true
+29,Vargas Leão - EI,89973955,MT,Grande,Alameda Bento Cirino,3021,,compra,true
+31,Fernandes S/A,15842888,AM,da Prata,Via de Rocha,1071,,descarte,true
+37,da Cunha,36089-284,RS,do Norte,Alameda Novaes,879,,compra,true
+37,Rodrigues Pereira Ltda.,52956286,MA,do Campo,Campo Farias,1396,,compra,true
+27,Freitas,47606578,RN,Grande,Aeroporto Cunha,9767,,compra,true
+,Ponto de coleta Teixeira de Silveira,12665386,MG,do Norte,Condomínio Camargo,7382,,descarte,true
+20,Aparecida - ME,55459570,RJ,Paulista,Sítio Abreu,7026,,atacado,true
+4,Caldeira Lima e Filhos,71206-625,RN,de Minas,Aeroporto de Albuquerque,1626,,compra,true
+17,Alves Ltda.,71044-150,RO,Paulista,Vila de Andrade,1331,,compra,true
+36,Lopes,62347651,AP,do Oeste,Distrito de Cavalcante,2565,,compra,true
+39,Siqueira,38990980,PR,dos Dourados,Estrada Davi Lucas Pereira,4772,,compra,true
+19,Lopes Barros - ME,39935349,RR,das Pedras,Parque de da Cunha,7439,,compra,true
+17,da Paz - EI,67675-487,SE,Verde,Passarela Dom Melo,9664,,compra,true
+35,da Rocha,40005-942,ES,da Mata,Recanto de Caldeira,2442,,descarte,true
+,Ponto de coleta Silva,11416361,AP,de Goiás,Condomínio de Montenegro,978,,descarte,true
+20,Aragão,47281-378,RN,Verde,Passarela de da Rocha,9326,,descarte,true
+30,Gonçalves,97573-552,RR,Verde,Trevo Pacheco,4983,,descarte,true
+33,Fonseca Pereira e Filhos,55568-154,PI,dos Dourados,Estação Maria Alice Rios,8091,,atacado,true
+3,Nunes,13815116,PA,da Praia,Chácara Sofia da Cruz,5281,,descarte,true
+15,Costa,48089881,RO,da Prata,Praia Nicolas Garcia,9425,,compra,true
+18,,33970578,RJ,Grande,Chácara de Siqueira,660,,compra,true
+29,Azevedo,52742-961,GO,de Goiás,Passarela Maria Liz Viana,2974,,descarte,true
+32,Carvalho,49404-815,AP,do Galho,Vale Pedro Miguel Machado,7701,,descarte,true
+21,Vieira S/A,50251619,RO,da Mata,Trecho Souza,1714,,compra,true
+32,Siqueira - EI,02340-427,MA,do Amparo,Quadra Alexia Sales,6562,,compra,true
+21,Lima,76011043,GO,das Flores,Morro Aragão,5297,,compra,true
+26,,98288164,PE,do Amparo,Praça Cardoso,19,,descarte,true
+13,Albuquerque,56752-591,PE,do Campo,Jardim de Almeida,5928,,descarte,true
+4,Teixeira,50223-957,DF,do Galho,Aeroporto Pietra da Paz,4376,,compra,true
+29,Moraes Pereira e Filhos,64714-306,RR,do Galho,Esplanada Rodrigues,7942,,varejo,true
+39,Pereira S/A,09428552,SE,Paulista,Condomínio de Carvalho,3921,,compra,true
+1,Vargas,05489-698,PI,da Mata,Vila de Pereira,6685,,compra,true
+8,Araújo S.A.,08371617,PB,da Serra,Rodovia da Cunha,1925,,compra,true
+19,Teixeira,75716-608,PE,das Flores,Morro Ana Clara da Conceição,4480,,descarte,true
+,Ponto de coleta Ramos da Mata,91159196,PR,do Oeste,Setor Pedro Miguel Sá,3994,,descarte,true

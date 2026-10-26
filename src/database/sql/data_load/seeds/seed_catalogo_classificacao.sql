@@ -87,6 +87,8 @@ UPDATE catalogo_coluna AS cc SET regra_negocio = v.regra
         ('usuario', 'email',                         'Único no sistema.'),
         ('usuario', 'nivel_acesso',                  'Valores permitidos: usuario, empresa, admin (CHECK).'),
         ('usuario', 'ultima_sessao',                 'Mantida por trigger; não atualizar manualmente.'),
+        ('usuario', 'falhas_login',                  'Incrementado a cada login malsucedido; zerado em login bem-sucedido.'),
+        ('usuario', 'bloqueado_ate',                 'Enquanto no futuro, login deve ser recusado mesmo com credenciais corretas.'),
         ('empresa', 'senha',                         'Armazenar apenas hash bcrypt.'),
         ('empresa', 'cnpj',                          'Único no sistema.'),
         ('localizacao_usuario', 'id_usuario',        'Único: no máximo um endereço por usuário.'),

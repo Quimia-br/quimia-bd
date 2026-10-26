@@ -7,4 +7,4 @@ CREATE TABLE log_rpa_execucao (
     linhas_processadas INTEGER,
     mensagem_erro TEXT,
     ultimo_watermark TIMESTAMPTZ
-);
+); 

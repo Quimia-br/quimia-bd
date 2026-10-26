@@ -107,6 +107,12 @@ TABELAS = {
     "validate_sql": BASE_DIR / "validate" / "validate_estante.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_estante.sql",
     },
+    "comodo": {
+    "stg_table": "stg_comodo",
+    "colunas": ["id_usuario_raw", "nome_raw", "icone_comodo_raw"],
+    "validate_sql": BASE_DIR / "validate" / "validate_comodo.sql",
+    "migrate_sql": BASE_DIR / "migrate" / "migrate_comodo.sql",
+    },
     "substancia_classe_quimica": {
     "stg_table": "stg_substancia_classe_quimica",
     "colunas": ["id_substancia_raw", "id_classe_quimica_raw"],
@@ -143,6 +149,11 @@ TABELAS = {
     ],
     "validate_sql": BASE_DIR / "validate" / "validate_incompatibilidade_regra.sql",
     "migrate_sql": BASE_DIR / "migrate" / "migrate_incompatibilidade_regra.sql",
+    },"sessao_acesso": {
+    "stg_table": "stg_sessao_acesso",
+    "colunas": ["id_usuario_raw", "ocorreu_em_raw"],
+    "validate_sql": BASE_DIR/"validate"/"validate_sessao_acesso.sql",
+    "migrate_sql": BASE_DIR/"migrate"/"migrate_sessao_acesso.sql",
     },
 }   
 
