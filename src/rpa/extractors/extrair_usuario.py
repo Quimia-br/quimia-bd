@@ -43,28 +43,26 @@ def extrair(desde=None) -> pd.DataFrame:
 
     df = df.rename(columns={
         "id_usuario": "id_legado",
-        "nome": "nome_raw",
-        "email": "email_raw",
-        "data_nascimento": "data_nasc_raw",
-        "data_cadastro": "cadastro_raw",
-        "url_foto": "foto_url_raw",
-        "status": "status_legado_raw",
+        "data_nascimento": "data_nasc",
+        "data_cadastro": "cadastro",
+        "url_foto": "foto_url",
+        "status": "status_legado",
     })
 
-    df["senha_raw"] = _SENHA_TEMPORARIA_HASH
-    df["nivel_acesso_raw"] = "padrao"
+    df["senha"] = _SENHA_TEMPORARIA_HASH
+    df["nivel_acesso"] = "usuario"
 
-    if "foto_url_raw" not in df.columns:
-        df["foto_url_raw"] = None
+    if "foto_url" not in df.columns:
+        df["foto_url"] = None
 
-    df = df[df["status_legado_raw"].str.upper().isin(STATUS_IMPORTAVEIS)]
+    df = df[df["status_legado"].str.upper().isin(STATUS_IMPORTAVEIS)]
     if df.empty:
         return df
 
 
     colunas_staging = [
-        "nome_raw", "email_raw", "data_nasc_raw",
-        "senha_raw", "nivel_acesso_raw", "foto_url_raw", "cadastro_raw",
+        "nome", "email", "data_nasc",
+        "senha", "nivel_acesso", "foto_url", "cadastro",
     ]
 
     return df[colunas_staging]

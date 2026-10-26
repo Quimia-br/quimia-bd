@@ -74,7 +74,7 @@ BEGIN
               (
                   (ir.id_substancia_a IS NOT NULL AND EXISTS (SELECT 1 FROM compostos_a WHERE id_substancia = ir.id_substancia_a))
                   OR (ir.id_classe_a IS NOT NULL AND EXISTS (SELECT 1 FROM classes_a WHERE id_classe_quimica = ir.id_classe_a))
-              )
+              ) 
               AND
               (
                   (ir.id_substancia_b IS NOT NULL AND EXISTS (SELECT 1 FROM compostos_b WHERE id_substancia = ir.id_substancia_b))
@@ -93,6 +93,25 @@ BEGIN
               )
             )
           )
+    ),
+    -- incompatibilidades declaradas na própria FDS (seção 10, já resolvidas
+    -- para substância/classe) que atingem o OUTRO produto; id_regra fica NULL
+    fds_batidas AS (
+        SELECT DISTINCT fi.severidade, fi.descricao_risco
+        FROM fds f
+        JOIN fds_incompatibilidade fi ON fi.id_fds = f.id
+        WHERE f.ativo = TRUE
+          AND f.id_produto IN (p_id_produto_a, p_id_produto_b)
+          AND (
+            (f.id_produto = p_id_produto_a AND (
+                (fi.id_substancia IS NOT NULL AND EXISTS (SELECT 1 FROM compostos_b WHERE id_substancia = fi.id_substancia))
+                OR (fi.id_classe_quimica IS NOT NULL AND EXISTS (SELECT 1 FROM classes_b WHERE id_classe_quimica = fi.id_classe_quimica))
+            ))
+            OR (f.id_produto = p_id_produto_b AND (
+                (fi.id_substancia IS NOT NULL AND EXISTS (SELECT 1 FROM compostos_a WHERE id_substancia = fi.id_substancia))
+                OR (fi.id_classe_quimica IS NOT NULL AND EXISTS (SELECT 1 FROM classes_a WHERE id_classe_quimica = fi.id_classe_quimica))
+            ))
+          )
     )
     SELECT u.resultado, u.id_regra, u.severidade, u.descricao_risco
     FROM (
@@ -102,9 +121,15 @@ BEGIN
 
         UNION ALL
 
-        -- só emite a linha "compativel" quando NENHUMA regra bateu
+        SELECT 'incompativel'::VARCHAR(20), NULL::INTEGER, fb.severidade, fb.descricao_risco
+        FROM fds_batidas fb
+
+        UNION ALL
+
+        -- só emite a linha "compativel" quando NENHUMA regra nem FDS bateu
         SELECT 'compativel'::VARCHAR(20), NULL::INTEGER, NULL::VARCHAR(20), NULL::TEXT
         WHERE NOT EXISTS (SELECT 1 FROM regras_batidas)
+          AND NOT EXISTS (SELECT 1 FROM fds_batidas)
     ) u
     ORDER BY
         CASE u.severidade
@@ -114,8 +139,8 @@ BEGIN
             WHEN 'baixa'   THEN 4
             ELSE 5
         END,
-        u.id_regra;
+        u.id_regra NULLS LAST;
 END;
 $$;
 
-COMMENT ON FUNCTION fn_match_produtos(INTEGER, INTEGER) IS 'Motor de detecção de mistura perigosa: cruza substâncias e classes químicas das FDS ativas dos dois produtos com incompatibilidade_regra. Retorna incompativel (uma linha por regra, da mais grave para a menos grave), compativel ou nao_avaliado quando falta composto resolvido.';
+COMMENT ON FUNCTION fn_match_produtos(INTEGER, INTEGER) IS 'Motor de detecção de mistura perigosa: cruza substâncias e classes químicas das FDS ativas dos dois produtos com incompatibilidade_regra. Retorna incompativel (uma linha por regra curada ou por incompatibilidade declarada na FDS, da mais grave para a menos grave), compativel ou nao_avaliado quando falta composto resolvido.';

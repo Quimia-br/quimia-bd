@@ -13,13 +13,9 @@
 --                            + vira pendência em sinonimo_pendente
 --                            para curadoria humana (fn_resolver_pendencia)
 --
--- fds_incompatibilidade NÃO é populada por esta function — o parser
--- não extrai incompatibilidades estruturadas (só grava texto bruto
--- em secoes.10, que já fica preservado no próprio raw_json). Essa
--- tabela continua sendo curadoria manual via incompatibilidade_regra
--- + fn_match_produtos. Deixamos aqui um tratamento defensivo caso
--- o parser um dia passe a extrair isso (contrato já prevê o campo
--- como opcional), mas hoje o array sempre vem vazio/ausente.
+-- fds_incompatibilidade (seção 10) e fds_primeiro_socorro (seção 04)
+-- também são populadas aqui; fn_match_produtos usa as incompatibilidades
+-- resolvidas da FDS além das regras curadas de incompatibilidade_regra.
 --
 -- Requer extensão unaccent (já habilitada no create_tables.sql).
 -- ============================================================
@@ -35,6 +31,11 @@ DECLARE
     v_composto          JSONB;
     v_incompatibilidade JSONB;
     v_descarte          JSONB;
+    v_socorro           JSONB;
+
+    v_reagente_norm     TEXT;
+    v_id_classe         INTEGER;
+    v_severidade        TEXT;
 
     v_nome_raw          TEXT;
     v_cas_raw           TEXT;
@@ -54,6 +55,7 @@ BEGIN
     DELETE FROM fds_composto          WHERE id_fds = p_id_fds;
     DELETE FROM fds_incompatibilidade WHERE id_fds = p_id_fds;
     DELETE FROM fds_descarte          WHERE id_fds = p_id_fds;
+    DELETE FROM fds_primeiro_socorro  WHERE id_fds = p_id_fds;
 
     -- pendências ainda não resolvidas desta FDS são recriadas do zero
     -- a cada reprocessamento; as já resolvidas/descartadas viram
@@ -101,12 +103,13 @@ BEGIN
         END IF;
 
         INSERT INTO fds_composto (
-            id_fds, id_substancia, concentracao_min, concentracao_max
+            id_fds, id_substancia, concentracao_min, concentracao_max, unidade_concentracao
         ) VALUES (
             p_id_fds,
             v_id_substancia,
             NULLIF(v_composto ->> 'concentracao_min', '')::NUMERIC(5,2),
-            NULLIF(v_composto ->> 'concentracao_max', '')::NUMERIC(5,2)
+            NULLIF(v_composto ->> 'concentracao_max', '')::NUMERIC(5,2),
+            left(NULLIF(btrim(v_composto ->> 'unidade_concentracao'), ''), 20)
         );
 
         -- 4. não resolveu -> vira pendência de curadoria
@@ -122,23 +125,86 @@ BEGIN
     END LOOP;
 
     -- ================================================================
-    -- SEÇÃO 10 — incompatibilidades (opcional; hoje sempre ausente,
-    -- parser só grava texto bruto, que fica preservado no raw_json)
+    -- SEÇÃO 10 — incompatibilidades (opcional)
+    -- Resolve o reagente para substância (CAS ou nome/sinônimo) ou classe
+    -- química (nome normalizado, '_' = espaço). O que não resolver fica
+    -- só como texto (ex.: "Temperaturas altas") e não entra no match.
     -- ================================================================
     IF jsonb_typeof(v_raw #> '{secoes,10,incompatibilidades}') = 'array' THEN
         FOR v_incompatibilidade IN
             SELECT jsonb_array_elements(v_raw #> '{secoes,10,incompatibilidades}')
         LOOP
+            v_id_substancia := NULL;
+            v_id_classe     := NULL;
+            v_cas_raw       := v_incompatibilidade ->> 'cas_numero';
+            v_reagente_norm := lower(unaccent(btrim(v_incompatibilidade ->> 'substancia_reagente')));
+
+            IF v_cas_raw IS NOT NULL THEN
+                SELECT s.id INTO v_id_substancia
+                FROM substancia s WHERE s.cas_numero = btrim(v_cas_raw);
+            END IF;
+
+            IF v_id_substancia IS NULL AND v_reagente_norm IS NOT NULL THEN
+                SELECT ss.id_substancia INTO v_id_substancia
+                FROM substancia_sinonimo ss
+                WHERE ss.sinonimo_normalizado = v_reagente_norm;
+            END IF;
+
+            IF v_id_substancia IS NULL AND v_reagente_norm IS NOT NULL THEN
+                SELECT s.id INTO v_id_substancia
+                FROM substancia s
+                WHERE lower(unaccent(btrim(s.nome_canonico))) = v_reagente_norm;
+            END IF;
+
+            IF v_id_substancia IS NULL AND v_reagente_norm IS NOT NULL THEN
+                SELECT cq.id INTO v_id_classe
+                FROM classe_quimica cq
+                WHERE lower(unaccent(replace(cq.nome, '_', ' '))) = v_reagente_norm;
+            END IF;
+
+            v_severidade := lower(btrim(v_incompatibilidade ->> 'severidade'));
+            IF v_severidade IS NULL OR v_severidade NOT IN ('baixa','media','alta','critica') THEN
+                v_severidade := 'media';
+            END IF;
+
             INSERT INTO fds_incompatibilidade (
-                id_fds, substancia_reagente, descricao_risco, severidade
+                id_fds, id_substancia, id_classe_quimica,
+                substancia_reagente, descricao_risco, severidade
             ) VALUES (
                 p_id_fds,
-                v_incompatibilidade ->> 'substancia_reagente',
+                v_id_substancia,
+                v_id_classe,
+                left(v_incompatibilidade ->> 'substancia_reagente', 255),
                 v_incompatibilidade ->> 'descricao_risco',
-                COALESCE(v_incompatibilidade ->> 'severidade', 'media')
+                v_severidade
             );
         END LOOP;
     END IF;
+
+    -- ================================================================
+    -- SEÇÃO 04 — primeiros socorros (rota fora do domínio é ignorada,
+    -- para não derrubar o INSERT da FDS inteira)
+    -- ================================================================
+    FOR v_socorro IN
+        SELECT jsonb_array_elements(
+            COALESCE(v_raw #> '{secoes,04,primeiros_socorros}', v_raw #> '{secoes,04,primeiros_socorro}', '[]'::jsonb)
+        )
+    LOOP
+        CONTINUE WHEN lower(v_socorro ->> 'rota_exposicao') IS NULL
+                   OR lower(v_socorro ->> 'rota_exposicao') NOT IN ('inalacao','pele','olhos','ingestao');
+
+        INSERT INTO fds_primeiro_socorro (
+            id_fds, rota_exposicao, descricao, sintomas,
+            tratamento_especial, atencao_medica_imediata
+        ) VALUES (
+            p_id_fds,
+            lower(v_socorro ->> 'rota_exposicao'),
+            v_socorro ->> 'descricao',
+            v_socorro ->> 'sintomas',
+            v_socorro ->> 'tratamento_especial',
+            COALESCE((v_socorro ->> 'atencao_medica_imediata')::BOOLEAN, FALSE)
+        );
+    END LOOP;
 
     -- ================================================================
     -- SEÇÃO 13 — descarte

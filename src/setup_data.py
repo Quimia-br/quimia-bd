@@ -24,6 +24,7 @@ from src.database.utils.data_generators.generate_historico_recomendacao import (
 from src.database.utils.data_generators.generate_incompatibilidade_regra import (
     gerar_incompatibilidade_regra, buscar_ids as buscar_ids_ir,
 )
+#from src.database.utils.data_generators import generate_sessao_acesso as gerador_sessao_acesso
 
 
 def salvar_csv(caminho: str, linhas: list[dict], fieldnames: list[str]):
@@ -205,6 +206,20 @@ def main():
         ],
     )
     rodar_pipeline("incompatibilidade_regra", csv_incompatibilidade)
+
+    # conn = get_connection()
+    # ids_usuario_sessao = gerador_sessao_acesso.buscar_ids(conn)
+    # conn.close()
+    
+    # linhas_sessao = gerador_sessao_acesso.gerar_sessoes(
+    #     ids_usuario_sessao, dias=60, proporcao_ruido=0
+    # )
+    # caminho_csv_sessao = gerador_sessao_acesso.salvar_csv(
+    #     linhas_sessao,
+    #     caminho="src/database/sql/data_load/mocks/sessao_acesso.csv",
+    # )
+    # rodar_pipeline("sessao_acesso", caminho_csv_sessao)
+
 
     executar_scripts([
         "src/database/sql/data_mart/dim/dim_tempo.sql",

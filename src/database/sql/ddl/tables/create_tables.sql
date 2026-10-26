@@ -111,7 +111,8 @@ CREATE TABLE fds (
     data_atualizacao DATE,
     ativo            BOOLEAN NOT NULL DEFAULT TRUE,
     fonte_url        TEXT,
-    raw_json         JSONB
+    raw_json         JSONB,
+    resumo_simplificado TEXT
 );
 
 CREATE TABLE fds_primeiro_socorro (
@@ -224,6 +225,7 @@ CREATE TABLE estante_produto (
     id_produto  INTEGER NOT NULL,
     id_usuario  UUID NOT NULL,
     id_estante  INTEGER NOT NULL,
+    id_comodo INTEGER,
     CONSTRAINT estante_produto_unique UNIQUE (id_estante, id_produto)
 );
 
