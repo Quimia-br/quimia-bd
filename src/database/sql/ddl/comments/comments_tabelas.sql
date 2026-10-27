@@ -42,6 +42,8 @@ COMMENT ON COLUMN localizacao_usuario.bairro IS 'Bairro do endereço (dado pesso
 COMMENT ON COLUMN localizacao_usuario.rua IS 'Logradouro (dado pessoal).';
 COMMENT ON COLUMN localizacao_usuario.numero IS 'Número do imóvel (dado pessoal).';
 COMMENT ON COLUMN localizacao_usuario.complemento IS 'Complemento do endereço (dado pessoal).';
+COMMENT ON COLUMN localizacao_usuario.latitude IS 'Latitude em graus decimais (-90 a 90); NULL se não informada. Sempre junto com longitude (dado pessoal: localização precisa).';
+COMMENT ON COLUMN localizacao_usuario.longitude IS 'Longitude em graus decimais (-180 a 180); NULL se não informada. Sempre junto com latitude (dado pessoal: localização precisa).';
 
 -- classe_quimica ------------------------------------------------------
 COMMENT ON TABLE classe_quimica IS

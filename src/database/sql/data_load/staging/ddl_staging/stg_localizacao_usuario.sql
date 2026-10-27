@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS stg_localizacao_usuario (
     rua_raw TEXT,
     numero_raw TEXT,
     complemento_raw TEXT,
+    latitude_raw TEXT,
+    longitude_raw TEXT,
  
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
     CHECK (status IN ('pendente','ok','rejeitado')),
@@ -26,6 +28,23 @@ BEGIN
         RETURN FALSE;
     END IF;
     PERFORM p_texto::INTEGER;
+    RETURN TRUE;
+EXCEPTION WHEN OTHERS THEN
+    RETURN FALSE;
+END;
+$$ LANGUAGE plpgsql;
+
+
+ALTER TABLE stg_localizacao_usuario ADD COLUMN IF NOT EXISTS latitude_raw TEXT;
+ALTER TABLE stg_localizacao_usuario ADD COLUMN IF NOT EXISTS longitude_raw TEXT;
+
+CREATE OR REPLACE FUNCTION fn_numerico_valido(p_texto TEXT)
+RETURNS BOOLEAN AS $$
+BEGIN
+    IF p_texto IS NULL OR btrim(p_texto) = '' THEN
+        RETURN FALSE;
+    END IF;
+    PERFORM p_texto::NUMERIC;
     RETURN TRUE;
 EXCEPTION WHEN OTHERS THEN
     RETURN FALSE;

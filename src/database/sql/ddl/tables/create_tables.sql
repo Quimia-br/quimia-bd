@@ -214,7 +214,12 @@ CREATE TABLE localizacao_usuario (
     rua         VARCHAR(255),
     numero      INTEGER,
     complemento VARCHAR(255),
-    CONSTRAINT localizacao_usuario_unique UNIQUE (id_usuario)
+    latitude    NUMERIC(9,6),
+    longitude   NUMERIC(9,6),
+    CONSTRAINT localizacao_usuario_unique UNIQUE (id_usuario),
+    CONSTRAINT chk_localizacao_latitude CHECK (latitude BETWEEN -90 AND 90),
+    CONSTRAINT chk_localizacao_longitude CHECK (longitude BETWEEN -180 AND 180),
+    CONSTRAINT chk_localizacao_coordenadas_juntas CHECK ((latitude IS NULL) = (longitude IS NULL))
 );
 
 CREATE TABLE estante (

@@ -64,6 +64,7 @@ TABELAS = {
         "colunas": [
             "id_usuario_raw", "cep_raw", "estado_raw", "bairro_raw",
             "rua_raw", "numero_raw", "complemento_raw",
+            "latitude_raw", "longitude_raw",
         ],
         "validate_sql": BASE_DIR / "validate" / "validate_localizacao_usuario.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_localizacao_usuario.sql",
@@ -270,7 +271,6 @@ def rodar_pipeline(tabela: str, caminho_csv: str) -> uuid.UUID:
         conn.close()
 
 
-# CLI
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Loader genérico de staging (Quimia)")
