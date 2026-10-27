@@ -4,7 +4,6 @@
 -- A sincronização nunca sobrescreve estes campos.
 -- =====================================================================
 
--- Domínio e nível de acesso -------------------------------------------
 UPDATE catalogo_tabela SET dominio = 'cadastro', nivel_acesso = 'publico'
  WHERE nome_tabela IN ('marca', 'produto', 'substancia', 'classe_quimica',
                        'substancia_classe_quimica', 'substancia_sinonimo');
@@ -47,7 +46,6 @@ UPDATE catalogo_tabela SET dominio = 'catalogo', nivel_acesso = 'interno'
 UPDATE catalogo_tabela SET responsavel = 'Equipe Quimia BD'
  WHERE responsavel IS NULL;
 
--- Regras de negócio por tabela ----------------------------------------
 UPDATE catalogo_tabela AS ct SET regra_negocio = v.regra
   FROM (VALUES
     ('usuario',                 'Dado pessoal: acesso só pelo próprio usuário e admin. Alterações auditadas por trg_auditoria_usuario.'),
@@ -64,7 +62,6 @@ UPDATE catalogo_tabela AS ct SET regra_negocio = v.regra
   ) AS v(tabela, regra)
  WHERE ct.nome_tabela = v.tabela;
 
--- Colunas com dado pessoal (LGPD) -------------------------------------
 UPDATE catalogo_coluna AS cc SET dado_pessoal_lgpd = TRUE
   FROM catalogo_tabela ct
  WHERE ct.id = cc.id_catalogo_tabela
@@ -74,12 +71,12 @@ UPDATE catalogo_coluna AS cc SET dado_pessoal_lgpd = TRUE
         ('localizacao_usuario', 'cep'), ('localizacao_usuario', 'bairro'),
         ('localizacao_usuario', 'rua'), ('localizacao_usuario', 'numero'),
         ('localizacao_usuario', 'complemento'),
+        ('localizacao_usuario', 'latitude'), ('localizacao_usuario', 'longitude'),
         ('empresa', 'email'), ('empresa', 'senha'),
         ('log_auditoria', 'dado_anterior'), ('log_auditoria', 'dado_novo'),
         ('refresh_token', 'token_hash')
    );
 
--- Regras de negócio por coluna ----------------------------------------
 UPDATE catalogo_coluna AS cc SET regra_negocio = v.regra
   FROM catalogo_tabela ct,
        (VALUES
