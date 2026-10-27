@@ -196,6 +196,7 @@ COMMENT ON COLUMN estante_produto.id_produto IS 'Produto guardado.';
 COMMENT ON COLUMN estante_produto.id_usuario IS 'Usuário dono; deve ser o mesmo dono da estante.';
 COMMENT ON COLUMN estante_produto.id_estante IS 'Estante onde o produto está; o par estante x produto é único.';
 COMMENT ON COLUMN estante_produto.id_comodo IS 'Cômodo onde o produto está guardado (opcional).';
+COMMENT ON COLUMN estante_produto.data_adicionado IS 'Momento em que o produto foi guardado na estante; base da ordenação Recentes/Antigos e do filtro por período.';
 
 -- historico_recomendacao ----------------------------------------------
 COMMENT ON TABLE historico_recomendacao IS

@@ -244,6 +244,7 @@ CREATE TABLE estante_produto (
     id_usuario  UUID NOT NULL,
     id_estante  INTEGER NOT NULL,
     id_comodo   INTEGER,
+    data_adicionado TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT estante_produto_unique UNIQUE (id_estante, id_produto)
 );
 

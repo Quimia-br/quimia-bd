@@ -69,6 +69,7 @@ def main():
 
          "src/database/sql/routines/procedures/pd_cadastrar_produto_completo.sql",
          "src/database/sql/routines/procedures/pd_registrar_consulta_match.sql",
+         "src/database/sql/routines/procedures/pd_guardar_produto_estante.sql",
 
         "src/database/sql/routines/triggers/trg_atualizar_ultima_sessao.sql",
         "src/database/sql/routines/triggers/trg_auditoria_fds.sql",
@@ -87,6 +88,7 @@ def main():
         "src/database/sql/indexes/idx_fds_primeiro_socorro_id_fds.sql",
         "src/database/sql/indexes/idx_substancia_sinonimo_id_substancia.sql",
         "src/database/sql/indexes/idx_produto_id_marca.sql",
+        "src/database/sql/indexes/idx_estante_produto_estante_data.sql",
         "src/database/sql/indexes/idx_sessao_acesso_id_usuario.sql",
         "src/database/sql/indexes/idx_sessao_acesso_ocorreu_em.sql",
         "src/database/sql/indexes/idx_log_auditoria_tabela_data.sql",
