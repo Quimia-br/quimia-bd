@@ -37,10 +37,10 @@ def salvar_csv(caminho: str, linhas: list[dict], fieldnames: list[str]):
 
 def main():
     executar_scripts([
-         "src/database/sql/ddl/tables/create_tables.sql",
-         "src/database/sql/logs/sessao_acesso.sql",
-         "src/database/sql/logs/log_auditoria.sql",
-         "src/database/sql/logs/log_rpa_execucao.sql",
+        "src/database/sql/ddl/tables/create_tables.sql",
+        "src/database/sql/logs/sessao_acesso.sql",
+        "src/database/sql/logs/log_auditoria.sql",
+        "src/database/sql/logs/log_rpa_execucao.sql",
         "src/database/sql/ddl/tables/catalogo.sql",
          "src/database/sql/data_load/staging/ddl_staging/stg_usuario_empresa.sql",
          "src/database/sql/data_load/staging/ddl_staging/stg_ponto_parceiro.sql",
