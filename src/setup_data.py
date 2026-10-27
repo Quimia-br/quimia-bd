@@ -60,6 +60,7 @@ def main():
          "src/database/sql/routines/functions/fn_atualizar_ultima_sessao.sql",
          "src/database/sql/routines/functions/fn_buscar_dados_fds.sql",
          "src/database/sql/routines/functions/fn_buscar_incompatibilidades_existentes.sql",
+         "src/database/sql/routines/functions/fn_buscar_primeiros_socorros.sql",
          "src/database/sql/routines/functions/fn_match.sql",
          "src/database/sql/routines/functions/fn_processar_fds_raw_json.sql",
          "src/database/sql/routines/functions/fn_validar_estante_produto.sql",
