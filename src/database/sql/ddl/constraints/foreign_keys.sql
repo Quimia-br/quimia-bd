@@ -205,3 +205,15 @@ ALTER TABLE ponto_parceiro
 ADD CONSTRAINT fk_ponto_parceiro_empresa
 FOREIGN KEY (id_empresa) REFERENCES empresa(id)
 ON DELETE SET NULL;
+
+ALTER TABLE ponto_salvo DROP CONSTRAINT IF EXISTS fk_ponto_salvo_usuario;
+ALTER TABLE ponto_salvo
+ADD CONSTRAINT fk_ponto_salvo_usuario
+FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+ON DELETE CASCADE;
+
+ALTER TABLE ponto_salvo DROP CONSTRAINT IF EXISTS fk_ponto_salvo_ponto;
+ALTER TABLE ponto_salvo
+ADD CONSTRAINT fk_ponto_salvo_ponto
+FOREIGN KEY (id_ponto) REFERENCES ponto_parceiro(id)
+ON DELETE CASCADE;

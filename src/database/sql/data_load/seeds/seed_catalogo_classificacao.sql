@@ -22,7 +22,7 @@ UPDATE catalogo_tabela SET dominio = 'curadoria', nivel_acesso = 'interno'
  WHERE nome_tabela IN ('sinonimo_pendente', 'incompatibilidade_regra');
 
 UPDATE catalogo_tabela SET dominio = 'interacao', nivel_acesso = 'interno'
- WHERE nome_tabela IN ('estante', 'estante_produto',
+ WHERE nome_tabela IN ('estante', 'estante_produto', 'ponto_salvo',
                        'historico_recomendacao', 'historico_match');
 
 UPDATE catalogo_tabela SET dominio = 'auditoria', nivel_acesso = 'restrito'
@@ -56,6 +56,7 @@ UPDATE catalogo_tabela AS ct SET regra_negocio = v.regra
     ('incompatibilidade_regra', 'Cada lado é substância OU classe química (XOR). Só regras ativas entram no match.'),
     ('sinonimo_pendente',       'Toda pendência resolvida deve apontar para uma substância e ter resolvido_em preenchido.'),
     ('historico_match',         'Par normalizado (id_produto_a < id_produto_b). nao_avaliado não significa seguro.'),
+    ('ponto_salvo',             'Um ponto por usuário (UNIQUE usuário x ponto). A Home usa o último ponto de descarte salvo; ao remover, vale o anterior.'),
     ('sessao_acesso',           'Inserida pelo backend a cada login; alimenta usuario.ultima_sessao e o DAU.'),
     ('log_auditoria',           'Somente inserção por trigger; pode conter dados pessoais em JSON.'),
     ('dim_usuario',             'Não expõe nome nem e-mail (LGPD).')
@@ -108,6 +109,7 @@ UPDATE catalogo_coluna AS cc SET regra_negocio = v.regra
         ('incompatibilidade_regra', 'severidade',      'Valores permitidos: baixa, media, alta, critica (CHECK).'),
         ('sinonimo_pendente', 'status',              'Valores permitidos: pendente, resolvido, descartado (CHECK).'),
         ('estante_produto', 'id_usuario',            'Deve ser o mesmo dono da estante (garantido pela trg_validar_estante_produto).'),
+        ('ponto_salvo', 'id_ponto',                  'Único por usuário: o mesmo ponto não pode ser salvo duas vezes.'),
         ('historico_match', 'id_produto_a',          'Sempre menor que id_produto_b (CHECK).'),
         ('historico_match', 'resultado',             'Valores permitidos: compativel, incompativel, nao_avaliado (CHECK).'),
         ('historico_recomendacao', 'resultado',      'Valores permitidos: compativel, incompativel, atencao, nao_avaliado (CHECK).'),
