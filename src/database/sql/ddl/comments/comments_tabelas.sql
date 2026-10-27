@@ -237,6 +237,14 @@ COMMENT ON COLUMN ponto_parceiro.complemento IS 'Complemento do endereço.';
 COMMENT ON COLUMN ponto_parceiro.tipo IS 'Finalidade do ponto: compra ou descarte.';
 COMMENT ON COLUMN ponto_parceiro.ativo IS 'Indica se o ponto está em funcionamento.';
 COMMENT ON COLUMN ponto_parceiro.latitude IS 'Latitude em graus decimais (-90 a 90); NULL se o ponto ainda não foi geocodificado. Sempre junto com longitude; base da busca por proximidade.';
+-- ponto_salvo ---------------------------------------------------------
+COMMENT ON TABLE ponto_salvo IS
+'Pontos parceiros salvos por cada usuário (fluxo de Proximidade). A Home mostra o último ponto de descarte salvo; remover o salvo é apagar a linha.';
+COMMENT ON COLUMN ponto_salvo.id IS 'Identificador do salvamento.';
+COMMENT ON COLUMN ponto_salvo.id_usuario IS 'Usuário que salvou o ponto.';
+COMMENT ON COLUMN ponto_salvo.id_ponto IS 'Ponto parceiro salvo; o par usuário x ponto é único.';
+COMMENT ON COLUMN ponto_salvo.criado_em IS 'Momento em que o usuário salvou o ponto; base da ordenação do mais recente.';
+
 COMMENT ON COLUMN ponto_parceiro.longitude IS 'Longitude em graus decimais (-180 a 180); NULL se o ponto ainda não foi geocodificado. Sempre junto com latitude; base da busca por proximidade.';
 
 -- sessao_acesso -------------------------------------------------------
