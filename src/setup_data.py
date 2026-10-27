@@ -118,7 +118,7 @@ def main():
     csv_localizacao = salvar_csv(
         "src/database/sql/data_load/mocks/localizacao_usuario.csv",
         linhas_localizacao,
-        ["id_usuario", "cep", "estado", "bairro", "rua", "numero", "complemento"],
+        ["id_usuario", "cep", "estado", "bairro", "rua", "numero", "complemento", "latitude", "longitude"],
     )
     rodar_pipeline("localizacao_usuario", csv_localizacao)
 
