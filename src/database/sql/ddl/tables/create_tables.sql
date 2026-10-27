@@ -270,7 +270,12 @@ CREATE TABLE ponto_parceiro (
     complemento VARCHAR(50),
     tipo        VARCHAR(50)
         CHECK (tipo IN ('compra', 'descarte')),
-    ativo       BOOLEAN DEFAULT TRUE
+    ativo       BOOLEAN DEFAULT TRUE,
+    latitude    NUMERIC(9,6),
+    longitude   NUMERIC(9,6),
+    CONSTRAINT chk_ponto_latitude CHECK (latitude BETWEEN -90 AND 90),
+    CONSTRAINT chk_ponto_longitude CHECK (longitude BETWEEN -180 AND 180),
+    CONSTRAINT chk_ponto_coordenadas_juntas CHECK ((latitude IS NULL) = (longitude IS NULL))
 );
 
 CREATE TABLE historico_match (

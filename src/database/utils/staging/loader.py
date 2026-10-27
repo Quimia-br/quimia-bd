@@ -74,6 +74,7 @@ TABELAS = {
         "colunas": [
             "id_empresa_raw", "nome_raw", "cep_raw", "estado_raw", "bairro_raw",
             "rua_raw", "numero_raw", "complemento_raw", "tipo_raw", "ativo_raw",
+            "latitude_raw", "longitude_raw",
         ],
         "validate_sql": BASE_DIR / "validate" / "validate_ponto_parceiro.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_ponto_parceiro.sql",

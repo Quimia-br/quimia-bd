@@ -12,7 +12,9 @@ INSERT INTO ponto_parceiro (
     numero,
     complemento,
     tipo,
-    ativo
+    ativo,
+    latitude,
+    longitude
 )
 SELECT
     NULLIF(btrim(id_empresa_raw), '')::INTEGER,
@@ -32,7 +34,9 @@ SELECT
         WHEN 'f'     THEN FALSE
         WHEN '0'     THEN FALSE
         ELSE TRUE
-    END
+    END,
+    NULLIF(btrim(latitude_raw), '')::NUMERIC(9,6),
+    NULLIF(btrim(longitude_raw), '')::NUMERIC(9,6)
 FROM stg_ponto_parceiro
 WHERE id_batch = :batch_id
   AND status = 'ok';
