@@ -130,7 +130,7 @@ def main():
     csv_estante = salvar_csv(
         "src/database/sql/data_load/mocks/estante.csv",
         linhas_estante,
-        ["id_usuario", "nome"],
+        ["id_usuario", "nome", "ambiente"],
     )
     rodar_pipeline("estante", csv_estante)
 
@@ -216,7 +216,7 @@ def main():
     ids_usuario_sessao = gerador_sessao_acesso.buscar_ids(conn)
     conn.close()
  
-    linhas_sessao = gerador_sessao_acesso.gerar_sessoes(ids_usuario_sessao, dias=60, proporcao_ruido=0)
+    linhas_sessao = gerador_sessao_acesso.gerar_sessoes(ids_usuario_sessao, dias=360, proporcao_ruido=0)
     caminho_csv_sessao = gerador_sessao_acesso.salvar_csv(
     linhas_sessao,
     caminho="src/database/sql/data_load/mocks/sessao_acesso.csv",

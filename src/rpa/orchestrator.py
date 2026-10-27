@@ -24,13 +24,13 @@ def rodar_processo(nome_processo: str, funcao_extracao, tabela_loader: str) -> N
 
         if df.empty:
             logger.info("%s: nenhuma linha nova, nada a fazer.", nome_processo)
-            log_execucao.finalizar(id_execucao, status="sucesso", linhas=0)
+            log_execucao.finalizar(id_execucao, status="sucesso", linhas=0, watermark=desde)
             return
 
         caminho_csv = _salvar_csv_temporario(df, nome_processo)
         loader.rodar_pipeline(tabela_loader, caminho_csv)
 
-        novo_watermark = df["data_alteracao"].max() if "data_alteracao" in df.columns else None
+        novo_watermark = df["cadastro"].max() if "cadastro" in df.columns else None
         log_execucao.finalizar(
             id_execucao,
             status="sucesso",

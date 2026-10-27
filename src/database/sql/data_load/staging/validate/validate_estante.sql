@@ -40,6 +40,13 @@ WHERE se.id_batch = :batch_id
       OR EXISTS (SELECT 1 FROM estante e WHERE e.id_usuario = se.id_usuario_raw::uuid)
   );
 
+-- ambiente é opcional, mas a coluna final é VARCHAR(255): acima disso o migrate estouraria
+UPDATE stg_estante
+SET status = 'rejeitado', motivo_rejeicao = 'ambiente maior que 255 caracteres'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND length(btrim(ambiente_raw)) > 255;
+
 UPDATE stg_estante
 SET status = 'ok'
 WHERE id_batch = :batch_id

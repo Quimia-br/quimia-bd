@@ -21,6 +21,7 @@ import uuid
 from faker import Faker
 
 from src.database.connection import get_connection
+from src.database.utils.data_generators.generate_comodo import COMODOS_COMUNS
 
 fake = Faker("pt_BR")
 random.seed(42)
@@ -87,10 +88,13 @@ def gerar_estante(n=100, ids_usuario=None):
             id_usuario = ""
 
         nome = gerar_nome_estante() if random.random() < 0.92 else ""
+        # ambiente é opcional (nullable): ~10% vem vazio, como se o usuário não tivesse informado
+        ambiente = random.choice(list(COMODOS_COMUNS)) if random.random() < 0.9 else ""
 
         linhas.append({
             "id_usuario": id_usuario,
             "nome": nome,
+            "ambiente": ambiente,
         })
 
     return linhas
@@ -109,7 +113,7 @@ if __name__ == "__main__":
     linhas = gerar_estante(n=args.n, ids_usuario=ids_usuario)
 
     with open(args.saida, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["id_usuario", "nome"])
+        writer = csv.DictWriter(f, fieldnames=["id_usuario", "nome", "ambiente"])
         writer.writeheader()
         writer.writerows(linhas)
 

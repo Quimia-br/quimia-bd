@@ -221,6 +221,7 @@ CREATE TABLE estante (
     id         INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario UUID NOT NULL,
     nome       VARCHAR(255),
+    ambiente   VARCHAR(255),
     criado_em  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT estante_usuario_unique UNIQUE (id_usuario)
 );

@@ -1,7 +1,14 @@
 .env
 **/__pycache__/
 *.pyc
-src/database/sql/data_load/mocks
-src/database/sql/data_load/seeds
-src/rpa/extractors
 src/rpa/_tmp
+
+# nenhum CSV vai ao Git: os gerados (setup_data, geradores, RPA) sao recriados em runtime
+*.csv
+# excecoes: entradas fixas que o setup_data le sem gerar, e o seed curado
+!src/database/sql/data_load/mocks/usuario.csv
+!src/database/sql/data_load/mocks/empresa.csv
+!src/database/sql/data_load/mocks/marca.csv
+!src/database/sql/data_load/mocks/classe_quimica.csv
+!src/database/sql/data_load/mocks/substancia.csv
+!src/database/sql/data_load/seeds/*.csv

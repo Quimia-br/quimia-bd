@@ -1,17 +1,14 @@
--- 1. id_usuario ausente ou vazio (NOT NULL na tabela final)
 UPDATE stg_sessao_acesso
 SET status = 'rejeitado', motivo_rejeicao = 'id_usuario ausente'
 WHERE id_batch = :batch_id
   AND (id_usuario_raw IS NULL OR btrim(id_usuario_raw) = '');
 
--- 2. id_usuario em formato inválido (não é um UUID)
 UPDATE stg_sessao_acesso
 SET status = 'rejeitado', motivo_rejeicao = 'id_usuario em formato inválido'
 WHERE id_batch = :batch_id
   AND status = 'pendente'
   AND id_usuario_raw !~ '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$';
 
--- 3. id_usuario não existe na tabela usuario (FK órfã)
 UPDATE stg_sessao_acesso s
 SET status = 'rejeitado', motivo_rejeicao = 'id_usuario inexistente'
 WHERE s.id_batch = :batch_id
@@ -21,17 +18,13 @@ WHERE s.id_batch = :batch_id
            ELSE false
       END;
 
--- 4. ocorreu_em ausente ou vazia (NOT NULL na tabela final; não vale cair no
---    DEFAULT now(), senão o lote inteiro viraria "hoje" e distorceria o DAU)
 UPDATE stg_sessao_acesso
 SET status = 'rejeitado', motivo_rejeicao = 'ocorreu_em ausente'
 WHERE id_batch = :batch_id
   AND status = 'pendente'
   AND (ocorreu_em_raw IS NULL OR btrim(ocorreu_em_raw) = '');
 
--- 5. ocorreu_em em formato inválido (esperado: ISO 8601, ex. 2026-10-03T08:15:22-03:00).
---    Além do formato, checa se o dia existe no mês (31/02 passa na regex, mas
---    estouraria o cast adiante).
+
 UPDATE stg_sessao_acesso
 SET status = 'rejeitado', motivo_rejeicao = 'ocorreu_em em formato inválido'
 WHERE id_batch = :batch_id
@@ -46,7 +39,6 @@ WHERE id_batch = :batch_id
       ELSE false
   END;
 
--- 6. ocorreu_em no futuro (um login não pode ter acontecido depois de agora)
 UPDATE stg_sessao_acesso
 SET status = 'rejeitado', motivo_rejeicao = 'ocorreu_em no futuro'
 WHERE id_batch = :batch_id
@@ -56,8 +48,7 @@ WHERE id_batch = :batch_id
            ELSE false
       END;
 
--- 7. sessão duplicada no lote (mesmo usuário + mesmo instante, comparando já
---    convertido: 08:00-03:00 e 11:00Z são o mesmo instante)
+
 WITH duplicados AS (
     SELECT ctid,
            ROW_NUMBER() OVER (
@@ -74,7 +65,19 @@ FROM duplicados d
 WHERE s.ctid = d.ctid
   AND d.rn > 1;
 
--- 8. o que sobrou passou em tudo
+UPDATE stg_sessao_acesso s
+SET status = 'rejeitado', motivo_rejeicao = 'sessão já cadastrada (mesmo usuário e instante)'
+WHERE s.id_batch = :batch_id
+  AND s.status = 'pendente'
+  AND CASE WHEN s.status = 'pendente'
+           THEN EXISTS (
+                    SELECT 1 FROM sessao_acesso sa
+                    WHERE sa.id_usuario = s.id_usuario_raw::uuid
+                      AND sa.ocorreu_em = s.ocorreu_em_raw::timestamptz)
+           ELSE false
+      END;
+
+
 UPDATE stg_sessao_acesso
 SET status = 'ok'
 WHERE id_batch = :batch_id
