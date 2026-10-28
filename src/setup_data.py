@@ -113,7 +113,7 @@ def main():
     csv_ponto = salvar_csv(
         "src/database/sql/data_load/mocks/ponto_parceiro.csv",
         gerar_ponto_parceiro(ids_empresa, n=200),
-        ["id_empresa", "nome", "cep", "estado", "bairro", "rua", "numero", "complemento", "tipo", "ativo"],
+        ["id_empresa", "nome", "cep", "estado", "bairro", "rua", "numero", "complemento", "tipo", "ativo", "latitude", "longitude"],
     )
     rodar_pipeline("ponto_parceiro", csv_ponto)
 

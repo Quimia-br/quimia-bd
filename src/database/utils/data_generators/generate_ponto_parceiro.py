@@ -23,6 +23,8 @@ import psycopg2
 from faker import Faker
 from dotenv import load_dotenv
 
+from src.database.utils.data_generators.generate_localizacao_usuario import gerar_coordenadas
+
 load_dotenv()
 fake = Faker("pt_BR")
 random.seed(42)
@@ -125,6 +127,8 @@ def gerar_ponto_parceiro(ids_empresa, n=200):
             tipo = random.choice(["compra", "descarte"])
             ativo = "true"
 
+        latitude, longitude = gerar_coordenadas(estado)
+
         linhas.append(
             {
                 "id_empresa": id_empresa,
@@ -137,6 +141,8 @@ def gerar_ponto_parceiro(ids_empresa, n=200):
                 "complemento": complemento,
                 "tipo": tipo,
                 "ativo": ativo,
+                "latitude": latitude,
+                "longitude": longitude,
             }
         )
 
@@ -159,6 +165,7 @@ if __name__ == "__main__":
             fieldnames=[
                 "id_empresa", "nome", "cep", "estado", "bairro",
                 "rua", "numero", "complemento", "tipo", "ativo",
+                "latitude", "longitude",
             ],
         )
         writer.writeheader()
