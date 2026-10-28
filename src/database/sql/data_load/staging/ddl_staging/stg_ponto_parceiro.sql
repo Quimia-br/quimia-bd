@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS stg_ponto_parceiro (
     complemento_raw TEXT,
     tipo_raw TEXT,
     ativo_raw TEXT,
+    latitude_raw TEXT,
+    longitude_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
                             CHECK (status IN ('pendente','ok','rejeitado')),
     motivo_rejeicao TEXT,
@@ -32,3 +34,8 @@ EXCEPTION WHEN OTHERS THEN
     RETURN FALSE;
 END;
 $$ LANGUAGE plpgsql;
+
+-- tabelas de staging persistem entre execuções (CREATE ... IF NOT EXISTS): bancos que já tinham
+-- a stg_ponto_parceiro sem as coordenadas ganham as colunas aqui.
+ALTER TABLE stg_ponto_parceiro ADD COLUMN IF NOT EXISTS latitude_raw TEXT;
+ALTER TABLE stg_ponto_parceiro ADD COLUMN IF NOT EXISTS longitude_raw TEXT;

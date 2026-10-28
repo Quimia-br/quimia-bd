@@ -67,6 +67,35 @@ WHERE id_batch = :batch_id
   AND btrim(ativo_raw) <> ''
   AND lower(btrim(ativo_raw)) NOT IN ('true', 'false', 't', 'f', '1', '0');
 
+-- latitude/longitude são opcionais (ponto ainda não geocodificado), mas só valem como par.
+-- fn_numerico_valido vem de stg_localizacao_usuario.sql.
+UPDATE stg_ponto_parceiro
+SET status = 'rejeitado', motivo_rejeicao = 'latitude e longitude devem ser informadas juntas'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND (nullif(btrim(latitude_raw), '') IS NULL) <> (nullif(btrim(longitude_raw), '') IS NULL);
+
+-- só ponto como separador decimal ("-23,55" é rejeitado)
+UPDATE stg_ponto_parceiro
+SET status = 'rejeitado', motivo_rejeicao = 'latitude ou longitude não numérica'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND (
+      (nullif(btrim(latitude_raw), '') IS NOT NULL AND NOT fn_numerico_valido(latitude_raw))
+      OR (nullif(btrim(longitude_raw), '') IS NOT NULL AND NOT fn_numerico_valido(longitude_raw))
+  );
+
+-- faixa geográfica; o CASE evita o cast em linha já rejeitada ou sem coordenada
+UPDATE stg_ponto_parceiro
+SET status = 'rejeitado', motivo_rejeicao = 'latitude ou longitude fora da faixa (±90 / ±180)'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND CASE WHEN status = 'pendente' AND nullif(btrim(latitude_raw), '') IS NOT NULL
+           THEN btrim(latitude_raw)::NUMERIC NOT BETWEEN -90 AND 90
+                OR btrim(longitude_raw)::NUMERIC NOT BETWEEN -180 AND 180
+           ELSE false
+      END;
+
 UPDATE stg_ponto_parceiro
 SET status = 'ok'
 WHERE id_batch = :batch_id

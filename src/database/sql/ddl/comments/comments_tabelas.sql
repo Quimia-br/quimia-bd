@@ -236,6 +236,8 @@ COMMENT ON COLUMN ponto_parceiro.numero IS 'Número do imóvel.';
 COMMENT ON COLUMN ponto_parceiro.complemento IS 'Complemento do endereço.';
 COMMENT ON COLUMN ponto_parceiro.tipo IS 'Finalidade do ponto: compra ou descarte.';
 COMMENT ON COLUMN ponto_parceiro.ativo IS 'Indica se o ponto está em funcionamento.';
+COMMENT ON COLUMN ponto_parceiro.latitude IS 'Latitude em graus decimais (-90 a 90); NULL se o ponto ainda não foi geocodificado. Sempre junto com longitude; base da busca por proximidade.';
+COMMENT ON COLUMN ponto_parceiro.longitude IS 'Longitude em graus decimais (-180 a 180); NULL se o ponto ainda não foi geocodificado. Sempre junto com latitude; base da busca por proximidade.';
 
 -- sessao_acesso -------------------------------------------------------
 COMMENT ON TABLE sessao_acesso IS
