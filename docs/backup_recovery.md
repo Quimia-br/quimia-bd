@@ -36,7 +36,7 @@ python ops/restore.py <arquivo> --host localhost --port 5433 \
 |---|---|
 | Dump | `backups/quimiadb_20261029_162535.dump`, 4.363.075 bytes |
 | Verificação | assinatura `PGDMP` ok, `pg_restore --list` com 827 entradas |
-| Restore | 48 tabelas, 58 functions/procedures, 14 views, 5 triggers, 83 índices, 3 extensões |
+| Restore | 48 tabelas, 18 rotinas do projeto (15 functions + 3 procedures) mais 40 de extensões, 14 views, 5 triggers, 83 índices, 3 extensões |
 | Erros no restore | 1 ignorado: `SET transaction_timeout = 0` (parâmetro existe só a partir do PG 17; não afeta schema nem dados). Exit code do `pg_restore` = 1 por causa dele |
 
 ### Contagens antes/depois
