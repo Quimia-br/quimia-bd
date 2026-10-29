@@ -10,7 +10,8 @@ SELECT
 FROM generate_series(
     LEAST(
         (SELECT MIN(data_consulta)::date FROM historico_recomendacao),
-        (SELECT MIN(data_consulta)::date FROM historico_match)
+        (SELECT MIN(data_consulta)::date FROM historico_match),
+        (SELECT MIN(ocorreu_em)::date FROM sessao_acesso)
     ),
     CURRENT_DATE,
     interval '1 day'
