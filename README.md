@@ -1,6 +1,8 @@
 # quimia-bd
 
-Banco de dados do Quimia (PostgreSQL): modelagem, rotinas, carga de dados, RPA de integração com o banco legado, data mart e catálogo de dados. O Quimia cadastra produtos de limpeza com suas FDS (fichas de dados de segurança) e detecta combinações perigosas entre eles.
+Banco de dados do Quimia (PostgreSQL): modelagem, rotinas, carga de dados, RPA de integração com o banco legado, data mart e catálogo de dados. **Catálogo de dados online: https://quimia-br.github.io/quimia-bd/**
+
+O Quimia cadastra produtos de limpeza com suas FDS (fichas de dados de segurança) e detecta combinações perigosas entre eles.
 
 ## Arquitetura
 
@@ -201,7 +203,7 @@ Planos `EXPLAIN (ANALYZE, BUFFERS)` reais de 4 consultas (`fn_match_produtos`, D
 ## Governança de dados
 
 - **Catálogo técnico no banco:** `catalogo_tabela` (nome, tipo de objeto, domínio, descrição, regra de negócio, **nível de acesso** `publico` / `interno` / `restrito`, responsável) e `catalogo_coluna` (tipo, obrigatoriedade, PK, referência, descrição, regra de negócio, `dado_pessoal_lgpd`). São preenchidas por `fn_sincronizar_catalogo()`, que lê o catálogo do PostgreSQL (colunas, PK, FK) e os `COMMENT ON`; nível de acesso, domínio e marcação LGPD vêm do seed de classificação. A view `vw_catalogo_dados` consulta tudo. No banco da Aiven: 46 objetos catalogados (26 internos, 11 públicos, 6 restritos, 3 sem classificação) e 296 colunas, 17 delas marcadas como dado pessoal.
-- **Site do catálogo:** abra `docs/catalog/index.html` direto no navegador (funciona via `file://`). `data.js`, `icons.js` e `diffs/` são gerados; não edite à mão, rode `python -m src.catalog_site.generate_catalog`. O workflow `.github/workflows/catalog.yml` publica o site no GitHub Pages.
+- **Site do catálogo:** o catálogo de dados está publicado no GitHub Pages do repositório, em **https://quimia-br.github.io/quimia-bd/** (o mesmo link do campo *About* do repositório). O workflow `.github/workflows/catalog.yml` regenera e publica o site a cada push na `main` que altere `src/database/sql/**` ou `src/catalog_site/**`. Para abrir localmente, use `docs/catalog/index.html` direto no navegador (funciona via `file://`). `data.js`, `icons.js` e `diffs/` são gerados; não edite à mão, rode `python -m src.catalog_site.generate_catalog`.
 - **Integridade:** PK em todas as tabelas de negócio, FKs com `ON DELETE` explícito, `UNIQUE` e `CHECK` de domínio, e validação em staging antes de qualquer migração.
 - **Segurança:** conexão com `sslmode=require`; senhas em bcrypt; `.env` fora do git (`.env.example` só com placeholders); auditoria por trigger; backup com restore testado.
 
