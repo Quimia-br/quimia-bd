@@ -1,0 +1,6 @@
+id_empresa,nome,cep,estado,bairro,rua,numero,complemento,tipo,ativo,latitude,longitude
+,Ambipar,01228-200,SP,Higienópolis,Avenida Angélica,2330,,descarte,true,-23.5513,-46.6622
+,Loga - Logística Ambiental de São Paulo (Unidade Jaguaré),05348-000,SP,Jaguaré,Avenida Gonçalo Madeira,600,,descarte,true,-23.5458,-46.7456
+,Seven Soluções Ambientais,07161-230,SP,Jardim Triunfo,Rua Vargas,284,,descarte,true,-23.4475,-46.4022
+,Cetes Ambiental,08676-000,SP,Vila Figueira,Avenida Antônio Marques Figueira,2000,,descarte,true,-23.5492,-46.3114
+,RCRambiental,06763-290,SP,Chácara Agrindus,Rua Raphael de Marco,300,,descarte,true,-23.6339,-46.7937

@@ -48,17 +48,37 @@ CENTROS_UF = {
     "SP": (-23.55, -46.63), "SE": (-10.91, -37.07), "TO": (-10.18, -48.33),
 }
 
+# Âncoras na Grande SP, onde o app é demonstrado. Sem peso extra, só ~1/27 dos registros cai em SP
+# e a proximidade acaba apontando um ponto de outro estado para um usuário de SP.
+ANCORAS_GRANDE_SP = [
+    (-23.55, -46.63),  # Centro
+    (-23.48, -46.62),  # Zona Norte
+    (-23.54, -46.47),  # Zona Leste
+    (-23.65, -46.70),  # Zona Sul
+    (-23.66, -46.53),  # ABC
+    (-23.45, -46.53),  # Guarulhos
+    (-23.53, -46.79),  # Osasco
+]
 
-def gerar_coordenadas(estado):
+
+def sortear_local(ufs, peso_sp=0.5):
+    """(estado, centro) de um registro: peso_sp deles na Grande SP, em volta de uma âncora; o resto em qualquer UF."""
+    if random.random() < peso_sp:
+        return "SP", random.choice(ANCORAS_GRANDE_SP)
+    return random.choice(ufs), None
+
+
+def gerar_coordenadas(estado, centro=None):
     """
     Devolve (latitude, longitude) como texto, no formato do CSV. Colunas opcionais:
       87% válidas | 6% vazias (válido, usuário não informou) | 3% fora da faixa |
       2% não numéricas (vírgula decimal) | 2% só uma das duas (rejeitada: têm que vir juntas)
     Estado inválido ("sao paulo", "") cai num centro aleatório, só pra ter o que sortear.
     """
-    lat0, lon0 = CENTROS_UF.get(estado) or random.choice(list(CENTROS_UF.values()))
-    lat = lat0 + random.uniform(-0.25, 0.25)
-    lon = lon0 + random.uniform(-0.25, 0.25)
+    lat0, lon0 = centro or CENTROS_UF.get(estado) or random.choice(list(CENTROS_UF.values()))
+    raio = 0.07 if centro else 0.25  # ~8 km em volta da âncora; ~25 km em volta da capital
+    lat = lat0 + random.uniform(-raio, raio)
+    lon = lon0 + random.uniform(-raio, raio)
     roll = random.random()
 
     if roll < 0.87:
@@ -108,7 +128,7 @@ def gerar_localizacao_usuario(ids_usuario, n=500):
 
         if roll < 0.82:
             cep = fake.postcode()
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -117,7 +137,7 @@ def gerar_localizacao_usuario(ids_usuario, n=500):
 
         elif roll < 0.87:
             cep = fake.postcode()
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -126,7 +146,7 @@ def gerar_localizacao_usuario(ids_usuario, n=500):
 
         elif roll < 0.91:
             cep = fake.postcode()
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -136,6 +156,7 @@ def gerar_localizacao_usuario(ids_usuario, n=500):
         elif roll < 0.95:
             cep = fake.postcode()
             estado = random.choice(["São Paulo", "sao paulo", "SPP", ""])
+            centro = None
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -144,14 +165,14 @@ def gerar_localizacao_usuario(ids_usuario, n=500):
 
         else:
             cep = random.choice(["", "12345", "cep-invalido"])
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
             complemento = ""
             id_usuario_out = id_usuario
 
-        latitude, longitude = gerar_coordenadas(estado)
+        latitude, longitude = gerar_coordenadas(estado, centro)
 
         linhas.append(
             {

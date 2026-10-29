@@ -23,7 +23,7 @@ import psycopg2
 from faker import Faker
 from dotenv import load_dotenv
 
-from src.database.utils.data_generators.generate_localizacao_usuario import gerar_coordenadas
+from src.database.utils.data_generators.generate_localizacao_usuario import gerar_coordenadas, sortear_local
 
 load_dotenv()
 fake = Faker("pt_BR")
@@ -71,7 +71,7 @@ def gerar_ponto_parceiro(ids_empresa, n=200):
             id_empresa = random.choice(ids_empresa)
             nome = fake.company()
             cep = fake.postcode()
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -83,7 +83,7 @@ def gerar_ponto_parceiro(ids_empresa, n=200):
             id_empresa = ""
             nome = f"Ponto de coleta {fake.city()}"
             cep = fake.postcode()
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -95,7 +95,7 @@ def gerar_ponto_parceiro(ids_empresa, n=200):
             id_empresa = 999999 + i
             nome = fake.company()
             cep = fake.postcode()
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -107,7 +107,7 @@ def gerar_ponto_parceiro(ids_empresa, n=200):
             id_empresa = random.choice(ids_empresa)
             nome = fake.company()
             cep = fake.postcode()
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -119,7 +119,7 @@ def gerar_ponto_parceiro(ids_empresa, n=200):
             id_empresa = random.choice(ids_empresa)
             nome = ""
             cep = fake.postcode()
-            estado = random.choice(UFS)
+            estado, centro = sortear_local(UFS)
             bairro = fake.city_suffix()
             rua = fake.street_name()
             numero = random.randint(1, 9999)
@@ -127,7 +127,7 @@ def gerar_ponto_parceiro(ids_empresa, n=200):
             tipo = random.choice(["compra", "descarte"])
             ativo = "true"
 
-        latitude, longitude = gerar_coordenadas(estado)
+        latitude, longitude = gerar_coordenadas(estado, centro)
 
         linhas.append(
             {

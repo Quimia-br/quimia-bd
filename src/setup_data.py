@@ -117,6 +117,7 @@ def main():
         gerar_ponto_parceiro(ids_empresa, n=200),
         ["id_empresa", "nome", "cep", "estado", "bairro", "rua", "numero", "complemento", "tipo", "ativo", "latitude", "longitude"],
     )
+    rodar_pipeline("ponto_parceiro", "src/database/sql/data_load/seeds/seed_ponto_parceiro_sp.csv")
     rodar_pipeline("ponto_parceiro", csv_ponto)
 
     linhas_localizacao = gerar_localizacao_usuario(ids_usuario, n=500)
