@@ -13,16 +13,17 @@ from src.database.utils.data_generators.generate_substancia_classe_quimica impor
     gerar_substancia_classe_quimica, buscar_ids as buscar_ids_scq, resolver_pares_curados,
 )
 from src.database.utils.data_generators.generate_substancia_sinonimo import (
-    gerar_substancia_sinonimo, buscar_substancias,
+    gerar_substancia_sinonimo, buscar_substancias, resolver_sinonimos_curados,
 )
 from src.database.utils.data_generators.generate_produto import (
-    gerar_produto, buscar_marcas,
+    gerar_produto, buscar_marcas, resolver_produtos_curados,
 )
+from src.database.utils.fds_loader import carregar_fds_curadas
 from src.database.utils.data_generators.generate_historico_recomendacao import (
     gerar_historico_recomendacao, buscar_ids as buscar_ids_hr, buscar_usuarios,
 )
 from src.database.utils.data_generators.generate_incompatibilidade_regra import (
-    gerar_incompatibilidade_regra, buscar_ids as buscar_ids_ir,
+    gerar_incompatibilidade_regra, buscar_ids as buscar_ids_ir, resolver_regras_curadas,
 )
 from src.database.utils.data_generators import generate_sessao_acesso as gerador_sessao_acesso
  
@@ -131,6 +132,7 @@ def main():
 
     rodar_pipeline("marca", "src/database/sql/data_load/mocks/marca.csv")
     rodar_pipeline("classe_quimica", "src/database/sql/data_load/mocks/classe_quimica.csv")
+    executar_scripts(["src/database/sql/data_load/seeds/seed_classe_quimica_sinonimo.sql"])
     rodar_pipeline("substancia", "src/database/sql/data_load/mocks/substancia.csv")
 
     linhas_estante = gerar_estante(n=200, ids_usuario=ids_usuario)
@@ -160,9 +162,12 @@ def main():
 
     conn = get_connection()
     substancias = buscar_substancias(conn)
+    sinonimos_curados = resolver_sinonimos_curados(conn)
     conn.close()
 
-    linhas_sinonimo = gerar_substancia_sinonimo(n=200, substancias=substancias)
+    linhas_sinonimo = gerar_substancia_sinonimo(
+        sinonimos_curados=sinonimos_curados, substancias=substancias, n_ruido=20
+    )
     csv_sinonimo = salvar_csv(
         "src/database/sql/data_load/mocks/substancia_sinonimo.csv",
         linhas_sinonimo,
@@ -172,15 +177,20 @@ def main():
 
     conn = get_connection()
     ids_marca = buscar_marcas(conn)
+    produtos_curados = resolver_produtos_curados(conn)
     conn.close()
 
-    linhas_produto = gerar_produto(n=200, ids_marca=ids_marca)
+    linhas_produto = gerar_produto(n=200, ids_marca=ids_marca, produtos_curados=produtos_curados)
     csv_produto = salvar_csv(
     "src/database/sql/data_load/mocks/produto.csv",
     linhas_produto,
     ["nome", "id_marca", "descricao", "tipo_produto", "cod_barras", "foto_url"],
     )
     rodar_pipeline("produto", csv_produto)
+
+    conn = get_connection()
+    carregar_fds_curadas(conn)
+    conn.close()
 
     conn = get_connection()
     ids_produto = buscar_ids_hr(conn, "produto")
@@ -202,10 +212,14 @@ def main():
     conn = get_connection()
     ids_substancia_ir = buscar_ids_ir(conn, "substancia")
     ids_classe_ir = buscar_ids_ir(conn, "classe_quimica")
+    regras_curadas_ir = resolver_regras_curadas(conn)
     conn.close()
 
     linhas_incompatibilidade = gerar_incompatibilidade_regra(
-        n=150, ids_substancia=ids_substancia_ir, ids_classe=ids_classe_ir
+        regras_curadas=regras_curadas_ir,
+        ids_substancia=ids_substancia_ir,
+        ids_classe=ids_classe_ir,
+        n_ruido=15,
     )
     csv_incompatibilidade = salvar_csv(
         "src/database/sql/data_load/mocks/incompatibilidade_regra.csv",

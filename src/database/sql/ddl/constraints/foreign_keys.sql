@@ -60,6 +60,12 @@ ADD CONSTRAINT fk_sinonimo_substancia
 FOREIGN KEY (id_substancia) REFERENCES substancia(id)
 ON DELETE CASCADE;
 
+ALTER TABLE classe_quimica_sinonimo DROP CONSTRAINT IF EXISTS fk_classe_sinonimo_classe;
+ALTER TABLE classe_quimica_sinonimo
+ADD CONSTRAINT fk_classe_sinonimo_classe
+FOREIGN KEY (id_classe_quimica) REFERENCES classe_quimica(id)
+ON DELETE CASCADE;
+
 ALTER TABLE substancia_classe_quimica DROP CONSTRAINT IF EXISTS fk_substancia_classe_substancia;
 ALTER TABLE substancia_classe_quimica
 ADD CONSTRAINT fk_substancia_classe_substancia

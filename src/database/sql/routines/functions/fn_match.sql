@@ -65,6 +65,28 @@ BEGIN
         FROM substancia_classe_quimica scq
         JOIN compostos_b cb ON cb.id_substancia = scq.id_substancia
     ),
+    -- ingredientes da FDS ativa de composição desconhecida: sem substância
+    -- resolvida (sinonimo_pendente) ou declarados só como mistura
+    -- (substancia.tipo = 'mistura'). Ausência de regra não prova
+    -- compatibilidade, então não dá para afirmá-la enquanto existirem
+    pendentes AS (
+        SELECT 1 AS existe
+        FROM sinonimo_pendente sp
+        JOIN fds f ON f.id = sp.id_fds
+        WHERE sp.status = 'pendente'
+          AND f.ativo = TRUE
+          AND f.id_produto IN (p_id_produto_a, p_id_produto_b)
+
+        UNION ALL
+
+        SELECT 1
+        FROM fds f
+        JOIN fds_composto fc ON fc.id_fds = f.id
+        JOIN substancia s ON s.id = fc.id_substancia
+        WHERE s.tipo = 'mistura'
+          AND f.ativo = TRUE
+          AND f.id_produto IN (p_id_produto_a, p_id_produto_b)
+    ),
     regras_batidas AS (
         SELECT DISTINCT ir.id AS id_regra, ir.severidade, ir.descricao_risco
         FROM incompatibilidade_regra ir
@@ -126,10 +148,22 @@ BEGIN
 
         UNION ALL
 
-        -- só emite a linha "compativel" quando NENHUMA regra nem FDS bateu
+        -- sem nenhum caminho de incompatibilidade, mas com ingrediente não
+        -- identificado ou de composição desconhecida (mistura): não afirma
+        -- compatibilidade
+        SELECT 'nao_avaliado'::VARCHAR(20), NULL::INTEGER, NULL::VARCHAR(20), NULL::TEXT
+        WHERE NOT EXISTS (SELECT 1 FROM regras_batidas)
+          AND NOT EXISTS (SELECT 1 FROM fds_batidas)
+          AND EXISTS (SELECT 1 FROM pendentes)
+
+        UNION ALL
+
+        -- só emite a linha "compativel" quando nenhuma regra nem FDS bateu
+        -- e não há ingrediente pendente em nenhum dos dois produtos
         SELECT 'compativel'::VARCHAR(20), NULL::INTEGER, NULL::VARCHAR(20), NULL::TEXT
         WHERE NOT EXISTS (SELECT 1 FROM regras_batidas)
           AND NOT EXISTS (SELECT 1 FROM fds_batidas)
+          AND NOT EXISTS (SELECT 1 FROM pendentes)
     ) u
     ORDER BY
         CASE u.severidade
@@ -143,4 +177,4 @@ BEGIN
 END;
 $$;
 
-COMMENT ON FUNCTION fn_match_produtos(INTEGER, INTEGER) IS 'Motor de detecção de mistura perigosa: cruza substâncias e classes químicas das FDS ativas dos dois produtos com incompatibilidade_regra. Retorna incompativel (uma linha por regra curada ou por incompatibilidade declarada na FDS, da mais grave para a menos grave), compativel ou nao_avaliado quando falta composto resolvido.';
+COMMENT ON FUNCTION fn_match_produtos(INTEGER, INTEGER) IS 'Motor de detecção de mistura perigosa: cruza substâncias e classes químicas das FDS ativas dos dois produtos com incompatibilidade_regra. Retorna incompativel (uma linha por regra curada ou por incompatibilidade declarada na FDS, da mais grave para a menos grave), compativel (só quando nenhum ingrediente é pendente nem declarado como mistura) ou nao_avaliado (sem composto resolvido em algum dos lados, ou sem incompatibilidade conhecida mas com ingrediente pendente ou de composição desconhecida).';

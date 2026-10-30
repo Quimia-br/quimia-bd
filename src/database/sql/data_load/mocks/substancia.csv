@@ -1,19 +1,65 @@
-nome_canonico,cas_numero,descricao
-Hipoclorito de sódio,7681-52-9,Agente clorado ativo em água sanitária.
-Amônia,7664-41-7,Base usada em limpa-vidros e desengraxantes.
-Ácido clorídrico,7647-01-0,"Ácido forte, base do ácido muriático."
-Ácido acético,64-19-7,"Ácido orgânico, componente de vinagre concentrado."
-Hidróxido de sódio,1310-73-2,Base forte (soda cáustica).
-Peróxido de hidrogênio,7722-84-1,"Agente oxidante, alvejante e desinfetante."
-Etanol,64-17-5,Álcool usado como solvente e desinfetante.
-Álcool isopropílico,67-63-0,Solvente e desinfetante de uso doméstico.
-Lauril sulfato de sódio,151-21-3,"Tensoativo aniônico, base de detergentes."
-Cloreto de benzalcônio,63449-41-2,"Quaternário de amônio, germicida."
-Hipoclorito de cálcio,7778-54-3,"Agente clorado sólido, uso em piscinas e desinfecção pesada."
-Ácido fosfórico,7664-38-2,Ácido usado em removedores de crosta/calcário.
-Ácido cítrico,77-92-9,"Ácido orgânico fraco, uso em antical natural."
-Dodecilbenzenossulfonato de sódio,25155-30-0,Tensoativo aniônico comum em detergentes multiuso.
-Fragrância,,Composto proprietário sem CAS declarado — caso real (FDS Minuano).
-,999-99-9,linha de teste — nome ausente
-Substância teste CAS malformado,abc-def,cas inválido de propósito
-Hipoclorito de sódio (duplicata),7681-52-9,duplicata proposital de CAS
+nome_canonico,cas_numero,descricao,tipo
+Hipoclorito de sódio,7681-52-9,Agente clorado ativo em água sanitária.,substancia
+Amônia,7664-41-7,Base usada em limpa-vidros e desengraxantes.,substancia
+Ácido clorídrico,7647-01-0,"Ácido forte, base do ácido muriático.",substancia
+Ácido acético,64-19-7,"Ácido orgânico, componente de vinagre concentrado.",substancia
+Hidróxido de sódio,1310-73-2,Base forte (soda cáustica).,substancia
+Peróxido de hidrogênio,7722-84-1,"Agente oxidante, alvejante e desinfetante.",substancia
+Etanol,64-17-5,Álcool usado como solvente e desinfetante.,substancia
+Álcool isopropílico,67-63-0,Solvente e desinfetante de uso doméstico.,substancia
+Lauril sulfato de sódio,151-21-3,"Tensoativo aniônico, base de detergentes.",substancia
+Cloreto de benzalcônio,63449-41-2,"Quaternário de amônio, germicida.",substancia
+Hipoclorito de cálcio,7778-54-3,"Agente clorado sólido, uso em piscinas e desinfecção pesada.",substancia
+Ácido fosfórico,7664-38-2,Ácido usado em removedores de crosta/calcário.,substancia
+Ácido cítrico,77-92-9,"Ácido orgânico fraco, uso em antical natural.",substancia
+Dodecilbenzenossulfonato de sódio,25155-30-0,Tensoativo aniônico comum em detergentes multiuso.,substancia
+Fragrância,,Composto proprietário sem CAS declarado — caso real (FDS Minuano).,mistura
+Sulfato de sódio,7757-82-6,Sal inorgânico usado como carga em detergentes em pó.,substancia
+Dicloroisocianurato de sódio,2893-78-9,Cloro ativo estabilizado usado como desinfetante e alvejante.,substancia
+Propano,74-98-6,Gás propelente de aerossóis.,substancia
+Limoneno,5989-27-5,Terpeno cítrico presente na casca de frutas cítricas.,substancia
+Linalol,78-70-6,Álcool terpênico de lavanda e alecrim.,substancia
+Citronelal,106-23-0,Aldeído terpênico presente na citronela.,substancia
+Eucaliptol,470-82-6,Óxido terpênico do óleo de eucalipto.,substancia
+Geraniol,106-24-1,Álcool terpênico de rosas e gerânios.,substancia
+Citral,5392-40-5,Mistura de aldeídos terpênicos presente no capim-limão.,substancia
+Eugenol,97-53-0,"Fenol do cravo-da-índia, usado como aromatizante.",substancia
+Mentol,1490-04-6,Álcool terpênico da hortelã.,substancia
+Alfa-pineno,80-56-8,Terpeno presente em resinas de pinheiros.,substancia
+Tensoativo aniônico (mistura),85536-14-7,"Nome declarado na FDS. CAS indica mistura, composição não especificada.",mistura
+Tensoativo catiônico (mistura),61789-80-8,"Nome declarado na FDS. CAS indica mistura, composição não especificada.",mistura
+Tensoativo (mistura),61789-32-0,Nome funcional declarado na FDS. CAS indica mistura.,mistura
+Surfactante (mistura),61789-40-0,Nome funcional declarado na FDS. CAS indica mistura.,mistura
+Condicionante (mistura),9005-25-8,Nome funcional declarado na FDS. CAS sem registro no PubChem.,mistura
+Alcalinizante (mistura),1344-00-9,"Nome funcional declarado na FDS. CAS 1344-00-9 é aluminossilicato de sódio (PubChem/EC 215-684-8; antiaglomerante/zeólita), não um alcalinizante: não classificar como bases.",mistura
+Enzima (mistura),9014-01-1,Nome funcional declarado na FDS. PubChem retornou um composto específico que não representa enzima de mistura: não usado como identidade.,mistura
+Coadjuvante (mistura),1318-02-1,Nome funcional declarado na FDS. CAS sem registro no PubChem.,mistura
+Éter monobutílico de dietilenoglicol,112-34-5,Éter de glicol usado como solvente em limpadores multiuso.,substancia
+Dodecilbenzenossulfonato de trietanolamina,27323-41-7,Tensoativo aniônico (sal de trietanolamina do ácido dodecilbenzenossulfônico).,substancia
+Metilisotiazolinona,2682-20-4,Conservante (MIT) usado em produtos de limpeza.,substancia
+Dicarboximetil alaninato de trissódio,164462-16-2,Agente quelante (MGDA trissódico) usado em detergentes.,substancia
+Cumenossulfonato de sódio,15763-76-5,Hidrótropo usado para solubilizar componentes em detergentes líquidos.,substancia
+Álcool benzílico,100-51-6,Solvente e conservante.,substancia
+Acetato de isobutila,110-19-0,Solvente éster.,substancia
+Metil etil cetona,78-93-3,Solvente cetônico.,substancia
+Metanol,67-56-1,Álcool usado como solvente.,substancia
+Glutaraldeído,111-30-8,Conservante/biocida.,substancia
+Bronopol,52-51-7,"Conservante (2-bromo-2-nitropropano-1,3-diol).",substancia
+Álcool graxo C9-11 etoxilado (mistura),68439-46-3,Nome declarado na FDS. CAS sem registro no PubChem: composição variável (tensoativo não iônico).,mistura
+Álcool graxo C10-12 etoxilado e propoxilado (mistura),68154-97-2,Nome declarado na FDS. CAS sem registro no PubChem: composição variável (tensoativo não iônico).,mistura
+Sulfato de amônio,7783-20-2,Sal inorgânico usado como fertilizante e em formulações; fonte de íons amônio (não é amônia nem amina).,substancia
+Heptamolibdato de amônio tetraidratado,12054-85-2,Reagente de laboratório ((NH4)6Mo7O24·4H2O). CAS conferido em Wikipedia e fornecedores; o PubChem não retornou este CAS.,substancia
+Água,7732-18-5,Solvente/veículo presente em quase todo produto de limpeza líquido.,substancia
+Peróxido de carbamida,124-43-6,Aduto de ureia e peróxido de hidrogênio; libera H2O2 (oxidante).,substancia
+2-Heptanona,110-43-0,Cetona usada como solvente (metil amil cetona).,substancia
+Formaldeído,50-00-0,Conservante/biocida; aparece em traços em produtos de limpeza.,substancia
+Ácido sulfúrico,7664-93-9,Ácido forte usado em desentupidores e limpadores de ralo.,substancia
+Hidróxido de amônio,1336-21-6,"Solução aquosa de amônia, base usada em limpa-vidros.",substancia
+Trietanolamina,102-71-6,Amina usada como alcalinizante e em tensoativos de limpadores.,substancia
+Cloridrato de trietanolamina,637-39-8,Sal de trietanolamina (C6H15NO3·HCl); em contato com nitritos/nitratos pode liberar nitrosaminas (seção 10 da FDS).,substancia
+Monoetanolamina,141-43-5,Amina usada em desengordurantes e limpadores alcalinos.,substancia
+Dietanolamina,111-42-2,Amina usada em detergentes e desengordurantes.,substancia
+,999-99-9,linha de teste — nome ausente,
+Substância teste CAS malformado,abc-def,cas inválido de propósito,
+Hipoclorito de sódio (duplicata),7681-52-9,duplicata proposital de CAS,
+Substância teste tipo inválido,111-11-1,tipo fora do domínio de propósito,composto

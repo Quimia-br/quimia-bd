@@ -87,6 +87,8 @@ Fluxo real de `src/setup_data.py`:
 
 Linhas rejeitadas ficam na `stg_*` com o motivo até a próxima carga daquela tabela (o `TRUNCATE` do staging roda no início de cada carga).
 
+**Catálogo curado, não sorteado.** `substancia_classe_quimica`, `substancia_sinonimo` e `incompatibilidade_regra` alimentam a resolução de ingredientes e o `fn_match_produtos`, então as linhas válidas vêm de seeds curados em `src/database/sql/data_load/seeds/` (`seed_substancia_classe_quimica.csv`, `seed_substancia_sinonimo.csv`, `seed_incompatibilidade_regra.csv`). Os geradores acrescentam por cima só ruído **inválido**, para exercitar o `validate` (toda linha de ruído deve ser rejeitada). Cada regra de incompatibilidade traz a `fonte`; regra com fonte ainda não conferida fica com `ativo=false`, e o `fn_match_produtos` a ignora até alguém ativá-la. Nome funcional genérico de ingrediente (ex.: "tensoativo", "propelente") não é sinônimo: a identidade dele é o CAS, e `substancia.tipo = 'mistura'` marca os ingredientes que a FDS declara só por nome funcional e CAS de mistura. Como ausência de regra não prova compatibilidade, o `fn_match_produtos` só devolve `compativel` quando nenhum dos dois produtos tem ingrediente pendente ou do tipo `mistura`; caso contrário devolve `nao_avaliado` (e `incompativel` sempre que alguma regra ou incompatibilidade da FDS bater).
+
 **Massa de dados** (banco da Aiven, snapshot do backup de 2026-10-29):
 
 | Tabela | Linhas | Tabela | Linhas |

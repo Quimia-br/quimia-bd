@@ -67,7 +67,7 @@ COMMENT ON COLUMN vw_fato_historico_match.nome_produto_a IS 'Nome do produto A.'
 COMMENT ON COLUMN vw_fato_historico_match.id_produto_b IS 'Produto de maior id do par.';
 COMMENT ON COLUMN vw_fato_historico_match.nome_produto_b IS 'Nome do produto B.';
 COMMENT ON COLUMN vw_fato_historico_match.id_usuario IS 'Usuário que comparou.';
-COMMENT ON COLUMN vw_fato_historico_match.resultado IS 'Veredito: compativel, incompativel ou nao_avaliado.';
+COMMENT ON COLUMN vw_fato_historico_match.resultado IS 'Veredito: compativel (nenhuma regra/FDS bateu e todos os ingredientes identificados), incompativel ou nao_avaliado (ingrediente pendente ou mistura de composição desconhecida); nao_avaliado não significa seguro.';
 COMMENT ON COLUMN vw_fato_historico_match.severidade IS 'Gravidade da regra disparada.';
 COMMENT ON COLUMN vw_fato_historico_match.descricao_risco IS 'Risco mostrado ao usuário.';
 COMMENT ON COLUMN vw_fato_historico_match.running_total_por_resultado IS 'Total acumulado de comparações com o mesmo resultado até a data.';
@@ -86,7 +86,7 @@ COMMENT ON COLUMN vw_dau.usuarios_ativos IS 'Usuários distintos que fizeram log
 COMMENT ON VIEW vw_cobertura_incompatibilidade IS
 'Quantidade de regras de incompatibilidade que envolvem cada classe química; aponta lacunas de curadoria.';
 COMMENT ON COLUMN vw_cobertura_incompatibilidade.classe_quimica IS 'Nome da classe química.';
-COMMENT ON COLUMN vw_cobertura_incompatibilidade.total_regras_envolvendo_classe IS 'Regras em que a classe aparece em qualquer lado.';
+COMMENT ON COLUMN vw_cobertura_incompatibilidade.total_regras_envolvendo_classe IS 'Regras ativas em que a classe aparece em qualquer lado.';
 
 COMMENT ON VIEW vw_fato_sessao_acesso IS
 'Fato de logins, com a quantidade de sessões do dia (window function).';
@@ -105,9 +105,11 @@ COMMENT ON VIEW vw_qualidade_resolucao_fds IS
 COMMENT ON COLUMN vw_qualidade_resolucao_fds.id_fds IS 'FDS avaliada.';
 COMMENT ON COLUMN vw_qualidade_resolucao_fds.nome_produto IS 'Produto da FDS.';
 COMMENT ON COLUMN vw_qualidade_resolucao_fds.total_compostos IS 'Compostos declarados na seção 3.';
-COMMENT ON COLUMN vw_qualidade_resolucao_fds.compostos_resolvidos IS 'Compostos com substância resolvida.';
+COMMENT ON COLUMN vw_qualidade_resolucao_fds.compostos_resolvidos IS 'Compostos com substância resolvida (inclui misturas do catálogo).';
 COMMENT ON COLUMN vw_qualidade_resolucao_fds.compostos_pendentes IS 'Compostos sem substância (em sinonimo_pendente).';
-COMMENT ON COLUMN vw_qualidade_resolucao_fds.pct_resolucao IS 'Percentual de compostos resolvidos.';
+COMMENT ON COLUMN vw_qualidade_resolucao_fds.pct_resolucao IS 'Percentual de compostos resolvidos (misturas contam como resolvidas).';
+COMMENT ON COLUMN vw_qualidade_resolucao_fds.compostos_mistura IS 'Compostos resolvidos para substancia.tipo = mistura (composição desconhecida).';
+COMMENT ON COLUMN vw_qualidade_resolucao_fds.pct_identificacao IS 'Percentual de compostos identificados como substância, excluindo misturas.';
 
 -- Catálogo ------------------------------------------------------------
 COMMENT ON VIEW vw_catalogo_dados IS

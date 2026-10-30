@@ -3,11 +3,12 @@
 -- cas_numero fica NULL quando não informado.
 
 
-INSERT INTO substancia (nome_canonico, cas_numero, descricao)
+INSERT INTO substancia (nome_canonico, cas_numero, descricao, tipo)
 SELECT
     btrim(nome_canonico_raw),
     NULLIF(btrim(cas_numero_raw), ''),
-    NULLIF(btrim(descricao_raw), '')
+    NULLIF(btrim(descricao_raw), ''),
+    COALESCE(NULLIF(lower(btrim(tipo_raw)), ''), 'substancia')
 FROM stg_substancia
 WHERE id_batch = :batch_id
   AND status = 'ok'

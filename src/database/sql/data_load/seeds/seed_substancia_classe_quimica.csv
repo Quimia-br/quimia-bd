@@ -17,3 +17,38 @@ cas_numero,nome_canonico,nome_classe
 77-92-9,Ácido cítrico,acidos
 25155-30-0,Dodecilbenzenossulfonato de sódio,tensoativos_anionicos
 ,Fragrância,fragrancias_aditivos
+7757-82-6,Sulfato de sódio,sais_inorganicos
+2893-78-9,Dicloroisocianurato de sódio,hipocloritos
+2893-78-9,Dicloroisocianurato de sódio,oxidantes
+74-98-6,Propano,propelentes
+5989-27-5,Limoneno,terpenos
+78-70-6,Linalol,terpenos
+106-23-0,Citronelal,terpenos
+470-82-6,Eucaliptol,terpenos
+106-24-1,Geraniol,terpenos
+5392-40-5,Citral,terpenos
+97-53-0,Eugenol,fragrancias_aditivos
+1490-04-6,Mentol,fragrancias_aditivos
+80-56-8,Alfa-pineno,terpenos
+85536-14-7,Tensoativo aniônico (mistura),tensoativos_anionicos
+61789-80-8,Tensoativo catiônico (mistura),tensoativos_cationicos
+27323-41-7,Dodecilbenzenossulfonato de trietanolamina,tensoativos_anionicos
+67-56-1,Metanol,solventes_organicos
+68439-46-3,Álcool graxo C9-11 etoxilado (mistura),tensoativos_nao_ionicos
+68154-97-2,Álcool graxo C10-12 etoxilado e propoxilado (mistura),tensoativos_nao_ionicos
+7783-20-2,Sulfato de amônio,sais_inorganicos
+12054-85-2,Heptamolibdato de amônio tetraidratado,sais_inorganicos
+124-43-6,Peróxido de carbamida,oxidantes
+7783-20-2,Sulfato de amônio,amonia_aminas
+12054-85-2,Heptamolibdato de amônio tetraidratado,amonia_aminas
+110-43-0,2-Heptanona,solventes_organicos
+78-93-3,Metil etil cetona,solventes_organicos
+110-19-0,Acetato de isobutila,solventes_organicos
+112-34-5,Éter monobutílico de dietilenoglicol,solventes_organicos
+7664-93-9,Ácido sulfúrico,acidos
+1336-21-6,Hidróxido de amônio,amonia_aminas
+1336-21-6,Hidróxido de amônio,bases
+102-71-6,Trietanolamina,amonia_aminas
+637-39-8,Cloridrato de trietanolamina,amonia_aminas
+141-43-5,Monoetanolamina,amonia_aminas
+111-42-2,Dietanolamina,amonia_aminas

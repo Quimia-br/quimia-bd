@@ -59,6 +59,14 @@ COMMENT ON COLUMN substancia.id IS 'Identificador da substância.';
 COMMENT ON COLUMN substancia.nome_canonico IS 'Nome padrão da substância; usado normalizado (lower(unaccent(btrim()))) como último passo da resolução.';
 COMMENT ON COLUMN substancia.cas_numero IS 'Número CAS, único; primeiro critério de resolução de compostos da FDS.';
 COMMENT ON COLUMN substancia.descricao IS 'Descrição da substância em linguagem simples.';
+COMMENT ON COLUMN substancia.tipo IS 'substancia = composto com identidade química única; mistura = ingrediente que a FDS declara só por nome funcional e CAS de mistura (ex: tensoativo, enzima). Mistura resolve o ingrediente, mas não traz química para o match.';
+
+-- classe_quimica_sinonimo ---------------------------------------------
+COMMENT ON TABLE classe_quimica_sinonimo IS
+'Aliases curados de classe química usados pela seção 10 da FDS (ex.: "agentes oxidantes" -> oxidantes). Só entra alias conservador.';
+COMMENT ON COLUMN classe_quimica_sinonimo.id IS 'Identificador do alias.';
+COMMENT ON COLUMN classe_quimica_sinonimo.id_classe_quimica IS 'Classe química à qual o alias se refere.';
+COMMENT ON COLUMN classe_quimica_sinonimo.sinonimo_normalizado IS 'Alias em lower(unaccent(btrim())), único globalmente.';
 
 -- substancia_sinonimo -------------------------------------------------
 COMMENT ON TABLE substancia_sinonimo IS
@@ -217,7 +225,7 @@ COMMENT ON COLUMN historico_match.id_usuario IS 'Usuário que fez a comparação
 COMMENT ON COLUMN historico_match.id_produto_a IS 'Produto de menor id do par.';
 COMMENT ON COLUMN historico_match.id_produto_b IS 'Produto de maior id do par.';
 COMMENT ON COLUMN historico_match.resultado IS
-'Veredito de fn_match_produtos: compativel, incompativel ou nao_avaliado (sem composto resolvido não significa seguro).';
+'Veredito de fn_match_produtos: compativel, incompativel ou nao_avaliado (sem composto resolvido, ingrediente pendente ou mistura de composição desconhecida; não significa seguro).';
 COMMENT ON COLUMN historico_match.id_regra IS 'Regra de incompatibilidade_regra que disparou o alerta, se houver.';
 COMMENT ON COLUMN historico_match.severidade IS 'Gravidade da regra disparada: baixa, media, alta ou critica.';
 COMMENT ON COLUMN historico_match.descricao_risco IS 'Risco mostrado ao usuário no momento da comparação.';

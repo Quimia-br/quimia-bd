@@ -67,6 +67,16 @@ FROM duplicatas_nome d
 WHERE ss.id = d.id
   AND d.rn > 1;
 
+-- tipo é opcional (vazio vira 'substancia' na migração), mas valor preenchido
+-- precisa estar no domínio da coluna
+UPDATE stg_substancia
+SET status = 'rejeitado', motivo_rejeicao = 'tipo fora do domínio (substancia, mistura)'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND tipo_raw IS NOT NULL
+  AND btrim(tipo_raw) <> ''
+  AND lower(btrim(tipo_raw)) NOT IN ('substancia', 'mistura');
+
 UPDATE stg_substancia
 SET status = 'ok'
 WHERE id_batch = :batch_id

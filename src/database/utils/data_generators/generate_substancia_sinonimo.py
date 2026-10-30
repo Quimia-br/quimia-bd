@@ -1,15 +1,24 @@
 """
-Quimia — Gerador de dados sintéticos: substancia_sinonimo
+Quimia — Gerador de dados: substancia_sinonimo
 
-Depende de `substancia` já migrada — busca id + nome_canonico reais e
-gera variações de grafia/nome comercial pra cada substância (é
-literalmente pra isso que a tabela existe: mapear vários jeitos de
-escrever pro mesmo composto canônico).
+Sinônimo errado faz o fn_processar_fds_raw_json resolver o ingrediente da FDS
+para a substância errada (e o match decidir em cima disso). Por isso as linhas
+VÁLIDAS não são mais variações sorteadas (ex: "Ácido c." servia a duas
+substâncias, e o nome-fantasia saía de palavra aleatória) — vêm de um seed
+curado manualmente (sql/data_load/seeds/seed_substancia_sinonimo.csv), com
+nomes alternativos reais de cada substância, resolvidos por CAS (ou por
+nome_canonico quando o CAS é nulo).
+
+Nome FUNCIONAL genérico ("propelente", "tensoativo aniônico") não entra como
+sinônimo: a identidade desses ingredientes é o CAS. Um sinônimo genérico
+resolveria qualquer FDS com esse nome para a mesma substância, mesmo com
+outro CAS.
 
 `sinonimo_normalizado` é UNIQUE globalmente na tabela oficial (não
-apenas por substância), então o gerador injeta de propósito:
+apenas por substância), então o gerador injeta de propósito, por cima do seed,
+só RUÍDO INVÁLIDO (toda linha de ruído deve ser rejeitada):
   - sinônimo repetido (mesmo texto saindo 2x, pra testar a rejeição
-    por duplicidade dentro do lote e contra a tabela oficial)
+    por duplicidade dentro do lote)
   - id_substancia inexistente (pra testar a rejeição por FK)
   - sinônimo vazio (pra testar campo obrigatório)
 
@@ -20,24 +29,24 @@ Pré-requisito: rodar o pipeline de `substancia` antes deste.
 
 Uso:
     python generate_substancia_sinonimo.py
-    python generate_substancia_sinonimo.py --n 300 --saida substancia_sinonimo.csv
+    python generate_substancia_sinonimo.py --n-ruido 20 --saida substancia_sinonimo.csv
 """
 
 import argparse
 import csv
 import random
-
-from faker import Faker
+from pathlib import Path
 
 from src.database.connection import get_connection
 
-fake = Faker("pt_BR")
 random.seed(42)
 
-SUFIXOS_COMERCIAIS = [
-    "PA", "concentrado", "industrial", "técnico",
-    "grau alimentício", "diluído", "solução aquosa",
-]
+SEED_PATH = (
+    Path(__file__).resolve().parent.parent.parent
+    / "sql" / "data_load" / "seeds" / "seed_substancia_sinonimo.csv"
+)
+
+TIPOS_RUIDO = ["repetido", "id_inexistente", "vazio"]
 
 
 def buscar_substancias(conn):
@@ -49,75 +58,99 @@ def buscar_substancias(conn):
     return resultado
 
 
-def gerar_variacao(nome_canonico: str) -> str:
-    """Gera uma variação de grafia/nome comercial a partir do nome canônico."""
-    tipo = random.choice(["maiuscula", "comercial", "abreviacao", "nome_fantasia"])
-
-    if tipo == "maiuscula":
-        return nome_canonico.upper()
-    elif tipo == "comercial":
-        sufixo = random.choice(SUFIXOS_COMERCIAIS)
-        return f"{nome_canonico} {sufixo}"
-    elif tipo == "abreviacao":
-        partes = nome_canonico.split()
-        if len(partes) > 1:
-            return f"{partes[0]} {'.'.join(p[0] for p in partes[1:])}."
-        return nome_canonico.lower()
-    else:
-        return f"{fake.word().capitalize()} {nome_canonico.split()[0]}"
+def buscar_substancia_por_cas_ou_nome(conn):
+    """Retorna dict { (cas_numero ou None, nome_canonico) -> id }"""
+    cur = conn.cursor()
+    cur.execute("SELECT id, nome_canonico, cas_numero FROM substancia")
+    resultado = {(cas, nome): str(id_) for id_, nome, cas in cur.fetchall()}
+    cur.close()
+    return resultado
 
 
-def gerar_substancia_sinonimo(n=200, substancias=None):
+def carregar_seed():
+    if not SEED_PATH.exists():
+        raise FileNotFoundError(
+            f"Seed não encontrado em {SEED_PATH}. "
+            "Crie o arquivo com os sinônimos curados por substância."
+        )
+    with open(SEED_PATH, newline="", encoding="utf-8-sig") as f:
+        return list(csv.DictReader(f))
+
+
+def resolver_sinonimos_curados(conn):
+    """
+    Lê o seed e resolve (cas/nome) -> id_substancia contra o banco atual.
+    Pula, com aviso, linhas cuja substância não existe no banco.
+    """
+    mapa_substancia = buscar_substancia_por_cas_ou_nome(conn)
+
+    curados = []
+    for linha in carregar_seed():
+        cas = linha["cas_numero"].strip() or None
+        nome = linha["nome_canonico"].strip()
+        id_substancia = mapa_substancia.get((cas, nome))
+
+        if not id_substancia:
+            print(
+                f"[aviso] sinônimo não resolvido no banco atual: "
+                f"substancia='{nome}' (cas={cas}) sinonimo='{linha['sinonimo']}' — pulado"
+            )
+            continue
+
+        curados.append({"id_substancia": id_substancia, "sinonimo": linha["sinonimo"].strip()})
+
+    return curados
+
+
+def gerar_substancia_sinonimo(sinonimos_curados=None, substancias=None, n_ruido=20):
     if not substancias:
         raise ValueError(
             "Nenhuma substância encontrada na tabela oficial `substancia`. "
             "Rode o pipeline de substancia antes deste."
         )
+    if not sinonimos_curados:
+        raise ValueError(
+            "Nenhum sinônimo curado resolvido a partir do seed. "
+            "Confira o seed_substancia_sinonimo.csv e se os dados batem com o banco atual."
+        )
 
-    linhas = []
-    sinonimos_validos_gerados = []
-    
-    for _ in range(n):
-        roll = random.random()
-        id_substancia, nome_canonico = random.choice(substancias)
+    linhas = [dict(s) for s in sinonimos_curados]
 
-        if roll < 0.80:
-            sinonimo = gerar_variacao(nome_canonico)
-            sinonimos_validos_gerados.append((id_substancia, sinonimo))
+    for i in range(n_ruido):
+        tipo = TIPOS_RUIDO[i % len(TIPOS_RUIDO)]
+        base = random.choice(sinonimos_curados)
 
-        elif roll < 0.88 and sinonimos_validos_gerados:
-            id_substancia, sinonimo = random.choice(sinonimos_validos_gerados)
-
-        elif roll < 0.94:
-            sinonimo = gerar_variacao(nome_canonico)
-            id_substancia = str(random.randint(900000, 999999))
-
+        if tipo == "repetido":
+            linhas.append(dict(base))
+        elif tipo == "id_inexistente":
+            linhas.append({"id_substancia": str(random.randint(900000, 999999)), "sinonimo": base["sinonimo"]})
         else:
-            sinonimo = ""
-
-        linhas.append({
-            "id_substancia": id_substancia,
-            "sinonimo": sinonimo,
-        })
+            linhas.append({"id_substancia": base["id_substancia"], "sinonimo": ""})
 
     return linhas
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--n", type=int, default=200, help="quantidade de linhas a gerar")
+    parser.add_argument("--n-ruido", type=int, default=20, help="quantidade de linhas inválidas de ruído")
     parser.add_argument("--saida", default="substancia_sinonimo.csv", help="caminho do CSV de saída")
     args = parser.parse_args()
 
     conn = get_connection()
     substancias = buscar_substancias(conn)
+    sinonimos_curados = resolver_sinonimos_curados(conn)
     conn.close()
 
-    linhas = gerar_substancia_sinonimo(n=args.n, substancias=substancias)
+    linhas = gerar_substancia_sinonimo(
+        sinonimos_curados=sinonimos_curados, substancias=substancias, n_ruido=args.n_ruido
+    )
 
     with open(args.saida, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["id_substancia", "sinonimo"])
         writer.writeheader()
         writer.writerows(linhas)
 
-    print(f"{args.saida} gerado com {len(linhas)} linhas ({len(substancias)} substâncias disponíveis)")
+    print(
+        f"{args.saida} gerado com {len(linhas)} linhas "
+        f"({len(sinonimos_curados)} sinônimos curados + {len(linhas) - len(sinonimos_curados)} de ruído)"
+    )
