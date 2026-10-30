@@ -72,4 +72,24 @@ SELECT 'T9 resolvidos=2 pendentes=1' AS cenario,
 FROM fds_composto fc JOIN fds f ON f.id = fc.id_fds
 WHERE f.versao = 'teste' AND f.id_produto = :pa;
 
+-- T10: regra no nível da substância (peróxido x ácido acético), criada só nesta transação
+INSERT INTO incompatibilidade_regra (id_substancia_a, id_substancia_b, severidade, descricao_risco, ativo)
+SELECT a.id, b.id, 'alta', 'teste', TRUE
+FROM substancia a, substancia b
+WHERE a.nome_canonico = 'Peróxido de hidrogênio' AND b.nome_canonico = 'Ácido acético';
+
+SELECT 'T10 regra de substância', resultado, severidade,
+       resultado = 'incompativel' AND severidade = 'alta'
+FROM pg_temp.cenario(ARRAY['Peróxido de hidrogênio'], ARRAY['Ácido acético']) LIMIT 1;
+
+-- T11: "Agentes oxidantes" da seção 10 resolve para a classe oxidantes via alias
+UPDATE fds SET raw_json = '{"status":"ok","secoes":{"10":{"incompatibilidades":[
+  {"substancia_reagente":"Agentes oxidantes","descricao_risco":"teste"}]}}}'::jsonb
+WHERE versao = 'teste' AND id_produto = :pa;
+
+SELECT 'T11 alias de classe' AS cenario, cq.nome AS classe, cq.nome = 'oxidantes' AS ok
+FROM fds_incompatibilidade fi JOIN fds f ON f.id = fi.id_fds
+LEFT JOIN classe_quimica cq ON cq.id = fi.id_classe_quimica
+WHERE f.versao = 'teste' AND f.id_produto = :pa;
+
 ROLLBACK;

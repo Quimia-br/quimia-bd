@@ -17,6 +17,7 @@ DROP TABLE IF EXISTS sinonimo_pendente CASCADE;
 DROP TABLE IF EXISTS incompatibilidade_regra CASCADE;
 DROP TABLE IF EXISTS substancia_classe_quimica CASCADE;
 DROP TABLE IF EXISTS substancia_sinonimo CASCADE;
+DROP TABLE IF EXISTS classe_quimica_sinonimo CASCADE;
 DROP TABLE IF EXISTS fds_composto CASCADE;
 DROP TABLE IF EXISTS fds_incompatibilidade CASCADE;
 DROP TABLE IF EXISTS fds_descarte CASCADE;
@@ -88,6 +89,13 @@ CREATE TABLE substancia_sinonimo (
     sinonimo              VARCHAR(255) NOT NULL,
     sinonimo_normalizado  VARCHAR(255) NOT NULL,
     CONSTRAINT un_sinonimo_normalizado UNIQUE (sinonimo_normalizado)
+);
+
+CREATE TABLE classe_quimica_sinonimo (
+    id                    INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_classe_quimica     INTEGER NOT NULL,
+    sinonimo_normalizado  VARCHAR(255) NOT NULL,
+    CONSTRAINT un_classe_sinonimo_normalizado UNIQUE (sinonimo_normalizado)
 );
 
 CREATE TABLE substancia_classe_quimica (

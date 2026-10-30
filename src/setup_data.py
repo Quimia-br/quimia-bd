@@ -131,6 +131,7 @@ def main():
 
     rodar_pipeline("marca", "src/database/sql/data_load/mocks/marca.csv")
     rodar_pipeline("classe_quimica", "src/database/sql/data_load/mocks/classe_quimica.csv")
+    executar_scripts(["src/database/sql/data_load/seeds/seed_classe_quimica_sinonimo.sql"])
     rodar_pipeline("substancia", "src/database/sql/data_load/mocks/substancia.csv")
 
     linhas_estante = gerar_estante(n=200, ids_usuario=ids_usuario)

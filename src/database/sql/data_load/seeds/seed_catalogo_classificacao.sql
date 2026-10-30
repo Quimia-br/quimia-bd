@@ -6,7 +6,7 @@
 
 UPDATE catalogo_tabela SET dominio = 'cadastro', nivel_acesso = 'publico'
  WHERE nome_tabela IN ('marca', 'produto', 'substancia', 'classe_quimica',
-                       'substancia_classe_quimica', 'substancia_sinonimo');
+                       'substancia_classe_quimica', 'substancia_sinonimo', 'classe_quimica_sinonimo');
 
 UPDATE catalogo_tabela SET dominio = 'cadastro', nivel_acesso = 'interno'
  WHERE nome_tabela IN ('empresa', 'empresa_produto', 'ponto_parceiro');

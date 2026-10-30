@@ -127,7 +127,7 @@ BEGIN
     -- ================================================================
     -- SEÇÃO 10 — incompatibilidades (opcional)
     -- Resolve o reagente para substância (CAS ou nome/sinônimo) ou classe
-    -- química (nome normalizado, '_' = espaço). O que não resolver fica
+    -- química (nome normalizado, '_' = espaço, ou alias em classe_quimica_sinonimo). O que não resolver fica
     -- só como texto (ex.: "Temperaturas altas") e não entra no match.
     -- ================================================================
     IF jsonb_typeof(v_raw #> '{secoes,10,incompatibilidades}') = 'array' THEN
@@ -160,6 +160,12 @@ BEGIN
                 SELECT cq.id INTO v_id_classe
                 FROM classe_quimica cq
                 WHERE lower(unaccent(replace(cq.nome, '_', ' '))) = v_reagente_norm;
+            END IF;
+
+            IF v_id_substancia IS NULL AND v_id_classe IS NULL AND v_reagente_norm IS NOT NULL THEN
+                SELECT cs.id_classe_quimica INTO v_id_classe
+                FROM classe_quimica_sinonimo cs
+                WHERE cs.sinonimo_normalizado = v_reagente_norm;
             END IF;
 
             v_severidade := lower(btrim(v_incompatibilidade ->> 'severidade'));

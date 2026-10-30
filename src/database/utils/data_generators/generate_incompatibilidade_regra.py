@@ -12,8 +12,9 @@ na tabela para revisão, mas o fn_match as ignora até alguém ativá-las.
 
 Cada lado (A e B) da regra precisa ser EXATAMENTE substancia OU classe
 (nunca os dois, nunca nenhum) — regra espelhada no CHECK da tabela oficial.
-O seed usa só classes; os IDs de classe_quimica são resolvidos em runtime
-contra o banco (IDENTITY pode variar entre cargas).
+Cada lado do seed é uma classe (classe_a/classe_b) ou, se cas_a/cas_b estiver
+preenchido, uma substância pelo CAS. Os IDs são resolvidos em runtime contra
+o banco (IDENTITY pode variar entre cargas).
 
 O gerador acrescenta, por cima do seed, só RUÍDO INVÁLIDO pro validate
 (toda linha de ruído deve ser rejeitada; nenhuma regra aleatória entra):
@@ -88,33 +89,47 @@ def carregar_seed():
         return list(csv.DictReader(f))
 
 
+def buscar_substancia_por_cas(conn):
+    cur = conn.cursor()
+    cur.execute("SELECT cas_numero, id FROM substancia WHERE cas_numero IS NOT NULL")
+    resultado = {cas: str(id_) for cas, id_ in cur.fetchall()}
+    cur.close()
+    return resultado
+
+
 def resolver_regras_curadas(conn):
     """
-    Lê o seed e resolve (classe_a, classe_b) -> (id_classe_a, id_classe_b)
-    contra os IDs reais do banco. Pula, com aviso, regras cujo lado não
-    existe no banco atual (ex: seed desatualizado).
+    Lê o seed e resolve cada lado contra os IDs reais do banco: cas_a/cas_b
+    (substância) quando preenchido, senão classe_a/classe_b (classe). Pula,
+    com aviso, regras cujo lado não existe no banco atual (ex: seed desatualizado).
     """
     mapa_classe = buscar_classe_por_nome(conn)
+    mapa_cas = buscar_substancia_por_cas(conn)
+
+    def resolver_lado(linha, lado):
+        cas = (linha.get(f"cas_{lado}") or "").strip()
+        if cas:
+            return mapa_cas.get(cas), "", cas
+        classe = linha[f"classe_{lado}"].strip()
+        return None, mapa_classe.get(classe), classe
 
     regras = []
     for linha in carregar_seed():
-        classe_a = linha["classe_a"].strip()
-        classe_b = linha["classe_b"].strip()
-        id_classe_a = mapa_classe.get(classe_a)
-        id_classe_b = mapa_classe.get(classe_b)
+        sub_a, cls_a, nome_a = resolver_lado(linha, "a")
+        sub_b, cls_b, nome_b = resolver_lado(linha, "b")
 
-        if not (id_classe_a and id_classe_b):
+        if not ((sub_a or cls_a) and (sub_b or cls_b)):
             print(
                 f"[aviso] regra não resolvida no banco atual: "
-                f"classe_a='{classe_a}' x classe_b='{classe_b}' — pulada"
+                f"'{nome_a}' x '{nome_b}' — pulada"
             )
             continue
 
         regras.append({
-            "id_substancia_a": "",
-            "id_classe_a": id_classe_a,
-            "id_substancia_b": "",
-            "id_classe_b": id_classe_b,
+            "id_substancia_a": sub_a or "",
+            "id_classe_a": cls_a or "",
+            "id_substancia_b": sub_b or "",
+            "id_classe_b": cls_b or "",
             "severidade": linha["severidade"].strip(),
             "descricao_risco": linha["descricao_risco"].strip(),
             "fonte": linha["fonte"].strip(),
@@ -129,6 +144,7 @@ def gerar_ruido(base, tipo, ids_substancia):
     linha = dict(base)
     if tipo == "lado_a_ambos":
         linha["id_substancia_a"] = random.choice(ids_substancia)
+        linha["id_classe_a"] = linha["id_classe_a"] or "1"
     elif tipo == "lado_b_nenhum":
         linha["id_classe_b"] = ""
         linha["id_substancia_b"] = ""
