@@ -19,6 +19,7 @@ Uso:
 import argparse
 import csv
 import random
+from pathlib import Path
 
 from faker import Faker
 
@@ -48,10 +49,44 @@ SUFIXOS_NOME = [
 
 def buscar_marcas(conn):
     cur = conn.cursor()
-    cur.execute("SELECT id FROM marca")
+    cur.execute("SELECT id FROM marca WHERE nome <> 'Flora'")  # Flora só tem produtos curados
     ids = [str(row[0]) for row in cur.fetchall()]
     cur.close()
     return ids
+
+
+SEED_PATH = (
+    Path(__file__).resolve().parent.parent.parent
+    / "sql" / "data_load" / "seeds" / "seed_produto.csv"
+)
+
+
+def resolver_produtos_curados(conn):
+    """
+    Lê o seed de produtos (nome, marca, tipo_produto, descricao) e resolve a
+    marca pelo nome contra o banco. Pula, com aviso, produto cuja marca não existe.
+    """
+    cur = conn.cursor()
+    cur.execute("SELECT nome, id FROM marca")
+    mapa_marca = {nome: str(id_) for nome, id_ in cur.fetchall()}
+    cur.close()
+
+    produtos = []
+    with open(SEED_PATH, newline="", encoding="utf-8-sig") as f:
+        for linha in csv.DictReader(f):
+            id_marca = mapa_marca.get(linha["marca"].strip())
+            if not id_marca:
+                print(f"[aviso] marca '{linha['marca']}' não existe — produto '{linha['nome']}' pulado")
+                continue
+            produtos.append({
+                "nome": linha["nome"].strip(),
+                "id_marca": id_marca,
+                "descricao": linha["descricao"].strip(),
+                "tipo_produto": linha["tipo_produto"].strip(),
+                "cod_barras": "",
+                "foto_url": "",
+            })
+    return produtos
 
 
 def gerar_nome_produto():
@@ -67,14 +102,14 @@ def gerar_foto_url(valida=True):
     return ""
 
 
-def gerar_produto(n=200, ids_marca=None):
+def gerar_produto(n=200, ids_marca=None, produtos_curados=None):
     if not ids_marca:
         raise ValueError(
             "Nenhuma marca encontrada na tabela oficial `marca`. "
             "Rode o pipeline de marca antes deste."
         )
 
-    linhas = []
+    linhas = [dict(p) for p in (produtos_curados or [])]
     cod_barras_usados = []
 
     for _ in range(n):

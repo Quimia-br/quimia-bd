@@ -16,8 +16,9 @@ from src.database.utils.data_generators.generate_substancia_sinonimo import (
     gerar_substancia_sinonimo, buscar_substancias, resolver_sinonimos_curados,
 )
 from src.database.utils.data_generators.generate_produto import (
-    gerar_produto, buscar_marcas,
+    gerar_produto, buscar_marcas, resolver_produtos_curados,
 )
+from src.database.utils.fds_loader import carregar_fds_curadas
 from src.database.utils.data_generators.generate_historico_recomendacao import (
     gerar_historico_recomendacao, buscar_ids as buscar_ids_hr, buscar_usuarios,
 )
@@ -176,15 +177,20 @@ def main():
 
     conn = get_connection()
     ids_marca = buscar_marcas(conn)
+    produtos_curados = resolver_produtos_curados(conn)
     conn.close()
 
-    linhas_produto = gerar_produto(n=200, ids_marca=ids_marca)
+    linhas_produto = gerar_produto(n=200, ids_marca=ids_marca, produtos_curados=produtos_curados)
     csv_produto = salvar_csv(
     "src/database/sql/data_load/mocks/produto.csv",
     linhas_produto,
     ["nome", "id_marca", "descricao", "tipo_produto", "cod_barras", "foto_url"],
     )
     rodar_pipeline("produto", csv_produto)
+
+    conn = get_connection()
+    carregar_fds_curadas(conn)
+    conn.close()
 
     conn = get_connection()
     ids_produto = buscar_ids_hr(conn, "produto")

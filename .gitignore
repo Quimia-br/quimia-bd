@@ -14,3 +14,4 @@ backups/
 !src/database/sql/data_load/mocks/classe_quimica.csv
 !src/database/sql/data_load/mocks/substancia.csv
 !src/database/sql/data_load/seeds/*.csv
+!src/database/sql/data_load/seeds/fds/*.csv
