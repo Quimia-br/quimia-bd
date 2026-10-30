@@ -54,10 +54,14 @@ FROM pg_temp.cenario(ARRAY['Hipoclorito de sódio', 'Tensoativo (mistura)'], ARR
 SELECT 'T7 pendência aberta', resultado, severidade, resultado = 'nao_avaliado'
 FROM pg_temp.cenario(ARRAY['Dicloroisocianurato de sódio'], ARRAY['Propano'], TRUE);
 
--- T8: regra 4 (inativa) não dispara: aniônico x catiônico
-SELECT 'T8 regra inativa não dispara', resultado, id_regra,
-       NOT EXISTS (SELECT 1 FROM incompatibilidade_regra r WHERE r.id = x.id_regra AND NOT r.ativo) AS ok
-FROM pg_temp.cenario(ARRAY['Lauril sulfato de sódio'], ARRAY['Tensoativo catiônico (mistura)']) x;
+-- T8: regra inativa não dispara (regra criada só nesta transação)
+INSERT INTO incompatibilidade_regra (id_classe_a, id_classe_b, severidade, descricao_risco, ativo)
+SELECT a.id, b.id, 'baixa', 'teste', FALSE
+FROM classe_quimica a, classe_quimica b
+WHERE a.nome = 'tensoativos_anionicos' AND b.nome = 'tensoativos_cationicos';
+
+SELECT 'T8 regra inativa não dispara', resultado, id_regra, resultado = 'nao_avaliado' AS ok
+FROM pg_temp.cenario(ARRAY['Lauril sulfato de sódio'], ARRAY['Tensoativo catiônico (mistura)']);
 
 -- T9: resolução por sinônimo; CAS de mistura genérica não resolve para outra mistura
 UPDATE fds SET raw_json = '{"status":"ok","secoes":{"03":{"compostos":[
@@ -72,15 +76,16 @@ SELECT 'T9 resolvidos=2 pendentes=1' AS cenario,
 FROM fds_composto fc JOIN fds f ON f.id = fc.id_fds
 WHERE f.versao = 'teste' AND f.id_produto = :pa;
 
--- T10: regra no nível da substância (peróxido x ácido acético), criada só nesta transação
-INSERT INTO incompatibilidade_regra (id_substancia_a, id_substancia_b, severidade, descricao_risco, ativo)
-SELECT a.id, b.id, 'alta', 'teste', TRUE
-FROM substancia a, substancia b
-WHERE a.nome_canonico = 'Peróxido de hidrogênio' AND b.nome_canonico = 'Ácido acético';
-
+-- T10: regra no nível da substância do seed (peróxido x ácido acético)
 SELECT 'T10 regra de substância', resultado, severidade,
        resultado = 'incompativel' AND severidade = 'alta'
 FROM pg_temp.cenario(ARRAY['Peróxido de hidrogênio'], ARRAY['Ácido acético']) LIMIT 1;
+
+SELECT 'T12 quaternário x aniônico', resultado, severidade, resultado = 'incompativel' AND severidade = 'baixa'
+FROM pg_temp.cenario(ARRAY['Cloreto de benzalcônio'], ARRAY['Lauril sulfato de sódio']) LIMIT 1;
+
+SELECT 'T13 base x ácido', resultado, severidade, resultado = 'incompativel' AND severidade = 'media'
+FROM pg_temp.cenario(ARRAY['Hidróxido de sódio'], ARRAY['Ácido fosfórico']) LIMIT 1;
 
 -- T11: "Agentes oxidantes" da seção 10 resolve para a classe oxidantes via alias
 UPDATE fds SET raw_json = '{"status":"ok","secoes":{"10":{"incompatibilidades":[

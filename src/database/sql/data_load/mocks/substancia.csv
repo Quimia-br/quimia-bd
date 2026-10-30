@@ -31,7 +31,7 @@ Tensoativo catiônico (mistura),61789-80-8,"Nome declarado na FDS. CAS indica mi
 Tensoativo (mistura),61789-32-0,Nome funcional declarado na FDS. CAS indica mistura.,mistura
 Surfactante (mistura),61789-40-0,Nome funcional declarado na FDS. CAS indica mistura.,mistura
 Condicionante (mistura),9005-25-8,Nome funcional declarado na FDS. CAS sem registro no PubChem.,mistura
-Alcalinizante (mistura),1344-00-9,Nome funcional declarado na FDS. PubChem associa este CAS a aluminossilicato de sódio: conferir antes de usar.,mistura
+Alcalinizante (mistura),1344-00-9,Nome funcional declarado na FDS. CAS 1344-00-9 é aluminossilicato de sódio (PubChem/EC 215-684-8; antiaglomerante/zeólita), não um alcalinizante: não classificar como bases.,mistura
 Enzima (mistura),9014-01-1,Nome funcional declarado na FDS. PubChem retornou um composto específico que não representa enzima de mistura: não usado como identidade.,mistura
 Coadjuvante (mistura),1318-02-1,Nome funcional declarado na FDS. CAS sem registro no PubChem.,mistura
 ,999-99-9,linha de teste — nome ausente,
