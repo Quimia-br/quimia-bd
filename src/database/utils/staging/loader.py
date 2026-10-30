@@ -99,7 +99,7 @@ TABELAS = {
         "stg_table":"stg_substancia",
         "colunas":[
             "nome_canonico_raw", "cas_numero_raw",
-            "descricao_raw", 
+            "descricao_raw", "tipo_raw",
         ],
         "validate_sql": BASE_DIR / "validate" / "validate_substancia.sql",
         "migrate_sql": BASE_DIR / "migrate" / "migrate_substancia.sql"

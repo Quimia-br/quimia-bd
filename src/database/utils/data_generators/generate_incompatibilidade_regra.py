@@ -1,53 +1,64 @@
 """
-Quimia — Gerador de dados sintéticos: incompatibilidade_regra
+Quimia — Gerador de dados: incompatibilidade_regra
 
-Depende de substancia e classe_quimica já migradas. Cada lado (A e B)
-da regra precisa ser EXATAMENTE substancia OU classe (nunca os dois,
-nunca nenhum) — regra espelhada no CHECK da tabela oficial.
+Esta tabela alimenta o fn_match_produtos: uma regra errada vira alerta falso
+ou, pior, um "compatível" falso. Por isso as linhas VÁLIDAS não são mais
+sorteadas — vêm de um seed curado manualmente
+(sql/data_load/seeds/seed_incompatibilidade_regra.csv), em que cada regra
+traz as duas classes, a severidade, a descrição do risco e a FONTE.
 
-NOTA (pendência conhecida): igual em substancia_classe_quimica, o
-sorteio de pares aqui é aleatório, sem afinidade química real — serve
-pra validar integridade/formato do pipeline, não o conteúdo. Regras
-quimicamente coerentes (ex: "ácido + hipoclorito = gás tóxico") devem
-ser curadas manualmente quando entrar FDS real, já que essa tabela
-alimenta o fn_match_produtos.
+Regras com fonte ainda não conferida ficam no seed com ativo=false: entram
+na tabela para revisão, mas o fn_match as ignora até alguém ativá-las.
 
-Ruído proposital pro validate:
-  - lado A/B com os dois preenchidos (viola XOR)
-  - lado A/B com nenhum preenchido (viola XOR)
+Cada lado (A e B) da regra precisa ser EXATAMENTE substancia OU classe
+(nunca os dois, nunca nenhum) — regra espelhada no CHECK da tabela oficial.
+O seed usa só classes; os IDs de classe_quimica são resolvidos em runtime
+contra o banco (IDENTITY pode variar entre cargas).
+
+O gerador acrescenta, por cima do seed, só RUÍDO INVÁLIDO pro validate
+(toda linha de ruído deve ser rejeitada; nenhuma regra aleatória entra):
+  - lado A com os dois preenchidos (viola XOR)
+  - lado B com nenhum preenchido (viola XOR)
   - severidade fora do CHECK
   - descricao_risco vazia
-  - id inexistente / formato inválido
+  - id de classe inexistente
 
 Pré-requisito: rodar os pipelines de `substancia` e `classe_quimica`
 antes deste.
 
 Uso:
     python generate_incompatibilidade_regra.py
-    python generate_incompatibilidade_regra.py --n 150 --saida incompatibilidade_regra.csv
+    python generate_incompatibilidade_regra.py --n-ruido 15 --saida incompatibilidade_regra.csv
 """
 
 import argparse
 import csv
 import random
-
-from faker import Faker
+from pathlib import Path
 
 from src.database.connection import get_connection
 
-fake = Faker("pt_BR")
 random.seed(42)
 
-SEVERIDADES_VALIDAS = ["baixa", "media", "alta", "critica"]
+SEED_PATH = (
+    Path(__file__).resolve().parent.parent.parent
+    / "sql" / "data_load" / "seeds" / "seed_incompatibilidade_regra.csv"
+)
+
 SEVERIDADES_INVALIDAS = ["moderada", "extrema", "leve", ""]
 
-DESCRICOES_RISCO = [
-    "Reação exotérmica com liberação de calor intenso.",
-    "Formação de gás tóxico (ex: cloro) ao entrar em contato.",
-    "Risco de explosão em ambientes confinados.",
-    "Liberação de vapores irritantes às vias respiratórias.",
-    "Corrosão acelerada de superfícies metálicas.",
-    "Reação pode causar queimaduras químicas por contato.",
+TIPOS_RUIDO = [
+    "lado_a_ambos",
+    "lado_b_nenhum",
+    "severidade_invalida",
+    "descricao_vazia",
+    "classe_inexistente",
+]
+
+CAMPOS = [
+    "id_substancia_a", "id_classe_a",
+    "id_substancia_b", "id_classe_b",
+    "severidade", "descricao_risco", "fonte", "ativo",
 ]
 
 
@@ -59,27 +70,83 @@ def buscar_ids(conn, tabela):
     return ids
 
 
-def sortear_lado(ids_substancia, ids_classe, forcar_erro=None):
-    """
-    Sorteia um lado (A ou B) da regra, respeitando o XOR na maioria
-    dos casos, mas podendo forçar um erro específico pro validate:
-      forcar_erro=None        -> válido (substância OU classe, sorteado)
-      forcar_erro="ambos"     -> substância E classe preenchidos (viola XOR)
-      forcar_erro="nenhum"    -> nenhum preenchido (viola XOR)
-    Retorna (id_substancia, id_classe).
-    """
-    if forcar_erro == "ambos":
-        return random.choice(ids_substancia), random.choice(ids_classe)
-    if forcar_erro == "nenhum":
-        return "", ""
+def buscar_classe_por_nome(conn):
+    cur = conn.cursor()
+    cur.execute("SELECT id, nome FROM classe_quimica")
+    resultado = {nome: str(id_) for id_, nome in cur.fetchall()}
+    cur.close()
+    return resultado
 
-    if random.random() < 0.5:
-        return random.choice(ids_substancia), ""
+
+def carregar_seed():
+    if not SEED_PATH.exists():
+        raise FileNotFoundError(
+            f"Seed não encontrado em {SEED_PATH}. "
+            "Crie o arquivo com as regras de incompatibilidade curadas."
+        )
+    with open(SEED_PATH, newline="", encoding="utf-8-sig") as f:
+        return list(csv.DictReader(f))
+
+
+def resolver_regras_curadas(conn):
+    """
+    Lê o seed e resolve (classe_a, classe_b) -> (id_classe_a, id_classe_b)
+    contra os IDs reais do banco. Pula, com aviso, regras cujo lado não
+    existe no banco atual (ex: seed desatualizado).
+    """
+    mapa_classe = buscar_classe_por_nome(conn)
+
+    regras = []
+    for linha in carregar_seed():
+        classe_a = linha["classe_a"].strip()
+        classe_b = linha["classe_b"].strip()
+        id_classe_a = mapa_classe.get(classe_a)
+        id_classe_b = mapa_classe.get(classe_b)
+
+        if not (id_classe_a and id_classe_b):
+            print(
+                f"[aviso] regra não resolvida no banco atual: "
+                f"classe_a='{classe_a}' x classe_b='{classe_b}' — pulada"
+            )
+            continue
+
+        regras.append({
+            "id_substancia_a": "",
+            "id_classe_a": id_classe_a,
+            "id_substancia_b": "",
+            "id_classe_b": id_classe_b,
+            "severidade": linha["severidade"].strip(),
+            "descricao_risco": linha["descricao_risco"].strip(),
+            "fonte": linha["fonte"].strip(),
+            "ativo": linha["ativo"].strip(),
+        })
+
+    return regras
+
+
+def gerar_ruido(base, tipo, ids_substancia):
+    """Copia uma regra curada e estraga exatamente um campo."""
+    linha = dict(base)
+    if tipo == "lado_a_ambos":
+        linha["id_substancia_a"] = random.choice(ids_substancia)
+    elif tipo == "lado_b_nenhum":
+        linha["id_classe_b"] = ""
+        linha["id_substancia_b"] = ""
+    elif tipo == "severidade_invalida":
+        linha["severidade"] = random.choice(SEVERIDADES_INVALIDAS)
+    elif tipo == "descricao_vazia":
+        linha["descricao_risco"] = ""
     else:
-        return "", random.choice(ids_classe)
+        linha["id_classe_a"] = str(random.randint(900000, 999999))
+    return linha
 
 
-def gerar_incompatibilidade_regra(n=150, ids_substancia=None, ids_classe=None):
+def gerar_incompatibilidade_regra(regras_curadas=None, ids_substancia=None, ids_classe=None, n_ruido=15):
+    if not regras_curadas:
+        raise ValueError(
+            "Nenhuma regra curada resolvida a partir do seed. "
+            "Confira o seed_incompatibilidade_regra.csv e se as classes existem no banco atual."
+        )
     if not ids_substancia:
         raise ValueError(
             "Nenhuma substância encontrada na tabela oficial `substancia`. "
@@ -91,84 +158,40 @@ def gerar_incompatibilidade_regra(n=150, ids_substancia=None, ids_classe=None):
             "Rode o pipeline de classe_quimica antes deste."
         )
 
-    linhas = []
-    for _ in range(n):
-        roll = random.random()
+    linhas = [dict(r) for r in regras_curadas]
 
-        if roll < 0.85:
-            erro_a, erro_b = None, None
-        elif roll < 0.91:
-            erro_a, erro_b = "ambos", None
-        elif roll < 0.97:
-            erro_a, erro_b = None, "nenhum"
-        else:
-            erro_a, erro_b = "ambos", "nenhum"
-
-        id_substancia_a, id_classe_a = sortear_lado(ids_substancia, ids_classe, erro_a)
-        id_substancia_b, id_classe_b = sortear_lado(ids_substancia, ids_classe, erro_b)
-
-        roll_sev = random.random()
-        if roll_sev < 0.85:
-            severidade = random.choice(SEVERIDADES_VALIDAS)
-        elif roll_sev < 0.94:
-            severidade = random.choice(SEVERIDADES_INVALIDAS)
-        else:
-            severidade = ""
-
-        descricao_risco = random.choice(DESCRICOES_RISCO) if random.random() < 0.93 else ""
-
-        fonte = "NBR 14725" if random.random() < 0.6 else ""
-
-        roll_ativo = random.random()
-        if roll_ativo < 0.85:
-            ativo = random.choice(["true", "false"])
-        elif roll_ativo < 0.95:
-            ativo = ""
-        else:
-            ativo = "sim"
-
-        linhas.append({
-            "id_substancia_a": id_substancia_a,
-            "id_classe_a": id_classe_a,
-            "id_substancia_b": id_substancia_b,
-            "id_classe_b": id_classe_b,
-            "severidade": severidade,
-            "descricao_risco": descricao_risco,
-            "fonte": fonte,
-            "ativo": ativo,
-        })
+    for i in range(n_ruido):
+        base = random.choice(regras_curadas)
+        linhas.append(gerar_ruido(base, TIPOS_RUIDO[i % len(TIPOS_RUIDO)], ids_substancia))
 
     return linhas
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--n", type=int, default=150, help="quantidade de linhas a gerar")
+    parser.add_argument("--n-ruido", type=int, default=15, help="quantidade de linhas inválidas de ruído")
     parser.add_argument("--saida", default="incompatibilidade_regra.csv", help="caminho do CSV de saída")
     args = parser.parse_args()
 
     conn = get_connection()
     ids_substancia = buscar_ids(conn, "substancia")
     ids_classe = buscar_ids(conn, "classe_quimica")
+    regras_curadas = resolver_regras_curadas(conn)
     conn.close()
 
     linhas = gerar_incompatibilidade_regra(
-        n=args.n, ids_substancia=ids_substancia, ids_classe=ids_classe
+        regras_curadas=regras_curadas,
+        ids_substancia=ids_substancia,
+        ids_classe=ids_classe,
+        n_ruido=args.n_ruido,
     )
 
     with open(args.saida, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=[
-                "id_substancia_a", "id_classe_a",
-                "id_substancia_b", "id_classe_b",
-                "severidade", "descricao_risco", "fonte", "ativo",
-            ],
-        )
+        writer = csv.DictWriter(f, fieldnames=CAMPOS)
         writer.writeheader()
         writer.writerows(linhas)
 
     print(
         f"{args.saida} gerado com {len(linhas)} linhas "
-        f"({len(ids_substancia)} substâncias, {len(ids_classe)} classes disponíveis)"
+        f"({len(regras_curadas)} regras curadas + {len(linhas) - len(regras_curadas)} de ruído)"
     )

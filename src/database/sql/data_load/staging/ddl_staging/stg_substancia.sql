@@ -4,9 +4,12 @@ CREATE TABLE IF NOT EXISTS stg_substancia (
     nome_canonico_raw TEXT,
     cas_numero_raw TEXT,
     descricao_raw TEXT,
+    tipo_raw TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente'
             CHECK (status IN ('pendente','ok','rejeitado')),
     motivo_rejeicao TEXT,
     criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
- 
+
+-- bancos que já tinham a staging criada sem a coluna
+ALTER TABLE stg_substancia ADD COLUMN IF NOT EXISTS tipo_raw TEXT;

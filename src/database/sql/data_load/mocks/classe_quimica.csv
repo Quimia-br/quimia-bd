@@ -9,5 +9,9 @@ tensoativos_nao_ionicos,"Surfactantes não-iônicos, comuns em desengraxantes mu
 solventes_organicos,"Álcoois e solventes, ex: etanol, isopropanol, usados em desinfetantes."
 quaternarios_amonio,"Compostos de amônio quaternário, base de desinfetantes/germicidas."
 fragrancias_aditivos,"Fragrâncias e aditivos sem função de limpeza direta, frequentemente sem CAS declarado."
+sais_inorganicos,"Sais inorgânicos usados como carga em formulações, ex: sulfato de sódio."
+propelentes,"Gases propelentes de aerossóis, inflamáveis, ex: propano."
+terpenos,"Terpenos e derivados de origem vegetal, usados como fragrâncias naturais, ex: limoneno, linalol."
+tensoativos_cationicos,"Surfactantes com carga positiva, usados em amaciantes e desinfetantes."
 ,linha de teste — nome ausente
 hipocloritos,duplicata proposital pra testar validação

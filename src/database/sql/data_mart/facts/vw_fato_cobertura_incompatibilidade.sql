@@ -4,5 +4,5 @@ SELECT
     COUNT(DISTINCT ir.id) AS total_regras_envolvendo_classe
 FROM classe_quimica cq
 LEFT JOIN incompatibilidade_regra ir
-    ON ir.id_classe_a = cq.id OR ir.id_classe_b = cq.id
+    ON ir.ativo = TRUE AND (ir.id_classe_a = cq.id OR ir.id_classe_b = cq.id)
 GROUP BY cq.nome;

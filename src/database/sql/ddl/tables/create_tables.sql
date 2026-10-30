@@ -77,7 +77,9 @@ CREATE TABLE substancia (
     id            INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome_canonico VARCHAR(255) NOT NULL,
     cas_numero    VARCHAR(20) UNIQUE,
-    descricao     TEXT
+    descricao     TEXT,
+    tipo          VARCHAR(20) NOT NULL DEFAULT 'substancia'
+        CHECK (tipo IN ('substancia', 'mistura'))
 );
 
 CREATE TABLE substancia_sinonimo (

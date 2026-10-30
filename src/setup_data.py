@@ -13,7 +13,7 @@ from src.database.utils.data_generators.generate_substancia_classe_quimica impor
     gerar_substancia_classe_quimica, buscar_ids as buscar_ids_scq, resolver_pares_curados,
 )
 from src.database.utils.data_generators.generate_substancia_sinonimo import (
-    gerar_substancia_sinonimo, buscar_substancias,
+    gerar_substancia_sinonimo, buscar_substancias, resolver_sinonimos_curados,
 )
 from src.database.utils.data_generators.generate_produto import (
     gerar_produto, buscar_marcas,
@@ -22,7 +22,7 @@ from src.database.utils.data_generators.generate_historico_recomendacao import (
     gerar_historico_recomendacao, buscar_ids as buscar_ids_hr, buscar_usuarios,
 )
 from src.database.utils.data_generators.generate_incompatibilidade_regra import (
-    gerar_incompatibilidade_regra, buscar_ids as buscar_ids_ir,
+    gerar_incompatibilidade_regra, buscar_ids as buscar_ids_ir, resolver_regras_curadas,
 )
 from src.database.utils.data_generators import generate_sessao_acesso as gerador_sessao_acesso
  
@@ -160,9 +160,12 @@ def main():
 
     conn = get_connection()
     substancias = buscar_substancias(conn)
+    sinonimos_curados = resolver_sinonimos_curados(conn)
     conn.close()
 
-    linhas_sinonimo = gerar_substancia_sinonimo(n=200, substancias=substancias)
+    linhas_sinonimo = gerar_substancia_sinonimo(
+        sinonimos_curados=sinonimos_curados, substancias=substancias, n_ruido=20
+    )
     csv_sinonimo = salvar_csv(
         "src/database/sql/data_load/mocks/substancia_sinonimo.csv",
         linhas_sinonimo,
@@ -202,10 +205,14 @@ def main():
     conn = get_connection()
     ids_substancia_ir = buscar_ids_ir(conn, "substancia")
     ids_classe_ir = buscar_ids_ir(conn, "classe_quimica")
+    regras_curadas_ir = resolver_regras_curadas(conn)
     conn.close()
 
     linhas_incompatibilidade = gerar_incompatibilidade_regra(
-        n=150, ids_substancia=ids_substancia_ir, ids_classe=ids_classe_ir
+        regras_curadas=regras_curadas_ir,
+        ids_substancia=ids_substancia_ir,
+        ids_classe=ids_classe_ir,
+        n_ruido=15,
     )
     csv_incompatibilidade = salvar_csv(
         "src/database/sql/data_load/mocks/incompatibilidade_regra.csv",
