@@ -1,0 +1,9 @@
+# Validado em venv limpo com Python 3.14.2 (Windows 11), em 2026-10-29.
+# Cobre src/ (setup_data, geradores, loader, RPA) e ops/ (backup, restore, check_db).
+# O gerador do catálogo (src/catalog_site) usa só a biblioteca padrão.
+psycopg2-binary==2.9.13   # conexão com o PostgreSQL (src/database, ops/check_db.py)
+python-dotenv==1.2.4      # leitura do .env
+Faker==40.44.0            # dados sintéticos (src/database/utils/data_generators)
+bcrypt==5.0.0             # hash das senhas dos mocks e senha temporária do RPA
+pandas==3.1.0             # extração do RPA (src/rpa/extractors)
+SQLAlchemy==2.0.48        # engines do RPA (src/rpa/config.py); manter < 2.1: a partir da 2.1 a URL postgresql:// usa o driver psycopg (v3), não o psycopg2

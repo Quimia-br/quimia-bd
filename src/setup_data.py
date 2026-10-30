@@ -94,6 +94,7 @@ def main():
         "src/database/sql/indexes/idx_sessao_acesso_id_usuario.sql",
         "src/database/sql/indexes/idx_sessao_acesso_ocorreu_em.sql",
         "src/database/sql/indexes/idx_log_auditoria_tabela_data.sql",
+        "src/database/sql/indexes/idx_log_rpa_execucao_processo.sql",
         
 
         "src/database/sql/ddl/comments/comments_tabelas.sql",
@@ -117,6 +118,7 @@ def main():
         gerar_ponto_parceiro(ids_empresa, n=200),
         ["id_empresa", "nome", "cep", "estado", "bairro", "rua", "numero", "complemento", "tipo", "ativo", "latitude", "longitude"],
     )
+    rodar_pipeline("ponto_parceiro", "src/database/sql/data_load/seeds/seed_ponto_parceiro_sp.csv")
     rodar_pipeline("ponto_parceiro", csv_ponto)
 
     linhas_localizacao = gerar_localizacao_usuario(ids_usuario, n=500)
@@ -238,6 +240,7 @@ def main():
         "src/database/sql/data_mart/facts/vw_fato_historico_match.sql",
         "src/database/sql/data_mart/facts/vw_fato_auditoria.sql",
         "src/database/sql/data_mart/facts/vw_dau.sql",
+        "src/database/sql/data_mart/facts/vw_sequencia_uso.sql",
         "src/database/sql/data_mart/facts/vw_fato_cobertura_incompatibilidade.sql",
         "src/database/sql/data_mart/facts/vw_fato_sessao_acesso.sql",
         "src/database/sql/data_mart/facts/vw_fato_adocao_estante.sql",

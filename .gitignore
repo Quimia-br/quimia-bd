@@ -2,6 +2,8 @@
 **/__pycache__/
 *.pyc
 src/rpa/_tmp
+backups/
+*.dump
 
 # nenhum CSV vai ao Git: os gerados (setup_data, geradores, RPA) sao recriados em runtime
 *.csv
