@@ -32,3 +32,7 @@ cas_numero,nome_canonico,nome_classe
 80-56-8,Alfa-pineno,terpenos
 85536-14-7,Tensoativo aniônico (mistura),tensoativos_anionicos
 61789-80-8,Tensoativo catiônico (mistura),tensoativos_cationicos
+27323-41-7,Dodecilbenzenossulfonato de trietanolamina,tensoativos_anionicos
+67-56-1,Metanol,solventes_organicos
+68439-46-3,Álcool graxo C9-11 etoxilado (mistura),tensoativos_nao_ionicos
+68154-97-2,Álcool graxo C10-12 etoxilado e propoxilado (mistura),tensoativos_nao_ionicos

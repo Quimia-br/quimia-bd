@@ -31,9 +31,22 @@ Tensoativo catiônico (mistura),61789-80-8,"Nome declarado na FDS. CAS indica mi
 Tensoativo (mistura),61789-32-0,Nome funcional declarado na FDS. CAS indica mistura.,mistura
 Surfactante (mistura),61789-40-0,Nome funcional declarado na FDS. CAS indica mistura.,mistura
 Condicionante (mistura),9005-25-8,Nome funcional declarado na FDS. CAS sem registro no PubChem.,mistura
-Alcalinizante (mistura),1344-00-9,Nome funcional declarado na FDS. CAS 1344-00-9 é aluminossilicato de sódio (PubChem/EC 215-684-8; antiaglomerante/zeólita), não um alcalinizante: não classificar como bases.,mistura
+Alcalinizante (mistura),1344-00-9,"Nome funcional declarado na FDS. CAS 1344-00-9 é aluminossilicato de sódio (PubChem/EC 215-684-8; antiaglomerante/zeólita), não um alcalinizante: não classificar como bases.",mistura
 Enzima (mistura),9014-01-1,Nome funcional declarado na FDS. PubChem retornou um composto específico que não representa enzima de mistura: não usado como identidade.,mistura
 Coadjuvante (mistura),1318-02-1,Nome funcional declarado na FDS. CAS sem registro no PubChem.,mistura
+Éter monobutílico de dietilenoglicol,112-34-5,Éter de glicol usado como solvente em limpadores multiuso.,substancia
+Dodecilbenzenossulfonato de trietanolamina,27323-41-7,Tensoativo aniônico (sal de trietanolamina do ácido dodecilbenzenossulfônico).,substancia
+Metilisotiazolinona,2682-20-4,Conservante (MIT) usado em produtos de limpeza.,substancia
+Dicarboximetil alaninato de trissódio,164462-16-2,Agente quelante (MGDA trissódico) usado em detergentes.,substancia
+Cumenossulfonato de sódio,15763-76-5,Hidrótropo usado para solubilizar componentes em detergentes líquidos.,substancia
+Álcool benzílico,100-51-6,Solvente e conservante.,substancia
+Acetato de isobutila,110-19-0,Solvente éster.,substancia
+Metil etil cetona,78-93-3,Solvente cetônico.,substancia
+Metanol,67-56-1,Álcool usado como solvente.,substancia
+Glutaraldeído,111-30-8,Conservante/biocida.,substancia
+Bronopol,52-51-7,"Conservante (2-bromo-2-nitropropano-1,3-diol).",substancia
+Álcool graxo C9-11 etoxilado (mistura),68439-46-3,Nome declarado na FDS. CAS sem registro no PubChem: composição variável (tensoativo não iônico).,mistura
+Álcool graxo C10-12 etoxilado e propoxilado (mistura),68154-97-2,Nome declarado na FDS. CAS sem registro no PubChem: composição variável (tensoativo não iônico).,mistura
 ,999-99-9,linha de teste — nome ausente,
 Substância teste CAS malformado,abc-def,cas inválido de propósito,
 Hipoclorito de sódio (duplicata),7681-52-9,duplicata proposital de CAS,
