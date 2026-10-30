@@ -1,12 +1,12 @@
-nome,marca,tipo_produto,descricao
-Limpador Multiuso Concentrado,Flora,limpeza_geral,Limpador multiuso concentrado à base de tensoativos e solvente glicólico.
-"Água Sanitária 2,5%",Flora,alvejante,"Água sanitária de uso doméstico (hipoclorito de sódio a 2–2,5%)."
-Hipoclorito de Sódio Profissional,Flora,alvejante,Hipoclorito de sódio concentrado (10–20%) para uso profissional.
-Água Sanitária Concentrada Uso Profissional,Flora,alvejante,"Água sanitária concentrada (hipoclorito de sódio a 12–14,5%) para uso profissional."
-Detergente Líquido,Flora,limpeza_geral,Detergente líquido com tensoativos aniônicos e perfume cítrico.
-Limpador Multiuso Cítrico,Flora,limpeza_geral,Limpador multiuso perfumado com limoneno e citral.
-Removedor Solvente de Limpeza,Flora,outro,"Removedor à base de solventes (etanol, acetato de isobutila e metil etil cetona)."
-Removedor de Resíduos,Flora,outro,Removedor de resíduos à base de 2-heptanona.
-Limpa Vidros,Flora,limpeza_geral,Limpa vidros com álcool e amônia.
-Soda Cáustica Líquida,Flora,desincrustante,Soda cáustica líquida (hidróxido de sódio) para desincrustação.
-Ácido Sulfúrico Desentupidor Profissional,Flora,desincrustante,"Ácido sulfúrico concentrado para desentupimento, uso profissional."
+nome,marca,tipo_produto,descricao,foto_url
+Limpador Multiuso Concentrado,Flora,limpeza_geral,Limpador multiuso concentrado à base de tensoativos e solvente glicólico.,
+"Água Sanitária 2,5%",Flora,alvejante,"Água sanitária de uso doméstico (hipoclorito de sódio a 2–2,5%).",https://raw.githubusercontent.com/Quimia-br/quimia-bd/main/src/database/assets/produtos/produto-agua-sanitaria-2-5.png
+Hipoclorito de Sódio Profissional,Flora,alvejante,Hipoclorito de sódio concentrado (10–20%) para uso profissional.,
+Água Sanitária Concentrada Uso Profissional,Flora,alvejante,"Água sanitária concentrada (hipoclorito de sódio a 12–14,5%) para uso profissional.",
+Detergente Líquido,Flora,limpeza_geral,Detergente líquido com tensoativos aniônicos e perfume cítrico.,https://raw.githubusercontent.com/Quimia-br/quimia-bd/main/src/database/assets/produtos/produto-detergente-liquido.png
+Limpador Multiuso Cítrico,Flora,limpeza_geral,Limpador multiuso perfumado com limoneno e citral.,https://raw.githubusercontent.com/Quimia-br/quimia-bd/main/src/database/assets/produtos/produto-limpador-multiuso-citrico.png
+Removedor Solvente de Limpeza,Flora,outro,"Removedor à base de solventes (etanol, acetato de isobutila e metil etil cetona).",
+Removedor de Resíduos,Flora,outro,Removedor de resíduos à base de 2-heptanona.,https://raw.githubusercontent.com/Quimia-br/quimia-bd/main/src/database/assets/produtos/produto-removedor-de-residuos.png
+Limpa Vidros,Flora,limpeza_geral,Limpa vidros com álcool e amônia.,
+Soda Cáustica Líquida,Flora,desincrustante,Soda cáustica líquida (hidróxido de sódio) para desincrustação.,
+Ácido Sulfúrico Desentupidor Profissional,Flora,desincrustante,"Ácido sulfúrico concentrado para desentupimento, uso profissional.",

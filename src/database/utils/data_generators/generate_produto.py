@@ -84,7 +84,7 @@ def resolver_produtos_curados(conn):
                 "descricao": linha["descricao"].strip(),
                 "tipo_produto": linha["tipo_produto"].strip(),
                 "cod_barras": "",
-                "foto_url": "",
+                "foto_url": linha["foto_url"].strip(),
             })
     return produtos
 
