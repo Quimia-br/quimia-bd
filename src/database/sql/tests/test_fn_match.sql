@@ -87,6 +87,12 @@ FROM pg_temp.cenario(ARRAY['Cloreto de benzalcônio'], ARRAY['Lauril sulfato de 
 SELECT 'T13 base x ácido', resultado, severidade, resultado = 'incompativel' AND severidade = 'media'
 FROM pg_temp.cenario(ARRAY['Hidróxido de sódio'], ARRAY['Ácido fosfórico']) LIMIT 1;
 
+SELECT 'T14 hipoclorito x peróxido', resultado, severidade, resultado = 'incompativel' AND severidade = 'alta'
+FROM pg_temp.cenario(ARRAY['Hipoclorito de sódio'], ARRAY['Peróxido de hidrogênio']) LIMIT 1;
+
+SELECT 'T15 hipoclorito x sal de amônio', resultado, severidade, resultado = 'incompativel' AND severidade = 'critica'
+FROM pg_temp.cenario(ARRAY['Hipoclorito de sódio'], ARRAY['Sulfato de amônio']) LIMIT 1;
+
 -- T11: "Agentes oxidantes" da seção 10 resolve para a classe oxidantes via alias
 UPDATE fds SET raw_json = '{"status":"ok","secoes":{"10":{"incompatibilidades":[
   {"substancia_reagente":"Agentes oxidantes","descricao_risco":"teste"}]}}}'::jsonb
