@@ -1,5 +1,5 @@
 nome,marca,tipo_produto,descricao,foto_url
-Limpador Multiuso Concentrado,Flora,limpeza_geral,Limpador multiuso concentrado à base de tensoativos e solvente glicólico.,
+Limpador Multiuso Concentrado,Flora,limpeza_geral,Limpador multiuso concentrado à base de tensoativos e solvente glicólico.,https://raw.githubusercontent.com/Quimia-br/quimia-bd/main/src/database/assets/produtos/produto-limpador-multiuso-concentrado.png
 "Água Sanitária 2,5%",Flora,alvejante,"Água sanitária de uso doméstico (hipoclorito de sódio a 2–2,5%).",https://raw.githubusercontent.com/Quimia-br/quimia-bd/main/src/database/assets/produtos/produto-agua-sanitaria-2-5.png
 Hipoclorito de Sódio Profissional,Flora,alvejante,Hipoclorito de sódio concentrado (10–20%) para uso profissional.,
 Água Sanitária Concentrada Uso Profissional,Flora,alvejante,"Água sanitária concentrada (hipoclorito de sódio a 12–14,5%) para uso profissional.",
