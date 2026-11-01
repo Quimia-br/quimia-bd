@@ -219,11 +219,13 @@ COMMENT ON COLUMN historico_recomendacao.data_consulta IS 'Momento da consulta.'
 
 -- historico_match -----------------------------------------------------
 COMMENT ON TABLE historico_match IS
-'Registro de cada comparação produto x produto feita pelo usuário para detectar mistura perigosa. Par normalizado: id_produto_a < id_produto_b.';
+'Registro de cada comparação feita pelo usuário para detectar mistura perigosa. Cada lado é produto OU substância (CHECK). Par normalizado: produto antes de substância; no mesmo tipo, menor id em A.';
 COMMENT ON COLUMN historico_match.id IS 'Identificador da comparação.';
 COMMENT ON COLUMN historico_match.id_usuario IS 'Usuário que fez a comparação.';
-COMMENT ON COLUMN historico_match.id_produto_a IS 'Produto de menor id do par.';
-COMMENT ON COLUMN historico_match.id_produto_b IS 'Produto de maior id do par.';
+COMMENT ON COLUMN historico_match.id_produto_a IS 'Produto do lado A (nulo se o lado A é substância). Se B também é produto, id_produto_a < id_produto_b.';
+COMMENT ON COLUMN historico_match.id_produto_b IS 'Produto do lado B (nulo se o lado B é substância).';
+COMMENT ON COLUMN historico_match.id_substancia_a IS 'Substância do lado A (nulo se o lado A é produto). Se B também é substância, id_substancia_a < id_substancia_b.';
+COMMENT ON COLUMN historico_match.id_substancia_b IS 'Substância do lado B (nulo se o lado B é produto).';
 COMMENT ON COLUMN historico_match.resultado IS
 'Veredito de fn_match_produtos: compativel, incompativel ou nao_avaliado (sem composto resolvido, ingrediente pendente ou mistura de composição desconhecida; não significa seguro).';
 COMMENT ON COLUMN historico_match.id_regra IS 'Regra de incompatibilidade_regra que disparou o alerta, se houver.';
