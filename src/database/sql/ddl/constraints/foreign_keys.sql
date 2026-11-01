@@ -200,6 +200,18 @@ ADD CONSTRAINT fk_historico_match_produto_b
 FOREIGN KEY (id_produto_b) REFERENCES produto(id)
 ON DELETE CASCADE;
 
+ALTER TABLE historico_match DROP CONSTRAINT IF EXISTS fk_historico_match_substancia_a;
+ALTER TABLE historico_match
+ADD CONSTRAINT fk_historico_match_substancia_a
+FOREIGN KEY (id_substancia_a) REFERENCES substancia(id)
+ON DELETE CASCADE;
+
+ALTER TABLE historico_match DROP CONSTRAINT IF EXISTS fk_historico_match_substancia_b;
+ALTER TABLE historico_match
+ADD CONSTRAINT fk_historico_match_substancia_b
+FOREIGN KEY (id_substancia_b) REFERENCES substancia(id)
+ON DELETE CASCADE;
+
 ALTER TABLE historico_match DROP CONSTRAINT IF EXISTS fk_historico_match_regra;
 ALTER TABLE historico_match
 ADD CONSTRAINT fk_historico_match_regra
