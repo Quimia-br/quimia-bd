@@ -130,7 +130,7 @@ def main():
     )
     rodar_pipeline("localizacao_usuario", csv_localizacao)
 
-    rodar_pipeline("marca", "src/database/sql/data_load/mocks/marca.csv")
+    rodar_pipeline("marca", "src/database/sql/data_load/seeds/seed_marca.csv")
     rodar_pipeline("classe_quimica", "src/database/sql/data_load/mocks/classe_quimica.csv")
     executar_scripts(["src/database/sql/data_load/seeds/seed_classe_quimica_sinonimo.sql"])
     rodar_pipeline("substancia", "src/database/sql/data_load/mocks/substancia.csv")
@@ -180,7 +180,8 @@ def main():
     produtos_curados = resolver_produtos_curados(conn)
     conn.close()
 
-    linhas_produto = gerar_produto(n=200, ids_marca=ids_marca, produtos_curados=produtos_curados)
+    # Só produtos curados à mão (seed_produto.csv): sem mock de produto (n=0).
+    linhas_produto = gerar_produto(n=0, ids_marca=ids_marca, produtos_curados=produtos_curados)
     csv_produto = salvar_csv(
     "src/database/sql/data_load/mocks/produto.csv",
     linhas_produto,

@@ -1,0 +1,264 @@
+{
+  "status": "processado_com_pendencias",
+  "mensagem": "Informações ausentes, verifique o documento anexado",
+  "secoes": {
+    "03": {
+      "encontrada": true,
+      "compostos": [
+        {
+          "nome": "CARGA;COADJUVANTE",
+          "cas_numero": "7757-82-6",
+          "concentracao_min": 50.0,
+          "concentracao_max": 80.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "CARGA;COADJUVANTE nº CAS: 7757-82-6 50 – 80"
+            }
+          ]
+        },
+        {
+          "nome": "TENSOATIVO ANIÔNICO",
+          "cas_numero": "85536-14-7",
+          "concentracao_min": 5.0,
+          "concentracao_max": 10.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "TENSOATIVO ANIÔNICO nº CAS: 85536-14-7 5 – 10"
+            }
+          ]
+        },
+        {
+          "nome": "ALCALINIZANTE",
+          "cas_numero": "1344-00-9",
+          "concentracao_min": 3.0,
+          "concentracao_max": 5.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "ALCALINIZANTE nº CAS: 1344-00-9 3 – 5"
+            }
+          ]
+        },
+        {
+          "nome": "ENZIMA",
+          "cas_numero": "9014-01-1",
+          "concentracao_min": 0.1,
+          "concentracao_max": 1.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "ENZIMA nº CAS: 9014-01-1 0,1 – 1"
+            }
+          ]
+        },
+        {
+          "nome": "FRAGRANCIA",
+          "cas_numero": null,
+          "concentracao_min": 0.1,
+          "concentracao_max": 1.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "FRAGRANCIA - 0,1 – 1"
+            }
+          ]
+        }
+      ]
+    },
+    "04": {
+      "encontrada": true,
+      "primeiros_socorros": [
+        {
+          "rota_exposicao": "inalacao",
+          "descricao": "Remova a pessoa para local ventilado e a mantenha em repouso numa posição que não dificulte a respiração. Contate imediatamente um CENTRO DE INFORMAÇÃO TOXICOLÓGICA ou um médico.",
+          "sintomas": "Pode causar irritação no trato respiratório, espirros, tosse, sensação de queimaduras na garganta com sensação de constrição da laringe e dificuldade de respiração.",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": true,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após inalação : Remova a pessoa para local ventilado e a mantenha em repouso numa posição que não dificulte a respiração. Contate imediatamente um CENTRO DE INFORMAÇÃO TOXICOLÓGICA ou um médico."
+            },
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Sintomas/efeitos em caso de inalação : Pode causar irritação no trato respiratório, espirros, tosse, sensação de queimaduras na garganta com sensação de constrição da laringe e dificuldade de respiração."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "pele",
+          "descricao": "Após contato com a pele, retirar imediatamente toda a roupa contaminada e lavar com água em abundância. Se a roupa se aderir à pele, não a remova. Tenha cuidado, o produto pode permanecer preso debaixo da roupa, calçado ou de um relógio de pulso.",
+          "sintomas": "Altamente corrosivo para a pele. Provoca queimaduras graves. Irritação (coceira, vermelhidão, formação de bolhas).",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": null,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após contato com a pele : Após contato com a pele, retirar imediatamente toda a roupa contaminada e lavar com água em abundância. Se a roupa se aderir à pele, não a remova. Tenha cuidado, o produto pode permanecer preso debaixo da roupa, calçado ou de um relógio de pulso."
+            },
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Sintomas/efeitos em caso de contato com a pele : Altamente corrosivo para a pele. Provoca queimaduras graves. Irritação (coceira, vermelhidão, formação de bolhas)."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "olhos",
+          "descricao": "EM CASO DE CONTATO COM OS OLHOS: Enxágue cuidadosamente com água durante vários minutos. No caso de uso de lentes de contato, remova-as, se for fácil. Continue enxaguando.",
+          "sintomas": "Causa graves queimaduras nos olhos. Ardência. vermelhidão, coceira, lágrimas. Provoca lesões oculares graves.",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": null,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após contato com os olhos : EM CASO DE CONTATO COM OS OLHOS: Enxágue cuidadosamente com água durante vários minutos. No caso de uso de lentes de contato, remova-as, se for fácil. Continue enxaguando."
+            },
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Sintomas/efeitos em caso de contato com os olhos : Causa graves queimaduras nos olhos. Ardência. vermelhidão, coceira, lágrimas. Provoca lesões oculares graves."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "ingestao",
+          "descricao": "Em caso de mal estar, consulte um médico. Se ingerido, procurar orientação médica imediatamente e mostrar esta embalagem ou o rótulo.",
+          "sintomas": "Pode ser nocivo se ingerido. A ingestão pode causar náuseas e vômito. Queimaduras ou irritação nos tecidos da boca, garganta e trato gastrointestinal.",
+          "tratamento_especial": "Não induzir o vômito devido aos efeitos corrosivos.",
+          "atencao_medica_imediata": true,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após ingestão : Em caso de mal estar, consulte um médico. Se ingerido, procurar orientação médica imediatamente e mostrar esta embalagem ou o rótulo. Não induzir o vômito devido aos efeitos corrosivos."
+            },
+            {
+              "secao": "04",
+              "pagina": 3,
+              "texto_evidencia": "Sintomas/efeitos em caso de ingestão : Pode ser nocivo se ingerido. A ingestão pode causar náuseas e vômito. Queimaduras ou irritação nos tecidos da boca, garganta e trato gastrointestinal."
+            }
+          ]
+        }
+      ],
+      "orientacoes_gerais": [
+        {
+          "descricao": "Procurar orientação médica imediatamente.",
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas gerais de primeiros-socorros : Procurar orientação médica imediatamente."
+            }
+          ]
+        }
+      ],
+      "notas_ao_medico": [
+        {
+          "descricao": "Tratar sintomaticamente",
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 3,
+              "texto_evidencia": "Notas ao médico : Tratar sintomaticamente"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "encontrada": true,
+      "situacao": "identificadas",
+      "incompatibilidades": [
+        {
+          "substancia_reagente": "Temperaturas extremamente altas ou baixas",
+          "cas_numero": null,
+          "descricao_risco": "Pode decompor-se quando exposto a temperaturas elevadas, liberando gases corrosivos.",
+          "severidade": null,
+          "evidencias": [
+            {
+              "secao": "10",
+              "pagina": 5,
+              "texto_evidencia": "Condições a evitar : Temperaturas extremamente altas ou baixas."
+            },
+            {
+              "secao": "10",
+              "pagina": 5,
+              "texto_evidencia": "Produtos perigosos da decomposição : Pode decompor-se quando exposto a temperaturas elevadas, liberando gases corrosivos."
+            }
+          ]
+        },
+        {
+          "substancia_reagente": "Calor, faísca, chama aberta e superfícies quentes",
+          "cas_numero": null,
+          "descricao_risco": null,
+          "severidade": null,
+          "evidencias": [
+            {
+              "secao": "10",
+              "pagina": 5,
+              "texto_evidencia": "Condições a evitar : Temperaturas extremamente altas ou baixas. Mantenha afastado do calor, faísca, chama aberta, superfícies quentes. - Não fume."
+            }
+          ]
+        }
+      ],
+      "evidencias": [
+        {
+          "secao": "10",
+          "pagina": 5,
+          "texto_evidencia": "Possibilidade de reações perigosas : Nenhuma, em condições normais de uso."
+        }
+      ]
+    }
+  },
+  "pendencias": [
+    {
+      "secao": "03",
+      "campo": "cas_numero",
+      "motivo": "informacao_ausente",
+      "descricao": "A ficha lista FRAGRANCIA com faixa de concentração, mas não informa o número de CAS desse componente.",
+      "evidencias": [
+        {
+          "secao": "03",
+          "pagina": 2,
+          "texto_evidencia": "FRAGRANCIA - 0,1 – 1"
+        }
+      ],
+      "composto": {
+        "indice": 4,
+        "nome": "FRAGRANCIA",
+        "cas_numero": null
+      }
+    },
+    {
+      "secao": "10",
+      "campo": "incompatibilidades",
+      "motivo": "documento_nao_especifica",
+      "descricao": "A seção 10 não identifica materiais incompatíveis; orienta apenas consultar o(s) fornecedor(es) para recomendações específicas.",
+      "evidencias": [
+        {
+          "secao": "10",
+          "pagina": 5,
+          "texto_evidencia": "Materiais incompatíveis : Consultar o(s) fornecedor(es) destes materiais para recomendações específicas."
+        }
+      ],
+      "composto": null
+    }
+  ]
+}

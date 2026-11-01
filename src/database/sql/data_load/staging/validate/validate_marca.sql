@@ -7,6 +7,12 @@ WHERE id_batch = :batch_id
   AND status = 'pendente'
   AND (nome_raw IS NULL OR btrim(nome_raw) = '');
 
+UPDATE stg_marca
+SET status = 'rejeitado', motivo_rejeicao = 'logo_url fora do padrão https'
+WHERE id_batch = :batch_id
+  AND status = 'pendente'
+  AND logo_url_raw IS NOT NULL
+  AND btrim(logo_url_raw) NOT LIKE 'https://%';
 
 WITH duplicatas AS (
     SELECT id,

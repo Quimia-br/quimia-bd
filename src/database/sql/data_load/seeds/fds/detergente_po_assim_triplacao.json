@@ -1,0 +1,180 @@
+{
+  "status": "processado_com_pendencias",
+  "mensagem": "Informações ausentes, verifique o documento anexado",
+  "secoes": {
+    "03": {
+      "encontrada": true,
+      "compostos": [
+        {
+          "nome": "CARGA;COADJUVANTE",
+          "cas_numero": "7757-82-6",
+          "concentracao_min": 10.0,
+          "concentracao_max": 50.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "CARGA;COADJUVANTE nº CAS: 7757-82-6 10 – 50"
+            }
+          ]
+        },
+        {
+          "nome": "TENSOATIVO ANIÔNICO",
+          "cas_numero": "85536-14-7",
+          "concentracao_min": 5.0,
+          "concentracao_max": 10.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "TENSOATIVO ANIÔNICO nº CAS: 85536-14-7 5 – 10"
+            }
+          ]
+        },
+        {
+          "nome": "ALCALINIZANTE",
+          "cas_numero": "1344-00-9",
+          "concentracao_min": 3.0,
+          "concentracao_max": 5.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "ALCALINIZANTE nº CAS: 1344-00-9 3 – 5"
+            }
+          ]
+        }
+      ]
+    },
+    "04": {
+      "encontrada": true,
+      "primeiros_socorros": [
+        {
+          "rota_exposicao": "inalacao",
+          "descricao": "Remova a pessoa para local ventilado e a mantenha em repouso numa posição que não dificulte a respiração. Contate imediatamente um CENTRO DE INFORMAÇÃO TOXICOLÓGICA ou um médico.",
+          "sintomas": "Pode causar irritação no trato respiratório, espirros, tosse, sensação de queimaduras na garganta com sensação de constrição da laringe e dificuldade de respiração.",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": true,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após inalação : Remova a pessoa para local ventilado e a mantenha em repouso numa posição que não dificulte a respiração. Contate imediatamente um CENTRO DE INFORMAÇÃO TOXICOLÓGICA ou um médico."
+            },
+            {
+              "secao": "04",
+              "pagina": 3,
+              "texto_evidencia": "Sintomas/efeitos em caso de inalação : Pode causar irritação no trato respiratório, espirros, tosse, sensação de queimaduras na garganta com sensação de constrição da laringe e dificuldade de respiração."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "pele",
+          "descricao": "Após contato com a pele, retirar imediatamente toda a roupa contaminada e lavar com água em abundância. Se a roupa se aderir à pele, não a remova. Tenha cuidado, o produto pode permanecer preso debaixo da roupa, calçado ou de um relógio de pulso.",
+          "sintomas": "Altamente corrosivo para a pele. Provoca queimaduras graves. Irritação (coceira, vermelhidão, formação de bolhas).",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": null,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Após contato com a pele, retirar imediatamente toda a roupa contaminada e lavar com água em abundância. Se a roupa se aderir à pele, não a remova."
+            },
+            {
+              "secao": "04",
+              "pagina": 3,
+              "texto_evidencia": "Sintomas/efeitos em caso de contato com a pele : Altamente corrosivo para a pele. Provoca queimaduras graves. Irritação (coceira, vermelhidão, formação de bolhas)."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "olhos",
+          "descricao": "Enxágue cuidadosamente com água durante vários minutos. No caso de uso de lentes de contato, remova-as, se for fácil. Continue enxaguando.",
+          "sintomas": "Causa graves queimaduras nos olhos. Ardência. vermelhidão, coceira, lágrimas. Provoca lesões oculares graves.",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": null,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "EM CASO DE CONTATO COM OS OLHOS: Enxágue cuidadosamente com água durante vários minutos. No caso de uso de lentes de contato, remova-as, se for fácil. Continue enxaguando."
+            },
+            {
+              "secao": "04",
+              "pagina": 3,
+              "texto_evidencia": "Sintomas/efeitos em caso de contato com os olhos : Causa graves queimaduras nos olhos. Ardência. vermelhidão, coceira, lágrimas. Provoca lesões oculares graves."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "ingestao",
+          "descricao": "Se ingerido, procurar orientação médica imediatamente e mostrar esta embalagem ou o rótulo.",
+          "sintomas": "Queimaduras ou irritação nos tecidos da boca, garganta e trato gastrointestinal.",
+          "tratamento_especial": "Não induzir o vômito devido aos efeitos corrosivos.",
+          "atencao_medica_imediata": true,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após ingestão : Se ingerido, procurar orientação médica imediatamente e mostrar esta embalagem ou o rótulo. Não induzir o vômito devido aos efeitos corrosivos."
+            },
+            {
+              "secao": "04",
+              "pagina": 3,
+              "texto_evidencia": "Sintomas/efeitos em caso de ingestão : Queimaduras ou irritação nos tecidos da boca, garganta e trato gastrointestinal."
+            }
+          ]
+        }
+      ],
+      "orientacoes_gerais": [
+        {
+          "descricao": "Em caso de mal estar, consulte um médico.",
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas gerais de primeiros-socorros : Em caso de mal estar, consulte um médico."
+            }
+          ]
+        }
+      ],
+      "notas_ao_medico": [
+        {
+          "descricao": "Tratar sintomaticamente.",
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 3,
+              "texto_evidencia": "Notas ao médico : Tratar sintomaticamente"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "encontrada": true,
+      "situacao": "nao_especificadas",
+      "incompatibilidades": [],
+      "evidencias": []
+    }
+  },
+  "pendencias": [
+    {
+      "secao": "10",
+      "campo": "incompatibilidades",
+      "motivo": "documento_nao_especifica",
+      "descricao": "A seção 10 não identifica materiais incompatíveis específicos; a ficha apenas orienta a consultar o(s) fornecedor(es) destes materiais para recomendações específicas, sem declarar ausência de incompatibilidades.",
+      "evidencias": [
+        {
+          "secao": "10",
+          "pagina": 5,
+          "texto_evidencia": "Materiais incompatíveis : Consultar o(s) fornecedor(es) destes materiais para recomendações específicas."
+        }
+      ],
+      "composto": null
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "status": "processado_com_pendencias",
+  "mensagem": "Informações ausentes, verifique o documento anexado",
+  "secoes": {
+    "03": {
+      "encontrada": true,
+      "compostos": [
+        {
+          "nome": "MATERIAL SAPONIFICAVEL",
+          "cas_numero": "8052-48-0",
+          "concentracao_min": 50.0,
+          "concentracao_max": 80.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "MATERIAL SAPONIFICAVEL \n \n(nº  CAS) 8052-48-0 \n \n50 - 80"
+            }
+          ]
+        },
+        {
+          "nome": "CARGA;COADJUVANTE",
+          "cas_numero": "7757-82-6",
+          "concentracao_min": 1.0,
+          "concentracao_max": 2.0,
+          "unidade_concentracao": "%",
+          "evidencias": [
+            {
+              "secao": "03",
+              "pagina": 2,
+              "texto_evidencia": "CARGA;COADJUVANTE \n \n(nº  CAS) 7757-82-6 \n \n1 - 2"
+            }
+          ]
+        }
+      ]
+    },
+    "04": {
+      "encontrada": true,
+      "primeiros_socorros": [
+        {
+          "rota_exposicao": "inalacao",
+          "descricao": "Se houver dificuldade respiratória, remover a vítima para o ar fresco e mantê-la em repouso em uma posição confortável para respirar. Caso sinta indisposição, contate um CENTRO DE INFORMAÇÃO TOXICOLÓGICA/médico.",
+          "sintomas": "Poeiras do produto, se presentes, podem causar irritação respiratória após exposição excessiva por inalação. Embora nenhum dado apropriado de efeitos para a saúde humana ou animal seja conhecido, espera-se que este material seja perigoso por inalação.",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": null,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após inalação : Se houver dificuldade respiratória, remover a vítima para o ar fresco e mantê-la em repouso em uma posição confortável para respirar. Caso sinta indisposição, contate um CENTRO DE INFORMAÇÃO TOXICOLÓGICA/médico."
+            },
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Sintomas/efeitos em caso de inalação : Poeiras do produto, se presentes, podem causar irritação respiratória após exposição excessiva por inalação. Embora nenhum dado apropriado de efeitos para a saúde humana ou animal seja conhecido, espera-se que este material seja perigoso por inalação."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "pele",
+          "descricao": "Após contato com a pele, retirar imediatamente toda a roupa contaminada e lavar com água em abundância.",
+          "sintomas": "Nenhum em condições normais. O pó pode causar irritação nas dobras da pele ou por contato em combinação com roupas apertadas.",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": null,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após contato com a pele : Após contato com a pele, retirar imediatamente toda a roupa contaminada e lavar com água em abundância."
+            },
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Sintomas/efeitos em caso de contato com a pele : Nenhum em condições normais. O pó pode causar irritação nas dobras da pele ou por contato em combinação com roupas apertadas."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "olhos",
+          "descricao": "Em caso de contato com os olhos, lavar imediatamente com água em abundância e procurar orientação médica.",
+          "sintomas": "Nenhum em condições normais. Poeiras deste produto podem causar irritação nos olhos.",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": null,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após contato com os olhos : Em caso de contato com os olhos, lavar imediatamente com água em abundância e procurar orientação médica."
+            },
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Sintomas/efeitos em caso de contato com os olhos : Nenhum em condições normais. Poeiras deste produto podem causar irritação nos olhos."
+            }
+          ]
+        },
+        {
+          "rota_exposicao": "ingestao",
+          "descricao": "NÃO provoque vômito. Enxaguar a boca com água.",
+          "sintomas": "Nenhum em condições normais.",
+          "tratamento_especial": null,
+          "atencao_medica_imediata": null,
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas de primeiros-socorros após ingestão : NÃO provoque vômito. Enxaguar a boca com água."
+            },
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Sintomas/efeitos em caso de ingestão : Nenhum em condições normais."
+            }
+          ]
+        }
+      ],
+      "orientacoes_gerais": [
+        {
+          "descricao": "Medidas gerais de primeiros-socorros: Em caso de mal estar, consulte um médico.",
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Medidas gerais de primeiros-socorros : Em caso de mal estar, consulte um médico."
+            }
+          ]
+        }
+      ],
+      "notas_ao_medico": [
+        {
+          "descricao": "Notas ao médico: Tratar sintomaticamente",
+          "evidencias": [
+            {
+              "secao": "04",
+              "pagina": 2,
+              "texto_evidencia": "Notas ao médico : Tratar sintomaticamente"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "encontrada": true,
+      "situacao": "nao_especificadas",
+      "incompatibilidades": [],
+      "evidencias": []
+    }
+  },
+  "pendencias": [
+    {
+      "secao": "10",
+      "campo": "incompatibilidades",
+      "motivo": "documento_nao_especifica",
+      "descricao": "A seção 10 não especifica quais materiais são incompatíveis; remete a consulta ao fornecedor para recomendações específicas.",
+      "evidencias": [
+        {
+          "secao": "10",
+          "pagina": 5,
+          "texto_evidencia": "Materiais incompatíveis : Consultar o(s) fornecedor(es) destes materiais para recomendações específicas"
+        }
+      ],
+      "composto": null
+    }
+  ]
+}
