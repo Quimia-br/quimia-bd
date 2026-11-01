@@ -67,7 +67,7 @@ COMMENT ON COLUMN vw_fato_historico_match.nome_produto_a IS 'Nome do produto A.'
 COMMENT ON COLUMN vw_fato_historico_match.id_produto_b IS 'Produto de maior id do par.';
 COMMENT ON COLUMN vw_fato_historico_match.nome_produto_b IS 'Nome do produto B.';
 COMMENT ON COLUMN vw_fato_historico_match.id_usuario IS 'Usuário que comparou.';
-COMMENT ON COLUMN vw_fato_historico_match.resultado IS 'Veredito: compativel (nenhuma regra/FDS bateu e todos os ingredientes identificados), incompativel ou nao_avaliado (ingrediente pendente ou mistura de composição desconhecida); nao_avaliado não significa seguro.';
+COMMENT ON COLUMN vw_fato_historico_match.resultado IS 'Veredito: incompativel (regra ou FDS bateu) ou nao_avaliado (sem incompatibilidade conhecida, composição não resolvida ou desconhecida); nao_avaliado não significa seguro. Não existe compativel: ausência de regra não prova compatibilidade.';
 COMMENT ON COLUMN vw_fato_historico_match.severidade IS 'Gravidade da regra disparada.';
 COMMENT ON COLUMN vw_fato_historico_match.descricao_risco IS 'Risco mostrado ao usuário.';
 COMMENT ON COLUMN vw_fato_historico_match.running_total_por_resultado IS 'Total acumulado de comparações com o mesmo resultado até a data.';

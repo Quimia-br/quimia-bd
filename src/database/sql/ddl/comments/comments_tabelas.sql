@@ -225,7 +225,7 @@ COMMENT ON COLUMN historico_match.id_usuario IS 'Usuário que fez a comparação
 COMMENT ON COLUMN historico_match.id_produto_a IS 'Produto de menor id do par.';
 COMMENT ON COLUMN historico_match.id_produto_b IS 'Produto de maior id do par.';
 COMMENT ON COLUMN historico_match.resultado IS
-'Veredito de fn_match_produtos: compativel, incompativel ou nao_avaliado (sem composto resolvido, ingrediente pendente ou mistura de composição desconhecida; não significa seguro).';
+'Veredito de fn_match_produtos: incompativel ou nao_avaliado (sem incompatibilidade conhecida, sem composto resolvido ou composição desconhecida; não significa seguro). fn_match_produtos não produz compativel.';
 COMMENT ON COLUMN historico_match.id_regra IS 'Regra de incompatibilidade_regra que disparou o alerta, se houver.';
 COMMENT ON COLUMN historico_match.severidade IS 'Gravidade da regra disparada: baixa, media, alta ou critica.';
 COMMENT ON COLUMN historico_match.descricao_risco IS 'Risco mostrado ao usuário no momento da comparação.';

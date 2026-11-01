@@ -42,7 +42,7 @@ SELECT 'T3 hipoclorito x etanol', resultado, severidade,
        resultado = 'incompativel' AND severidade = 'alta'
 FROM pg_temp.cenario(ARRAY['Hipoclorito de sódio'], ARRAY['Etanol']) LIMIT 1;
 
-SELECT 'T4 dicloroisocianurato x propano', resultado, severidade, resultado = 'compativel'
+SELECT 'T4 dicloroisocianurato x propano', resultado, severidade, resultado = 'nao_avaliado'
 FROM pg_temp.cenario(ARRAY['Dicloroisocianurato de sódio'], ARRAY['Propano']);
 
 SELECT 'T5 mistura x sem regra', resultado, severidade, resultado = 'nao_avaliado'

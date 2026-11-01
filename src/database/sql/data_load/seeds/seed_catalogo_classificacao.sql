@@ -111,7 +111,7 @@ UPDATE catalogo_coluna AS cc SET regra_negocio = v.regra
         ('estante_produto', 'id_usuario',            'Deve ser o mesmo dono da estante (garantido pela trg_validar_estante_produto).'),
         ('ponto_salvo', 'id_ponto',                  'Único por usuário: o mesmo ponto não pode ser salvo duas vezes.'),
         ('historico_match', 'id_produto_a',          'Sempre menor que id_produto_b (CHECK).'),
-        ('historico_match', 'resultado',             'Valores permitidos: compativel, incompativel, nao_avaliado (CHECK).'),
+        ('historico_match', 'resultado',             'Valores permitidos: compativel, incompativel, nao_avaliado (CHECK). fn_match_produtos produz só incompativel ou nao_avaliado.'),
         ('historico_recomendacao', 'resultado',      'Valores permitidos: compativel, incompativel, atencao, nao_avaliado (CHECK).'),
         ('ponto_parceiro', 'tipo',                   'Valores permitidos: compra, descarte (CHECK).'),
         ('log_auditoria', 'operacao',                'Preenchida com TG_OP: INSERT, UPDATE, DELETE (CHECK).'),
