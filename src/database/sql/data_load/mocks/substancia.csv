@@ -63,3 +63,8 @@ Dietanolamina,111-42-2,Amina usada em detergentes e desengordurantes.,substancia
 Substância teste CAS malformado,abc-def,cas inválido de propósito,
 Hipoclorito de sódio (duplicata),7681-52-9,duplicata proposital de CAS,
 Substância teste tipo inválido,111-11-1,tipo fora do domínio de propósito,composto
+Ácido dodecilbenzenossulfônico,27176-87-0,"Ácido de tensoativo aniônico (ATIVO; TENSOATIVO ANIÔNICO na FDS). Cadeia alquílica em mistura de comprimentos, mas o CAS identifica a substância.",substancia
+Lauril éter sulfato de sódio (mistura),9004-82-4,Nome declarado na FDS. Grau de etoxilação variável: composição não especificada.,mistura
+Sulfato de magnésio anidro,7487-88-9,Espessante (ESPESSANTE na FDS). Sal inorgânico.,substancia
+Material saponificável (mistura),8052-48-0,Nome declarado na FDS. CAS não confirmado em fonte consultada.,mistura
+Bicarbonato de sódio,144-55-8,Base fraca usada em pastas de limpeza e desodorizantes.,substancia
