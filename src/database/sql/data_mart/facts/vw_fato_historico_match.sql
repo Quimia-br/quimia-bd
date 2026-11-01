@@ -15,6 +15,6 @@ SELECT
         ORDER BY hm.data_consulta
     ) AS running_total_por_resultado
 FROM historico_match hm
-JOIN dim_produto dpa ON dpa.id_produto = hm.id_produto_a
-JOIN dim_produto dpb ON dpb.id_produto = hm.id_produto_b
+LEFT JOIN dim_produto dpa ON dpa.id_produto = hm.id_produto_a
+LEFT JOIN dim_produto dpb ON dpb.id_produto = hm.id_produto_b
 JOIN dim_usuario du  ON du.id_usuario = hm.id_usuario;

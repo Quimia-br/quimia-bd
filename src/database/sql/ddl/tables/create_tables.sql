@@ -301,8 +301,10 @@ CREATE TABLE ponto_salvo (
 CREATE TABLE historico_match (
     id                INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario        UUID NOT NULL,
-    id_produto_a      INTEGER NOT NULL,
-    id_produto_b      INTEGER NOT NULL,
+    id_produto_a      INTEGER,
+    id_produto_b      INTEGER,
+    id_substancia_a   INTEGER,
+    id_substancia_b   INTEGER,
     resultado         VARCHAR(20) NOT NULL
         CHECK (resultado IN ('compativel', 'incompativel', 'nao_avaliado')),
     id_regra          INTEGER,
@@ -310,5 +312,11 @@ CREATE TABLE historico_match (
         CHECK (severidade IN ('baixa','media','alta','critica')),
     descricao_risco   TEXT,
     data_consulta     TIMESTAMPTZ NOT NULL DEFAULT now(),
-    CONSTRAINT chk_historico_match_par CHECK (id_produto_a < id_produto_b)
+    CONSTRAINT chk_historico_match_lado_a CHECK ((id_produto_a IS NULL) <> (id_substancia_a IS NULL)),
+    CONSTRAINT chk_historico_match_lado_b CHECK ((id_produto_b IS NULL) <> (id_substancia_b IS NULL)),
+    CONSTRAINT chk_historico_match_par CHECK (
+        NOT (id_produto_a IS NULL AND id_produto_b IS NOT NULL)
+        AND (id_produto_a IS NULL OR id_produto_b IS NULL OR id_produto_a < id_produto_b)
+        AND (id_substancia_a IS NULL OR id_substancia_b IS NULL OR id_substancia_a < id_substancia_b)
+    )
 );
