@@ -180,7 +180,8 @@ def main():
     produtos_curados = resolver_produtos_curados(conn)
     conn.close()
 
-    linhas_produto = gerar_produto(n=200, ids_marca=ids_marca, produtos_curados=produtos_curados)
+    # Só produtos curados à mão (seed_produto.csv): sem mock de produto (n=0).
+    linhas_produto = gerar_produto(n=0, ids_marca=ids_marca, produtos_curados=produtos_curados)
     csv_produto = salvar_csv(
     "src/database/sql/data_load/mocks/produto.csv",
     linhas_produto,
