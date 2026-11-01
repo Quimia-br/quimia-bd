@@ -130,7 +130,7 @@ def main():
     )
     rodar_pipeline("localizacao_usuario", csv_localizacao)
 
-    rodar_pipeline("marca", "src/database/sql/data_load/mocks/marca.csv")
+    rodar_pipeline("marca", "src/database/sql/data_load/seeds/seed_marca.csv")
     rodar_pipeline("classe_quimica", "src/database/sql/data_load/mocks/classe_quimica.csv")
     executar_scripts(["src/database/sql/data_load/seeds/seed_classe_quimica_sinonimo.sql"])
     rodar_pipeline("substancia", "src/database/sql/data_load/mocks/substancia.csv")
