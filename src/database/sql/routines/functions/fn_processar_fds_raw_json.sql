@@ -124,6 +124,12 @@ BEGIN
         END IF;
     END LOOP;
 
+    -- marcador de composição parcial da FDS
+    IF v_raw #>> '{secoes,03,composicao_parcial}' = 'true' THEN
+        INSERT INTO fds_composto (id_fds, id_substancia, concentracao_min, concentracao_max, unidade_concentracao)
+        VALUES (p_id_fds, NULL, NULL, NULL, NULL);
+    END IF;
+
     -- ================================================================
     -- SEÇÃO 10 — incompatibilidades (opcional)
     -- Resolve o reagente para substância (CAS ou nome/sinônimo) ou classe
