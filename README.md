@@ -1,43 +1,96 @@
-# quimia-bd
+<div align="center">
 
-Banco de dados do Quimia (PostgreSQL): modelagem, rotinas, carga de dados, RPA de integração com o banco legado, data mart e catálogo de dados. **Catálogo de dados online: https://quimia-br.github.io/quimia-bd/**
+# Quimia BD
 
-O Quimia cadastra produtos de limpeza com suas FDS (fichas de dados de segurança) e detecta combinações perigosas entre eles.
+**O banco de dados do Quimia: modelagem relacional em PostgreSQL, rotinas, carga de dados, RPA de integração com o banco legado, data mart para BI e catálogo de dados.**
+
+[![Catálogo](https://github.com/Quimia-br/quimia-bd/actions/workflows/catalog.yml/badge.svg)](https://github.com/Quimia-br/quimia-bd/actions/workflows/catalog.yml)
+[![PostgreSQL 18](https://img.shields.io/badge/PostgreSQL-18-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Python](https://img.shields.io/badge/python-3.12%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Licença](https://img.shields.io/badge/licença-LICENSE-green)](LICENSE)
+
+[Visão geral](#visão-geral) · [Arquitetura](#arquitetura) · [Primeiros passos](#primeiros-passos) · [Modelagem](#modelagem) · [Carga](#pipeline-principal-setup_data) · [RPA](#rpa-banco-legado--quimia) · [Data Mart](#data-mart) · [Rotinas](#rotinas-triggers-e-auditoria) · [Governança](#governança-de-dados) · [Estrutura](#estrutura)
+
+**Catálogo de dados online: https://quimia-br.github.io/quimia-bd/**
+
+</div>
+
+---
+
+O Quimia cadastra produtos de limpeza com suas FDS (fichas de dados de segurança) e detecta combinações perigosas entre eles. Este repositório é a **fonte de verdade do schema**: a [quimia-api](https://github.com/Quimia-br/quimia-api) apenas lê e grava nele, sem nunca alterar a estrutura.
+
+## Visão geral
+
+| Tema | Como é tratado |
+| --- | --- |
+| **Modelagem** | 27 tabelas de negócio, 15 de staging, 3 para logs e controle de sessão com PK em todas e FKs explícitas, mirando a 3FN. |
+| **Carga** | Toda carga passa por uma tabela `stg_*`: `COPY`, validação e migração apenas das linhas aprovadas. |
+| **Integração** | RPA incremental (por *watermark*) do banco legado para o Quimia, com log de execução. |
+| **BI** | Data mart em estrela, feito de views: dimensões e fatos com CTEs e window functions. |
+| **Lógica no banco** | Functions, procedures e triggers, incluindo auditoria completa (`OLD`, `NEW`, `TG_OP`, `CURRENT_USER`). |
+| **Monitoramento** | DAU calculado no próprio PostgreSQL pela view `vw_dau`. |
+| **Governança** | Catálogo de dados em tabelas e em site publicado, com nível de acesso e marcação LGPD. |
+| **Operação** | Backup e restore testados, e planos `EXPLAIN ANALYZE` documentados com índices. |
 
 ## Arquitetura
 
-```
- banco legado (PostgreSQL) ──RPA──┐
-                                  ▼
- mocks (CSV / Faker) ───────► staging stg_* ──validação──► tabelas finais ──► views do Data Mart (dim_*, vw_*)
-                                                          (PostgreSQL / Aiven)        │
-                                                                  │                   └── JDBC ──► Databricks
-                                                                  └── auditoria, log_rpa_execucao, catálogo de dados
+```mermaid
+flowchart LR
+    Legado[("Banco legado<br/>PostgreSQL")] -- "RPA" --> Stg
+    Mocks["Mocks CSV<br/>e Faker"] --> Stg["Staging stg_*"]
+    Stg -- "validação" --> Final[("Tabelas finais<br/>PostgreSQL · Aiven")]
+    Final --> Mart["Views do Data Mart<br/>dim_* · vw_*"]
+    Final --> Audit["Auditoria · log_rpa_execucao<br/>catálogo de dados"]
+    Mart -- "JDBC" --> DBX["Databricks"]
+    Final --> API["quimia-api"]
 ```
 
 - **Banco de entrega:** PostgreSQL hospedado na Aiven (versão 18.6, SSL obrigatório).
 - **Staging comum e não persistente:** toda carga passa por uma `stg_*` (COPY → validação → migração das linhas aprovadas).
 
-## Requisitos e configuração
+## Stack
 
-Validado com **Python 3.14.2**, em venv limpo. O gerador do catálogo roda só com a biblioteca padrão (o CI usa Python 3.12).
+| Área | Escolhas |
+| --- | --- |
+| Banco | PostgreSQL 18 (Aiven), extensões `pgcrypto` e `unaccent` |
+| Pipeline e RPA | Python, psycopg2, SQLAlchemy, pandas, Faker, bcrypt |
+| BI | Views em estrela consumidas pelo Databricks via JDBC |
+| Catálogo | Gerador em Python (biblioteca padrão) publicado no GitHub Pages |
+| Operação | `pg_dump` / `pg_restore`, com Docker como alternativa às ferramentas locais |
+| CI | GitHub Actions (publicação do catálogo) |
+
+## Primeiros passos
+
+**Requisitos:** Python (validado com 3.14.2 em venv limpo; o CI usa 3.12) e acesso a um PostgreSQL. O gerador do catálogo usa só a biblioteca padrão.
 
 ```bash
+git clone https://github.com/Quimia-br/quimia-bd.git
+cd quimia-bd
 python -m venv .venv
 .venv\Scripts\activate          # Linux/macOS: source .venv/bin/activate
 pip install -r requirements.txt
 copy .env.example .env          # Linux/macOS: cp .env.example .env  (depois preencha)
 ```
 
-O `.env` é ignorado pelo git. As variáveis estão descritas em [.env.example](.env.example). `DB_*` e `DB_URL` apontam para o mesmo banco do Quimia (formatos diferentes: psycopg2 e SQLAlchemy); `RPA_DB_URL` aponta para o banco legado.
+O `.env` é ignorado pelo git. As variáveis estão descritas em [`.env.example`](.env.example):
+
+| Variável | Finalidade |
+| --- | --- |
+| `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` | Banco do Quimia (psycopg2), usado por `setup_data`, geradores, loader e `ops/` |
+| `DB_URL` | O mesmo banco, em formato URL (SQLAlchemy), usado pelo log do RPA |
+| `RPA_DB_URL` | Banco legado, origem do RPA (somente leitura) |
+| `RESTORE_PGPASSWORD`, `RESTORE_PGSSLMODE` | Destino do restore (opcional; nunca o banco de entrega) |
+| `PG_TOOLS_IMAGE` | Imagem Docker para `pg_dump`/`pg_restore` quando não estão no PATH (padrão `postgres:18`) |
+
+A conexão usa sempre `sslmode=require`. Para conferir o banco apontado pelo `.env`: `python ops/check_db.py`.
 
 ## Modelagem
 
-O `setup_data` cria **29 tabelas** + 14 de staging (`stg_*`), com **PK em todas as tabelas de negócio** e FKs em `src/database/sql/ddl/constraints/foreign_keys.sql`.
+O `setup_data` cria **30 tabelas** + 15 de staging (`stg_*`), com **PK em todas as tabelas de negócio** e FKs em [`foreign_keys.sql`](src/database/sql/ddl/constraints/foreign_keys.sql).
 
 | Grupo | Tabelas |
-|---|---|
-| Catálogo químico | `marca`, `produto`, `substancia`, `substancia_sinonimo`, `classe_quimica`, `substancia_classe_quimica`, `incompatibilidade_regra`, `sinonimo_pendente` |
+| --- | --- |
+| Catálogo químico | `marca`, `produto`, `substancia`, `substancia_sinonimo`, `classe_quimica`, `classe_quimica_sinonimo`, `substancia_classe_quimica`, `incompatibilidade_regra`, `sinonimo_pendente` |
 | FDS | `fds`, `fds_composto`, `fds_incompatibilidade`, `fds_primeiro_socorro`, `fds_descarte` |
 | Usuários e uso | `usuario`, `localizacao_usuario`, `estante`, `comodo`, `estante_produto`, `historico_recomendacao`, `historico_match`, `sessao_acesso` |
 | Parceiros | `empresa`, `empresa_produto`, `ponto_parceiro`, `ponto_salvo` |
@@ -48,7 +101,7 @@ O banco da Aiven tem ainda 4 tabelas do **back-end** que o `setup_data` não cri
 **Cardinalidades principais**
 
 | Relação | Cardinalidade | Implementação |
-|---|---|---|
+| --- | --- | --- |
 | `marca` → `produto` | 1:N | `produto.id_marca` |
 | `produto` → `fds` | 1:N | `fds.id_produto` |
 | `fds` → `fds_composto`, `fds_incompatibilidade`, `fds_primeiro_socorro`, `fds_descarte` | 1:N | `id_fds` (ON DELETE CASCADE) |
@@ -77,9 +130,10 @@ O banco da Aiven tem ainda 4 tabelas do **back-end** que o `setup_data` não cri
 python -m src.setup_data
 ```
 
-> **Atenção:** apaga e recria os objetos do banco apontado pelas variáveis `DB_*`. Confira o destino antes de rodar.
+> [!WARNING]
+> Apaga e recria os objetos do banco apontado pelas variáveis `DB_*`. Confira o destino antes de rodar.
 
-Fluxo real de `src/setup_data.py`:
+Fluxo real de [`src/setup_data.py`](src/setup_data.py):
 
 1. **DDL:** `create_tables.sql` (DROP + CREATE, extensões `pgcrypto` e `unaccent`), tabelas de log, catálogo e staging; depois functions, procedures, triggers, FKs, índices e `COMMENT ON`.
 2. **Carga** (`rodar_pipeline` em `src/database/utils/staging/loader.py`): para cada tabela, `TRUNCATE` da `stg_*` → `COPY` do CSV → `validate_*.sql` (marca cada linha como `ok` ou `rejeitado`, com `motivo_rejeicao`) → `migrate_*.sql` (move só as linhas `ok`). Os CSVs vêm de mocks fixos (`usuario`, `empresa`, `marca`, `classe_quimica`, `substancia`, `seeds/`) ou de geradores Faker em `src/database/utils/data_generators/`.
@@ -87,12 +141,12 @@ Fluxo real de `src/setup_data.py`:
 
 Linhas rejeitadas ficam na `stg_*` com o motivo até a próxima carga daquela tabela (o `TRUNCATE` do staging roda no início de cada carga).
 
-**Catálogo curado, não sorteado.** `substancia_classe_quimica`, `substancia_sinonimo` e `incompatibilidade_regra` alimentam a resolução de ingredientes e o `fn_match_produtos`, então as linhas válidas vêm de seeds curados em `src/database/sql/data_load/seeds/` (`seed_substancia_classe_quimica.csv`, `seed_substancia_sinonimo.csv`, `seed_incompatibilidade_regra.csv`). Os geradores acrescentam por cima só ruído **inválido**, para exercitar o `validate` (toda linha de ruído deve ser rejeitada). Cada regra de incompatibilidade traz a `fonte`; regra com fonte ainda não conferida fica com `ativo=false`, e o `fn_match_produtos` a ignora até alguém ativá-la. Nome funcional genérico de ingrediente (ex.: "tensoativo", "propelente") não é sinônimo: a identidade dele é o CAS, e `substancia.tipo = 'mistura'` marca os ingredientes que a FDS declara só por nome funcional e CAS de mistura. Como ausência de regra não prova compatibilidade, o `fn_match_produtos` só devolve `compativel` quando nenhum dos dois produtos tem ingrediente pendente ou do tipo `mistura`; caso contrário devolve `nao_avaliado` (e `incompativel` sempre que alguma regra ou incompatibilidade da FDS bater).
+**Catálogo curado, não sorteado.** `substancia_classe_quimica`, `substancia_sinonimo` e `incompatibilidade_regra` alimentam a resolução de ingredientes e o `fn_match_produtos`, então as linhas válidas vêm de seeds curados em [`src/database/sql/data_load/seeds/`](src/database/sql/data_load/seeds). Os geradores acrescentam por cima só ruído **inválido**, para exercitar o `validate` (toda linha de ruído deve ser rejeitada). Cada regra de incompatibilidade traz a `fonte`; regra com fonte ainda não conferida fica com `ativo=false`, e o `fn_match_produtos` a ignora até alguém ativá-la. Nome funcional genérico de ingrediente (ex.: "tensoativo", "propelente") não é sinônimo: a identidade dele é o CAS, e `substancia.tipo = 'mistura'` marca os ingredientes que a FDS declara só por nome funcional e CAS de mistura. Como ausência de regra não prova compatibilidade, o `fn_match_produtos` nunca devolve `compativel`: sem nenhuma regra ou incompatibilidade da FDS batendo, devolve `nao_avaliado`; e devolve `incompativel` sempre que alguma regra ou incompatibilidade da FDS bater.
 
 **Massa de dados** (banco da Aiven, snapshot do backup de 2026-10-29):
 
 | Tabela | Linhas | Tabela | Linhas |
-|---|---:|---|---:|
+| --- | ---: | --- | ---: |
 | `usuario` | 819 | `incompatibilidade_regra` | 89 |
 | `empresa` | 39 | `estante` | 143 |
 | `marca` | 92 | `localizacao_usuario` | 379 |
@@ -103,13 +157,14 @@ Linhas rejeitadas ficam na `stg_*` com o motivo até a próxima carga daquela ta
 
 Soma das tabelas oficiais acima: **47.158 registros** (o requisito de 500+ vale pelo total, não por tabela). Vazias na Aiven: `comodo`, `estante_produto`, `empresa_produto`, `ponto_salvo`, `historico_match`, `fds` e filhas, `log_rpa_execucao`.
 
-## RPA (banco legado → Quimia)
+## RPA: banco legado → Quimia
 
 ```bash
 python -m src.rpa.orchestrator
 ```
 
-> **Estado: EM VALIDAÇÃO.** Veja a evidência abaixo antes de tratar a integração como operacional.
+> [!NOTE]
+> **Estado: em validação.** Veja a evidência abaixo antes de tratar a integração como operacional.
 
 **Fluxo** (`src/rpa/`): `orchestrator.py` percorre a lista `PROCESSOS` (hoje só `usuario`). Para cada processo:
 
@@ -133,26 +188,26 @@ python -m src.rpa.orchestrator
 ## Eventos e acesso
 
 - **`sessao_acesso`** (`id`, `id_usuario`, `ocorreu_em`): uma linha por login. É carregada pelo mesmo fluxo de staging (`stg_sessao_acesso`), tem índices por usuário e por data, e o trigger `trg_atualizar_ultima_sessao` copia o horário mais recente para `usuario.ultima_sessao`. É a fonte do DAU.
-- **`evento_app`: não existe** neste repositório. Eventos de navegação do app não são modelados; o uso é medido por `sessao_acesso`.
+- **`evento_app` não existe** neste repositório. Eventos de navegação do app não são modelados; o uso é medido por `sessao_acesso`.
 
 ## Data Mart
 
 As dimensões e os fatos são **views** sobre as tabelas finais (não materializadas), no formato **estrela**: cada fato se liga às dimensões por chave. Não há snowflake.
 
 | Tipo | Views |
-|---|---|
-| Dimensões | `dim_tempo`, `dim_produto`, `dim_usuario`, `dim_substancia`, `dim_localizacao` |
-| Fatos | `vw_fato_historico_recomendacao`, `vw_fato_historico_match`, `vw_fato_sessao_acesso`, `vw_fato_adocao_estante`, `vw_fato_auditoria`, `vw_cobertura_incompatibilidade`, `vw_qualidade_resolucao_fds` |
+| --- | --- |
+| Dimensões | `dim_tempo`, `dim_produto`, `dim_usuario`, `dim_substancia`, `dim_localizacao` ([`dim/`](src/database/sql/data_mart/dim)) |
+| Fatos | `vw_fato_historico_recomendacao`, `vw_fato_historico_match`, `vw_fato_sessao_acesso`, `vw_fato_adocao_estante`, `vw_fato_auditoria`, `vw_cobertura_incompatibilidade`, `vw_qualidade_resolucao_fds` ([`facts/`](src/database/sql/data_mart/facts)) |
 | Monitoramento e apoio | `vw_dau`, `vw_sequencia_uso`, `vw_catalogo_dados` |
 
 - **CTE:** `vw_fato_historico_recomendacao` (CTEs `base`, `ranking_produto`, `running_total_diario`), `vw_sequencia_uso`, `fn_match_produtos` e as validações do staging (`validate_*.sql`).
 - **Window functions:** `RANK() OVER` e `SUM(COUNT(*)) OVER` em `vw_fato_historico_recomendacao`; `COUNT(*) OVER (PARTITION BY ...)` em `vw_fato_sessao_acesso` e `vw_fato_historico_match`; `ROW_NUMBER() OVER` nas validações de duplicidade do staging.
-- **`WITH RECURSIVE`:** `vw_sequencia_uso` calcula as sequências de dias consecutivos de uso por usuário. É uma view para análise do conjunto completo; para um único usuário, veja a reescrita em [docs/explain_analyze.md](docs/explain_analyze.md).
+- **`WITH RECURSIVE`:** [`vw_sequencia_uso`](src/database/sql/data_mart/facts/vw_sequencia_uso.sql) calcula as sequências de dias consecutivos de uso por usuário. É uma view para análise do conjunto completo; para um único usuário, veja a reescrita em [docs/explain_analyze.md](docs/explain_analyze.md).
 - `vw_fato_historico_match` e `vw_qualidade_resolucao_fds` retornam 0 linhas hoje, porque as tabelas de origem (`historico_match`, `fds*`) estão vazias.
 
-## DAU
+### DAU
 
-O DAU (usuários ativos por dia) é calculado diretamente no PostgreSQL pela view `vw_dau` ([vw_dau.sql](src/database/sql/data_mart/facts/vw_dau.sql)):
+O DAU (usuários ativos por dia) é calculado diretamente no PostgreSQL pela view [`vw_dau`](src/database/sql/data_mart/facts/vw_dau.sql):
 
 ```sql
 SELECT ocorreu_em::date AS data, COUNT(DISTINCT id_usuario) AS usuarios_ativos
@@ -162,23 +217,7 @@ GROUP BY ocorreu_em::date;
 
 Hoje cobre 360 dias. Para uma janela recente, filtre por intervalo em `sessao_acesso.ocorreu_em` (usa `idx_sessao_acesso_ocorreu_em`); filtrar pela coluna `data` da view força leitura completa (medição em [docs/explain_analyze.md](docs/explain_analyze.md)).
 
-## Rotinas, triggers e auditoria
-
-| Tipo | Objetos do projeto |
-|---|---|
-| Functions (15) | `fn_match_produtos`, `buscar_dados_fds`, `buscar_incompatibilidades`, `buscar_pontos_salvos`, `buscar_primeiros_socorros`, `fn_processar_fds_raw_json`, `fn_sincronizar_catalogo`, validadores (`fn_data_valida`, `fn_inteiro_valido`, `fn_numerico_valido`, `fn_timestamp_valido`) e funções de trigger |
-| Procedures (3) | `cadastrar_produto_completo`, `guardar_produto_estante`, `sp_registrar_consulta_match` |
-| Triggers (5) | auditoria em `usuario` e `fds`; `sessao_acesso` (última sessão); `estante_produto` (dono da estante); `fds` (processa o `raw_json`) |
-
-**Auditoria:** `fn_auditoria()` grava em `log_auditoria` a tabela (`TG_TABLE_NAME`), a operação (`TG_OP`), o registro anterior (`OLD`), o novo (`NEW`) e o `CURRENT_USER`.
-
-**Demonstração** de `CALL` e auditoria, dentro de uma transação com `ROLLBACK` (não deixa dados):
-
-```bash
-psql -d <banco> -f src/database/sql/tests/demo_call_auditoria.sql
-```
-
-## Databricks (PostgreSQL/Aiven → JDBC → Databricks)
+### Databricks (PostgreSQL → JDBC → Databricks)
 
 O Databricks consome as dimensões e os fatos do Data Mart direto do PostgreSQL por JDBC. A configuração do lado Databricks (cluster, segredos) **não está neste repositório**; o padrão de leitura, com placeholders, é:
 
@@ -194,42 +233,78 @@ df = (spark.read.format("jdbc")
 
 Usuário e senha ficam em segredos do Databricks, nunca no código nem no repositório. A Aiven exige SSL, por isso `sslmode=require`.
 
+## Rotinas, triggers e auditoria
+
+| Tipo | Objetos do projeto |
+| --- | --- |
+| Functions (15) | `fn_match_produtos`, `buscar_dados_fds`, `buscar_incompatibilidades`, `buscar_pontos_salvos`, `buscar_primeiros_socorros`, `fn_processar_fds_raw_json`, `fn_sincronizar_catalogo`, validadores (`fn_data_valida`, `fn_inteiro_valido`, `fn_numerico_valido`, `fn_timestamp_valido`) e funções de trigger ([`functions/`](src/database/sql/routines/functions)) |
+| Procedures (3) | `cadastrar_produto_completo`, `guardar_produto_estante`, `sp_registrar_consulta_match` ([`procedures/`](src/database/sql/routines/procedures)) |
+| Triggers (5) | auditoria em `usuario` e `fds`; `sessao_acesso` (última sessão); `estante_produto` (dono da estante); `fds` (processa o `raw_json`) ([`triggers/`](src/database/sql/routines/triggers)) |
+
+**Auditoria:** `fn_auditoria()` grava em `log_auditoria` a tabela (`TG_TABLE_NAME`), a operação (`TG_OP`), o registro anterior (`OLD`), o novo (`NEW`) e o `CURRENT_USER`. Triggers: [`trg_auditoria_usuario`](src/database/sql/routines/triggers/trg_auditoria_usuario.sql) e [`trg_auditoria_fds`](src/database/sql/routines/triggers/trg_auditoria_fds.sql).
+
+**Demonstração** de `CALL` e auditoria, dentro de uma transação com `ROLLBACK` (não deixa dados):
+
+```bash
+psql -d <banco> -f src/database/sql/tests/demo_call_auditoria.sql
+```
+
 ## Backup e recovery
 
-`ops/backup.py`, `ops/verify_backup.py` e `ops/restore.py` (`pg_dump -Fc` / `pg_restore`, restore sempre em destino explícito, nunca na Aiven). Evidência do teste real, versões e contagens antes/depois em [docs/backup_recovery.md](docs/backup_recovery.md). Checagem rápida do banco apontado pelo `.env`: `python ops/check_db.py`.
+[`ops/backup.py`](ops/backup.py), [`ops/verify_backup.py`](ops/verify_backup.py) e [`ops/restore.py`](ops/restore.py) usam `pg_dump -Fc` / `pg_restore`, com restore sempre em destino explícito, nunca na Aiven. Evidência do teste real, versões e contagens antes/depois em [docs/backup_recovery.md](docs/backup_recovery.md).
 
 ## Performance
 
-Planos `EXPLAIN (ANALYZE, BUFFERS)` reais de 4 consultas (`fn_match_produtos`, DAU, `vw_fato_historico_recomendacao`, busca de produto), com análise e comparação antes/depois de índices, em [docs/explain_analyze.md](docs/explain_analyze.md).
+Planos `EXPLAIN (ANALYZE, BUFFERS)` reais de 4 consultas (`fn_match_produtos`, DAU, `vw_fato_historico_recomendacao`, busca de produto), com análise e comparação antes/depois de índices, em [docs/explain_analyze.md](docs/explain_analyze.md). Os índices ficam em [`src/database/sql/indexes/`](src/database/sql/indexes).
 
 ## Governança de dados
 
 - **Catálogo técnico no banco:** `catalogo_tabela` (nome, tipo de objeto, domínio, descrição, regra de negócio, **nível de acesso** `publico` / `interno` / `restrito`, responsável) e `catalogo_coluna` (tipo, obrigatoriedade, PK, referência, descrição, regra de negócio, `dado_pessoal_lgpd`). São preenchidas por `fn_sincronizar_catalogo()`, que lê o catálogo do PostgreSQL (colunas, PK, FK) e os `COMMENT ON`; nível de acesso, domínio e marcação LGPD vêm do seed de classificação. A view `vw_catalogo_dados` consulta tudo. No banco da Aiven: 46 objetos catalogados (26 internos, 11 públicos, 6 restritos, 3 sem classificação) e 296 colunas, 17 delas marcadas como dado pessoal.
-- **Site do catálogo:** o catálogo de dados está publicado no GitHub Pages do repositório, em **https://quimia-br.github.io/quimia-bd/** (o mesmo link do campo *About* do repositório). O workflow `.github/workflows/catalog.yml` regenera e publica o site a cada push na `main` que altere `src/database/sql/**` ou `src/catalog_site/**`. Para abrir localmente, use `docs/catalog/index.html` direto no navegador (funciona via `file://`). `data.js`, `icons.js` e `diffs/` são gerados; não edite à mão, rode `python -m src.catalog_site.generate_catalog`.
+- **Site do catálogo:** publicado no GitHub Pages em **https://quimia-br.github.io/quimia-bd/**. O workflow [`catalog.yml`](.github/workflows/catalog.yml) regenera e publica o site a cada push na `main` que altere `src/database/sql/**` ou `src/catalog_site/**`. Para abrir localmente, use `docs/catalog/index.html` direto no navegador (funciona via `file://`). `data.js`, `icons.js` e `diffs/` são gerados; não edite à mão, rode `python -m src.catalog_site.generate_catalog`.
 - **Integridade:** PK em todas as tabelas de negócio, FKs com `ON DELETE` explícito, `UNIQUE` e `CHECK` de domínio, e validação em staging antes de qualquer migração.
 - **Segurança:** conexão com `sslmode=require`; senhas em bcrypt; `.env` fora do git (`.env.example` só com placeholders); auditoria por trigger; backup com restore testado.
+
+## Limitações conhecidas
+
+- A 3FN não foi auditada formalmente; as exceções conhecidas estão listadas em [Modelagem](#modelagem).
+- `historico_match`, `fds*`, `comodo`, `estante_produto`, `empresa_produto` e `ponto_salvo` estão vazias na Aiven, então os fatos que dependem delas retornam 0 linhas.
+- `vw_sequencia_uso` percorre o conjunto completo; para um usuário isolado há uma reescrita em [docs/explain_analyze.md](docs/explain_analyze.md).
+- A configuração do Databricks não é versionada aqui.
 
 ## Estrutura
 
 ```
 src/
-├── setup_data.py            # orquestra a criação e a carga do banco
-├── catalog_site/            # gerador do site do catálogo (parser SQL, git, plano de execução)
-├── rpa/                     # RPA legado → Quimia (orchestrator, extractors, log_execucao)
+├── setup_data.py            orquestra a criação e a carga do banco
+├── catalog_site/            gerador do site do catálogo (parser SQL, git, plano de execução)
+├── rpa/                     RPA legado → Quimia (orchestrator, extractors, log_execucao)
 └── database/
     ├── connection.py
-    ├── utils/               # geradores de dados sintéticos e loader do staging
+    ├── utils/               geradores de dados sintéticos e loader do staging
     └── sql/
-        ├── ddl/             # tabelas, constraints e COMMENT ON
-        ├── routines/        # functions, procedures e triggers
+        ├── ddl/             tabelas, constraints e COMMENT ON
+        ├── routines/        functions, procedures e triggers
         ├── indexes/
-        ├── logs/            # sessao_acesso, log_auditoria e log_rpa_execucao
-        ├── data_load/       # mocks (CSV), staging, validação, migração e seeds
-        ├── data_mart/       # dimensões, fatos e views
-        └── tests/           # demonstração de CALL e auditoria
-ops/                         # backup, verify_backup, restore e check_db
+        ├── logs/            sessao_acesso, log_auditoria e log_rpa_execucao
+        ├── data_load/       mocks (CSV), staging, validação, migração e seeds
+        ├── data_mart/       dimensões, fatos e views
+        └── tests/           demonstração de CALL e auditoria
+ops/                         backup, verify_backup, restore e check_db
 docs/
 ├── backup_recovery.md
 ├── explain_analyze.md
-└── catalog/                 # catálogo de dados (site estático)
+└── catalog/                 catálogo de dados (site estático)
 ```
+
+## Repositórios relacionados
+
+| Repositório | Papel |
+| --- | --- |
+| [quimia-api](https://github.com/Quimia-br/quimia-api) | API REST que usa este schema |
+| [quimia-agent](https://github.com/Quimia-br/quimia-agent) | Assistente Kemi, que consulta o catálogo |
+| [quimia-extractor-ai](https://github.com/Quimia-br/quimia-extractor-ai) | Extração das FDS que alimentam `fds*` |
+| [quimia-mobile](https://github.com/Quimia-br/quimia-mobile) · [quimia-web](https://github.com/Quimia-br/quimia-web) | Clientes |
+
+## Licença
+
+Veja o arquivo [LICENSE](LICENSE).
