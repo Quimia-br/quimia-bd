@@ -46,7 +46,7 @@
         </a>
         <a class="cartao neo4j-card" href="#/banco-mongodb">
           <span class="neo4j-card-icone"><img src="icons/mongo_logo.svg" alt=""></span>
-          <h2>MongoDB</h2><p class="sutil">Histórico das conversas do Kemi na coleção <code>chat_turns</code>.</p>
+          <h2>MongoDB</h2><p class="sutil">Turnos e memória entre sessões do Kemi nas coleções <code>chat_turns</code> e <code>chat_summaries</code>.</p>
           <span class="botao">Explorar</span>
         </a>
       </div>
