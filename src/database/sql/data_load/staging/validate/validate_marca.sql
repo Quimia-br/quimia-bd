@@ -12,7 +12,7 @@ SET status = 'rejeitado', motivo_rejeicao = 'logo_url fora do padrão https'
 WHERE id_batch = :batch_id
   AND status = 'pendente'
   AND logo_url_raw IS NOT NULL
-  AND btrim(logo_url_raw) NOT LIKE 'https://%';
+  AND NOT starts_with(btrim(logo_url_raw), 'https://');
 
 WITH duplicatas AS (
     SELECT id,

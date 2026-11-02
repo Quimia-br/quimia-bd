@@ -1,8 +1,4 @@
--- ============================================================
--- STAGING DDL — marca
--- Staging COMUM (não persistente) — TRUNCATE a cada rodada,
--- feito pelo loader.py antes do COPY.
--- ============================================================
+DROP TABLE IF EXISTS stg_marca;
 
 CREATE TABLE IF NOT EXISTS stg_marca (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
