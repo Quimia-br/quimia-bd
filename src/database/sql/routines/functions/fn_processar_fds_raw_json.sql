@@ -107,8 +107,8 @@ BEGIN
         ) VALUES (
             p_id_fds,
             v_id_substancia,
-            NULLIF(v_composto ->> 'concentracao_min', '')::NUMERIC(5,2),
-            NULLIF(v_composto ->> 'concentracao_max', '')::NUMERIC(5,2),
+            NULLIF(v_composto ->> 'concentracao_min', '')::NUMERIC(12,8),
+            NULLIF(v_composto ->> 'concentracao_max', '')::NUMERIC(12,8),
             left(NULLIF(btrim(v_composto ->> 'unidade_concentracao'), ''), 20)
         );
 
@@ -170,7 +170,7 @@ BEGIN
 
             v_severidade := lower(btrim(v_incompatibilidade ->> 'severidade'));
             IF v_severidade IS NULL OR v_severidade NOT IN ('baixa','media','alta','critica') THEN
-                v_severidade := 'media';
+                v_severidade := NULL;
             END IF;
 
             INSERT INTO fds_incompatibilidade (
@@ -208,7 +208,7 @@ BEGIN
             v_socorro ->> 'descricao',
             v_socorro ->> 'sintomas',
             v_socorro ->> 'tratamento_especial',
-            COALESCE((v_socorro ->> 'atencao_medica_imediata')::BOOLEAN, FALSE)
+            (v_socorro ->> 'atencao_medica_imediata')::BOOLEAN
         );
     END LOOP;
 

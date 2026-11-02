@@ -139,15 +139,15 @@ CREATE TABLE fds_primeiro_socorro (
     descricao                TEXT,
     sintomas                 TEXT,
     tratamento_especial      TEXT,
-    atencao_medica_imediata  BOOLEAN NOT NULL DEFAULT FALSE
+    atencao_medica_imediata  BOOLEAN
 );
 
 CREATE TABLE fds_composto (
     id                    INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_fds                INTEGER NOT NULL,
     id_substancia         INTEGER,
-    concentracao_min      NUMERIC(5,2),
-    concentracao_max      NUMERIC(5,2),
+    concentracao_min      NUMERIC(12,8),
+    concentracao_max      NUMERIC(12,8),
     unidade_concentracao  VARCHAR(20),
     CONSTRAINT chk_fds_composto_concentracao CHECK (
         concentracao_min IS NULL OR concentracao_max IS NULL

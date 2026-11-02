@@ -124,7 +124,7 @@ COMMENT ON COLUMN fds_primeiro_socorro.rota_exposicao IS 'Via de exposição: in
 COMMENT ON COLUMN fds_primeiro_socorro.descricao IS 'Procedimento de primeiros socorros para a rota.';
 COMMENT ON COLUMN fds_primeiro_socorro.sintomas IS 'Sintomas esperados após a exposição.';
 COMMENT ON COLUMN fds_primeiro_socorro.tratamento_especial IS 'Orientação de tratamento médico específico, se houver.';
-COMMENT ON COLUMN fds_primeiro_socorro.atencao_medica_imediata IS 'Indica se a exposição exige atendimento médico imediato.';
+COMMENT ON COLUMN fds_primeiro_socorro.atencao_medica_imediata IS 'Indica se a FDS exige atendimento médico imediato; nulo quando não informado.';
 
 -- fds_composto --------------------------------------------------------
 COMMENT ON TABLE fds_composto IS
