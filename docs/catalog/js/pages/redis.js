@@ -42,7 +42,12 @@
           <div><h3>Pontos</h3><p>Pontos de descarte por tipo, estado e bairro.</p></div>
           <div><h3>Insights</h3><p>Agregados do painel da empresa por cinco minutos.</p></div>
         </div>
-      </section>`;
+      </section>
+      <a class="cartao neo4j-card" href="https://github.com/Quimia-br/quimia-api" target="_blank" rel="noopener noreferrer">
+        <span class="neo4j-card-icone"><img src="icons/link.svg" alt=""></span>
+        <h2>Repositório da API</h2><p class="sutil">Código fonte do <code>quimia-api</code> no GitHub.</p>
+        <span class="botao">Abrir repositório</span>
+      </a>`;
   }
 
   function modelagemRedis() {
@@ -80,8 +85,7 @@
       <div class="grade-2">
         <section class="cartao"><h2>Redis indisponível ou lento</h2><p>Uma falha de leitura faz a API consultar o PostgreSQL e registrar o problema no log. O prazo padrão de conexão e operação é 500 ms, configurável por <code>QUIMIA_CACHE_TIMEOUT_MS</code>.</p><p class="legenda">Se a limpeza falhar, o dado antigo pode permanecer até o TTL; a falha é registrada como erro.</p></section>
         <section class="cartao"><h2>Ativação</h2><p>O cache só é usado com <code>QUIMIA_CACHE_ENABLED=true</code>. <code>REDIS_URL</code> aponta para o serviço Redis; no Aiven, a URI usa <code>rediss://</code> para TLS.</p><p class="legenda">As configurações gerais ficam em <code>CacheConfig.java</code>. O prefixo padrão das chaves é <code>quimia:</code>.</p></section>
-      </div>
-      <section class="cartao"><h2>Fonte</h2><p>Implementação no repositório <code>quimia-api</code>, introduzida no <a href="https://github.com/Quimia-br/quimia-api/pull/28" target="_blank" rel="noopener noreferrer">PR #28</a>.</p></section>`;
+      </div>`;
   }
 
   function cachesRedis() {

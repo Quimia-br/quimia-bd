@@ -151,7 +151,12 @@ RETURN p1.nome AS produto_1,
     return `${cabecalho({ secao: 'Explorador', titulo: 'Banco de Dados', subtitulo: 'MongoDB · turnos e memória entre sessões do Kemi.' })}
       ${abas('banco', 'mongodb')}
       <div class="barra-filtros">${seletorBancos('banco', 'MongoDB')}</div>
-      ${conteudoKemi()}`;
+      ${conteudoKemi()}
+      <a class="cartao neo4j-card" href="https://github.com/Quimia-br/quimia-agent" target="_blank" rel="noopener noreferrer">
+        <span class="neo4j-card-icone"><img src="icons/link.svg" alt=""></span>
+        <h2>Repositório do Kemi</h2><p class="sutil">Código fonte do <code>quimia-agent</code> no GitHub.</p>
+        <span class="botao">Abrir repositório</span>
+      </a>`;
   }
 
   function modelagemMongo() {

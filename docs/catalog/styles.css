@@ -640,12 +640,14 @@ details.ver-sql[open] summary { margin-bottom: 12px; }
 :root[data-theme="dark"] img[src$="share-2.svg"],
 :root[data-theme="dark"] img[src$="building-2.svg"],
 :root[data-theme="dark"] img[src$="bot.svg"],
-:root[data-theme="dark"] img[src$="audio-waveform.svg"] { filter: invert(1); }
+:root[data-theme="dark"] img[src$="audio-waveform.svg"],
+:root[data-theme="dark"] img[src$="link.svg"] { filter: invert(1); }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) img[src$="share-2.svg"],
   :root:not([data-theme="light"]) img[src$="building-2.svg"],
   :root:not([data-theme="light"]) img[src$="bot.svg"],
-  :root:not([data-theme="light"]) img[src$="audio-waveform.svg"] { filter: invert(1); }
+  :root:not([data-theme="light"]) img[src$="audio-waveform.svg"],
+  :root:not([data-theme="light"]) img[src$="link.svg"] { filter: invert(1); }
 }
 .nav-item.ativo img.nav-icone-arquivo { filter: none; }
 .metrica.metrica-alerta { background: var(--feedback-warning); }
