@@ -49,6 +49,11 @@
           <h2>MongoDB</h2><p class="sutil">Turnos e memória entre sessões do Kemi nas coleções <code>chat_turns</code> e <code>chat_summaries</code>.</p>
           <span class="botao">Explorar</span>
         </a>
+        <a class="cartao neo4j-card" href="#/banco-redis">
+          <span class="neo4j-card-icone"><img src="icons/redis_logo.svg" alt=""></span>
+          <h2>Redis</h2><p class="sutil">Cache das leituras da API sobre o PostgreSQL: produtos, segurança, pontos e indicadores da empresa.</p>
+          <span class="botao">Explorar</span>
+        </a>
       </div>
       <div class="grade-2">
         <section class="cartao">

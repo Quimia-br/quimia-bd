@@ -1,4 +1,4 @@
-/* Complemento do catálogo: navegação entre bancos, Neo4j e MongoDB. */
+/* Complemento do catálogo: navegação entre bancos, Neo4j, MongoDB e Redis. */
 (function (Q) {
   'use strict';
   if (!Q) return;
@@ -39,7 +39,7 @@ RETURN p1.nome AS produto_1,
     { nome: 'PostgreSQL', logo: 'postgrees_logo.svg', paginas: { banco: '#/banco', modelagem: '#/modelagem' } },
     { nome: 'Neo4j', logo: 'neo4j_logo.svg', paginas: { banco: '#/banco-neo4j', modelagem: '#/modelagem-neo4j' } },
     { nome: 'MongoDB', logo: 'mongo_logo.svg', paginas: { banco: '#/banco-mongodb', modelagem: '#/modelagem-mongodb' } },
-    { nome: 'Redis', logo: 'redis_logo.svg' }
+    { nome: 'Redis', logo: 'redis_logo.svg', paginas: { banco: '#/banco-redis', modelagem: '#/modelagem-redis' } }
   ];
 
   function seletorBancos(pagina, ativo) {

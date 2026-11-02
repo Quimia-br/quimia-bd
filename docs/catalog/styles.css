@@ -622,13 +622,30 @@ details.ver-sql[open] summary { margin-bottom: 12px; }
 .mongo-campo:nth-child(odd) { background: var(--surface-background); }
 .mongo-campo + .mongo-campo { border-top: 1px solid var(--border-secondary); }
 .mongo-campo span { color: var(--foreground-subtle); }
+.redis-dominios { margin-top: 20px; }
+.redis-dominios > div { padding: 20px; border-radius: 20px; background: var(--surface-background); }
+.redis-dominios h3 { margin: 0 0 8px; }
+.redis-dominios p { margin: 0; }
+.redis-modelo { display: grid; gap: 12px; margin: 20px 0; }
+.redis-modelo > div { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 16px; align-items: center; padding: 16px 20px; border-radius: 16px; background: var(--surface-background); }
+.redis-modelo span { color: var(--foreground-subtle); }
+.redis-modelo code, .redis-dominios code { overflow-wrap: anywhere; }
+.redis-etapas { display: grid; gap: 12px; margin: 20px 0; padding: 0; list-style: none; counter-reset: redis-etapa; }
+.redis-etapas li { display: grid; grid-template-columns: minmax(100px, .3fr) minmax(0, 1fr); gap: 16px; padding: 18px 20px; border-radius: 16px; background: var(--surface-background); counter-increment: redis-etapa; }
+.redis-etapas strong::before { content: counter(redis-etapa) '. '; color: var(--foreground-subtle); }
+.redis-etapas code, .linha code { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .redis-modelo > div, .redis-etapas li { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+}
 :root[data-theme="dark"] img[src$="share-2.svg"],
 :root[data-theme="dark"] img[src$="building-2.svg"],
-:root[data-theme="dark"] img[src$="bot.svg"] { filter: invert(1); }
+:root[data-theme="dark"] img[src$="bot.svg"],
+:root[data-theme="dark"] img[src$="audio-waveform.svg"] { filter: invert(1); }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) img[src$="share-2.svg"],
   :root:not([data-theme="light"]) img[src$="building-2.svg"],
-  :root:not([data-theme="light"]) img[src$="bot.svg"] { filter: invert(1); }
+  :root:not([data-theme="light"]) img[src$="bot.svg"],
+  :root:not([data-theme="light"]) img[src$="audio-waveform.svg"] { filter: invert(1); }
 }
 .nav-item.ativo img.nav-icone-arquivo { filter: none; }
 .metrica.metrica-alerta { background: var(--feedback-warning); }
