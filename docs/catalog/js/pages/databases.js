@@ -1,4 +1,4 @@
-/* Complemento do catálogo: navegação entre bancos, Neo4j e MongoDB. */
+/* Complemento do catálogo: navegação entre bancos, Neo4j, MongoDB e Redis. */
 (function (Q) {
   'use strict';
   if (!Q) return;
@@ -39,7 +39,7 @@ RETURN p1.nome AS produto_1,
     { nome: 'PostgreSQL', logo: 'postgrees_logo.svg', paginas: { banco: '#/banco', modelagem: '#/modelagem' } },
     { nome: 'Neo4j', logo: 'neo4j_logo.svg', paginas: { banco: '#/banco-neo4j', modelagem: '#/modelagem-neo4j' } },
     { nome: 'MongoDB', logo: 'mongo_logo.svg', paginas: { banco: '#/banco-mongodb', modelagem: '#/modelagem-mongodb' } },
-    { nome: 'Redis', logo: 'redis_logo.svg' }
+    { nome: 'Redis', logo: 'redis_logo.svg', paginas: { banco: '#/banco-redis', modelagem: '#/modelagem-redis' } }
   ];
 
   function seletorBancos(pagina, ativo) {
@@ -126,30 +126,41 @@ RETURN p1.nome AS produto_1,
   function conteudoKemi() {
     return `<section class="cartao">
       <div class="cartao-topo"><h2>Kemi · chatbot do aplicativo</h2><span class="neo4j-card-icone"><img src="icons/bot.svg" alt=""></span></div>
-      <p>O Kemi usa o MongoDB para guardar o histórico das conversas. No banco <code>quimia</code>, a coleção <code>chat_turns</code> contém um documento para cada pergunta respondida.</p>
-      <p class="legenda">A implementação fica no repositório <code>quimia-agent</code>, na rota <code>POST /chat</code>.</p>
+      <p>O Kemi usa o MongoDB para guardar os turnos da sessão atual em <code>chat_turns</code> e a memória entre sessões em <code>chat_summaries</code>. No banco <code>quimia</code>, cada turno concluído e cada sessão resumida têm seu próprio documento.</p>
+      <p class="legenda">A implementação fica no repositório <code>quimia-agent</code>, nas rotas <code>POST /chat</code> e <code>POST /chat/sessions/close</code>.</p>
     </section>
     <div class="grade-2">
       <section class="cartao"><h2>Guardar as conversas</h2>
-        <p>Após o Kemi concluir uma resposta, grava o identificador do usuário, a sessão, a pergunta, a resposta e a data do turno.</p></section>
+        <p>Após o Kemi concluir uma resposta, grava em segundo plano o identificador do usuário, a sessão, a pergunta, a resposta e a data UTC do turno. Respostas que falharam não são gravadas.</p></section>
       <section class="cartao"><h2>Dar contexto às respostas</h2>
-        <p>Antes de responder, busca até oito turnos anteriores do mesmo usuário e da mesma sessão. Envia esses turnos em ordem cronológica ao fluxo do chatbot para interpretar a pergunta atual.</p></section>
+        <p>Antes de responder, busca até oito turnos anteriores do mesmo usuário e da mesma sessão. Envia esses turnos em ordem cronológica ao fluxo do chatbot para interpretar a pergunta atual, limitando pergunta e resposta a 1.000 e 2.000 caracteres.</p></section>
+    </div>
+    <div class="grade-2">
+      <section class="cartao"><h2>Resumir a sessão encerrada</h2>
+        <p>Ao receber <code>POST /chat/sessions/close</code>, o Kemi resume até 40 turnos recentes da sessão em até 1.200 caracteres e grava <code>resumo</code>, <code>turnos</code> e a data UTC em <code>chat_summaries</code>. Cada par de usuário e sessão é resumido uma vez; sessões sem turnos não geram resumo.</p></section>
+      <section class="cartao"><h2>Recuperar memória entre sessões</h2>
+        <p>Quando o orquestrador pede memória, o Kemi consulta até 100 resumos recentes de outras sessões do mesmo usuário, ordena pela sobreposição de palavras com a pergunta e usa até três. A busca por “ontem” considera a data de criação do resumo no fuso de São Paulo.</p></section>
     </div>
     <section class="cartao"><h2>Limite do histórico</h2>
-      <p>O histórico ajuda a entender referências a mensagens anteriores, mas não comprova informações técnicas sobre produtos nem a segurança de misturas.</p>
+      <p>Turnos e resumos ajudam a entender referências a conversas anteriores, mas não comprovam informações técnicas sobre produtos nem a segurança de misturas. A busca de resumos é lexical: pode não encontrar uma lembrança sem palavras em comum com a pergunta.</p>
       <p class="legenda">A rota de teste recebe <code>user_id</code> do cliente; a integração com o aplicativo precisa validar a identidade do usuário antes de expor esse histórico.</p>
     </section>`;
   }
 
   function bancoMongo() {
-    return `${cabecalho({ secao: 'Explorador', titulo: 'Banco de Dados', subtitulo: 'MongoDB · histórico de conversas do Kemi, chatbot do aplicativo.' })}
+    return `${cabecalho({ secao: 'Explorador', titulo: 'Banco de Dados', subtitulo: 'MongoDB · turnos e memória entre sessões do Kemi.' })}
       ${abas('banco', 'mongodb')}
       <div class="barra-filtros">${seletorBancos('banco', 'MongoDB')}</div>
-      ${conteudoKemi()}`;
+      ${conteudoKemi()}
+      <a class="cartao neo4j-card" href="https://github.com/Quimia-br/quimia-agent" target="_blank" rel="noopener noreferrer">
+        <span class="neo4j-card-icone"><img src="icons/link.svg" alt=""></span>
+        <h2>Repositório do Kemi</h2><p class="sutil">Código fonte do <code>quimia-agent</code> no GitHub.</p>
+        <span class="botao">Abrir repositório</span>
+      </a>`;
   }
 
   function modelagemMongo() {
-    const campos = [
+    const camposTurnos = [
       ['_id', 'ObjectId', 'Identificador gerado pelo MongoDB'],
       ['user_id', 'string', 'UUID do usuário convertido em texto'],
       ['session_id', 'string', 'Identificador da sessão de conversa'],
@@ -157,24 +168,43 @@ RETURN p1.nome AS produto_1,
       ['resposta', 'string', 'Resposta concluída pelo Kemi'],
       ['criado_em', 'Date', 'Data e hora do turno em UTC']
     ];
-    return `${cabecalho({ secao: 'Explorador', titulo: 'Modelagem', subtitulo: 'MongoDB · modelo documental do histórico de conversas do Kemi.' })}
+    const camposResumos = [
+      ['_id', 'ObjectId', 'Identificador gerado pelo MongoDB'],
+      ['user_id', 'string', 'UUID do usuário convertido em texto'],
+      ['session_id', 'string', 'Identificador da sessão resumida'],
+      ['resumo', 'string', 'Resumo da sessão, com até 1.200 caracteres'],
+      ['turnos', 'int', 'Quantidade de turnos usados no resumo (até 40)'],
+      ['criado_em', 'Date', 'Data e hora da gravação do resumo em UTC']
+    ];
+    return `${cabecalho({ secao: 'Explorador', titulo: 'Modelagem', subtitulo: 'MongoDB · turnos e resumos das conversas do Kemi.' })}
       ${abas('modelagem', 'mongodb')}
       <div class="barra-filtros">${seletorBancos('modelagem', 'MongoDB')}</div>
       <section class="cartao"><div class="cartao-topo"><h2>Modelo documental</h2></div>
         <div class="mongo-modelo"><div class="mongo-documento" role="table" aria-label="Campos da coleção chat_turns">
           <div class="mongo-documento-titulo" role="row"><strong>chat_turns</strong><span>coleção · quimia</span></div>
-          ${campos.map(([nome, tipo, descricao]) => `<div class="mongo-campo" role="row" title="${esc(descricao)}"><code role="cell">${esc(nome)}</code><span role="cell">${esc(tipo)}</span></div>`).join('')}
+          ${camposTurnos.map(([nome, tipo, descricao]) => `<div class="mongo-campo" role="row" title="${esc(descricao)}"><code role="cell">${esc(nome)}</code><span role="cell">${esc(tipo)}</span></div>`).join('')}
         </div></div>
         <p class="legenda">Cada documento representa um turno concluído. <code>user_id</code> e <code>session_id</code> identificam a conversa usada na busca do histórico; não são referências a outras coleções MongoDB.</p>
       </section>
-      <section class="cartao"><h2>Campos da coleção</h2>
+      <section class="cartao"><h2>Campos de chat_turns</h2>
         <div class="lista"><div class="lista-cabecalho" style="--colunas:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)"><span>Campo</span><span>Tipo</span><span>Função</span></div>
-          ${campos.map(([nome, tipo, descricao]) => `<div class="linha" style="--colunas:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)"><code>${esc(nome)}</code><span data-rotulo="Tipo">${esc(tipo)}</span><span data-rotulo="Função">${esc(descricao)}</span></div>`).join('')}
+          ${camposTurnos.map(([nome, tipo, descricao]) => `<div class="linha" style="--colunas:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)"><code>${esc(nome)}</code><span data-rotulo="Tipo">${esc(tipo)}</span><span data-rotulo="Função">${esc(descricao)}</span></div>`).join('')}
+        </div></section>
+      <section class="cartao"><div class="cartao-topo"><h2>Modelo documental · chat_summaries</h2></div>
+        <div class="mongo-modelo"><div class="mongo-documento" role="table" aria-label="Campos da coleção chat_summaries">
+          <div class="mongo-documento-titulo" role="row"><strong>chat_summaries</strong><span>coleção · quimia</span></div>
+          ${camposResumos.map(([nome, tipo, descricao]) => `<div class="mongo-campo" role="row" title="${esc(descricao)}"><code role="cell">${esc(nome)}</code><span role="cell">${esc(tipo)}</span></div>`).join('')}
+        </div></div>
+        <p class="legenda">Cada documento representa o resumo de uma sessão encerrada. <code>user_id</code> e <code>session_id</code> identificam a sessão original; a gravação usa esses campos para evitar sobrescrever um resumo já salvo.</p>
+      </section>
+      <section class="cartao"><h2>Campos de chat_summaries</h2>
+        <div class="lista"><div class="lista-cabecalho" style="--colunas:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)"><span>Campo</span><span>Tipo</span><span>Função</span></div>
+          ${camposResumos.map(([nome, tipo, descricao]) => `<div class="linha" style="--colunas:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)"><code>${esc(nome)}</code><span data-rotulo="Tipo">${esc(tipo)}</span><span data-rotulo="Função">${esc(descricao)}</span></div>`).join('')}
         </div></section>`;
   }
 
   function detalheKemi() {
-    return `${cabecalho({ secao: 'MongoDB', titulo: 'Kemi', subtitulo: 'Como o chatbot do aplicativo usa o histórico salvo no MongoDB.' })}
+    return `${cabecalho({ secao: 'MongoDB', titulo: 'Kemi', subtitulo: 'Como o chatbot do aplicativo usa turnos e resumos salvos no MongoDB.' })}
       ${conteudoKemi()}`;
   }
 
