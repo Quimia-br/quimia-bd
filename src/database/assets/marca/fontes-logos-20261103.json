@@ -1,0 +1,119 @@
+[
+  {
+    "id": 8,
+    "nome_fonte": "CIF",
+    "fonte": "https://www.unileverprofessional.com/br/pt/brands",
+    "original_url": "https://cdn.sanity.io/images/daix4r4j/production/5c57bf24dd96739969594a365229ddf1fcadda01-1684x1532.png",
+    "original_sha256": "ebb437beec7166e8a7ae0f67ba6e52cbb116857fa0aba659dbfec42134dfdd89",
+    "sha256": "c5eff74f547aa1618a17c151cf9fb76a990b69af9f4b806bcda2bfac0b11c743",
+    "repo_path": "src/database/assets/marca/marca-catalogo-8.png"
+  },
+  {
+    "id": 14,
+    "nome_fonte": "Omo",
+    "fonte": "https://www.unileverprofessional.com/br/pt/brands",
+    "original_url": "https://cdn.sanity.io/images/daix4r4j/production/ac80a9fcafb1925c1b0cb1b49ebe6a613c39d475-1100x753.png",
+    "original_sha256": "43bfb05a6d660f295f004f916e7ccb58f7870ebe69eb060aca4530568936b7fe",
+    "sha256": "dff2ea8964c92fc2e30827b9e5940ab56b832cb825c826aaa92dd248f112f079",
+    "repo_path": "src/database/assets/marca/marca-catalogo-14.png"
+  },
+  {
+    "id": 7,
+    "nome_fonte": "Comfort",
+    "fonte": "https://www.unileverprofessional.com/br/pt/brands",
+    "original_url": "https://cdn.sanity.io/images/daix4r4j/production/aa0c4f22c54160ff018bc73f51f30df495b5136e-600x600.png",
+    "original_sha256": "f4d7a72f4a98b25e97f40c72793bf6b6298efe35a048dd1044adc3fa567ab473",
+    "sha256": "69e5c9a73128bf7f40f88fd6351509bfd4a356f11084125ddb3c235bd17b5663",
+    "repo_path": "src/database/assets/marca/marca-catalogo-7.png"
+  },
+  {
+    "id": 13,
+    "nome_fonte": "Dove",
+    "fonte": "https://www.unileverprofessional.com/br/pt/brands",
+    "original_url": "https://cdn.sanity.io/images/daix4r4j/production/c791b0a25865eb48fd1635258e8e14375790b849-4096x4096.png",
+    "original_sha256": "e464c1c7442297aa6145251f3fb5e51841b19c140953b0a99f9cf043c4f2cdca",
+    "sha256": "cf240ee18ed5146bb3f987d0af9addcce6f14f13708a49740ed6d7cd9197d3e7",
+    "repo_path": "src/database/assets/marca/marca-catalogo-13.png"
+  },
+  {
+    "id": 6,
+    "nome_fonte": "Brilhante",
+    "fonte": "https://www.unileverprofessional.com/br/pt/brands",
+    "original_url": "https://cdn.sanity.io/images/daix4r4j/production/06c2bbf934db31d8e6b7ba1b041cc2beaceb1216-4096x4096.png",
+    "original_sha256": "f656fd32408a6ec9282e0485fd8bd22968945864618e43f562f1fd91e7e6edd4",
+    "sha256": "5235ea2b60321dccacbd8c56bea9482bed11f9a7934a8abc3c97fa0c62c0dd13",
+    "repo_path": "src/database/assets/marca/marca-catalogo-6.png"
+  },
+  {
+    "id": 9,
+    "nome_fonte": "Ypê",
+    "fonte": "https://logospng.org/logo-ype/",
+    "original_url": "https://logospng.org/download/ype/logo-ype-512.png",
+    "original_sha256": "6c91a0f23cbeba12479612406317bbb66b13034ecd53862c7608e0c61a7fa711",
+    "sha256": "51efe173a1abbb3da5d0640fd792962c785835a84e7348df9a03ee7ee70d7b4c",
+    "repo_path": "src/database/assets/marca/marca-catalogo-9.png"
+  },
+  {
+    "id": 10,
+    "nome_fonte": "Sanol",
+    "fonte": "https://www.totalquimicaoficial.com.br/sanol/",
+    "original_url": "https://www.totalquimicaoficial.com.br/sanol/wp-content/uploads/2025/08/cropped-Logo-Sanol.png",
+    "original_sha256": "6f34acbf872caed3a62b7dcd3d965d5cd9ae806b7093e5c76683210141fbe148",
+    "sha256": "0b8d9c8a81df8574467959774208bc9eddaa057faf6c95856e11edc80fb841ed",
+    "repo_path": "src/database/assets/marca/marca-catalogo-10.png"
+  },
+  {
+    "id": 11,
+    "nome_fonte": "Limpol",
+    "fonte": "https://www.bombril.com.br/limpol-limpadores",
+    "original_url": "https://images.squarespace-cdn.com/content/v1/6329b3c289890b31abfcff74/affb69e2-2fdc-4a1c-945c-a343ba2e59c2/Logo+Limpol.png",
+    "original_sha256": "dcf2d98aeed97c62664cb3d4b106b2aec92d71c4472b3778177ac1ec2ce8fb8d",
+    "sha256": "9311ebaf7ba0c643c7d886e4da58a4bd51dff895b6f1f50558565c1706bbd4e6",
+    "repo_path": "src/database/assets/marca/marca-catalogo-11.png"
+  },
+  {
+    "id": 12,
+    "nome_fonte": "Veja",
+    "fonte": "https://www.vejalimpeza.com.br/",
+    "original_url": "https://eu-images.contentstack.com/v3/assets/blt9ca8222b5acaa556/bltee65698d386d7432/65f87a61acd14e0407fba374/logo.png",
+    "original_sha256": "d3e2c09a4310610e6ac231425592e9886e12c9116b45310107ea6be725293069",
+    "sha256": "b261d5002a512586de57e29d5eceb8ac0c06e61aa30dc988985e31704b98ea82",
+    "repo_path": "src/database/assets/marca/marca-catalogo-12.png"
+  },
+  {
+    "id": 15,
+    "nome_fonte": "Fuzetto",
+    "fonte": "https://www.fuzetto.com.br/",
+    "original_url": "https://www.fuzetto.com.br/wp-content/uploads/2023/12/logo-fuzetto.png",
+    "original_sha256": "e57a5e662997de497dcdbd5277ecdbdbb3797fe3692b4ddf079ee6dbe58231c0",
+    "sha256": "0fa2a4a8f30b1e881df3648ecbdf99fd95b0e6174dad9b02c9a883f059237114",
+    "repo_path": "src/database/assets/marca/marca-catalogo-15.png"
+  },
+  {
+    "id": 16,
+    "nome_fonte": "Agi Fácil",
+    "fonte": "https://archote.ind.br/",
+    "original_url": "https://archote.ind.br/wp-content/uploads/2023/12/AGIFACIL.png",
+    "original_sha256": "72864c842e6b201eb417265e6441ad8d91ea21abab60a159616f06960bc781c6",
+    "sha256": "58a0c935f5bafb5e08dfa139c8deb8e02c2ffeb86dbe8a9ae363815e0a5465cc",
+    "repo_path": "src/database/assets/marca/marca-catalogo-16.png"
+  },
+  {
+    "id": 17,
+    "nome_fonte": "Quimia",
+    "fonte": "https://github.com/Quimia-br/quimia-mobile",
+    "original_url": "local:C:/dev/QUI/quimia-mobile/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "original_sha256": "4de12763cbacadfdde5c61f515d2459d24a31aca6475118bb51ced156374db20",
+    "sha256": "4de12763cbacadfdde5c61f515d2459d24a31aca6475118bb51ced156374db20",
+    "repo_path": "src/database/assets/marca/marca-catalogo-17.png"
+  },
+  {
+    "id": 18,
+    "nome_fonte": "Girando Sol",
+    "fonte": "https://girandosol.com.br/tipo-de-material/logos/",
+    "original_url": "https://cdn-images-site-girandosol.bravo.st/2025/07/GS-LOGO-RGB.png",
+    "original_sha256": "db03338579419f9079ba71e4fbced9c4bec41a6387c1bd1af793d9005b178386",
+    "sha256": "50cb801b0e47dc70ae6c0fe19a19a3eedf4b18d1c789c7831a8ef6d2ff130cd4",
+    "repo_path": "src/database/assets/marca/marca-catalogo-18.png"
+  }
+]
